@@ -18,7 +18,10 @@ $semibold: 600;
 $bold: 700;
 $extrabold: 800;
 
+$light-gray: #eee;
+$medium-gray: #aaa;
 $wbg-blue: #323090;
 $wbg-blue2: #344482;
+$wbg-dark-blue: darken($wbg-blue2, 10%);
 $wbg-light-blue: #abc;
 $wbg-yellow: #ffff88;

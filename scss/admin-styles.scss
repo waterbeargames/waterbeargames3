@@ -6,9 +6,12 @@ $size-lg: 1200px;
 $size-xl: 1600px;
 
 @import '_global/_mixins';
-@import '_global/_resets';
 @import '_global/_global';
 @import '_global/_utility';
+
+body {
+    line-height: 1;
+}
 
 #postdivrich {
     display: none;
@@ -17,13 +20,130 @@ $size-xl: 1600px;
 #page_builder_options {
     .inside {
         @import '_global/_text';
-    }
         
-    .wbg-column-content {
-        display: none;
+        * {
+            box-sizing: border-box;
+        }
+        
+        h4 {
+            text-align: center;
+        }
+    
+        p {
+            margin: 30px 0;
+            font-size: 14px;
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
+        
+        .button {
+            color: #000;
+        }
+    
+        #wbg-page-section-options {
+            word-wrap: break-word;
+        
+            input, select, textarea {
+                width: 100%;
+                max-width: 100%;
+            
+                &[type='checkbox'] {
+                    width: auto;
+                }
+            }
+        
+            small {
+                font-size: 10px;
+                font-size: 1rem;
+            }
+        
+            #general-options-area {
+                text-align: left;
+            }
+        
+            .wbg-add-section-area {
+                display: none;
+            
+                &.show {
+                    display: block;
+                }
+            
+                h3, > p {
+                    text-align: center;
+                }
+            
+                img {
+                    margin: 10px auto 0 auto;
+                }
+            
+                > .row > .column {
+                    padding-bototm: 10px;
+                    background-color: #f6f6f6;
+                    border: solid 10px #fff;
+                    border-radius: 5px;
+        
+                    .wbg-column-content {
+                        display: none;
 
-        &.show {
-            display: block;
+                        &.show {
+                            display: block;
+                        }
+                    }
+                
+                    .column {
+                        padding: 10px;
+                    }
+                
+                    .wbg-icon-preview i {
+                        margin: 10px 0;
+                        font-size: 50px;
+                    }
+                }
+            
+                &#wbg-features-area, &#wbg-team-members-area {
+                    text-align: center;
+                }
+            }
+        }
+    
+        #choose-section-area {
+            text-align: center;
+        }
+    
+        .wbg-pop-up-area {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000; /* z-index of sidebar is 9999 */
+            width: 100%;
+            padding: 100px 10%;
+            background-color: rgba(#000, 0.5);
+        
+            &.show {
+                display: block;
+            }
+        
+            #wbgcustomeditor_ifr {
+                max-height: 200px;
+            }
+        
+            .wbg-pop-up-controls {
+                text-align: center;
+            
+                .button {
+                    height: auto;
+                    margin: 10px;
+                    padding: 5px 10px;
+                    font-size: 18px;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                
+                    .fa {
+                        margin-left: 5px;
+                    }
+                }
+            }
         }
     }
     
@@ -75,121 +195,6 @@ $size-xl: 1600px;
             background-color: #bbb;
             border-radius: 50%;
             color: #fff;
-        }
-    }
-}
-
-#page_builder_options .inside {    
-    * {
-        box-sizing: border-box;
-    }
-    
-    p {
-        margin: 30px 0;
-        font-size: 14px;
-        font-size: 1.4rem;
-        line-height: 1.3;
-    }
-    
-    #wbg-page-section-options {
-        word-wrap: break-word;
-        
-        input, select, textarea {
-            width: 100%;
-            max-width: 100%;
-            
-            &[type='checkbox'] {
-                width: auto;
-            }
-        }
-        
-        small {
-            font-size: 10px;
-            font-size: 1rem;
-        }
-        
-        #general-options-area {
-            text-align: left;
-        }
-        
-        .wbg-add-section-area {
-            display: none;
-            
-            &.show {
-                display: block;
-            }
-            
-            h3, > p {
-                text-align: center;
-            }
-            
-            img {
-                margin: 10px auto 0 auto;
-            }
-            
-            .column {
-                padding: 10px;
-            }
-            
-            > .row > .column {
-                background-color: #f6f6f6;
-                border: solid 10px #fff;
-                border-radius: 5px;
-                
-                .column {
-                    border: 0;
-                    padding-left: 0;
-                }
-                
-                .wbg-icon-preview i {
-                    margin: 10px 0;
-                    font-size: 50px;
-                }
-            }
-            
-            &#wbg-features-area, &#wbg-team-members-area {
-                text-align: center;
-            }
-        }
-    }
-    
-    #choose-section-area {
-        text-align: center;
-    }
-    
-    .wbg-pop-up-area {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10000; /* z-index of sidebar is 9999 */
-        width: 100%;
-        padding: 100px 10%;
-        background-color: rgba(#000, 0.5);
-        
-        &.show {
-            display: block;
-        }
-        
-        #wbgcustomeditor_ifr {
-            max-height: 200px;
-        }
-        
-        .wbg-pop-up-controls {
-            text-align: center;
-            
-            .button {
-                height: auto;
-                margin: 10px;
-                padding: 5px 10px;
-                font-size: 18px;
-                font-size: 1.8rem;
-                font-weight: bold;
-                
-                .fa {
-                    margin-left: 5px;
-                }
-            }
         }
     }
 }

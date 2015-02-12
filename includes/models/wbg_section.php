@@ -88,9 +88,45 @@ class wbgSection {
     // Setting this variable is optional. Use if a section needs more options.
     //
     // Available input types: text, textarea, checkbox, select, icon, image, and hidden.
-    private $options;
+    private $options = array(
+        'title'             => array(
+            'name'          => 'Title',
+            'input_type'    => 'text'
+        ),
+        'background_image'  => array(
+            'name'          => 'Background Image',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'image'
+        ),
+        'background_color'  => array(
+            'name'          => 'Background Color',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                'White'         => 'white',
+                'Gray'          => 'gray',
+                'Light Blue'    => 'light-blue',
+                'Blue'          => 'blue'
+            )
+        ),
+        'text_color'        => array(
+            'name'          => 'Text Color Scheme',
+            'width'         => 'xs-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                'Dark'      => 'dark',
+                'Light'     => 'light'
+            )
+        )
+    );
     function set_options($new_options) {
         $this->options = $new_options;
+        return $this;
+    }
+    function add_options($new_options) {
+        foreach($new_options as $k => $v) {
+            $this->options[$k] = $v;
+        }
         return $this;
     }
     function get_options() {

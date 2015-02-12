@@ -2,8 +2,8 @@
 $wbgNews = new wbgSection;
 $wbgNews->set_group_name('News')
     ->set_group_name_slug('news')
-    ->set_single_name('News Video')
-    ->set_single_name_slug('news_video')
+    ->set_single_name('Featured Story')
+    ->set_single_name_slug('news_story_feature')
     ->set_multiple(true)
     ->set_admin_column_classes('xs-span12')
     ->set_markup_attr(array(
@@ -258,10 +258,6 @@ $wbgNews->set_group_name('News')
         )
     ))
     ->set_options(array(
-        'title'             => array(
-            'name'          => 'Title',
-            'input_type'    => 'text'
-        ),
         'posts_num'         => array(
             'name'          => 'Number of Posts to Display',
             'width'         => 'xs-span6 xs-right6',
@@ -273,34 +269,10 @@ $wbgNews->set_group_name('News')
             ),
             'selected'      => '4'
         ),
-        'background_image'  => array(
-            'name'          => 'Background Image',
-            'width'         => 'xs-span12 sm-span6',
-            'input_type'    => 'image'
-        ),
-        'background_color'  => array(
-            'name'          => 'Background Color',
-            'width'         => 'xs-span12 sm-span6',
-            'input_type'    => 'select',
-            'options'       => array(
-                'White'         => 'white',
-                'Gray'          => 'gray',
-                'Light Blue'    => 'light-blue',
-                'Blue'          => 'blue'
-            )
-        ),
-        'text_color'        => array(
-            'name'          => 'Text Color Scheme',
-            'width'         => 'xs-span6',
-            'input_type'    => 'select',
-            'options'       => array(
-                'Light'     => 'light',
-                'Dark'      => 'dark'
-            )
-        ),
         'main_content'      => array(
             'name'          => 'Main Content',
-            'input_type'    => 'textarea'
+            'input_type'    => 'textarea',
+            'rows'          => 10
         )
     ));
 ?>

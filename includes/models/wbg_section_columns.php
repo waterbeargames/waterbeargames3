@@ -253,51 +253,31 @@ $wbgColumns->set_group_name('Columns')
         ),
         'background_color'  => array(
             'name'          => 'Background Color',
-            'width'         => 'xs-span12 sm-span6 sm-right6',
+            'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
                 'Transparent'   => 'transparent',
                 'White'         => 'white',
                 'Gray'          => 'gray',
                 'Light Blue'    => 'light-blue',
-                'Blue'          => 'blue'
+                'Blue'          => 'blue',
+                'Black'         => 'black'
+            )
+        ),
+        'text_color'        => array(
+            'name'          => 'Override section text color',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                ''          => '',
+                'Light'     => 'light',
+                'Dark'      => 'dark'
             )
         ),
         'content'           => array(
             'name'          => 'Content',
             'input_type'    => 'textarea',
             'rows'          => 10
-        )
-    ))
-    ->set_options(array(
-        'title'             => array(
-            'name'          => 'Title',
-            'input_type'    => 'text'
-        ),
-        'background_image'  => array(
-            'name'          => 'Background Image',
-            'width'         => 'xs-span12 sm-span6',
-            'input_type'    => 'image'
-        ),
-        'background_color'  => array(
-            'name'          => 'Background Color',
-            'width'         => 'xs-span12 sm-span6',
-            'input_type'    => 'select',
-            'options'       => array(
-                'White'         => 'white',
-                'Gray'          => 'gray',
-                'Light Blue'    => 'light-blue',
-                'Blue'          => 'blue'
-            )
-        ),
-        'text_color'        => array(
-            'name'          => 'Text Color Scheme',
-            'width'         => 'xs-span6',
-            'input_type'    => 'select',
-            'options'       => array(
-                'Light'     => 'light',
-                'Dark'      => 'dark'
-            )
         )
     ));
 ?>

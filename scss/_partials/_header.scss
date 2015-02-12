@@ -54,13 +54,14 @@ body.home #header {
                 padding: 25px 10px;
                 background-color: $wbg-light-blue;
                 background-color: rgba($wbg-light-blue, 0.75);
-                border: solid 10px $wbg-light-blue;
+                border: solid 10px rgba($wbg-light-blue, 0.5);
                 border-radius: 100%;
                 font-family: $font-family-futura-condensed;
                 font-size: 26px;
                 letter-spacing: 1px;
                 line-height: 1;
                 text-decoration: none;
+                text-shadow: 0 0 5px rgba(#000, 0.1);
                 text-transform: uppercase;
                 color: #fff;
                 
@@ -73,7 +74,7 @@ body.home #header {
                 &.header-button-important {
                     background-color: $wbg-blue;
                     background-color: rgba($wbg-blue, 0.75);
-                    border-color: $wbg-blue;
+                    border-color: rgba($wbg-blue, 0.5);
                     
                     &:hover, &:active {
                         background-color: $wbg-blue;

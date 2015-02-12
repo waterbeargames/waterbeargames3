@@ -53,12 +53,12 @@ function meta_options() {
             
             <div class="row<?php if ($section->has_multiple()) echo ' added-sections'; ?>">
                 <?php
-                if (count($wbg_columns) > 0 && $wbg_section_type == $section->get_group_name_slug()) {
+                if (!empty($wbg_columns) && $wbg_section_type == $section->get_group_name_slug()) {
                     foreach($wbg_columns as $wbg_column) {
                         echo $section->admin_column_markup($c, $wbg_column);
                         $c++;
                     }
-                } else {
+                } else if ($section->get_markup_attr()) {
                     echo $section->admin_column_markup($c);
                     $c++;
                 }
@@ -152,7 +152,11 @@ function save_options() {
         // Save the data
     
         update_post_meta($post_id, 'wbg_options', $_POST['wbg_options']);
-        update_post_meta($post_id, 'wbg_columns', $_POST['wbg_columns']);
+        
+        if ($_POST['wbg_columns']) {
+            update_post_meta($post_id, 'wbg_columns', $_POST['wbg_columns']);
+        }
+        
         update_post_meta($post_id, 'wbg_section_type', $_POST['wbg_section_type']);
         
         $wbg_section_type = get_post_meta($post->ID, 'wbg_section_type', true);

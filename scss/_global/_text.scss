@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h1, h2, h3 {
+h1, h2 {
     text-transform: uppercase;
 }
 
@@ -101,29 +101,29 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 40px;
-    font-size: 4rem;
-    line-height: 1.25;
+    font-size: 50px;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 40px;
+    font-size: 4rem;
 }
 
-h3, h4, h5, h6, p, li, th, td {
+h3, h4, h5, h6, li, th, td {
     font-family: $font-family-open-sans;
     line-height: 1.5;
+    color: #444;
 }
 
 h3 {
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 h4 {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 20px;
+    font-size: 2rem;
 }
 
 h5 {
@@ -138,10 +138,13 @@ h6 {
     font-size: 1.6rem;
 }
 
-p {
+p, li, th, td {
     font-size: 16px;
     font-size: 1.6rem;
     font-weight: $normal;
+}
+
+p {
     margin: 15px 0;
     margin: 1.5rem 0;
     line-height: 1.75;
@@ -165,5 +168,49 @@ a {
     
     &:hover, &:active {
         color: $wbg-light-blue;
+    }
+}
+
+.light-text, .dark-text .light-text {
+    h1, h2, h3, h4, h5, h6, p, th, td, li, a {
+        color: #fff;
+    }
+    
+    a.wbg-button {
+        &, &:hover, &:active {
+            color: #fff;
+        }
+    }
+    
+    a:hover, a:active {
+        color: $wbg-light-blue;
+    }
+    
+    hr {
+        background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11px" height="5px" viewBox="0 0 11 5" enable-background="new 0 0 11 5" xml:space="preserve"><circle fill="%23aabbcc" cx="2.5" cy="2.5" r="2.5"/></svg>');
+    }
+}
+
+.dark-text, .light-text .dark-text {
+    h1, h2 {
+        color: $wbg-blue2;
+    }
+    
+    h3, h4, h5, h6, p, th, td, li {
+        color: #444;
+    }
+    
+    a {
+        color: $wbg-blue;
+        
+        &.wbg-button {
+            &, &:hover, &:active {
+                color: #fff;
+            }
+        }
+    
+        &:hover, &:active {
+            color: $wbg-light-blue;
+        }
     }
 }

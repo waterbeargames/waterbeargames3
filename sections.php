@@ -21,37 +21,35 @@ foreach($page_sections as $page_section) :
     
     ?>
     
-<section id="<?php echo $page_section->post_name; ?>" class="wbg-<?php echo $wbg_section_type; ?>"<?php echo (!empty($wbg_options['background_image']) ? ' style="background-image: url(' . $wbg_options['background_image'] . ');"' : ''); ?>>
-    <?php if (!empty($wbg_options['title']) || !empty($wbg_options['main_content'])) : ?>
+<section id="<?php echo $page_section->post_name; ?>" class="wbg-<?php echo $wbg_section_type; ?> <?php echo $wbg_options['background_color']?>-background <?php echo $wbg_options['text_color']; ?>-text"<?php echo (!empty($wbg_options['background_image']) ? ' style="background-image: url(' . $wbg_options['background_image'] . ');"' : ''); ?>>
     <div class="row wbg-main-content">
         <div class="column xs-span12 md-span10 center">
-            <div class="wbg-area">
-                <?php
-                if (!empty($wbg_options['title'])) {
-                    echo '<div class="section-headline"><h2>' . $wbg_options['title'] . '</h2><hr />';
-                }
-                
-                if (!empty($wbg_options['main_content'])) {
-                    echo apply_filters('the_content', $wbg_options['main_content']);
-                }
-                ?>
+            <div class="wbg-area section-headline">
+                <h2><?php echo $wbg_options['title']; ?></h2>
+                <hr />
             </div>
+            <?php if (!empty($wbg_options['main_content'])) : ?>
+            <div class="wbg-area">
+                <?php echo apply_filters('the_content', $wbg_options['main_content']); ?>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
-    <?php endif; ?>
     <div class="row wbg-<?php echo $wbg_section_type; ?>-content">
         <?php
-        foreach($wbg_columns as $wbg_column) {
-            foreach($wbg_sections as $wbg_section) {
-                if ($wbg_section_type == $wbg_section->get_group_name_slug()) {
-                    // $markup() - the specific function needed to output this section's
-                    //             markup for the individual columns, created using
-                    //             the single name slug and the suffix '_markup'
-                    //
-                    // These specific methods can be found in 'wbg_markup.php'.
-                    $markup = $wbg_section->get_single_name_slug() . '_markup';
-                    echo $markup($c, $wbg_columns_num, $wbg_options, $wbg_column);
-                    $c++;
+        if ($wbg_columns) {
+            foreach($wbg_columns as $wbg_column) {
+                foreach($wbg_sections as $wbg_section) {
+                    if ($wbg_section_type == $wbg_section->get_group_name_slug()) {
+                        // $markup() - the specific function needed to output this section's
+                        //             markup for the individual columns, created using
+                        //             the single name slug and the suffix '_markup'
+                        //
+                        // These specific methods can be found in 'wbg_markup.php'.
+                        $markup = $wbg_section->get_single_name_slug() . '_markup';
+                        echo $markup($c, $wbg_columns_num, $wbg_options, $wbg_column);
+                        $c++;
+                    }
                 }
             }
         }

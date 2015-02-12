@@ -7,8 +7,9 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: $wbg-blue2;
-    background-color: rgba($wbg-blue2, 0.9);
+    background-color: $wbg-dark-blue;
+    background-color: rgba($wbg-dark-blue, 0.9);
+    box-shadow: 0 0 10px rgba(#000, 0.1);
     
     .row {
         display: table;
