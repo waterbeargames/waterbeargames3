@@ -16,7 +16,7 @@ function column_markup($current_col_num, $total_col_num, $options, $attrs) {
     }
     
     $output  = '<div class="column' . $column_classes . (!empty($attrs['center']) ? ' center' : '' ) . '">';
-    $output .= '<div class="wbg-area' . $text_background . '">';
+    $output .= '<div class="wbg-area wbg-area-background-' . $attrs['background_color'] . '">';
     $output .= apply_filters('the_content', $attrs['content']);
     $output .= '</div>';
     $output .= '</div>';

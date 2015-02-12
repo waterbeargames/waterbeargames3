@@ -47,14 +47,14 @@ body.home #header {
             .header-button {
                 display: inline-block;
                 vertical-align: middle;
-                width: 100px;
-                height: 100px;
+                width: 120px;
+                height: 120px;
                 margin: 0 10px;
                 margin: 0 1rem;
-                padding: 22px 10px;
+                padding: 25px 10px;
                 background-color: $wbg-light-blue;
                 background-color: rgba($wbg-light-blue, 0.75);
-                border: solid 2px $wbg-light-blue;
+                border: solid 10px $wbg-light-blue;
                 border-radius: 100%;
                 font-family: $font-family-futura-condensed;
                 font-size: 26px;

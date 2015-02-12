@@ -30,8 +30,10 @@ foreach($page_sections as $page_section) :
                 if (!empty($wbg_options['title'])) {
                     echo '<div class="section-headline"><h2>' . $wbg_options['title'] . '</h2><hr />';
                 }
-            
-                echo apply_filters('the_content', $wbg_options['main_content'])
+                
+                if (!empty($wbg_options['main_content'])) {
+                    echo apply_filters('the_content', $wbg_options['main_content']);
+                }
                 ?>
             </div>
         </div>

@@ -35,6 +35,8 @@ $header_buttons = get_option('wbg_header_buttons');
             </div>
         </div>
         <?php endif; ?>
+
+        <?php if (has_nav_menu('primary')) : ?>
         <nav id="nav">
             <div class="row">
                 <div class="column xs-span12">
@@ -75,4 +77,5 @@ $header_buttons = get_option('wbg_header_buttons');
                 </div>
             </div>
         </nav>
+        <?php endif; ?>
     </header>
