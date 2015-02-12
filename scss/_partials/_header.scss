@@ -1,0 +1,86 @@
+/*--------*/
+/* Header */
+/*--------*/
+
+body.home #header {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+    background-color: $wbg-light-blue;
+    background-image: url(../images/header-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    #header-content {
+        @extend %vertical-center-fix;
+        
+        #header-image {
+            box-sizing: content-box;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #fff;
+            background-color: rgba(#fff, 0.4);
+            border-radius: 100%;
+            
+            #header-image-inner {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#fff, 0.6);
+                border-radius: 100%;
+            }
+            
+            img {
+                @extend %vertical-center-fix;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+        
+        #header-buttons {
+            margin-top: 20px;
+            margin-top: 2rem;
+            text-align: center;
+            
+            .header-button {
+                display: inline-block;
+                vertical-align: middle;
+                width: 100px;
+                height: 100px;
+                margin: 0 10px;
+                margin: 0 1rem;
+                padding: 22px 10px;
+                background-color: $wbg-light-blue;
+                background-color: rgba($wbg-light-blue, 0.75);
+                border: solid 2px $wbg-light-blue;
+                border-radius: 100%;
+                font-family: $font-family-futura-condensed;
+                font-size: 26px;
+                letter-spacing: 1px;
+                line-height: 1;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                
+                &:hover, &:active {
+                    background-color: $wbg-light-blue;
+                    border-color: $wbg-light-blue;
+                    color: #fff;
+                }
+                
+                &.header-button-important {
+                    background-color: $wbg-blue;
+                    background-color: rgba($wbg-blue, 0.75);
+                    border-color: $wbg-blue;
+                    
+                    &:hover, &:active {
+                        background-color: $wbg-blue;
+                        border-color: $wbg-blue;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/*---------------*/
+/* Media Queries */
+/*---------------*/
+
+@media screen and (min-width: $size-sm) {
+}
+
+@media screen and (min-width: 601px) {
+    body.admin-bar #nav {
+        top: 46px;
+    }
+}
+
+@media screen and (min-width: $size-md) {
+    h1 {
+        font-size: 50px;
+        font-size: 5rem;
+    }
+    
+    h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+    
+    h3 {
+        font-size: 25px;
+        font-size: 2.5rem;
+    }
+    
+    h4 {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+    
+    .wbg-header .header-content {
+        height: 600px;
+    }
+    
+    #dl-menu {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: block;
+    }
+    
+    .wbg-main-content {
+        .section-headline {
+            hr {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 783px) {
+    body.admin-bar #nav {
+        top: 32px;
+    }
+}
+
+@media screen and (min-width: $size-lg) {
+}
+
+@media screen and (min-width: $size-xl) {
+}

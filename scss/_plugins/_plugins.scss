@@ -1,0 +1,31 @@
+/*-------------------*/
+/* Plugins Overrides */
+/*-------------------*/
+
+/* Contact Form 7 */
+
+.wpcf7-form {
+    span.wpcf7-not-valid-tip {
+        margin-top: -5px;
+        margin-top: -0.5rem;
+        padding: 0 5px;
+        background-color: rgba(#f00, 0.5);
+        font-size: 14px;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    
+    div.wpcf7-response-output {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 20px;
+        background-color: rgba(#000, 0.4);
+        border: 0;
+        color: #fff;
+    
+        &.wpcf7-mail-sent-ok {
+            background-color: #fff;
+            background-color: rgba(#fff, 0.5);
+        }
+    }
+}

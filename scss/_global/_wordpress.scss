@@ -1,0 +1,40 @@
+/*------------------------------*/
+/* Wordpress - Required Classes */
+/*------------------------------*/
+
+.alignleft, .alignright {
+    max-width: 50%;
+	margin-bottom: 10px;
+}
+
+.alignleft {
+	float: left;
+    clear: right;
+	margin-right: 10px;
+}
+
+.alignright {
+	float: right;
+    clear: left;
+	margin-left: 10px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 10px auto;
+}
+
+.wp-caption {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.wp-caption-text, .gallery-caption, .bypostauthor {
+    text-align: center;
+}
+
+/* Other Wordpress classes (not required to style) */
+
+.wp-post-image {
+    box-sizing: content-box;
+}

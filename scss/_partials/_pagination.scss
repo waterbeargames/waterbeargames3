@@ -1,0 +1,46 @@
+/*------------*/
+/* Pagination */
+/*------------*/
+
+#pagination {
+    @extend %clearfix;
+    margin-left: 0;
+    list-style: none;
+    
+    li {
+        display: inline-block;
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+    
+    a {
+        @extend %default-border-radius;
+        display: inline-block;
+        padding: 15px 25px;
+        background-color: #fff;
+        border: solid 2px #aaa;
+        text-decoration: none;
+        
+        &:hover {
+            background-color: #aaa;
+            border-color: transparent;
+            color: #fff;
+        }
+    }
+    
+    #newer-pages {
+        float: left;
+        
+        .fa {
+            margin-right: 5px;
+        }
+    }
+    
+    #older-pages {
+        float: right;
+        
+        .fa {
+            margin-left: 5px;
+        }
+    }
+}
