@@ -1,16 +1,17 @@
 <?php
 
-require_once('includes/wbg_helpers.php');
-require_once('includes/models/wbg_section.php');
+require_once('includes/page_builder/helpers.php');
+require_once('includes/page_builder/models/wbg_section.php');
 
-foreach (glob(get_stylesheet_directory() . '/includes/models/wbg_section_*.php') as $filename) {
+foreach (glob(get_stylesheet_directory() . '/includes/page_builder/models/wbg_section_*.php') as $filename) {
     include $filename;
 }
 
-require_once('includes/wbg_config.php');
-require_once('includes/wbg_markup.php');
-require_once('includes/wbg_page-builder.php');
-require_once('includes/wbg_settings.php');
+require_once('includes/page_builder/config.php');
+require_once('includes/page_builder/markup.php');
+require_once('includes/page_builder/page_builder.php');
+
+require_once('includes/theme_settings.php');
 
 // Register Menus
 function wbg_menus() {
