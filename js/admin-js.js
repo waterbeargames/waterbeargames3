@@ -136,45 +136,18 @@ jQuery('document').ready(function($){
             
             $wbgEditor.addClass('show');
     
-            $updateButton.click(function() {
+            $updateButton.click(function(e) {
+                e.preventDefault();
                 $textButton.trigger('click');
                 $originalTextBox.val($wbgEditorHTML.val());
                 $wbgEditor.removeClass('show');
                 $updateButton.off('click');
             });
     
-            $cancelButton.click(function() {
+            $cancelButton.click(function(e) {
+                e.preventDefault();
                 $wbgEditor.removeClass('show');
             });
-        });
-    };
-    
-    // Add icon
-    var $fontAwesomeLibrary = $('#wbg-font-awesome-library'),
-        $fontAwesomeMolecules = $('.font-awesome-molecule'),
-        $cancelIconButton = $('#wbg-cancel-icon');
-    
-    var openIconLibrary = function(column) {
-        column.find($('.wbg-add-fa-icon')).click(function(e) {
-            e.preventDefault();
-            $iconDisplay = $(this).siblings('i');
-            $iconInput = $(this).siblings('input');
-            
-            $fontAwesomeLibrary.addClass('show');
-            
-            $fontAwesomeMolecules.click(function() {
-                e.preventDefault();
-                $fontAwesomeLibrary.removeClass('show');
-                iconValue = $(this).children('i').attr('class');
-                
-                $iconInput.val(iconValue);
-                $iconDisplay.attr('class', iconValue);
-            })
-            
-            $cancelIconButton.click(function() {
-                e.preventDefault();
-                $fontAwesomeLibrary.removeClass('show');
-            })
         });
     };
     
@@ -184,7 +157,6 @@ jQuery('document').ready(function($){
         addImage(column);
         removeImage(column);
         openEditor(column);
-        openIconLibrary(column);
     };
     
     initColumn($allColumns);

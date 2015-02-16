@@ -83,14 +83,12 @@ h1, h2, h3, h4, h5, h6, ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $bold;
-    
     a {
         text-decoration: none;
     }
 }
 
-h1, h2 {
+h1, h2, h5 {
     text-transform: uppercase;
 }
 
@@ -113,6 +111,7 @@ h2 {
 h3, h4, h5, h6, li, th, td {
     font-family: $font-family-open-sans;
     line-height: 1.5;
+    font-weight: $semibold;
     color: #444;
 }
 
@@ -127,10 +126,8 @@ h4 {
 }
 
 h5 {
-    margin-bottom: 20px;
-    margin-bottom: 2rem;
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 h6 {

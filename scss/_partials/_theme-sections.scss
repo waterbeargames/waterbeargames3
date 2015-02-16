@@ -3,14 +3,12 @@
 /*----------*/
 
 /* Subsections inside each section */
-.wbg-main-content {
-    .section-headline {
-        padding-bottom: 0;
-        text-align: center;
-        
-        h2 {
-            margin-top: 0;
-        }
+.section-headline {
+    padding-bottom: 0;
+    text-align: center;
+    
+    h1, h2 {
+        margin-top: 0;
     }
 }
 

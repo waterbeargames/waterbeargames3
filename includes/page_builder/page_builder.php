@@ -130,7 +130,7 @@ function meta_options() {
 function save_options() {
 	global $post;
     $post_id = $post->ID;
-    $template = get_post_meta($post->ID, '_wp_page_template', true);
+    $template = get_post_meta($post_id, '_wp_page_template', true);
     
     if ($template == 'template-section.php') {
         // Verify if this is an auto save routine. 

@@ -11,6 +11,10 @@ require_once('includes/page_builder/config.php');
 require_once('includes/page_builder/markup.php');
 require_once('includes/page_builder/page_builder.php');
 
+foreach (glob(get_stylesheet_directory() . '/includes/custom_post_types/*.php') as $filename) {
+    include $filename;
+}
+
 require_once('includes/theme_settings.php');
 
 // Register Menus
@@ -28,8 +32,8 @@ function sidebar_widget_init() {
 		'id'            => 'main-sidebar',
 		'before_widget' => '<div class="sidebar-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
 	));
 }
 add_action('widgets_init', 'sidebar_widget_init');

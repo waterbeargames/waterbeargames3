@@ -33,4 +33,14 @@ function game_markup($current_col_num, $total_col_num, $options, $attrs) {
 function news_story_feature_markup($current_col_num, $total_col_num, $options, $attrs) {
 }
 
+function team_member_markup($current_col_num, $total_col_num, $options, $attrs) {
+    $output  = '<div class="column ' . span_classes($current_col_num, $total_col_num) . '">';
+    $output .= '<div class="wbg-area">';
+    $output .= '<a class="wbg-button wbg-large-button" href="/team-member/' . $options->post_name . '">' . $options->post_title . '</a>';
+    $output .= '</div>';
+    $output .= '</div>';
+    
+    return $output;
+}
+
 ?>

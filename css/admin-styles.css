@@ -32,7 +32,7 @@ main {
     padding-top: 40px;
     padding-bottom: 40px; }
     main > section:first-child {
-      padding-top: 150px; }
+      padding-top: 100px; }
     main > section ul, main > section ol {
       margin-left: 30px; }
 
@@ -554,6 +554,12 @@ body {
 #postdivrich {
   display: none; }
 
+#page_builder_options input, #page_builder_options select, #page_builder_options textarea, #team_member_options input, #team_member_options select, #team_member_options textarea, .toplevel_page_wbg_settings input, .toplevel_page_wbg_settings select, .toplevel_page_wbg_settings textarea {
+  width: 100%;
+  max-width: 100%; }
+  #page_builder_options input[type='checkbox'], #page_builder_options input[type='submit'], #page_builder_options select[type='checkbox'], #page_builder_options select[type='submit'], #page_builder_options textarea[type='checkbox'], #page_builder_options textarea[type='submit'], #team_member_options input[type='checkbox'], #team_member_options input[type='submit'], #team_member_options select[type='checkbox'], #team_member_options select[type='submit'], #team_member_options textarea[type='checkbox'], #team_member_options textarea[type='submit'], .toplevel_page_wbg_settings input[type='checkbox'], .toplevel_page_wbg_settings input[type='submit'], .toplevel_page_wbg_settings select[type='checkbox'], .toplevel_page_wbg_settings select[type='submit'], .toplevel_page_wbg_settings textarea[type='checkbox'], .toplevel_page_wbg_settings textarea[type='submit'] {
+    width: auto; }
+
 #page_builder_options .inside {
   /*------*/
   /* Text */
@@ -625,11 +631,9 @@ body {
   #page_builder_options .inside h1, #page_builder_options .inside h2, #page_builder_options .inside h3, #page_builder_options .inside h4, #page_builder_options .inside h5, #page_builder_options .inside h6, #page_builder_options .inside ul, #page_builder_options .inside ol {
     margin: 10px 0;
     margin: 1rem 0; }
-  #page_builder_options .inside h1, #page_builder_options .inside h2, #page_builder_options .inside h3, #page_builder_options .inside h4, #page_builder_options .inside h5, #page_builder_options .inside h6 {
-    font-weight: 700; }
-    #page_builder_options .inside h1 a, #page_builder_options .inside h2 a, #page_builder_options .inside h3 a, #page_builder_options .inside h4 a, #page_builder_options .inside h5 a, #page_builder_options .inside h6 a {
-      text-decoration: none; }
-  #page_builder_options .inside h1, #page_builder_options .inside h2 {
+  #page_builder_options .inside h1 a, #page_builder_options .inside h2 a, #page_builder_options .inside h3 a, #page_builder_options .inside h4 a, #page_builder_options .inside h5 a, #page_builder_options .inside h6 a {
+    text-decoration: none; }
+  #page_builder_options .inside h1, #page_builder_options .inside h2, #page_builder_options .inside h5 {
     text-transform: uppercase; }
   #page_builder_options .inside h1, #page_builder_options .inside h2 {
     font-family: "Futura MdCn BT", sans-serif;
@@ -644,6 +648,7 @@ body {
   #page_builder_options .inside h3, #page_builder_options .inside h4, #page_builder_options .inside h5, #page_builder_options .inside h6, #page_builder_options .inside li, #page_builder_options .inside th, #page_builder_options .inside td {
     font-family: "Open Sans", sans-serif;
     line-height: 1.5;
+    font-weight: 600;
     color: #444; }
   #page_builder_options .inside h3 {
     font-size: 25px;
@@ -652,10 +657,8 @@ body {
     font-size: 20px;
     font-size: 2rem; }
   #page_builder_options .inside h5 {
-    margin-bottom: 20px;
-    margin-bottom: 2rem;
-    font-size: 16px;
-    font-size: 1.6rem; }
+    font-size: 18px;
+    font-size: 1.8rem; }
   #page_builder_options .inside h6 {
     font-size: 16px;
     font-size: 1.6rem; }
@@ -712,11 +715,6 @@ body {
     color: #000; }
   #page_builder_options .inside #wbg-page-section-options {
     word-wrap: break-word; }
-    #page_builder_options .inside #wbg-page-section-options input, #page_builder_options .inside #wbg-page-section-options select, #page_builder_options .inside #wbg-page-section-options textarea {
-      width: 100%;
-      max-width: 100%; }
-      #page_builder_options .inside #wbg-page-section-options input[type='checkbox'], #page_builder_options .inside #wbg-page-section-options select[type='checkbox'], #page_builder_options .inside #wbg-page-section-options textarea[type='checkbox'] {
-        width: auto; }
     #page_builder_options .inside #wbg-page-section-options small {
       font-size: 10px;
       font-size: 1rem; }
@@ -834,10 +832,6 @@ body {
   border: solid 1px #888; }
 .toplevel_page_wbg_settings form .wp-color-result {
   height: auto; }
-.toplevel_page_wbg_settings form input, .toplevel_page_wbg_settings form select, .toplevel_page_wbg_settings form textarea {
-  width: 100%; }
-  .toplevel_page_wbg_settings form input[type='checkbox'], .toplevel_page_wbg_settings form input[type='submit'], .toplevel_page_wbg_settings form select[type='checkbox'], .toplevel_page_wbg_settings form select[type='submit'], .toplevel_page_wbg_settings form textarea[type='checkbox'], .toplevel_page_wbg_settings form textarea[type='submit'] {
-    width: auto; }
 .toplevel_page_wbg_settings form .column {
   padding-right: 10px; }
 

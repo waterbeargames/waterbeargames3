@@ -39,7 +39,22 @@ foreach($page_sections as $page_section) :
     </div>
     <div class="row wbg-<?php echo $wbg_section_type; ?>-content">
         <?php
-        if ($wbg_columns) {
+        if ($wbg_section_type == 'team-members') {
+            $args = array(
+                'orderby'           => 'menu_order',
+                'order'             => 'ASC',
+                'posts_per_page'    => -1,
+                'post_type'         => 'team-member'
+            );
+            $members = get_posts($args);
+            $members_num = count($members);
+            
+            foreach ($members as $member) {
+                $team_member_atts = get_post_meta($member->ID, 'wbg_team_member', true);
+                echo team_member_markup($c, $members_num, $member, $team_member_atts);
+                $c++;
+            }
+        } elseif ($wbg_columns) {
             foreach($wbg_columns as $wbg_column) {
                 foreach($wbg_sections as $wbg_section) {
                     if ($wbg_section_type == $wbg_section->get_group_name_slug()) {

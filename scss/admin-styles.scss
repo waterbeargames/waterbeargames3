@@ -17,6 +17,17 @@ body {
     display: none;
 }
 
+#page_builder_options, #team_member_options, .toplevel_page_wbg_settings {
+    input, select, textarea {
+        width: 100%;
+        max-width: 100%;
+    
+        &[type='checkbox'], &[type='submit'] {
+            width: auto;
+        }
+    }
+}
+
 #page_builder_options {
     .inside {
         @import '_global/_text';
@@ -42,15 +53,6 @@ body {
     
         #wbg-page-section-options {
             word-wrap: break-word;
-        
-            input, select, textarea {
-                width: 100%;
-                max-width: 100%;
-            
-                &[type='checkbox'] {
-                    width: auto;
-                }
-            }
         
             small {
                 font-size: 10px;
@@ -239,14 +241,6 @@ body {
         
         .wp-color-result {
             height: auto;
-        }
-        
-        input, select, textarea {
-            width: 100%;
-            
-            &[type='checkbox'], &[type='submit'] {
-                width: auto;
-            }
         }
         
         .column {

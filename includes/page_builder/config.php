@@ -11,7 +11,8 @@ global $wbgBlog;
 global $wbgColumns;
 global $wbgGames;
 global $wbgNews;
+global $wbgTeamMembers;
 
-$wbg_sections = [$wbgColumns, $wbgGames, $wbgBlog, $wbgNews];
+$wbg_sections = [$wbgColumns, $wbgGames, $wbgBlog, $wbgNews, $wbgTeamMembers];
 
 ?>

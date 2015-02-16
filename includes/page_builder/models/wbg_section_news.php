@@ -3,7 +3,7 @@ $wbgNews = new wbgSection;
 $wbgNews->set_group_name('News')
     ->set_group_name_slug('news')
     ->set_single_name('Featured Story')
-    ->set_single_name_slug('news_story_feature')
+    ->set_single_name_slug('column')
     ->set_multiple(true)
     ->set_admin_column_classes('xs-span12')
     ->set_markup_attr(array(
@@ -257,7 +257,7 @@ $wbgNews->set_group_name('News')
             'rows'          => 10
         )
     ))
-    ->set_options(array(
+    ->add_options(array(
         'posts_num'         => array(
             'name'          => 'Number of Posts to Display',
             'width'         => 'xs-span6 xs-right6',
