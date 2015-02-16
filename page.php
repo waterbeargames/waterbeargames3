@@ -10,20 +10,37 @@ $args = array(
 
 $sections = get_pages($args);
 
+?>
 
+<?php get_header(); ?>
+<main>
+<?php
 if (have_posts()) {
 	while (have_posts()) {
 		the_post();
-        get_header();
-        ?>
-    	<main>
+        
+        if (!empty(get_the_content())) : ?>
+        <section>
+            <div class="row">
+                <div class="column xs-span12">
+                    <div class="wbg-area">
+                        <?php if (count($sections) < 1) : ?>
+                        <div class="wbg-area section-headline">
+                            <h2><?php echo get_the_title(); ?></h2>
+                        </div>
+                        <div class="wbg-area">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
         <?php
-            the_content();
-            get_template_part('sections');
-        ?>
-        </main>
-        <?php
-        get_footer();
+        endif;
+        get_template_part('sections');
     }
 }
 ?>
+</main>
+<?php get_footer(); ?>

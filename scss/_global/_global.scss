@@ -22,11 +22,19 @@ main {
     > section {
         padding-top: 40px;
         padding-bottom: 40px;
+        
+        &:first-child {
+            padding-top: 150px;
+        }
     
         ul, ol {
             margin-left: 30px;
         }
     }
+}
+
+.home main > section:first-child {
+    padding-top: 40px;
 }
 
 section {

@@ -1,0 +1,12 @@
+/*------------*/
+/* Posts Loop */
+/*------------*/
+
+.nova-loop {
+    @extend %clearfix;
+    
+    .nova-button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

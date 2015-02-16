@@ -25,7 +25,7 @@ function sidebar_widget_init() {
 	register_sidebar(array(
 		'name'          => 'Main Sidebar',
 		'id'            => 'main-sidebar',
-		'before_widget' => '<div class="sidebar-widget column xs-span12 md-span4 lg-span12">',
+		'before_widget' => '<div class="sidebar-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',

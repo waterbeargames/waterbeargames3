@@ -19,7 +19,7 @@ $header_buttons = get_option('wbg_header_buttons');
 </head>
 <body <?php body_class(); ?>>
     <header id="header">
-        <?php if ($logo) : ?>
+        <?php if ($logo && is_front_page()) : ?>
         <div id="header-content">
             <div id="header-image">
                 <div id="header-image-inner">

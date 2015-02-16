@@ -48,8 +48,13 @@ main {
   main > section {
     padding-top: 40px;
     padding-bottom: 40px; }
+    main > section:first-child {
+      padding-top: 150px; }
     main > section ul, main > section ol {
       margin-left: 30px; }
+
+.home main > section:first-child {
+  padding-top: 40px; }
 
 section {
   position: relative;
@@ -87,7 +92,8 @@ a img {
   letter-spacing: 0.1rem;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #fff; }
   .wbg-button:hover, input[type='submit']:hover, .wbg-button:active, input[type='submit']:active {
     background-color: #5f5dc9;
     color: #fff; }
@@ -934,6 +940,12 @@ body.home #header {
 #sidebar ul {
   margin-left: 0;
   list-style: none; }
+  #sidebar ul li {
+    padding: 10px 0;
+    padding: 1rem 0;
+    border-bottom: solid 1px #abc; }
+    #sidebar ul li:last-child {
+      border-bottom: 0; }
   #sidebar ul a {
     text-decoration: none; }
 
@@ -996,16 +1008,16 @@ body.home #header {
   border-radius: 20px; }
   .wbg-area.wbg-area-white-background {
     background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.75); }
+    background-color: rgba(255, 255, 255, 0.9); }
   .wbg-area.wbg-area-light-blue-background {
     background-color: #eee;
-    background-color: rgba(238, 238, 238, 0.75); }
+    background-color: rgba(238, 238, 238, 0.9); }
   .wbg-area.wbg-area-blue-background {
     background-color: #344482;
-    background-color: rgba(52, 68, 130, 0.75); }
+    background-color: rgba(52, 68, 130, 0.9); }
   .wbg-area.wbg-area-black-background {
     background-color: #000;
-    background-color: rgba(0, 0, 0, 0.75); }
+    background-color: rgba(0, 0, 0, 0.9); }
 
 /*
  * Section backgrounds

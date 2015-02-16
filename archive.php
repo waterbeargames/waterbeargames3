@@ -10,10 +10,12 @@ $found_posts = $wp_query->found_posts;
         <section>
             <div class="row">
                 <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
-                    <h2>Date: <?php single_month_title(' '); ?></h2>
-                    <hr />
+                    <div class="wbg-area">
             		<?php
-            			if (have_posts()) {
+            			if (have_posts()) { ?>
+                            <h2>Date: <?php single_month_title(' '); ?></h2>
+                            <h4><?php echo $found_posts ?> post<?php echo ($found_posts != 1 ? 's' : ''); ?> in <?php single_month_title(' '); ?></h4>
+                            <?php
             				while (have_posts()) {
             					the_post();
                                 get_template_part('loop');
@@ -24,10 +26,11 @@ $found_posts = $wp_query->found_posts;
                             }
                         } else { ?>
                             <h1>No results</h1>
-                            <p>Sorry, no posts found.</p>
+                            <p>Sorry, no posts in <?php single_month_title(' '); ?>.</p>
                             <?php
                         }
                     ?>
+                    </div>
                 </div>
                 <?php
                 if (is_active_sidebar('main-sidebar')) {

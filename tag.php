@@ -11,11 +11,10 @@ $found_posts = $wp_query->found_posts;
         <section>
             <div class="row">
                 <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
-                    <div class="wbg-area">
     		        <?php
     			    if (have_posts()) { ?>
-                        <h2>Category: <?php single_cat_title(); ?></h2>
-                            <h4><?php echo $found_posts; ?> post<?php echo ($found_posts != 1 ? 's' : ''); ?> categorized as &quot;<?php echo single_cat_title(); ?>&quot;</h4>
+                        <h2>Tag: <?php single_tag_title(); ?></h2>
+                        <h4><?php echo $found_posts ?> post<?php echo ($found_posts != 1 ? 's' : ''); ?> tagged as &quot;<?php echo single_tag_title(); ?>&quot;</h4>
                         <hr />
                         <?php
     				    while (have_posts()) {
@@ -28,11 +27,10 @@ $found_posts = $wp_query->found_posts;
                         }
                     } else { ?>
                         <h1>No results</h1>
-                        <p>Sorry, no posts categorized as &quot;<?php echo get_search_query(); ?>&quot;.</p>
+                        <p>Sorry, no posts tagged as &quot;<?php echo single_tag_title(); ?>&quot;.</p>
                         <?php
                     }
                     ?>
-                    </div>
                 </div>
         
                 <?php

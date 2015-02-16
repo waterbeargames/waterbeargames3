@@ -24,10 +24,12 @@ foreach($page_sections as $page_section) :
 <section id="<?php echo $page_section->post_name; ?>" class="wbg-<?php echo $wbg_section_type; ?> <?php echo $wbg_options['background_color']?>-background <?php echo $wbg_options['text_color']; ?>-text"<?php echo (!empty($wbg_options['background_image']) ? ' style="background-image: url(' . $wbg_options['background_image'] . ');"' : ''); ?>>
     <div class="row wbg-main-content">
         <div class="column xs-span12 md-span10 center">
+            <?php if (!empty($wbg_options['title'])) : ?>
             <div class="wbg-area section-headline">
                 <h2><?php echo $wbg_options['title']; ?></h2>
                 <hr />
             </div>
+            <?php endif; ?>
             <?php if (!empty($wbg_options['main_content'])) : ?>
             <div class="wbg-area">
                 <?php echo apply_filters('the_content', $wbg_options['main_content']); ?>

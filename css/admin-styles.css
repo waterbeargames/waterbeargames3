@@ -31,8 +31,13 @@ main {
   main > section {
     padding-top: 40px;
     padding-bottom: 40px; }
+    main > section:first-child {
+      padding-top: 150px; }
     main > section ul, main > section ol {
       margin-left: 30px; }
+
+.home main > section:first-child {
+  padding-top: 40px; }
 
 section {
   position: relative;
@@ -70,7 +75,8 @@ a img {
   letter-spacing: 0.1rem;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #fff; }
   .wbg-button:hover, .wbg-button:active {
     background-color: #5f5dc9;
     color: #fff; }
