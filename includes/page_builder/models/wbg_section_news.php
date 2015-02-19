@@ -263,7 +263,7 @@ $wbgNews->set_group_name('News')
             'width'         => 'xs-span6 xs-right6',
             'input_type'    => 'select',
             'options'       => array(
-                'All'       => 'all',
+                'All'       => '-1',
                 '4'         => '4',
                 '8'         => '8'
             ),

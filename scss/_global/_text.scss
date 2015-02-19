@@ -197,5 +197,9 @@ a {
         &:hover, &:active {
             color: $wbg-light-blue;
         }
+        
+        &.wbg-button {
+            color: #fff;
+        }
     }
 }

@@ -560,10 +560,10 @@ body {
 #postdivrich {
   display: none; }
 
-#page_builder_options input, #page_builder_options select, #page_builder_options textarea, #team_member_options input, #team_member_options select, #team_member_options textarea, .toplevel_page_wbg_settings input, .toplevel_page_wbg_settings select, .toplevel_page_wbg_settings textarea {
+#page_builder_options input, #page_builder_options select, #page_builder_options textarea, #news_story_options input, #news_story_options select, #news_story_options textarea, #team_member_options input, #team_member_options select, #team_member_options textarea, .toplevel_page_wbg_settings input, .toplevel_page_wbg_settings select, .toplevel_page_wbg_settings textarea {
   width: 100%;
   max-width: 100%; }
-  #page_builder_options input[type='checkbox'], #page_builder_options input[type='submit'], #page_builder_options select[type='checkbox'], #page_builder_options select[type='submit'], #page_builder_options textarea[type='checkbox'], #page_builder_options textarea[type='submit'], #team_member_options input[type='checkbox'], #team_member_options input[type='submit'], #team_member_options select[type='checkbox'], #team_member_options select[type='submit'], #team_member_options textarea[type='checkbox'], #team_member_options textarea[type='submit'], .toplevel_page_wbg_settings input[type='checkbox'], .toplevel_page_wbg_settings input[type='submit'], .toplevel_page_wbg_settings select[type='checkbox'], .toplevel_page_wbg_settings select[type='submit'], .toplevel_page_wbg_settings textarea[type='checkbox'], .toplevel_page_wbg_settings textarea[type='submit'] {
+  #page_builder_options input[type='checkbox'], #page_builder_options input[type='submit'], #page_builder_options select[type='checkbox'], #page_builder_options select[type='submit'], #page_builder_options textarea[type='checkbox'], #page_builder_options textarea[type='submit'], #news_story_options input[type='checkbox'], #news_story_options input[type='submit'], #news_story_options select[type='checkbox'], #news_story_options select[type='submit'], #news_story_options textarea[type='checkbox'], #news_story_options textarea[type='submit'], #team_member_options input[type='checkbox'], #team_member_options input[type='submit'], #team_member_options select[type='checkbox'], #team_member_options select[type='submit'], #team_member_options textarea[type='checkbox'], #team_member_options textarea[type='submit'], .toplevel_page_wbg_settings input[type='checkbox'], .toplevel_page_wbg_settings input[type='submit'], .toplevel_page_wbg_settings select[type='checkbox'], .toplevel_page_wbg_settings select[type='submit'], .toplevel_page_wbg_settings textarea[type='checkbox'], .toplevel_page_wbg_settings textarea[type='submit'] {
     width: auto; }
 
 #page_builder_options .inside {
@@ -704,6 +704,8 @@ body {
     color: #323090; }
     #page_builder_options .inside .dark-text a:hover, #page_builder_options .inside .dark-text a:active, #page_builder_options .inside .light-text .dark-text a:hover, #page_builder_options .inside .light-text .dark-text a:active {
       color: #abc; }
+    #page_builder_options .inside .dark-text a.wbg-button, #page_builder_options .inside .light-text .dark-text a.wbg-button {
+      color: #fff; }
   #page_builder_options .inside * {
     box-sizing: border-box; }
   #page_builder_options .inside h4 {

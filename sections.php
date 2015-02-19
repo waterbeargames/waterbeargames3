@@ -54,6 +54,26 @@ foreach($page_sections as $page_section) :
                 echo team_member_markup($c, $members_num, $member, $team_member_atts);
                 $c++;
             }
+        } elseif ($wbg_section_type == 'news') {
+            $args = array(
+                'orderby'           => 'menu_order',
+                'order'             => 'ASC',
+                'posts_per_page'    => $wbg_options['posts_num'],
+                'post_type'         => 'news-story'
+            );
+            $news_stories = get_posts($args);
+            $news_stories_num = count($news_stories);
+
+            foreach($wbg_columns as $wbg_column) {
+                echo column_markup($c, $wbg_columns_num, $wbg_options, $wbg_column);
+                $c++;
+            }
+            
+            foreach($news_stories as $story) {
+                $news_story_atts = get_post_meta($story->ID, 'wbg_news_story', true);
+                echo news_story_markup($c, $news_stories_num, $story, $news_story_atts);
+                $c++;
+            }
         } elseif ($wbg_columns) {
             foreach($wbg_columns as $wbg_column) {
                 foreach($wbg_sections as $wbg_section) {

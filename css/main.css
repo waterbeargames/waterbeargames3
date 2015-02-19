@@ -761,6 +761,8 @@ a {
   color: #323090; }
   .dark-text a:hover, .dark-text a:active, .light-text .dark-text a:hover, .light-text .dark-text a:active {
     color: #abc; }
+  .dark-text a.wbg-button, .light-text .dark-text a.wbg-button {
+    color: #fff; }
 
 /*-------*/
 /* Forms */
@@ -1059,6 +1061,9 @@ body.home #header {
 .blue-background {
   background-color: #344482; }
 
+/*
+ * Sections
+ */
 /*-------------------*/
 /* Editable Sections */
 /*-------------------*/

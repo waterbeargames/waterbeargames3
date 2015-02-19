@@ -11,7 +11,7 @@ $wbgGames->set_group_name('Games')
             'name'          => 'Number of Posts to Display',
             'input_type'    => 'select',
             'options'       => array(
-                'All'       => 'all',
+                'All'       => '-1',
                 '3'         => '3',
                 '4'         => '4',
                 '8'         => '8'
