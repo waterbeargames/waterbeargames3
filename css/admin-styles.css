@@ -78,13 +78,19 @@ a img {
   text-transform: uppercase;
   color: #fff; }
   .wbg-button:hover, .wbg-button:active {
-    background-color: #5f5dc9;
-    color: #fff; }
+    background-color: #5f5dc9; }
   .wbg-button.wbg-large-button {
     width: 100%;
     padding: 15px 30px;
     font-size: 24px;
     font-size: 2.4rem; }
+
+.blue-background .wbg-button {
+  background-color: #f2eda5;
+  color: #323090; }
+  .blue-background .wbg-button:hover, .blue-background .wbg-button:active {
+    background-color: #fff;
+    color: #323090; }
 
 .column {
   float: left; }
@@ -686,8 +692,6 @@ body {
       color: #abc; }
   #page_builder_options .inside .light-text h1, #page_builder_options .inside .light-text h2, #page_builder_options .inside .light-text h3, #page_builder_options .inside .light-text h4, #page_builder_options .inside .light-text h5, #page_builder_options .inside .light-text h6, #page_builder_options .inside .light-text p, #page_builder_options .inside .light-text th, #page_builder_options .inside .light-text td, #page_builder_options .inside .light-text li, #page_builder_options .inside .light-text a, #page_builder_options .inside .dark-text .light-text h1, #page_builder_options .inside .dark-text .light-text h2, #page_builder_options .inside .dark-text .light-text h3, #page_builder_options .inside .dark-text .light-text h4, #page_builder_options .inside .dark-text .light-text h5, #page_builder_options .inside .dark-text .light-text h6, #page_builder_options .inside .dark-text .light-text p, #page_builder_options .inside .dark-text .light-text th, #page_builder_options .inside .dark-text .light-text td, #page_builder_options .inside .dark-text .light-text li, #page_builder_options .inside .dark-text .light-text a {
     color: #fff; }
-  #page_builder_options .inside .light-text a.wbg-button, #page_builder_options .inside .light-text a.wbg-button:hover, #page_builder_options .inside .light-text a.wbg-button:active, #page_builder_options .inside .dark-text .light-text a.wbg-button, #page_builder_options .inside .dark-text .light-text a.wbg-button:hover, #page_builder_options .inside .dark-text .light-text a.wbg-button:active {
-    color: #fff; }
   #page_builder_options .inside .light-text a:hover, #page_builder_options .inside .light-text a:active, #page_builder_options .inside .dark-text .light-text a:hover, #page_builder_options .inside .dark-text .light-text a:active {
     color: #abc; }
   #page_builder_options .inside .light-text hr, #page_builder_options .inside .dark-text .light-text hr {
@@ -698,8 +702,6 @@ body {
     color: #444; }
   #page_builder_options .inside .dark-text a, #page_builder_options .inside .light-text .dark-text a {
     color: #323090; }
-    #page_builder_options .inside .dark-text a.wbg-button, #page_builder_options .inside .dark-text a.wbg-button:hover, #page_builder_options .inside .dark-text a.wbg-button:active, #page_builder_options .inside .light-text .dark-text a.wbg-button, #page_builder_options .inside .light-text .dark-text a.wbg-button:hover, #page_builder_options .inside .light-text .dark-text a.wbg-button:active {
-      color: #fff; }
     #page_builder_options .inside .dark-text a:hover, #page_builder_options .inside .dark-text a:active, #page_builder_options .inside .light-text .dark-text a:hover, #page_builder_options .inside .light-text .dark-text a:active {
       color: #abc; }
   #page_builder_options .inside * {

@@ -173,12 +173,6 @@ a {
         color: #fff;
     }
     
-    a.wbg-button {
-        &, &:hover, &:active {
-            color: #fff;
-        }
-    }
-    
     a:hover, a:active {
         color: $wbg-light-blue;
     }
@@ -199,12 +193,6 @@ a {
     
     a {
         color: $wbg-blue;
-        
-        &.wbg-button {
-            &, &:hover, &:active {
-                color: #fff;
-            }
-        }
     
         &:hover, &:active {
             color: $wbg-light-blue;

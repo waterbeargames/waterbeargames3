@@ -95,13 +95,19 @@ a img {
   text-transform: uppercase;
   color: #fff; }
   .wbg-button:hover, input[type='submit']:hover, .wbg-button:active, input[type='submit']:active {
-    background-color: #5f5dc9;
-    color: #fff; }
+    background-color: #5f5dc9; }
   .wbg-button.wbg-large-button, input.wbg-large-button[type='submit'] {
     width: 100%;
     padding: 15px 30px;
     font-size: 24px;
     font-size: 2.4rem; }
+
+.blue-background .wbg-button, .blue-background input[type='submit'] {
+  background-color: #f2eda5;
+  color: #323090; }
+  .blue-background .wbg-button:hover, .blue-background input[type='submit']:hover, .blue-background .wbg-button:active, .blue-background input[type='submit']:active {
+    background-color: #fff;
+    color: #323090; }
 
 .column {
   float: left; }
@@ -742,8 +748,6 @@ a {
 
 .light-text h1, .light-text h2, .light-text h3, .light-text h4, .light-text h5, .light-text h6, .light-text p, .light-text th, .light-text td, .light-text li, .light-text a, .dark-text .light-text h1, .dark-text .light-text h2, .dark-text .light-text h3, .dark-text .light-text h4, .dark-text .light-text h5, .dark-text .light-text h6, .dark-text .light-text p, .dark-text .light-text th, .dark-text .light-text td, .dark-text .light-text li, .dark-text .light-text a {
   color: #fff; }
-.light-text a.wbg-button, .light-text a.wbg-button:hover, .light-text a.wbg-button:active, .dark-text .light-text a.wbg-button, .dark-text .light-text a.wbg-button:hover, .dark-text .light-text a.wbg-button:active {
-  color: #fff; }
 .light-text a:hover, .light-text a:active, .dark-text .light-text a:hover, .dark-text .light-text a:active {
   color: #abc; }
 .light-text hr, .dark-text .light-text hr {
@@ -755,8 +759,6 @@ a {
   color: #444; }
 .dark-text a, .light-text .dark-text a {
   color: #323090; }
-  .dark-text a.wbg-button, .dark-text a.wbg-button:hover, .dark-text a.wbg-button:active, .light-text .dark-text a.wbg-button, .light-text .dark-text a.wbg-button:hover, .light-text .dark-text a.wbg-button:active {
-    color: #fff; }
   .dark-text a:hover, .dark-text a:active, .light-text .dark-text a:hover, .light-text .dark-text a:active {
     color: #abc; }
 
@@ -948,7 +950,7 @@ body.home #header {
         display: block;
         padding: 10px 15px; }
         #nav-menu ul li a:hover, #nav-menu ul li a:active {
-          color: #ffff88; }
+          color: #f2eda5; }
 
 /*---------*/
 /* Sidebar */
