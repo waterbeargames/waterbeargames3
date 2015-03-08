@@ -651,10 +651,11 @@ body {
   #page_builder_options .inside h2 {
     font-size: 40px;
     font-size: 4rem; }
+  #page_builder_options .inside h3, #page_builder_options .inside h4 {
+    font-weight: 700; }
   #page_builder_options .inside h3, #page_builder_options .inside h4, #page_builder_options .inside h5, #page_builder_options .inside h6, #page_builder_options .inside li, #page_builder_options .inside th, #page_builder_options .inside td {
     font-family: "Open Sans", sans-serif;
     line-height: 1.5;
-    font-weight: 600;
     color: #444; }
   #page_builder_options .inside h3 {
     font-size: 25px;
@@ -662,6 +663,8 @@ body {
   #page_builder_options .inside h4 {
     font-size: 20px;
     font-size: 2rem; }
+  #page_builder_options .inside h5, #page_builder_options .inside h6 {
+    font-weight: 600; }
   #page_builder_options .inside h5 {
     font-size: 18px;
     font-size: 1.8rem; }

@@ -6,7 +6,7 @@
   font-size: 0;
   content: " "; }
 
-.wbg-button, input[type='submit'], .categories .cat-item a, input:not([type='submit']), select, textarea, #sidebar .sidebar-widget, #pagination a, .wbg-news .wbg-news-story .wbg-area {
+.wbg-button, input[type='submit'], .categories .cat-item a, input:not([type='submit']), select, textarea, #sidebar .sidebar-widget, #pagination a, .wbg-news .wbg-news-story .wbg-area, .wbg-blog-posts .wbg-blog-post .wbg-area {
   border-radius: 10px; }
 
 .row {
@@ -20,7 +20,7 @@ body.home #header #header-content, body.home #header #header-content #header-ima
   -ms-transform: translateY(-50%);
   transform: translateY(-50%) perspective(1px); }
 
-.wbg-news .wbg-news-content, .wbg-news .wbg-news-content > .column {
+.wbg-news .wbg-news-content, .wbg-blog-posts .wbg-blog-posts-content, .wbg-news .wbg-news-content > .column, .wbg-blog-posts .wbg-blog-posts-content > .column {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
@@ -702,10 +702,12 @@ h2 {
   font-size: 40px;
   font-size: 4rem; }
 
+h3, h4 {
+  font-weight: 700; }
+
 h3, h4, h5, h6, li, th, td {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 600;
   color: #444; }
 
 h3 {
@@ -715,6 +717,9 @@ h3 {
 h4 {
   font-size: 20px;
   font-size: 2rem; }
+
+h5, h6 {
+  font-weight: 600; }
 
 h5 {
   font-size: 18px;
@@ -1069,24 +1074,37 @@ body.home #header {
 /*
  * Sections
  */
-.wbg-news .wbg-news-content {
+.wbg-news .wbg-news-content, .wbg-blog-posts .wbg-blog-posts-content {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  .wbg-news .wbg-news-content > .column {
+  .wbg-news .wbg-news-content > .column, .wbg-blog-posts .wbg-blog-posts-content > .column {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto; }
-  .wbg-news .wbg-news-content .wbg-area {
+  .wbg-news .wbg-news-content .wbg-area, .wbg-blog-posts .wbg-blog-posts-content .wbg-area {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
-.wbg-news .wbg-news-story {
+
+.wbg-news .wbg-news-story-feature .wbg-area, .wbg-news .wbg-news-story .wbg-area, .wbg-blog-posts .wbg-blog-post .wbg-area {
+  margin: 30px 15px; }
+
+.wbg-news .wbg-news-story, .wbg-news .wbg-news-view-all,
+.wbg-blog-posts .wbg-blog-post, .wbg-blog-posts .wbg-blog-posts-view-all {
   text-align: center; }
-  .wbg-news .wbg-news-story .wbg-area {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: #cad5df; }
+
+.wbg-news .wbg-news-story .wbg-area, .wbg-blog-posts .wbg-blog-post .wbg-area {
+  padding-bottom: 90px;
+  background-color: #cad5df; }
+  .wbg-news .wbg-news-story .wbg-area .wbg-button, .wbg-news .wbg-news-story .wbg-area input[type='submit'], .wbg-blog-posts .wbg-blog-post .wbg-area .wbg-button, .wbg-blog-posts .wbg-blog-post .wbg-area input[type='submit'] {
+    position: absolute;
+    left: 15%;
+    bottom: 30px;
+    width: 70%; }
+
+.wbg-news .wbg-news-story-featured .wbg-area {
+  background-color: #eaeef2; }
 
 /*-------------------*/
 /* Editable Sections */

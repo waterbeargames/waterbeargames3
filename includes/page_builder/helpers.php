@@ -21,6 +21,22 @@ function hex2rgb($hex) {
     // return $rgb; // returns an array with the rgb values
 }
 
+function make_excerpt($post_content) {
+    $excerpt = $post_content;
+    $excerpt_length = 35;
+    $excerpt = strip_tags(strip_shortcodes($excerpt));
+    $words = explode(' ', $excerpt, $excerpt_length + 1);
+
+    if (count($words) > $excerpt_length) {
+        array_pop($words);
+        array_push($words, '…');
+        $excerpt = implode(' ', $words);
+    }
+
+    $excerpt = '<p>' . $excerpt . '</p>';
+    return $excerpt;
+}
+
 function span_classes($current_col_num, $total_col_num) {
     $span_classes = 'xs-span12 md-span6';
     

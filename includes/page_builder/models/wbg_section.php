@@ -98,6 +98,22 @@ class wbgSection {
             'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'image'
         ),
+        'background_position'   => array(
+            'name'          => 'Background Position',
+            'width'         => 'xs-span12 sm-span6',
+            'input_type'    => 'select',
+            'options'       => array(
+                'center center' => 'center center',
+                'center top'    => 'center top',
+                'center bottom' => 'center bottom',
+                'left center'   => 'left center',
+                'left top'      => 'left top',
+                'left bottom'   => 'left bottom',
+                'right center'  => 'right center',
+                'right top'     => 'right top',
+                'right bottom'  => 'right bottom'
+            )
+        ),
         'background_color'  => array(
             'name'          => 'Background Color',
             'width'         => 'xs-span12 sm-span6',
@@ -111,7 +127,7 @@ class wbgSection {
         ),
         'text_color'        => array(
             'name'          => 'Text Color Scheme',
-            'width'         => 'xs-span6',
+            'width'         => 'xs-span12 sm-span6',
             'input_type'    => 'select',
             'options'       => array(
                 'Dark'      => 'dark',

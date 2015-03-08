@@ -108,10 +108,13 @@ h2 {
     font-size: 4rem;
 }
 
+h3, h4 {
+    font-weight: $bold;
+}
+
 h3, h4, h5, h6, li, th, td {
     font-family: $font-family-open-sans;
     line-height: 1.5;
-    font-weight: $semibold;
     color: #444;
 }
 
@@ -123,6 +126,10 @@ h3 {
 h4 {
     font-size: 20px;
     font-size: 2rem;
+}
+
+h5, h6 {
+    font-weight: $semibold;
 }
 
 h5 {
