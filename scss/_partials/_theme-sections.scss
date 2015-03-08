@@ -65,7 +65,27 @@
 
 .wbg-news {
     .wbg-news-content {
+        @extend %display-flex;
+        @include flex-wrap(wrap);
+
+        > .column {
+            @extend %display-flex;
+            @include flex(0, 1, auto);
+        }
+
         .wbg-area {
+            @include flex(1, 1, auto);
+        }
+    }
+
+    .wbg-news-story {
+        text-align: center;
+        
+        .wbg-area {
+            @extend %default-border-radius;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: lighten($wbg-light-blue, 10%);
         }
     }
 }

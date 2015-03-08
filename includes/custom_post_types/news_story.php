@@ -8,7 +8,7 @@ function news_story_init() {
 			'singular_name' => __('News Story')
 		),
         'public' => true,
-        'show_ui' => true
+        'has_archive' => true
 	));
 }
 add_action('init', 'news_story_init');

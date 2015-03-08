@@ -56,8 +56,8 @@ foreach($page_sections as $page_section) :
             }
         } elseif ($wbg_section_type == 'news') {
             $args = array(
-                'orderby'           => 'menu_order',
-                'order'             => 'ASC',
+                'orderby'           => 'date',
+                'order'             => 'DESC',
                 'posts_per_page'    => $wbg_options['posts_num'],
                 'post_type'         => 'news-story'
             );
@@ -68,12 +68,18 @@ foreach($page_sections as $page_section) :
                 echo column_markup($c, $wbg_columns_num, $wbg_options, $wbg_column);
                 $c++;
             }
-            
+
             foreach($news_stories as $story) {
                 $news_story_atts = get_post_meta($story->ID, 'wbg_news_story', true);
                 echo news_story_markup($c, $news_stories_num, $story, $news_story_atts);
                 $c++;
-            }
+            } ?>
+			<div class="column xs-span12">
+				<div class="wbg-area">
+					<a class="wbg-button" href="/news-story">View All News Stories</a>
+				</div>
+			</div>
+			<?php
         } elseif ($wbg_columns) {
             foreach($wbg_columns as $wbg_column) {
                 foreach($wbg_sections as $wbg_section) {

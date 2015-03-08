@@ -31,12 +31,12 @@ function game_markup($current_col_num, $total_col_num, $options, $attrs) {
 }
 
 function news_story_markup($current_col_num, $total_col_num, $options, $attrs) {
-    $output  = '<div class="column ' . span_classes($current_col_num, $total_col_num) . '">';
+    $output  = '<div class="column wbg-news-story ' . span_classes($current_col_num, $total_col_num) . '">';
     $output .= '<div class="wbg-area">';
     $output .= '<h4>' . $options->post_title . '</h4>';
     $output .= '<h6>' . $attrs['media'] . '</h6>';
     $output .= '<h6>' . date('F j, Y', strtotime($options->post_date)) . '</h6>';
-    $output .= '<a class="wbg-button" href="/team-member/' . $options->post_name . '">Read More</a>';
+    $output .= '<a class="wbg-button" href="' . $attrs['link'] . '" target="_blank">View Story</a>';
     $output .= '</div>';
     $output .= '</div>';
     
