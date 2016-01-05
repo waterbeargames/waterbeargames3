@@ -1,0 +1,196 @@
+/*----------------*/
+/* Navigation Bar */
+/*----------------*/
+
+#nav {
+    @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: $medium-gray;
+    background-color: rgba($medium-gray, 0.9);
+    
+    .row {
+        @include align-items(center);
+        height: 70px;
+        padding: 5px 15px;
+    }
+    
+    ul {
+        margin: 0;
+    }
+    
+    img {
+        display: block;
+        width: auto;
+        max-height: 50px;
+        
+        @include breakpoint($size-md) {
+            margin-left: 15px;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        
+        img {
+            /* Fix blurriness when scaling/transitioning */
+            @include filter(blur(0));
+            /* Fix for blur filter causing issues in IE9 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+            @include transition(all 0.4s ease);
+        }
+        
+        &:hover, &:active {
+            img {
+                opacity: 0.75;;
+            }
+        }
+    }
+}
+
+@include breakpoint(601px) {
+    body.admin-bar #nav {
+        top: 46px;
+    }
+}
+
+@include breakpoint(783px) {
+    body.admin-bar #nav {
+        top: 32px;
+    }
+}
+
+/* Mobile menu */
+#dl-menu.dl-menuwrapper {
+    float: right;
+    height: 45px;
+    
+    button, ul {
+        right: 0;
+    }
+    
+    button {
+        position: absolute;
+        top: 0;
+        border-radius: 0;
+        @include transition(all 0.4s ease);
+    }
+    
+    ul {
+        @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+        top: 50px;
+        left: auto;
+        width: 250px;
+        
+        li {
+            margin: 0;
+        }
+    }
+    
+    a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    
+    li.dl-back:after, li > a:not(:only-child):after {
+        font-family: 'FontAwesome';
+        font-size: 18px;
+        line-height: 40px;
+        content: '\f0da';
+    }
+}
+
+/* Desktop menu */
+#nav-menu {
+    display: none;
+    
+    ul {
+        margin: 0;
+        list-style: none;
+        text-align: right;
+    
+        li {
+            position: relative;
+            vertical-align: middle;
+            display: inline-block;
+        
+            a {
+                display: block;
+                padding: 10px 15px;
+                
+                &:hover, &:active {
+                    opacity: 0.75;
+                }
+            }
+        }
+        
+        .menu-item-has-children {
+            position: relative;
+        }
+        
+        ul {
+            @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+            @include transition(visibility 0.4s ease, opacity 0.4s ease);
+            position: absolute;
+            visibility: hidden;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            width: 250px;
+            background-color: $medium-gray;
+            background-color: rgba($medium-gray, 0.9);
+            text-align: left;
+            opacity: 0;
+            
+            &.show {
+                z-index: 2;
+                visibility: visible;
+                opacity: 1;
+            }
+            
+            &.show-adjust {
+                left: auto;
+                right: 0;
+            }
+            
+            li {
+                display: block;
+                
+                &.menu-item-has-children > a {
+                    padding-right: 25px;
+                    
+                    &:after {
+                        position: absolute;
+                        top: 9px;
+                        right: 10px;
+                        display: block;
+                        font-family: 'FontAwesome';
+                        content: '\f0da';
+                    }
+                }
+            }
+            
+            ul {
+                top: 0;
+                left: 100%;
+                
+                &.show-adjust {
+                    left: -100%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint($size-md) {
+    #dl-menu {
+        display: none;
+    }
+    
+    #nav-menu {
+        display: block;
+    }
+}

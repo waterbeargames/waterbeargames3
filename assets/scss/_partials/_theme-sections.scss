@@ -1,0 +1,55 @@
+/*-----------------*/
+/* Puzzle Sections */
+/*-----------------*/
+
+/* Section backgrounds */
+
+.white-background {
+    background-color: #fff;
+}
+
+.gray-background {
+    background-color: $light-gray;
+}
+
+/* Subsections inside each section */
+
+.puzzle-section-headline {
+    text-align: center;
+    
+    .column-inner {
+        padding-bottom: 0;
+        
+        > *:first-child {
+            margin-top: 0;
+        }
+        
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.puzzle-background-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.85;
+}
+
+/*
+ * The sections
+ */
+
+.puzzle-features-content, .puzzle-team-members-content {
+    > .column {
+        @include display-flex;
+    }
+    
+    .column-inner {
+        @include flex(1 1 auto);
+        min-width: 0;
+    }
+}

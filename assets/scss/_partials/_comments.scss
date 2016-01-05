@@ -1,0 +1,53 @@
+/*----------*/
+/* Comments */
+/*----------*/
+
+.comment {
+    padding: 1.5rem 2rem;
+    border-bottom: solid 1px $light-gray;
+    list-style: none;
+    
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.comment-meta {
+    a {
+        text-decoration: none;
+    }
+}
+
+.comment-reply-link, #cancel-comment-reply-link {
+    @extend %puzzle-button;
+}
+
+.comment-reply-link {
+    line-height: 1;
+}
+
+.page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: $light-gray;
+    text-decoration: none;
+    
+    &.current {
+        background-color: $medium-gray;
+        color: #fff;
+    }
+}
+
+#cancel-comment-reply-link {
+    padding: 0.5rem;
+}
+
+.comment-respond {
+    margin-top: 2rem;
+}
+
+.comment-form {
+    .comment-form-comment, .form-submit {
+        margin: 0;
+    }
+}

@@ -1,0 +1,39 @@
+/*---------*/
+/* Sidebar */
+/*---------*/
+
+#sidebar {
+    .sidebar-widget {
+        margin: 3rem 0;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    
+    .post-date {
+        margin-left: 5px;
+    }
+    
+    .screen-reader-text {
+        display: none;
+    }
+    
+    ul {
+        margin-left: 0;
+        list-style: none;
+        
+        li {
+            padding: 1rem 0;
+            border-bottom: solid 1px $light-gray;
+            
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    }
+}

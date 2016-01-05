@@ -1,0 +1,38 @@
+/*------------------*/
+/* Single Post Page */
+/*------------------*/
+
+.single-post-meta {
+    h4, h6 {
+        margin: 0.5rem 0;
+    }
+}
+
+.single-post-content {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: solid 1px $medium-gray;
+    
+    &.comments-open {
+        border-bottom: solid 1px $medium-gray;
+    }
+}
+
+.single-post-page-links {
+    font-weight: $bold;
+    
+    span {
+        display: inline-block;
+        padding: 0 1rem;
+        background-color: $medium-gray;
+    }
+    
+    a {
+        display: inline-block;
+        background-color: $light-gray;
+        
+        span {
+            background-color: transparent;
+        }
+    }
+}

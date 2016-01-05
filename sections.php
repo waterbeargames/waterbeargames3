@@ -1,141 +1,96 @@
 <?php
+$page_sections = get_post_meta($post->ID, 'puzzle_page_sections', true);
 
-global $wbg_sections;
-
-$args = array(
-    'sort_column'   => 'menu_order',
-    'sort_order'    => 'ASC',
-    'child_of'      => $post->ID,
-    'meta_key'      => '_wp_page_template',
-    'meta_value'    => 'template-section.php'
-);
-
-$page_sections = get_pages($args);
-
-foreach($page_sections as $page_section) :
-    $c = 0;
-    $wbg_options = get_post_meta($page_section->ID, 'wbg_options', true);
-    $wbg_columns = get_post_meta($page_section->ID, 'wbg_columns', true);
-    $wbg_columns_num = count($wbg_columns);
-    $wbg_section_type = get_post_meta($page_section->ID, 'wbg_section_type', true);
+if (!empty($page_sections)) :
+    $s = 0;
     
-    $style = '';
+    foreach ($page_sections as $page_section) :
+        $puzzle_options = $page_section['options'];
+        $puzzle_columns = $page_section['columns'];
+        $puzzle_columns_num = count($puzzle_columns);
+        $puzzle_section_type = $page_section['type'];
     
-    if (!empty($wbg_options['background_image'])) {
-        $style = ' style="background-image: url(' . $wbg_options['background_image'] . ');';
+        $main_content = (!empty($puzzle_options['main_content']) ? $puzzle_options['main_content'] : false);
+    
+        $background_color = (!empty($puzzle_options['background_color']) ? ' ' . $puzzle_options['background_color'] : '');
+        $background_image = (!empty($puzzle_options['background_image']) ? ' ' . wp_get_attachment_url($puzzle_options['background_image']) : false);
+        $text_color_scheme = (!empty($puzzle_options['text_color_scheme']) ? ' ' . $puzzle_options['text_color_scheme'] : '');
+        $padding_top = (!empty($puzzle_options['padding_top']) ? ' ' . $puzzle_options['padding_top'] . '-padding-top' : '');
+        $padding_bottom = (!empty($puzzle_options['padding_bottom']) ? ' ' . $puzzle_options['padding_bottom'] . '-padding-bottom' : '');
+        $open_one_accordion_at_a_time = (!empty($puzzle_options['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
+    
+        $section_classes = $puzzle_section_type . $background_color . $text_color_scheme . $padding_top . $padding_bottom . $open_one_accordion_at_a_time;
         
-        if (!empty($wbg_options['background_position'])) {
-            $style .= ' background-position: ' . $wbg_options['background_position'] . ';';
-        }
-        
-        $style .= '"';
-    }
-    
-    ?>
-    
-<section id="<?php echo $page_section->post_name; ?>" class="wbg-<?php echo $wbg_section_type; ?> <?php echo $wbg_options['background_color']?>-background <?php echo $wbg_options['text_color']; ?>-text"<?php echo $style; ?>>
-    <div class="row wbg-main-content">
-        <div class="column xs-span12 md-span10 center">
-            <?php if (!empty($wbg_options['title'])) : ?>
-            <div class="wbg-area section-headline">
-                <h2><?php echo $wbg_options['title']; ?></h2>
-                <hr />
-            </div>
-            <?php endif; ?>
-            <?php if (!empty($wbg_options['main_content'])) : ?>
-            <div class="wbg-area">
-                <?php echo apply_filters('the_content', $wbg_options['main_content']); ?>
-            </div>
-            <?php endif; ?>
-        </div>
-    </div>
-    <div class="row wbg-<?php echo $wbg_section_type; ?>-content">
-        <?php
-        if ($wbg_section_type == 'team-members') {
-            $args = array(
-                'orderby'           => 'menu_order',
-                'order'             => 'ASC',
-                'posts_per_page'    => -1,
-                'post_type'         => 'team-member'
-            );
-            $members = get_posts($args);
-            $members_num = count($members);
-            
-            foreach ($members as $member) {
-                $team_member_atts = get_post_meta($member->ID, 'wbg_team_member', true);
-                echo team_member_markup($c, $members_num, $member, $team_member_atts);
-                $c++;
-            }
-        } elseif ($wbg_section_type == 'news') {
-            $args = array(
-                'orderby'           => 'date',
-                'order'             => 'DESC',
-                'posts_per_page'    => $wbg_options['posts_num'],
-                'post_type'         => 'news-story'
-            );
-            $news_stories = get_posts($args);
-            $news_stories_num = count($news_stories);
-
-            foreach ($wbg_columns as $wbg_column) {
-                echo news_story_featured_markup($c, $wbg_columns_num, $wbg_options, $wbg_column);
-                $c++;
-            }
-
-            foreach ($news_stories as $story) {
-                $news_story_atts = get_post_meta($story->ID, 'wbg_news_story', true);
-                echo news_story_markup($c, $news_stories_num, $story, $news_story_atts);
-                $c++;
-            } ?>
-            <div class="column xs-span8 md-span6 center wbg-news-view-all">
-                <div class="wbg-area">
-                    <p><a class="wbg-button wbg-large-button" href="/news-story">View All News Stories</a></p>
-                </div>
-            </div>
-            <?php
-        } elseif ($wbg_section_type == 'blog-posts') {
-            $args = array(
-                'orderby'           => 'date',
-                'order'             => 'DESC',
-                'posts_per_page'    => $wbg_options['posts_num'],
-                'post_type'         => 'post'
-            );
-            $blog_posts = get_posts($args);
-            $blog_posts_num = count($news_stories);
-            
-            foreach ($blog_posts as $blog_post) {
-                echo blog_post_markup($c, $blog_posts_num, $blog_post, array());
-                $c++;
-            } ?>
-            <div class="column xs-span8 md-span6 center wbg-blog-posts-view-all">
-                <div class="wbg-area">
-                    <p><a class="wbg-button wbg-large-button" href="/blog">View All Blog Posts</a></p>
-                </div>
-            </div>
-            <?php
-        } elseif ($wbg_columns) {
-            foreach($wbg_columns as $wbg_column) {
-                foreach($wbg_sections as $wbg_section) {
-                    if ($wbg_section_type == $wbg_section->get_group_name_slug()) {
-                        // $markup() - the specific function needed to output this section's
-                        //             markup for the individual columns, created using
-                        //             the single name slug and the suffix '_markup'
-                        //
-                        // These specific methods can be found in 'wbg_markup.php'.
-                        $markup = $wbg_section->get_single_name_slug() . '_markup';
-                        echo $markup($c, $wbg_columns_num, $wbg_options, $wbg_column);
-                        $c++;
-                    }
-                }
-            }
+        if (!empty($puzzle_options['id'])) {
+            $section_id = $puzzle_options['id'];
+        } elseif (!empty($puzzle_options['headline'])) {
+            $section_id = to_slug($puzzle_options['headline']);
+        } else {
+            $section_id = 'section-' . ($s + 1);
         }
         ?>
-    </div>
-    <?php
-    if (current_user_can('manage_options')) {
-        echo '<a class="wbg-edit-section-button" href="' . get_site_url() . '/wp-admin/post.php?post=' . $page_section->ID . '&action=edit"><i class="fa fa-pencil"></i> Edit</a>';
-    }
-    ?>
-</section>
-<?php
-endforeach;
+    
+        <section id="<?php echo $section_id; ?>" class="puzzle-<?php echo $section_classes; ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
+            <?php if (!empty($puzzle_options['overlay'])) : ?>
+            <div class="puzzle-background-overlay <?php echo $background_color; ?>"></div>
+            <?php endif; ?>
+        
+            <?php if (!empty($puzzle_options['headline'])) : ?>
+            <div class="row puzzle-section-headline">
+                <div class="column xs-span12">
+                    <div class="column-inner">
+                        <h2><?php echo $puzzle_options['headline']; ?></h2>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if (!empty($main_content)) : ?>
+            <div class="row puzzle-main-content">
+                <div class="column xs-span12">
+                    <div class="column-inner">
+                        <?php echo apply_filters('the_content', $main_content); ?>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+    
+            <?php if (!empty($puzzle_columns)) : ?>
+            <div class="row puzzle-<?php echo $puzzle_section_type; ?>-content">
+                <?php
+                $c = 0;
+                $loop_file = 'theme/loops/' . $puzzle_section_type . '.php';
+        
+                foreach($puzzle_columns as $puzzle_column) {
+                    include(locate_template($loop_file));
+                    $c++;
+                }
+                ?>
+            </div>
+            <?php endif; ?>
+        </section>
+        <?php
+        if ($puzzle_section_type == 'header' && $puzzle_columns_num > 1) :
+            $owl_autoplay = (!empty($puzzle_options['speed']) ? $puzzle_options['speed'] : '10000');
+            $owl_navigation = (!empty($puzzle_options['hide_arrows']) ? 'false' : 'true');
+            $owl_pagination = (!empty($puzzle_options['hide_pagination']) ? 'false' : 'true');
+            ?>
+            <script id="<?php echo $section_id; ?>-carousel-script">
+            jQuery('#<?php echo $section_id; ?> .puzzle-header-content').owlCarousel({
+                items: 1,
+                singleItem: true,
+                autoPlay: <?php echo $owl_autoplay; ?>,
+                navigation: <?php echo $owl_navigation; ?>,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                pagination: <?php echo $owl_pagination; ?>,
+                transitionStyle: 'fade'
+            });
+            jQuery('#<?php echo $section_id; ?>-carousel-script').remove();
+            </script>
+        <?php
+        endif;
+        
+        $s++;
+    endforeach;
+endif;
 ?>

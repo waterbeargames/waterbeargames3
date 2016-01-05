@@ -1,0 +1,19 @@
+/*------------*/
+/* Posts Loop */
+/*------------*/
+
+.puzzle-loop {
+    @extend %clearfix;
+    padding: 3rem 0;
+    border-top: solid 1px $medium-gray;
+    
+    &:first-child {
+        padding-top: 0;
+        border-top: 0;
+    }
+    
+    .puzzle-button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

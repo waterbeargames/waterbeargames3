@@ -1,0 +1,61 @@
+/*--------*/
+/* Global */
+/*--------*/
+
+html {
+    // Allows for rems to size similar to px
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    font: 14px / 1.5 $open-sans;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+    
+    @include breakpoint($size-md) {
+        font-size: 1.6rem;
+    }
+}
+
+main {
+    display: block;
+    
+    > section {
+        &:first-child {
+            padding-top: 120px;
+        
+            &.puzzle-header {
+                padding-top: 0;
+            }
+        }
+    }
+    
+    ul, ol {
+        margin-left: 3rem;
+    }
+}
+
+section {
+    position: relative;
+    padding: 30px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &.no-padding-top {
+        padding-top: 0;
+    }
+    
+    &.no-padding-bottom {
+        padding-bottom: 0;
+    }
+    
+    &.large-padding-top {
+        padding-top: 60px;
+    }
+    
+    &.large-padding-bottom {
+        padding-bottom: 60px;
+    }
+}

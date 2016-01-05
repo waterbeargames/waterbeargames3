@@ -1,0 +1,70 @@
+/*-----------------*/
+/* Utility Classes */
+/*-----------------*/
+
+%puzzle-button {
+    @include transition (all 0.4s ease);
+    @extend %default-border-radius;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: $medium-gray;
+    border: solid 1px $medium-gray;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    
+    &:hover {
+        color: #fff;
+    }
+}
+
+.puzzle-button {
+    @extend %puzzle-button;
+    
+    &.puzzle-button-white, &.puzzle-button-transparent:hover {
+        background-color: #fff;
+        border-color: #fff;
+    }
+    
+    &.puzzle-button-black {
+        background-color: #000;
+        border-color: #000;
+    }
+    
+    &.puzzle-button-transparent {
+        background-color: transparent;
+        border-color: #fff;
+    }
+    
+    &.puzzle-button-has-icon {
+        position: relative;
+        padding-right: 20px;
+        
+        &:before {
+            position: absolute;
+            right: 8px;
+            display: inline-block;
+            font-family: 'FontAwesome';
+            content: '\f01a';
+        }
+    }
+}
+
+.primary-color-background {
+    .puzzle-button {
+        &.puzzle-button-white {
+            background-color: #fff;
+            border-color: #fff;
+        }
+        
+        &.puzzle-button-black {
+            background-color: #000;
+            border-color: #000;
+        }
+        
+        &.puzzle-button-transparent {
+            background-color: transparent;
+            border-color: #fff;
+        }
+    }
+}

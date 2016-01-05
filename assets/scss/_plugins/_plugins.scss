@@ -1,0 +1,112 @@
+/*-------------------*/
+/* Plugins Overrides */
+/*-------------------*/
+
+/*
+ * All in One Event Calendar
+ */
+
+/* Agenda view */
+.ai1ec-agenda-widget-view, .ai1ec-agenda-view {
+    .ai1ec-date {
+        background: none;
+        border: 0;
+        
+        &.ai1ec-today {
+            background: none;
+            border: 0;
+        }
+    }
+    
+    .ai1ec-year {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    
+    .ai1ec-title, .ai1ec-date-title {
+        background: $light-gray;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+.gray-background {
+    .ai1ec-agenda-widget-view, .ai1ec-agenda-view {
+        .ai1ec-title, .ai1ec-date-title {
+            background: #fff;
+        }
+    }
+}
+
+.ai1ec-agenda-view {
+    .ai1ec-event {
+        &.ai1ec-expanded, &:hover {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        
+        .ai1ec-event-title {
+            font-size: 20px;
+        }
+        
+        .ai1ec-event-time {
+            font-size: 14px;
+        }
+    }
+}
+
+.ai1ec-agenda-widget-view {
+    .ai1ec-event > a {
+        border: 0;
+        
+        .ai1ec-allday-badge {
+            display: none;
+        }
+    }
+}
+
+/* Monthly view */
+
+.ai1ec-month-view .ai1ec-date {
+    text-shadow: none;
+}
+
+/* Miscellaneous */
+
+.ai1ec-dropdown-menu, .ai1ec-btn-group.ai1ec-open .ai1ec-dropdown-toggle, .ai1ec-popover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ai1ec-month-view .ai1ec-allday .ai1ec-event, .ai1ec-month-view .ai1ec-multiday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event {
+    text-shadow: none;
+}
+
+/* Contact Form 7 */
+
+.wpcf7-form {
+    span.wpcf7-not-valid-tip {
+        margin-top: -5px;
+        margin-top: -0.5rem;
+        padding: 0 20px;
+        background-color: rgba(#f00, 0.5);
+        font-size: 14px;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+    
+    div.wpcf7-response-output {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 20px;
+        background-color: rgba(#000, 0.4);
+        border: 0;
+        color: #fff;
+    
+        &.wpcf7-mail-sent-ok {
+            background-color: #aaa;
+            background-color: rgba(#aaa, 0.5);
+        }
+    }
+}

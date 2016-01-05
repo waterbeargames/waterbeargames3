@@ -1,20 +1,16 @@
 <?php get_header(); ?>
-	<main>
+    <main>
         <section>
             <div class="row">
                 <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
-            		<?php
-            		if (have_posts()) {
-            			while (have_posts()) {
-            				the_post(); ?>
-
-                            <div class="wbg-area">
-                                <h1><?php the_title(); ?></h1>
-                        
-                                <?php if (get_post_type($post) == 'post') : ?>
-                                <h4><?php the_time('F j, Y'); ?></h4>
-                                <?php endif; ?>
-                        
+                    <div class="column-inner">
+                    <?php
+                    if (have_posts()) :
+                        while (have_posts()) :
+                            the_post(); ?>
+                            <div class="single-post-meta">
+                                <h2><?php the_title(); ?></h2>
+                                <h4><?php the_time('F j, Y'); ?>, by <?php the_author(); ?></h4>
                                 <?php
                                 $categories = get_the_category();
                                 if ($categories) : ?>
@@ -26,29 +22,34 @@
                                         </ul>
                                     </h6>
                                 <?php endif; ?>
-                    
+                        
                                 <?php if (has_tag()) : ?>
                                 <h6><?php the_tags(); ?></h6>
-                                <?php endif;?>
-                    
-                                <hr />
+                                <?php endif; ?>
                             </div>
-                            
-                            <div class="wbg-area">
-                                <?php the_content(); ?>
+                        
+                            <div class="single-post-content<?php echo (comments_open() ? ' comments-open' : ''); ?>">
+                                <?php
+                                the_content();
+                                
+                                $args = array(
+                                    'before'            => '<p class="single-post-page-links">' . __( 'Pages:' ),
+                                    'after'             => '</p>',
+                                    'link_before'       => '<span>',
+                                    'link_after'        => '</span>'
+                                );
+                                wp_link_pages($args);
+                                ?>
                             </div>
-                            
-                            <?php if (comments_open()) : ?>
-                            <div class="wbg-area">
-                                <hr />
-                                <?php comments_template(); ?>
-                            </div>
-                            <?php endif; ?>
                             
                             <?php
-                        }
-                    }
+                            if (comments_open()) {
+                                comments_template();
+                            }
+                        endwhile;
+                    endif;
                     ?>
+                    </div>
                 </div>
                 <?php
                 if (is_active_sidebar('main-sidebar')) {
