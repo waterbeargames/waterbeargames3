@@ -1,12 +1,5 @@
 <?php
 $logo_id = get_theme_mod('logo');
-
-$disable_smooth_scroll = get_theme_mod('disable_smooth_scroll');
-if ($disable_smooth_scroll) {
-    $smooth_scroll_class = 'smooth-scroll-disabled';
-} else {
-    $smooth_scroll_class = 'smooth-scroll-enabled';
-}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -16,7 +9,7 @@ if ($disable_smooth_scroll) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class($smooth_scroll_class); ?>>
+<body <?php body_class('smooth-scroll-enabled'); ?>>
     <?php if ($logo_id || has_nav_menu('primary')) : ?>
     <nav id="nav">
         <div class="row">

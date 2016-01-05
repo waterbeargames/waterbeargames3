@@ -37,33 +37,13 @@ function puzzle_customize_register($wp_customize) {
         )));
     }
     
-    /* For nav and footer */
+    /* For footer */
     $background_color_options = array(
         'primary'       => 'Primary Color',
         'secondary'     => 'Secondary Color',
         'white'         => 'White',
         'gray'          => 'Gray'
     );
-    
-    /* Navigation Bar */
-    $wp_customize->add_section('puzzle_nav' , array(
-        'title'      => 'Navigation Bar',
-        'priority'   => 200,
-    ));
-    
-    $wp_customize->add_setting('nav_background_color', array(
-        'default'           => 'primary',
-        'sanitize_callback' => 'esc_attr',
-        'transport'         => 'refresh'
-    ));
-    
-    $wp_customize->add_control('nav_background_color', array(
-        'label'             => 'Background Color',
-        'section'           => 'puzzle_nav',
-        'settings'          => 'nav_background_color',
-        'type'              => 'select',
-        'choices'           => $background_color_options
-    ));
     
     /* Footer */
     $wp_customize->add_section('puzzle_footer' , array(
@@ -97,26 +77,6 @@ function puzzle_customize_register($wp_customize) {
         'settings'          => 'footer_content',
         'type'              => 'textarea'
     ));
-    
-    /* Miscellaneous */
-    $wp_customize->add_section('puzzle_miscellaneous' , array(
-        'title'      => 'Miscellaneous',
-        'priority'   => 220,
-    ));
-    
-    $wp_customize->add_setting('disable_smooth_scroll', array(
-        'default'           => '',
-        'sanitize_callback' => 'esc_attr',
-        'transport'         => 'refresh'
-    ));
-    
-    $wp_customize->add_control('disable_smooth_scroll', array(
-        'label'             => 'Disable smooth scrolling',
-        'description'       => 'Checking this box will turn off the scrolling animation when a user clicks on a link that takes them to another part of the page.',
-        'section'           => 'puzzle_miscellaneous',
-        'settings'          => 'disable_smooth_scroll',
-        'type'              => 'checkbox'
-    ));
 }
 add_action('customize_register', 'puzzle_customize_register');
 
@@ -125,8 +85,13 @@ function puzzle_save_custom_style() {
     require(get_stylesheet_directory() . '/theme/settings/custom_style.php');
     $css = ob_get_clean();
     
-    WP_Filesystem();
     global $wp_filesystem;
+    
+    if (empty($wp_filesystem)) {
+        require_once(ABSPATH .'/wp-admin/includes/file.php');
+        WP_Filesystem();
+    }
+    
     if (!$wp_filesystem->put_contents(get_stylesheet_directory() . '/assets/css/custom.css', $css)) {
         return true;
     }

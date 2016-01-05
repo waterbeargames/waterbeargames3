@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, th,
 .dark-text-color-scheme h5,
 .dark-text-color-scheme h6,
 .dark-text-color-scheme th {
-    color: #333;
+    color: #06539d;
 }
 
 body, p, li, td,
@@ -16,7 +16,7 @@ body, p, li, td,
 .dark-text-color-scheme p,
 .dark-text-color-scheme li,
 .dark-text-color-scheme td {
-    color: #555;
+    color: #4d4d4d;
 }
 
 .light-text-color-scheme h1,
@@ -39,48 +39,47 @@ body, p, li, td,
 
 /* Section Backgrounds */
 
+.alternative-background {
+    background-color: #0faeb2;
+}
+
 .primary-color-background {
-    background-color: #314887;
+    background-color: #06539d;
 }
 
 .secondary-color-background {
-    background-color: #4b97e3;
+    background-color: #0faeb2;
 }
 
 /* Links */
 
 a {
-    color: #314887;
+    color: #06539d;
 }
 
 a:hover, a:active {
-    color: #4b97e3;
+    color: #0faeb2;
 }
 
 /* Navigation Bar */
 
-#nav {
-    background-color: #fff;
-    background-color: rgba(255,255,255, 0.9);
-}
-
 #nav a {
-    color: #314887;
+    color: #06539d;
 }
 
 #dl-menu.dl-menuwrapper button {
-    background: #314887;
+    background: #06539d;
 }
 
 #dl-menu.dl-menuwrapper ul,
 #dl-menu.dl-menuwrapper button.dl-active,
-#dl-menu.dl-menuwrapper button:hover,
+#dl-menu.dl-menuwrapper button,
 #nav-menu ul ul {
-    background: #314887;
+    background-color: #06539d;
 }
 
-#dl-menu.dl-menuwrapper button {
-    background-color: #4b97e3;
+#dl-menu.dl-menuwrapper button:hover {
+    background: #0faeb2;
 }
 
 #dl-menu.dl-menuwrapper li a {
@@ -89,19 +88,21 @@ a:hover, a:active {
 
 #dl-menu.dl-menuwrapper li a:hover,
 #dl-menu.dl-menuwrapper li a:active {
-    color: #314887;
+    color: #06539d;
 }
 
 #dl-menu.dl-menuwrapper button:active,
 #dl-menu.dl-menuwrapper li a:hover,
 #dl-menu.dl-menuwrapper li a:active {
-    background: #fff;
+    background: <br />
+<b>Notice</b>:  Undefined variable: nav_primary_color in <b>/Users/artemis/sites/waterbeargames/wp-content/themes/waterbeargames3/theme/settings/custom_style.php</b> on line <b>122</b><br />
+;
 }
 
 /* Footer */
 
 #footer {
-    background-color: #314887}
+    background-color: #06539d}
 
 #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
     color: #fff;
@@ -113,41 +114,41 @@ a:hover, a:active {
 /* Sections */
 
 .owl-theme .owl-controls .owl-page.active span {
-    background-color: #314887;
+    background-color: #06539d;
 }
 
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #4b97e3;
+    background-color: #0faeb2;
 }
 
 .puzzle-header .puzzle-header-text-background-primary-color {
-    background-color:   rgba(49,72,135, 0.8);
-    -webkit-box-shadow: 10px 0 0 rgba(49,72,135, 0.8), -10px 0 0 rgba(49,72,135, 0.8);
-    -moz-box-shadow:    10px 0 0 rgba(49,72,135, 0.8), -10px 0 0 rgba(49,72,135, 0.8);
-    box-shadow:         10px 0 0 rgba(49,72,135, 0.8), -10px 0 0 rgba(49,72,135, 0.8);
+    background-color:   rgba(6,83,157, 0.8);
+    -webkit-box-shadow: 10px 0 0 rgba(6,83,157, 0.8), -10px 0 0 rgba(6,83,157, 0.8);
+    -moz-box-shadow:    10px 0 0 rgba(6,83,157, 0.8), -10px 0 0 rgba(6,83,157, 0.8);
+    box-shadow:         10px 0 0 rgba(6,83,157, 0.8), -10px 0 0 rgba(6,83,157, 0.8);
 }
 
 .puzzle-header .puzzle-header-text-background-secondary-color {
-    background-color:   rgba(75,151,227, 0.75);
-    -webkit-box-shadow: 10px 0 0 rgba(75,151,227, 0.75), -10px 0 0 rgba(75,151,227, 0.75);
-    -moz-box-shadow:    10px 0 0 rgba(75,151,227, 0.75), -10px 0 0 rgba(75,151,227, 0.75);
-    box-shadow:         10px 0 0 rgba(75,151,227, 0.75), -10px 0 0 rgba(75,151,227, 0.75);
+    background-color:   rgba(15,174,178, 0.75);
+    -webkit-box-shadow: 10px 0 0 rgba(15,174,178, 0.75), -10px 0 0 rgba(15,174,178, 0.75);
+    -moz-box-shadow:    10px 0 0 rgba(15,174,178, 0.75), -10px 0 0 rgba(15,174,178, 0.75);
+    box-shadow:         10px 0 0 rgba(15,174,178, 0.75), -10px 0 0 rgba(15,174,178, 0.75);
 }
 
 .puzzle-header .puzzle-header-text-primary-color {
-    color: #314887;
+    color: #06539d;
 }
 
 .puzzle-header .puzzle-header-text-secondary-color {
-    color: #4b97e3;
+    color: #0faeb2;
 }
 
 .puzzle-accordions .column-inner > h5:first-child:hover .fa {
-    color: #4b97e3;
+    color: #0faeb2;
 }
 
 .puzzle-features .column-inner > i:first-child, .puzzle-accordions .column-inner > h5:first-child i {
-    color: #314887;
+    color: #06539d;
 }
 
 /* Buttons */
@@ -164,25 +165,25 @@ input[type='submit'],
 a.page-numbers:hover,
 #cancel-comment-reply-link,
 #pagination a:hover {
-    background-color: #314887;
-    border-color: #314887;
+    background-color: #06539d;
+    border-color: #06539d;
     color: #fff;
 }
 
 .white-background .puzzle-button.puzzle-button-white,
 #pagination a {
-    border-color: #314887;
-    color: #314887;
+    border-color: #06539d;
+    color: #06539d;
 }
 
 .puzzle-button.puzzle-button-white,
 .primary-color-background .puzzle-button.puzzle-button-white {
-    color: #314887;
+    color: #06539d;
 }
 
 .white-background .puzzle-button.puzzle-button-transparent {
-    border-color: #4b97e3;
-    color: #4b97e3;
+    border-color: #0faeb2;
+    color: #0faeb2;
 }
 
 .puzzle-button:hover,
@@ -198,8 +199,8 @@ input[type='submit']:hover,
 .categories .cat-item a:hover,
 #cancel-comment-reply-link:hover,
 .comment-reply-link:hover {
-    background-color: #4b97e3;
-    border-color: #4b97e3;
+    background-color: #0faeb2;
+    border-color: #0faeb2;
     color: #fff;
 }
 
@@ -211,26 +212,26 @@ input[type='submit']:hover,
 .secondary-color-background input[type='submit']:hover {
     background-color: #fff;
     border-color: #fff;
-    color: #314887;
+    color: #06539d;
 }
 
 /* Blog */
 
 .puzzle-loop, .single-post-content, .single-post-content.comments-open, #pagination {
-    border-color: #314887;
+    border-color: #06539d;
 }
 
 .single-post-page-links a, .page-numbers {
-    color: #555}
+    color: #4d4d4d}
 
 /* Contact Form 7 */
 
 .wpcf7-form div.wpcf7-response-output.wpcf7-mail-sent-ok {
-    background-color: #314887;
-    background-color: rgba(49,72,135, 0.5);
+    background-color: #06539d;
+    background-color: rgba(6,83,157, 0.5);
 }
 
 .primary-color-background .wpcf7-form div.wpcf7-response-output.wpcf7-mail-sent-ok {
-    background-color: #4b97e3;
-    background-color: rgba(75,151,227, 0.5);
+    background-color: #0faeb2;
+    background-color: rgba(15,174,178, 0.5);
 }

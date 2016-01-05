@@ -1233,8 +1233,8 @@ a img {
   position: fixed;
   z-index: 2;
   width: 100%;
-  background-color: #aaa;
-  background-color: rgba(170, 170, 170, 0.9); }
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9); }
   #nav .row {
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -1467,7 +1467,8 @@ a img {
 /* Footer */
 /*--------*/
 #footer {
-  background-color: #aaa; }
+  background-color: #aaa;
+  text-align: center; }
 
 /*-----------------*/
 /* Puzzle Sections */

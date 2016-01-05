@@ -14,12 +14,13 @@ $puzzle_default_colors = $puzzle_pieces->colors();
 
 $primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_color']->default_color());
 $secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
+$accent_color = get_theme_mod('alternative_background', $puzzle_default_colors['alternative_background']->default_color());
+$alternative_background = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
 $headline_dark = get_theme_mod('headline_dark', $puzzle_default_colors['headline_dark']->default_color());
 $text_dark = get_theme_mod('text_dark', $puzzle_default_colors['text_dark']->default_color());
 $headline_light = get_theme_mod('headline_light', $puzzle_default_colors['headline_light']->default_color());
 $text_light = get_theme_mod('text_light', $puzzle_default_colors['text_light']->default_color());
 
-$nav_background_color = get_theme_mod('nav_background_color', 'primary');
 $footer_background_color = get_theme_mod('footer_background_color', 'primary');
 ?>
 /* Text */
@@ -63,6 +64,10 @@ body, p, li, td,
 
 /* Section Backgrounds */
 
+.alternative-background {
+    background-color: <?php echo $alternative_background; ?>;
+}
+
 .primary-color-background {
     background-color: <?php echo $primary_color; ?>;
 }
@@ -82,32 +87,9 @@ a:hover, a:active {
 }
 
 /* Navigation Bar */
-<?php
-$nav_secondary_color = $primary_color;
-
-if ($nav_background_color == 'secondary') {
-    $nav_primary_color = $secondary_color;
-    $nav_text_color = $text_light;
-} elseif ($nav_background_color == 'gray') {
-    $nav_primary_color = '#eee';
-    $nav_text_color = $primary_color;
-} elseif ($nav_background_color == 'white') {
-    $nav_primary_color = '#fff';
-    $nav_text_color = $primary_color;
-} else {
-    $nav_primary_color = $primary_color;
-    $nav_secondary_color = $secondary_color;
-    $nav_text_color = $text_light;
-}
-?>
-
-#nav {
-    background-color: <?php echo $nav_primary_color; ?>;
-    background-color: rgba(<?php echo hex2rgb($nav_primary_color); ?>, 0.9);
-}
 
 #nav a {
-    color: <?php echo $nav_text_color; ?>;
+    color: <?php echo $primary_color; ?>;
 }
 
 #dl-menu.dl-menuwrapper button {
@@ -116,14 +98,13 @@ if ($nav_background_color == 'secondary') {
 
 #dl-menu.dl-menuwrapper ul,
 #dl-menu.dl-menuwrapper button.dl-active,
-#dl-menu.dl-menuwrapper button:hover,
+#dl-menu.dl-menuwrapper button,
 #nav-menu ul ul {
-    background: <?php echo $nav_secondary_color; ?>;
+    background-color: <?php echo $primary_color; ?>;
 }
-<?php if ($nav_primary_color == '#fff' || $nav_primary_color == '#eee') : ?>
 
-#dl-menu.dl-menuwrapper button {
-    background-color: <?php echo $secondary_color; ?>;
+#dl-menu.dl-menuwrapper button:hover {
+    background: <?php echo $secondary_color; ?>;
 }
 
 #dl-menu.dl-menuwrapper li a {
@@ -134,7 +115,6 @@ if ($nav_background_color == 'secondary') {
 #dl-menu.dl-menuwrapper li a:active {
     color: <?php echo $primary_color; ?>;
 }
-<?php endif; ?>
 
 #dl-menu.dl-menuwrapper button:active,
 #dl-menu.dl-menuwrapper li a:hover,

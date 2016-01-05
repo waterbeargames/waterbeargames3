@@ -3,9 +3,6 @@
 /*
  * Puzzle
  * Config
- *
- * This file is automatically included in 'puzzle_pieces/puzzle_pieces.php',
- * so the location cannot change.
  */
 
 $puzzle_pieces = new PuzzlePieces;
