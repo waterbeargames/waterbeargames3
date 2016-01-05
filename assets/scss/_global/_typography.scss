@@ -8,29 +8,27 @@ h1, h2, h3, h4, h5, h6, p, li, th, td {
 
 h1, h2, h3, h4, h5, h6, ul, ol {
     margin: 1rem 0;
-    line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
-    font-weight: $semibold;
+    line-height: 1.4;
     
     &:first-child {
         margin-top: 0;
     }
-    
-    a {
-        text-decoration: none;
-    }
 }
 
 h1, h2, h3 {
-    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+h1, h2 {
+    font-weight: $light;
 }
 
 h1 {
     font-size: 3rem;
-    line-height: 1.25;
 }
 
 h2 {
@@ -39,6 +37,11 @@ h2 {
 
 h3 {
     font-size: 2rem;
+    font-weight: $normal;
+}
+
+h4, h5 {
+    font-weight: $semibold;
 }
 
 h4 {
@@ -50,7 +53,8 @@ h5 {
 }
 
 h6 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: $normal;
 }
 
 p, li, th, td {
@@ -75,18 +79,19 @@ small {
 }
 
 pre {
-    padding: 10px;
+    padding: 1rem;
     background-color: $light-gray;
 }
 
 hr {
-    margin: 20px 0;
+    margin: 2rem 0;
     border: 0;
     border-bottom: solid 1px $medium-gray;
 }
 
 a {
     @include transition(all 0.4s ease);
+    text-decoration: none;
 }
 
 @include breakpoint($size-md) {
@@ -118,7 +123,37 @@ a {
         font-size: 1.8rem;
     }
     
+    h6 {
+        font-size: 1.4rem;
+    }
+    
     p, li, th, td {
         font-size: 1.6rem;
+    }
+    
+    hr {
+        margin: 3rem 0;
+    }
+}
+
+@include breakpoint($size-lg) {
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 4.8rem;
+    }
+    
+    h3 {
+        font-size: 2.8rem;
+    }
+    
+    h4 {
+        font-size: 2.4rem;
+    }
+    
+    p, li, th, td {
+        font-size: 1.8rem;
     }
 }

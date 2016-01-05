@@ -14,8 +14,8 @@ $puzzle_default_colors = $puzzle_pieces->colors();
 
 $primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_color']->default_color());
 $secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
-$accent_color = get_theme_mod('alternative_background', $puzzle_default_colors['alternative_background']->default_color());
-$alternative_background = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
+$accent_color = get_theme_mod('accent_color', $puzzle_default_colors['accent_color']->default_color());
+$alternative_background = get_theme_mod('alternative_background', $puzzle_default_colors['alternative_background']->default_color());
 $headline_dark = get_theme_mod('headline_dark', $puzzle_default_colors['headline_dark']->default_color());
 $text_dark = get_theme_mod('text_dark', $puzzle_default_colors['text_dark']->default_color());
 $headline_light = get_theme_mod('headline_light', $puzzle_default_colors['headline_light']->default_color());
@@ -79,11 +79,11 @@ body, p, li, td,
 /* Links */
 
 a {
-    color: <?php echo $primary_color; ?>;
+    color: <?php echo $secondary_color; ?>;
 }
 
 a:hover, a:active {
-    color: <?php echo $secondary_color; ?>;
+    color: <?php echo $primary_color; ?>;
 }
 
 /* Navigation Bar */
