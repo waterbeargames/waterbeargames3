@@ -23,7 +23,91 @@ function puzzle_customize_register($wp_customize) {
         )));
     }
     
-    /* For footer */
+    /* Header */
+    $wp_customize->add_section('puzzle_header' , array(
+        'title'      => 'Header',
+        'priority'   => 200,
+    ));
+    
+    for ($i = 0; $i < 3; $i++) {
+        $wp_customize->add_setting('home_buttons[' . $i . '][text]', array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_html',
+            'transport'         => 'refresh'
+        ));
+    
+        $wp_customize->add_control('home_buttons[' . $i . '][text]', array(
+            'label'             => 'Button ' . ($i + 1) . ' Text',
+            'section'           => 'puzzle_header',
+            'settings'          => 'home_buttons[' . $i . '][text]',
+            'type'              => 'text'
+        ));
+        
+        $wp_customize->add_setting('home_buttons[' . $i . '][icon]', array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_attr',
+            'transport'         => 'refresh'
+        ));
+    
+        $wp_customize->add_control('home_buttons[' . $i . '][icon]', array(
+            'label'             => 'Button ' . ($i + 1) . ' Icon',
+            'section'           => 'puzzle_header',
+            'settings'          => 'home_buttons[' . $i . '][icon]',
+            'type'              => 'select',
+            'choices'           => array(
+                'bear'          => 'Water Bear',
+                'salmon'        => 'Salmon',
+                'bee'           => 'Bee'
+            )
+        ));
+        
+        $wp_customize->add_setting('home_buttons[' . $i . '][color]', array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_attr',
+            'transport'         => 'refresh'
+        ));
+    
+        $wp_customize->add_control('home_buttons[' . $i . '][color]', array(
+            'label'             => 'Button ' . ($i + 1) . ' Color',
+            'section'           => 'puzzle_header',
+            'settings'          => 'home_buttons[' . $i . '][color]',
+            'type'              => 'select',
+            'choices'           => array(
+                'primary'       => 'Primary Color',
+                'secondary'     => 'Secondary Color',
+                'accent'        => 'Accent Color',
+                'alternative'   => 'Alternative Background Color'
+            )
+        ));
+        
+        $wp_customize->add_setting('home_buttons[' . $i . '][link]', array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_html',
+            'transport'         => 'refresh'
+        ));
+    
+        $wp_customize->add_control('home_buttons[' . $i . '][link]', array(
+            'label'             => 'Button ' . ($i + 1) . ' Link',
+            'section'           => 'puzzle_header',
+            'settings'          => 'home_buttons[' . $i . '][link]',
+            'type'              => 'text'
+        ));
+        
+        $wp_customize->add_setting('home_buttons[' . $i . '][open_link_in_new_tab]', array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_attr',
+            'transport'         => 'refresh'
+        ));
+    
+        $wp_customize->add_control('home_buttons[' . $i . '][open_link_in_new_tab]', array(
+            'label'             => 'Open button ' . ($i + 1) . ' link in new tab',
+            'section'           => 'puzzle_header',
+            'settings'          => 'home_buttons[' . $i . '][open_link_in_new_tab]',
+            'type'              => 'checkbox'
+        ));
+    }
+    
+    /* Footer */
     $background_color_options = array(
         'primary'       => 'Primary Color',
         'secondary'     => 'Secondary Color',
@@ -31,7 +115,6 @@ function puzzle_customize_register($wp_customize) {
         'gray'          => 'Gray'
     );
     
-    /* Footer */
     $wp_customize->add_section('puzzle_footer' , array(
         'title'      => 'Footer',
         'priority'   => 210,

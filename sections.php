@@ -12,12 +12,11 @@ if (!empty($page_sections)) :
     
         $main_content = (!empty($puzzle_options['main_content']) ? $puzzle_options['main_content'] : false);
     
-        $background_color = (!empty($puzzle_options['background_color']) ? ' ' . $puzzle_options['background_color'] : '');
+        $background_color = (!empty($puzzle_options['background_color']) ? ' ' . $puzzle_options['background_color'] '-background' : '');
         $background_image = (!empty($puzzle_options['background_image']) ? ' ' . wp_get_attachment_url($puzzle_options['background_image']) : false);
-        $text_color_scheme = (!empty($puzzle_options['text_color_scheme']) ? ' ' . $puzzle_options['text_color_scheme'] : '');
+        $text_color_scheme = (!empty($puzzle_options['text_color_scheme']) ? ' ' . $puzzle_options['text_color_scheme'] . '-text-color-scheme' : '');
         $padding_top = (!empty($puzzle_options['padding_top']) ? ' ' . $puzzle_options['padding_top'] . '-padding-top' : '');
         $padding_bottom = (!empty($puzzle_options['padding_bottom']) ? ' ' . $puzzle_options['padding_bottom'] . '-padding-bottom' : '');
-        $open_one_accordion_at_a_time = (!empty($puzzle_options['open_one_at_a_time']) ? ' puzzle-accordions-one-open' : '');
     
         $section_classes = $puzzle_section_type . $background_color . $text_color_scheme . $padding_top . $padding_bottom . $open_one_accordion_at_a_time;
         

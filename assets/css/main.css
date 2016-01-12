@@ -1322,7 +1322,6 @@ a img {
     height: 0;
     padding: 50% 0;
     border-radius: 50%;
-    background-color: #aaa;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
     .home-button .home-button-icon-container svg {
@@ -1349,7 +1348,7 @@ a img {
       .home-button:not(:first-child) h4 {
         font-size: 2rem; }
       .home-button:first-child {
-        top: 0;
+        top: -1%;
         left: 0;
         right: 50%; }
       .home-button:nth-child(2) {
@@ -1357,7 +1356,7 @@ a img {
         right: 0;
         left: 60%; }
       .home-button:last-child {
-        top: 60%;
+        top: 59%;
         right: 30%;
         left: 30%; } }
   @media all and (min-width: 850px) {

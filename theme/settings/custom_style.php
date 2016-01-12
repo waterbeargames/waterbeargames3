@@ -64,16 +64,20 @@ body, p, li, td,
 
 /* Section Backgrounds */
 
-.alternative-background {
-    background-color: <?php echo $alternative_background; ?>;
-}
-
-.primary-color-background {
+.primary-background {
     background-color: <?php echo $primary_color; ?>;
 }
 
-.secondary-color-background {
+.secondary-background {
     background-color: <?php echo $secondary_color; ?>;
+}
+
+.accent-background {
+    background-color: <?php echo $accent_color; ?>;
+}
+
+.alternative-background {
+    background-color: <?php echo $alternative_background; ?>;
 }
 
 /* Links */
@@ -84,20 +88,6 @@ a {
 
 a:hover, a:active {
     color: <?php echo $primary_color; ?>;
-}
-
-/* Header */
-
-.home-button:first-child .home-button-icon-container {
-    background-color: <?php echo $accent_color; ?>;
-}
-
-.home-button:nth-child(2) .home-button-icon-container {
-    background-color: <?php echo $secondary_color; ?>;
-}
-
-.home-button:last-child .home-button-icon-container {
-    background-color: <?php echo $alternative_background; ?>;
 }
 
 /* Navigation Bar */
