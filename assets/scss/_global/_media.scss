@@ -16,3 +16,11 @@ img {
 a img {
     border: 0;
 }
+
+.vector-container {
+    position: relative;
+    
+    svg {
+        max-width: 100%;
+    }
+}

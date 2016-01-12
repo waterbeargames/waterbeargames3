@@ -3,4 +3,111 @@
 /*--------*/
 
 #header {
+    + main > section:first-child {
+        padding-top: 30px;
+    }
+    
+    @include breakpoint($size-md) {
+        @include display-flex;
+        @include align-items(center);
+        height: 100%;
+        
+        .row {
+            @include flex(0 1 100%);
+            
+            .column:last-child {
+                @include display-flex;
+                
+                .column-inner {
+                    @include flex(0 1 100%);
+                }
+            }
+        }
+    }
+}
+
+.home-buttons {
+    position: relative;
+    @include display-flex;
+}
+
+.home-button {
+    @include flex(0 1 (100% / 3));
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    
+    .home-button-icon-container {
+        @include display-flex;
+        @include align-items(center);
+        @include justify-content(center);
+        height: 0;
+        padding: 50% 0;
+        border-radius: 50%;
+        background-color: $medium-gray;
+        @include transition(all 0.4s ease);
+        
+        svg {
+            @include flex(0 1 60%);
+        }
+    }
+    
+    &:hover .home-button-icon-container {
+        @include transform(scale(1.1));
+    }
+        
+    &:first-child .home-button-icon-container svg {
+        @include flex-basis(70%);
+    }
+    
+    h4 {
+        margin: 1rem 0 0;
+    }
+    
+    @include breakpoint($size-sm) {
+        padding: 10px;
+    }
+    
+    @include breakpoint($size-md) {
+        position: absolute;
+        
+        &:not(:first-child) {
+            h4 {
+                font-size: 2rem;
+            }
+        }
+        
+        &:first-child {
+            top: 0;
+            left: 0;
+            right: 50%;
+        }
+        
+        &:nth-child(2) {
+            top: 15%;
+            right: 0;
+            left: 60%;
+        }
+        
+        &:last-child {
+            top: 60%;
+            right: 30%;
+            left: 30%;
+        }
+    }
+    
+    @include breakpoint($size-lg) {
+        &:first-child {
+            right: 53%;
+        }
+        
+        &:nth-child(2) {
+            left: 62%;
+        }
+        
+        &:last-child {
+            right: 33%;
+            left: 33%;
+        }
+    }
 }

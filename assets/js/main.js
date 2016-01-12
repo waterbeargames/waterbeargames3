@@ -1,7 +1,9 @@
 jQuery('document').ready(function($){
     var $window = $(window),
+        $body = $('body'),
         $adminBar = $('#wpadminbar'),
         $header = $('#header'),
+        $nav = $('#nav'),
         $main = $('main'),
         $footer = $('#footer');
         
@@ -23,4 +25,38 @@ jQuery('document').ready(function($){
 
     pushFooterDown();
     $window.resize(pushFooterDown);
+    
+    // Home page nav effects
+    var navHasLogo = false,
+        navHasShadow = false;
+    
+    var toggleNav = function() {
+        var adminBarHeight = $adminBar.height(),
+            threshold = $header.outerHeight() - $nav.outerHeight();
+        
+        if ($('#wpadminbar').css('position') === 'fixed') {
+            threshold -= adminBarHeight;
+        }
+        
+        if ($window.scrollTop() > 10 && !navHasShadow) {
+            $nav.removeClass('no-transition').removeClass('no-shadow');
+            navHasShadow = true;
+        } else if ($window.scrollTop() <= 10 && navHasShadow) {
+            $nav.addClass('no-shadow');
+            navHasShadow = false;
+        }
+        
+        if ($window.scrollTop() > threshold && !navHasLogo) {
+            $nav.removeClass('no-transition').removeClass('no-logo');
+            navHasLogo = true;
+        } else if ($window.scrollTop() <= threshold && navHasLogo) {
+            $nav.addClass('no-logo');
+            navHasLogo = false;
+        }
+    }
+    
+    if ($body.hasClass('home')) {
+        toggleNav();
+        $window.scroll(toggleNav);
+    }
 });

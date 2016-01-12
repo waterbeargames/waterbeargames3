@@ -6,20 +6,6 @@
  */
 
 function puzzle_customize_register($wp_customize) {
-    /* Logo */
-    $wp_customize->add_setting('logo', array(
-        'default'           => '',
-        'sanitize_callback' => 'esc_attr',
-        'transport'         => 'refresh'
-    ));
-    
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'logo', array(
-        'label'             => 'Logo',
-        'description'       => 'Add your logo. We recommend a PNG with a transparent background that is at least 100px tall and contrasts your navigation bar color.',
-        'section'           => 'title_tagline',
-        'settings'          => 'logo'
-    )));
-    
     /* Colors */
     $puzzle_pieces = new PuzzlePieces;
     

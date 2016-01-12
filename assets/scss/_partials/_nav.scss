@@ -3,16 +3,32 @@
 /*----------------*/
 
 #nav {
-    @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
     position: fixed;
     z-index: 2;
     width: 100%;
-    background-color: #fff;
     background-color: rgba(#fff, 0.9);
+    @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
+    @include transition(all 0.4s ease);
+    
+    &.no-logo {
+        .vector-container {
+            opacity: 0;
+            visibility: none;
+        }
+    }
+    
+    &.no-shadow {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+    
+    &.no-transition {
+        @include transition(none);
+    }
     
     .row {
         @include align-items(center);
-        height: 70px;
+        height: 80px;
         padding: 5px 15px;
     }
     
@@ -20,10 +36,20 @@
         margin: 0;
     }
     
-    img {
-        display: block;
-        width: auto;
-        max-height: 50px;
+    .vector-container {
+        height: 60px;
+        opacity: 1;
+        @include transition(all 0.4s ease);
+        visibility: visible;
+        
+        svg {
+            width: auto;
+            height: 60px;
+            
+            path {
+                @include transition(all 0.4s ease);
+            }
+        }
         
         @include breakpoint($size-md) {
             margin-left: 15px;

@@ -3,7 +3,7 @@ $link_target = (!empty($puzzle_column['open_link_in_new_tab']) ? ' target="_blan
 
 $span_classes = '';
 if ($puzzle_options['layout'] == 'columns') {
-    $span_classes = span_classes($c, $puzzle_columns_num, false) . ' icon-column';
+    $span_classes = span_classes($puzzle_columns_num) . ' icon-column';
 } else {
     $span_classes = 'xs-span12 icon-row';
 }

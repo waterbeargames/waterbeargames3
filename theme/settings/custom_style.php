@@ -86,10 +86,32 @@ a:hover, a:active {
     color: <?php echo $primary_color; ?>;
 }
 
+/* Header */
+
+.home-button:first-child .home-button-icon-container {
+    background-color: <?php echo $accent_color; ?>;
+}
+
+.home-button:nth-child(2) .home-button-icon-container {
+    background-color: <?php echo $secondary_color; ?>;
+}
+
+.home-button:last-child .home-button-icon-container {
+    background-color: <?php echo $alternative_background; ?>;
+}
+
 /* Navigation Bar */
 
 #nav a {
     color: <?php echo $primary_color; ?>;
+}
+
+#nav .vector-container path {
+    fill: <?php echo $primary_color; ?>;
+}
+
+#nav .vector-container a:hover path {
+    fill: <?php echo $secondary_color; ?>;
 }
 
 #dl-menu.dl-menuwrapper button {
