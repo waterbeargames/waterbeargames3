@@ -1,3 +1,19 @@
-
+#game_options *, #news_story_options *, #team_options * {
+  box-sizing: border-box; }
+#game_options ::-webkit-input-placeholder, #news_story_options ::-webkit-input-placeholder, #team_options ::-webkit-input-placeholder {
+  font-style: italic;
+  color: #ddd; }
+#game_options ::-moz-placeholder, #news_story_options ::-moz-placeholder, #team_options ::-moz-placeholder {
+  font-style: italic;
+  color: #ddd; }
+#game_options :-ms-input-placeholder, #news_story_options :-ms-input-placeholder, #team_options :-ms-input-placeholder {
+  font-style: italic;
+  color: #ddd; }
+#game_options input:not([type='submit']), #game_options select, #game_options textarea, #news_story_options input:not([type='submit']), #news_story_options select, #news_story_options textarea, #team_options input:not([type='submit']), #team_options select, #team_options textarea {
+  width: 100%; }
+#game_options img[src=''], #news_story_options img[src=''], #team_options img[src=''] {
+  display: none; }
+#game_options .column, #news_story_options .column, #team_options .column {
+  padding-right: 10px; }
 
 /*# sourceMappingURL=admin-styles.css.map */

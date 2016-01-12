@@ -1,0 +1,32 @@
+#game_options, #news_story_options, #team_options {
+    * {
+        box-sizing: border-box;
+    }
+    
+    ::-webkit-input-placeholder {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    ::-moz-placeholder {
+        font-style: italic;
+        color: #ddd;
+    }
+
+    :-ms-input-placeholder {
+        font-style: italic;
+        color: #ddd; 
+    }
+    
+    input:not([type='submit']), select, textarea {
+        width: 100%;
+    }
+    
+    img[src=''] {
+        display: none;
+    }
+    
+    .column {
+        padding-right: 10px;
+    }
+}
