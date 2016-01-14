@@ -1673,10 +1673,15 @@ img, svg {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 0 15px 10px; }
   .puzzle-games-content .column-inner, .puzzle-team-content .column-inner {
     width: 100%;
-    padding: 10px; }
+    margin: 0;
+    padding: 5px; }
+    @media all and (min-width: 480px) {
+      .puzzle-games-content .column-inner, .puzzle-team-content .column-inner {
+        padding: 10px; } }
 
 /*---------------------------*/
 /* Puzzle Accordions Section */

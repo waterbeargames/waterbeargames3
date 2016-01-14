@@ -7,7 +7,7 @@ $args = array(
 );
 $games = get_posts($args);
 $games_num = count($games);
-$span_classes = span_classes($games_num, 3, 4, 'sm', 'lg');
+$span_classes = span_classes($games_num, 3, 4, 'xs', 'md');
 ?>
 <div class="row puzzle-<?php echo $puzzle_section_type; ?>-content">
 <?php
