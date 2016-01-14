@@ -279,6 +279,10 @@ input[type='submit']:hover,
     color: <?php echo $primary_color; ?>;
 }
 
+.circle-button .fa {
+    color: <?php echo $primary_color; ?>;
+}
+
 /* Blog */
 
 .puzzle-loop, .single-post-content, .single-post-content.comments-open, #pagination {

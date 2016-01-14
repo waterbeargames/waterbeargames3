@@ -8,7 +8,7 @@
     width: 100%;
     background-color: rgba(#fff, 0.9);
     @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
-    @include transition(all 0.4s ease);
+    @include transition(box-shadow 0.4s ease);
     
     &.no-logo {
         .vector-container {
@@ -28,8 +28,12 @@
     
     .row {
         @include align-items(center);
-        height: 80px;
+        height: 60px;
         padding: 5px 15px;
+        
+        @include breakpoint($size-md) {
+            height: 80px;
+        }
     }
     
     ul {
@@ -37,14 +41,14 @@
     }
     
     .vector-container {
-        height: 60px;
+        height: 50px;
         opacity: 1;
         @include transition(all 0.4s ease);
         visibility: visible;
         
         svg {
             width: auto;
-            height: 60px;
+            height: 50px;
             
             path {
                 @include transition(all 0.4s ease);
@@ -52,7 +56,12 @@
         }
         
         @include breakpoint($size-md) {
+            height: 60px;
             margin-left: 15px;
+            
+            svg {
+                height: 60px;
+            }
         }
     }
     

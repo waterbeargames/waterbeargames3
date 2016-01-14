@@ -18,7 +18,8 @@ function game_init() {
         'supports'          => array(
             'title',
             'editor',
-            'thumbnail'
+            'thumbnail',
+            'page-attributes'
         )
     ));
 }
@@ -38,13 +39,30 @@ function game_meta_options(){
     if (!empty($game['banner'])) {
         $game_banner = wp_get_attachment_image($game['banner'], 'large');
     }
+    
+    $file_name_regex = '/[^\/]*$/';
+    
+    $game_logo_preview = '';
+    if (!empty($game['logo'])) {
+        preg_match($file_name_regex, wp_get_attachment_url($game['logo']), $matches);
+        $game_logo_preview = $matches[0];
+    }
+    
+    $game_print_and_play_preview = '';
+    if (!empty($game['print_and_play'])) {
+        preg_match($file_name_regex, wp_get_attachment_url($game['print_and_play']), $matches);
+        $game_print_and_play_preview = $matches[0];
+    }
     ?>
     <div class="row">
-        <div class="column xs-span12 md-span4">
+        <div class="column xs-span12 sm-span4">
             <h3>Imagery</h3>
             <p>
                 SVG Logo<br />
-                <input class="wbg-game-file-preview" type="text" value="<?php echo (!empty($game['logo']) ? wp_get_attachment_url($game['logo']) : ''); ?>" readonly />
+                <?php
+                
+                ?>
+                <input class="wbg-game-file-preview" type="text" value="<?php echo $game_logo_preview; ?>" readonly />
                 <input class="wbg-game-file-id" name="wbg_game[logo]" type="hidden" value="<?php echo (!empty($game['logo']) ? $game['logo'] : ''); ?>" readonly />
                 <a href="#" class="wbg_add_file_button button" data-editor="content" title="Add File">Add File</a>
                 <a href="#" class="wbg_remove_file_button button">Remove File</a>
@@ -56,11 +74,11 @@ function game_meta_options(){
                 <a href="#" class="puzzle_add_image_button button" data-editor="content" title="Add Image">Add Image</a> <a href="#" class="puzzle_remove_image_button button">Remove Image</a>
             </p>
         </div>
-        <div class="column xs-span12 md-span4">
+        <div class="column xs-span12 sm-span4">
             <h3>Links</h3>
             <p>
                 Print &amp; Play File<br />
-                <input class="wbg-game-file-preview" type="text" value="<?php echo (!empty($game['print_and_play']) ? wp_get_attachment_url($game['print_and_play']) : ''); ?>" readonly />
+                <input class="wbg-game-file-preview" type="text" value="<?php echo $game_print_and_play_preview; ?>" readonly />
                 <input class="wbg-game-file-id" name="wbg_game[print_and_play]" type="hidden" value="<?php echo (!empty($game['print_and_play']) ? $game['print_and_play'] : ''); ?>" readonly />
                 <a href="#" class="wbg_add_file_button button" data-editor="content" title="Add File">Add File</a>
                 <a href="#" class="wbg_remove_file_button button">Remove File</a>
@@ -70,7 +88,7 @@ function game_meta_options(){
                 <input name="wbg_game[store]" placeholder="http://..." value="<?php echo (!empty($game['store']) ? $game['store'] : ''); ?>" />
             </p>
         </div>
-        <div class="column xs-span12 md-span4">
+        <div class="column xs-span12 sm-span4">
             <h3>General Details</h3>
             <p>
                 Playtime<br />
@@ -83,6 +101,14 @@ function game_meta_options(){
             <p>
                 Difficulty<br />
                 <input name="wbg_game[difficulty]" placeholder="8 years old and up" value="<?php echo (!empty($game['difficulty']) ? $game['difficulty'] : ''); ?>" />
+            </p>
+            <p>
+                Last Print &amp; Play Update<br />
+                <input name="wbg_game[print_and_play_update]" placeholder="January 1st, 2016" value="<?php echo (!empty($game['print_and_play_update']) ? $game['print_and_play_update'] : ''); ?>" />
+            </p>
+            <p>
+                Accent Color<br />
+                <input class="color-field" name="wbg_game[accent_color]" value="<?php echo (!empty($game['accent_color']) ? $game['accent_color'] : ''); ?>" type="text" />
             </p>
         </div>
     </div>

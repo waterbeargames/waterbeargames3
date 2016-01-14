@@ -1,0 +1,86 @@
+/*------------------*/
+/* Single Game Page */
+/*------------------*/
+
+.header-game-logo {
+    @include display-flex;
+    @include align-items(center);
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgba($dark-gray, 0.75);
+    
+    svg {
+        @include flex(0 1 100%);
+        @include filter(drop-shadow(0 0 3px rgba(#000, 0.3)));
+        
+        path, polygon {
+            fill: #fff;
+        }
+    }
+    
+    @include breakpoint($size-md) {
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+    }
+    
+    @include breakpoint($size-lg) {
+        width: 400px;
+        height: 400px;
+        padding: 60px;
+    }
+}
+
+.game-buttons {
+    @include display-flex;
+    @include justify-content(center);
+    margin-bottom: 3rem;
+    
+    .circle-button-container {
+        @include flex(0 1 50%);
+    }
+    
+    .circle-button-content {
+        position: relative;
+        top: -0.5rem;
+        
+        .fa {
+            font-size: 48px;
+            
+            @include breakpoint($size-md) {
+                font-size: 72px;
+            }
+        }
+        
+        h4, h5 {
+            line-height: 1.1;
+            margin: 0;
+        }
+        
+        h4 {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.game-details {
+    padding: 10px 25px;
+    @extend %default-border-radius;
+    
+    p {
+        margin: 0.5rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        
+        @include breakpoint($size-md) {
+            font-size: 1.4rem;
+        }
+        
+        @include breakpoint($size-lg) {
+            font-size: 1.6rem;
+        }
+    }
+}

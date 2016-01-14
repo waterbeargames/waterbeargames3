@@ -9,18 +9,17 @@ iframe {
 
 img {
     display: inline-block;
-    max-width: 100%;
-    height: auto;
 }
 
 a img {
     border: 0;
 }
 
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
 .vector-container {
     position: relative;
-    
-    svg {
-        max-width: 100%;
-    }
 }
