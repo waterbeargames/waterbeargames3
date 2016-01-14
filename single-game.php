@@ -23,7 +23,7 @@ $meta_info = array_filter(array(
                 </div>
             </div>
             <?php if ($has_sidebar) : ?>
-            <div class="game-sidebar column xs-span12 sm-span8 sm-left2 sm-right2 lg-span6 lg-left0 lg-right0 xl-span5">
+            <div class="game-sidebar column xs-span12 sm-span8 sm-center lg-span6 lg-uncenter xl-span5">
                 <div class="column-inner">
                     <?php if (!empty($game['store']) || !empty($game['print_and_play'])) : ?>
                     <div class="game-buttons">
@@ -35,6 +35,7 @@ $meta_info = array_filter(array(
                                     <h4>Purchase</h4>
                                     <h5>the official game</h5>
                                 </div>
+                                <a class="puzzle-full-cover-link" href="<?php echo $game['store']; ?>" target="_blank"></a>
                             </div>
                         </div>
                         <?php endif; ?>
@@ -47,6 +48,7 @@ $meta_info = array_filter(array(
                                     <h4>Download</h4>
                                     <h5>the print &amp; play</h5>
                                 </div>
+                                <a class="puzzle-full-cover-link" href="<?php echo wp_get_attachment_url($game['print_and_play']); ?>"></a>
                             </div>
                         </div>
                         <?php endif; ?>

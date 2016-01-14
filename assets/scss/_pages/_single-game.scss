@@ -46,6 +46,7 @@
     .circle-button-content {
         position: relative;
         top: -0.5rem;
+        @include flex-basis(80%);
         
         .fa {
             font-size: 48px;

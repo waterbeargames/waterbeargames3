@@ -8,10 +8,6 @@
     background-color: #fff;
 }
 
-.gray-background {
-    background-color: $light-gray;
-}
-
 /* Subsections inside each section */
 
 .puzzle-section-headline {
@@ -30,6 +26,16 @@
     }
 }
 
+.puzzle-main-content {
+    text-align: center;
+    
+    @include breakpoint($size-lg) {
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+
 .puzzle-background-overlay {
     position: absolute;
     top: 0;
@@ -43,13 +49,11 @@
  * The sections
  */
 
-.puzzle-features-content, .puzzle-team-members-content {
-    > .column {
-        @include display-flex;
-    }
+.puzzle-games-content, .puzzle-team-content {
+    @include justify-content(center);
     
     .column-inner {
-        @include flex(1 1 auto);
-        min-width: 0;
+        width: 100%;
+        padding: 10px;
     }
 }

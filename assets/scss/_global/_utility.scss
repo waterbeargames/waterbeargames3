@@ -84,22 +84,39 @@
 }
     
 .circle-button {
+    position: relative;
     @include display-flex;
     @include align-items(center);
     @include justify-content(center);
     height: 0;
     padding: 50% 0;
-    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
     @include transition(all 0.4s ease);
     
     .circle-button-content {
-        @include flex(0 1 80%);
+        @include flex(0 1 70%);
     }
     
     &.light-text-color-scheme {
         .fa {
             color: #fff;
         }
+    }
+    
+    &, .puzzle-background-overlay, .puzzle-full-cover-link {
+        border-radius: 50%;
+    }
+    
+    .puzzle-background-overlay {
+        opacity: 0.5;
+        @include transition(all 0.4s ease);
+    }
+    
+    &:hover .puzzle-background-overlay {
+        opacity: 0.1;
     }
 }
 
