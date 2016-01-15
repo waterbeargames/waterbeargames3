@@ -228,9 +228,8 @@ if ($footer_background_color == 'secondary') {
 .wbg-button,
 input[type='button'],
 input[type='submit'],
-.wbg-button.wbg-button-secondary-color:hover,
-.secondary-color-background .wbg-button.wbg-button-white:hover,
-.secondary-color-background .wbg-button.wbg-button-secondary-color,
+.wbg-button.wbg-button-secondary:hover,
+.secondary-background .wbg-button.wbg-button-secondary,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -238,52 +237,34 @@ a.page-numbers:hover,
 #cancel-comment-reply-link,
 #pagination a:hover {
     background-color: <?php echo $primary_color; ?>;
-    border-color: <?php echo $primary_color; ?>;
     color: #fff;
 }
 
-.white-background .wbg-button.wbg-button-white,
 #pagination a {
-    border-color: <?php echo $primary_color; ?>;
     color: <?php echo $primary_color; ?>;
-}
-
-.wbg-button.wbg-button-white,
-.primary-color-background .wbg-button.wbg-button-white {
-    color: <?php echo $primary_color; ?>;
-}
-
-.white-background .wbg-button.wbg-button-transparent {
-    border-color: <?php echo $secondary_color; ?>;
-    color: <?php echo $secondary_color; ?>;
 }
 
 .wbg-button:hover,
-.wbg-button.wbg-button-white:hover,
-.wbg-button.wbg-button-transparent:hover,
 input[type='button']:hover,
 input[type='submit']:hover,
-.wbg-button.wbg-button-secondary-color,
-.primary-color-background .wbg-button,
-.primary-color-background input[type='button'],
-.primary-color-background input[type='submit'],
-.primary-color-background .wbg-button.wbg-button-white:hover,
+.wbg-button.wbg-button-secondary,
+.primary-background .wbg-button,
+.primary-background input[type='button'],
+.primary-background input[type='submit'],
 .categories .cat-item a:hover,
 #cancel-comment-reply-link:hover,
 .comment-reply-link:hover {
     background-color: <?php echo $secondary_color; ?>;
-    border-color: <?php echo $secondary_color; ?>;
     color: #fff;
 }
 
-.primary-color-background .wbg-button:hover,
-.primary-color-background input[type='button']:hover,
-.primary-color-background input[type='submit']:hover,
-.secondary-color-background .wbg-button:hover,
-.secondary-color-background input[type='button']:hover ,
-.secondary-color-background input[type='submit']:hover {
+.primary-background .wbg-button:hover,
+.primary-background input[type='button']:hover,
+.primary-background input[type='submit']:hover,
+.secondary-background .wbg-button:hover,
+.secondary-background input[type='button']:hover ,
+.secondary-background input[type='submit']:hover {
     background-color: #fff;
-    border-color: #fff;
     color: <?php echo $primary_color; ?>;
 }
 

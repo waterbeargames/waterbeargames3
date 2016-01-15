@@ -19,11 +19,7 @@
 }
 
 .comment-reply-link, #cancel-comment-reply-link {
-    @extend %wbg-button;
-}
-
-.comment-reply-link {
-    line-height: 1;
+    @extend %wbg-button-small;
 }
 
 .page-numbers {
@@ -36,10 +32,6 @@
         background-color: $medium-gray;
         color: #fff;
     }
-}
-
-#cancel-comment-reply-link {
-    padding: 0.5rem;
 }
 
 .comment-respond {

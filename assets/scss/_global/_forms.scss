@@ -44,7 +44,7 @@ input, select {
 }
 
 button, input[type='button'], input[type='submit'] {
-    @extend %wbg-button;
+    @extend %wbg-button-small;
     text-transform: uppercase;
     white-space: normal;
     cursor: pointer;

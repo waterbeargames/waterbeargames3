@@ -3,8 +3,8 @@
   display: table;
   content: " "; }
 
-.wbg-button, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, input, select, textarea, #pagination a, .puzzle-accordions-content .column-inner, .game-details {
-  border-radius: 5px; }
+.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button, input, select, textarea, #pagination a, .puzzle-accordions-content .column-inner, .game-details {
+  border-radius: 10px; }
 
 .row, .puzzle-header .header-content .header-content-inner {
   max-width: 1060px;
@@ -64,47 +64,96 @@ section {
 /*-----------------*/
 /* Utility Classes */
 /*-----------------*/
-.wbg-button, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  display: inline-block;
-  padding: 1rem 1.5rem;
-  background-color: #aaa;
-  border: solid 1px #aaa;
-  color: #fff;
-  text-align: center;
-  text-decoration: none; }
-  .wbg-button:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, .comment-reply-link:hover, #cancel-comment-reply-link:hover {
-    color: #fff; }
-
-.wbg-button.wbg-button-white, .wbg-button.wbg-button-transparent:hover {
-  background-color: #fff;
-  border-color: #fff; }
-.wbg-button.wbg-button-black {
-  background-color: #000;
-  border-color: #000; }
-.wbg-button.wbg-button-transparent {
-  background-color: transparent;
-  border-color: #fff; }
-.wbg-button.wbg-button-has-icon {
+.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button {
+  top: 0;
+  bottom: 0.5rem;
+  margin-bottom: 0;
+  padding: 1rem 3rem 1.5rem;
+  -webkit-box-shadow: 0 -0.5rem 0 rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 -0.5rem 0 rgba(0, 0, 0, 0.3) inset;
   position: relative;
-  padding-right: 20px; }
-  .wbg-button.wbg-button-has-icon:before {
-    position: absolute;
-    right: 8px;
-    display: inline-block;
-    font-family: 'FontAwesome';
-    content: '\f01a'; }
+  top: 0;
+  display: inline-block;
+  border: 0;
+  background-color: #aaa;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease; }
+  .wbg-button-small:active, button:active, input[type='button']:active, input[type='submit']:active, .comment-reply-link:active, #cancel-comment-reply-link:active, .wbg-button-large:active, .wbg-button:active {
+    top: 0.5rem;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset; }
+  .wbg-button-small:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, .comment-reply-link:hover, #cancel-comment-reply-link:hover, .wbg-button-large:hover, .wbg-button:hover {
+    color: #fff; }
+  @media all and (min-width: 660px) {
+    .wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button {
+      font-size: 2rem; } }
+  @media all and (min-width: 850px) {
+    .wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button {
+      font-size: 2.4rem; } }
 
-.primary-color-background .wbg-button.wbg-button-white {
-  background-color: #fff;
-  border-color: #fff; }
-.primary-color-background .wbg-button.wbg-button-black {
-  background-color: #000;
-  border-color: #000; }
-.primary-color-background .wbg-button.wbg-button-transparent {
-  background-color: transparent;
-  border-color: #fff; }
+.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
+  top: 0;
+  bottom: 0.4rem;
+  margin-bottom: 0;
+  padding: 0.8rem 2.5rem 1.2rem;
+  -webkit-box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
+  font-size: 1.4rem; }
+  .wbg-button-small:active, button:active, input[type='button']:active, input[type='submit']:active, .comment-reply-link:active, #cancel-comment-reply-link:active {
+    top: 0.4rem;
+    bottom: 0;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.8rem;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset; }
+
+.wbg-button-large {
+  top: 0;
+  bottom: 0.7rem;
+  margin-bottom: 0;
+  padding: 1rem 4rem 1.7rem;
+  -webkit-box-shadow: 0 -0.7rem 0 rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 -0.7rem 0 rgba(0, 0, 0, 0.3) inset;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase; }
+  .wbg-button-large:active {
+    top: 0.7rem;
+    bottom: 0;
+    margin-bottom: 0.7rem;
+    padding-bottom: 1rem;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset; }
+
+@media all and (min-width: 660px) {
+  .wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
+    font-size: 1.6rem; }
+
+  .wbg-button-large {
+    font-size: 2.6rem; } }
+@media all and (min-width: 850px) {
+  .wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
+    font-size: 1.8rem; }
+
+  .wbg-button-large {
+    font-size: 3.6rem; } }
+.wbg-button.wbg-button-black {
+  background-color: #555; }
+
+.wbg-button-large {
+  border-radius: 15px; }
+
+.primary-background .wbg-button.wbg-button-black {
+  background-color: #555; }
 
 .circle-button-container {
   position: relative;
@@ -1573,9 +1622,6 @@ img, svg {
 .comment-meta a {
   text-decoration: none; }
 
-.comment-reply-link {
-  line-height: 1; }
-
 .page-numbers {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -1584,9 +1630,6 @@ img, svg {
   .page-numbers.current {
     background-color: #aaa;
     color: #fff; }
-
-#cancel-comment-reply-link {
-  padding: 0.5rem; }
 
 .comment-respond {
   margin-top: 2rem; }
@@ -1684,6 +1727,12 @@ img, svg {
   left: 0;
   right: 0;
   opacity: 0.85; }
+
+.vertical-center .row:last-child {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 /*
  * The sections

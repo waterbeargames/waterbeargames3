@@ -68,6 +68,10 @@ $two_column->set_group_name('Two Column')
                 'Light'     => 'light'
             )
         ),
+        'vertical_center'    => array(
+            'name'          => 'Vertically center columns',
+            'input_type'    => 'checkbox'
+        ),
         'background_image'  => array(
             'name'          => 'Background Image',
             'width'         => 'xs-span12 sm-span6',

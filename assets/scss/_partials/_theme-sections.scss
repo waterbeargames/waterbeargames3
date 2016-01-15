@@ -45,6 +45,12 @@
     opacity: 0.85;
 }
 
+.vertical-center {
+    .row:last-child {
+        @include align-items(center);
+    }
+}
+
 /*
  * The sections
  */

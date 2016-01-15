@@ -80,9 +80,7 @@ function meta_options_wbg_shortcode_form() { ?>
                         <option value="secondary">Secondary Color</option>
                         <option value="accent">Accent Color</option>
                         <option value="alternative">Alternative Background Color</option>
-                        <option value="white">White</option>
                         <option value="black">Black</option>
-                        <option value="transparent">Transparent</option>
                     </select>
                 </p>
                 <p>
