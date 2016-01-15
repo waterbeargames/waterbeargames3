@@ -16,6 +16,14 @@ $primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_
 $secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
 $accent_color = get_theme_mod('accent_color', $puzzle_default_colors['accent_color']->default_color());
 $alternative_background = get_theme_mod('alternative_background', $puzzle_default_colors['alternative_background']->default_color());
+
+$colors = array(
+    'primary'       => $primary_color,
+    'secondary'     => $secondary_color,
+    'accent'        => $accent_color,
+    'alternative'   => $alternative_background
+);
+
 $headline_dark = get_theme_mod('headline_dark', $puzzle_default_colors['headline_dark']->default_color());
 $text_dark = get_theme_mod('text_dark', $puzzle_default_colors['text_dark']->default_color());
 $headline_light = get_theme_mod('headline_light', $puzzle_default_colors['headline_light']->default_color());
@@ -217,12 +225,12 @@ if ($footer_background_color == 'secondary') {
 
 /* Buttons */
 
-.puzzle-button,
+.wbg-button,
 input[type='button'],
 input[type='submit'],
-.puzzle-button.puzzle-button-secondary-color:hover,
-.secondary-color-background .puzzle-button.puzzle-button-white:hover,
-.secondary-color-background .puzzle-button.puzzle-button-secondary-color,
+.wbg-button.wbg-button-secondary-color:hover,
+.secondary-color-background .wbg-button.wbg-button-white:hover,
+.secondary-color-background .wbg-button.wbg-button-secondary-color,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -234,32 +242,32 @@ a.page-numbers:hover,
     color: #fff;
 }
 
-.white-background .puzzle-button.puzzle-button-white,
+.white-background .wbg-button.wbg-button-white,
 #pagination a {
     border-color: <?php echo $primary_color; ?>;
     color: <?php echo $primary_color; ?>;
 }
 
-.puzzle-button.puzzle-button-white,
-.primary-color-background .puzzle-button.puzzle-button-white {
+.wbg-button.wbg-button-white,
+.primary-color-background .wbg-button.wbg-button-white {
     color: <?php echo $primary_color; ?>;
 }
 
-.white-background .puzzle-button.puzzle-button-transparent {
+.white-background .wbg-button.wbg-button-transparent {
     border-color: <?php echo $secondary_color; ?>;
     color: <?php echo $secondary_color; ?>;
 }
 
-.puzzle-button:hover,
-.puzzle-button.puzzle-button-white:hover,
-.puzzle-button.puzzle-button-transparent:hover,
+.wbg-button:hover,
+.wbg-button.wbg-button-white:hover,
+.wbg-button.wbg-button-transparent:hover,
 input[type='button']:hover,
 input[type='submit']:hover,
-.puzzle-button.puzzle-button-secondary-color,
-.primary-color-background .puzzle-button,
+.wbg-button.wbg-button-secondary-color,
+.primary-color-background .wbg-button,
 .primary-color-background input[type='button'],
 .primary-color-background input[type='submit'],
-.primary-color-background .puzzle-button.puzzle-button-white:hover,
+.primary-color-background .wbg-button.wbg-button-white:hover,
 .categories .cat-item a:hover,
 #cancel-comment-reply-link:hover,
 .comment-reply-link:hover {
@@ -268,10 +276,10 @@ input[type='submit']:hover,
     color: #fff;
 }
 
-.primary-color-background .puzzle-button:hover,
+.primary-color-background .wbg-button:hover,
 .primary-color-background input[type='button']:hover,
 .primary-color-background input[type='submit']:hover,
-.secondary-color-background .puzzle-button:hover,
+.secondary-color-background .wbg-button:hover,
 .secondary-color-background input[type='button']:hover ,
 .secondary-color-background input[type='submit']:hover {
     background-color: #fff;
@@ -283,6 +291,14 @@ input[type='submit']:hover,
     color: <?php echo $primary_color; ?>;
 }
 
+<?php foreach ($colors as $label => $color) : ?>
+.circle-button-container:hover .circle-button.<?php echo $label; ?>-background,
+.circle-button.<?php echo $label; ?>-background:hover {
+    box-shadow: 0 0 0 8px rgba(<?php echo hex2rgb($color); ?>, 0.5);
+}
+
+<?php endforeach; ?>
+
 /* Blog */
 
 .puzzle-loop, .single-post-content, .single-post-content.comments-open, #pagination {
@@ -292,6 +308,7 @@ input[type='submit']:hover,
 .single-post-page-links a, .page-numbers {
     color: <?php echo $text_dark; ?>
 }
+
 
 /* Contact Form 7 */
 

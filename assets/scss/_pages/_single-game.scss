@@ -45,8 +45,8 @@
     
     .circle-button-content {
         position: relative;
-        top: -0.5rem;
-        @include flex-basis(80%);
+        top: -2px;
+        @include flex-basis(100%);
         
         .fa {
             font-size: 48px;
@@ -63,6 +63,11 @@
         
         h4 {
             text-transform: uppercase;
+        }
+        
+        h5 {
+            width: 70%;
+            margin: 0 auto;
         }
     }
 }

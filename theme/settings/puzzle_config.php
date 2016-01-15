@@ -8,7 +8,7 @@
 $puzzle_pieces = new PuzzlePieces;
 
 /* Add shortcode buttons to WYSIWYG editor */
-$puzzle_pieces->set_shortcodes(true);
+$puzzle_pieces->set_shortcodes(false);
 
 /* Add Icon Library to page builder */
 $puzzle_pieces->set_icon_library(true);
@@ -51,5 +51,6 @@ foreach (glob(get_stylesheet_directory() . '/theme/models/*.php') as $filename) 
 require_once('puzzle_colors.php');
 require_once('customize_theme.php');
 require_once(dirname(__FILE__) . '/../miscellaneous/helpers.php');
+require_once(dirname(__FILE__) . '/../miscellaneous/button_shortcode.php');
 
 ?>

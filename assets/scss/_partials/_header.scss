@@ -3,33 +3,41 @@
 /*--------*/
 
 #header {
-    min-height: 300px;
+    position: relative;
+    height: 300px;
     padding: 80px 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    
+    h1 {
+        @include vertical-center-fix;
+    }
     
     + main > section:first-child {
         padding-top: 30px;
     }
     
     @include breakpoint($size-md) {
-        min-height: 400px;
+        height: 400px;
         padding: 100px 0;
     }
     
     @include breakpoint($size-lg) {
-        min-height: 600px;
+        height: 600px;
     }
 }
 
 .home #header {
+    height: auto;
     padding: 30px 0;
     
     @include breakpoint($size-md) {
         @include display-flex;
         @include align-items(center);
         height: 100%;
+        min-height: 400px;
         padding: 0;
         
         .row {
@@ -43,6 +51,11 @@
                 }
             }
         }
+    }
+    
+    @include breakpoint($size-lg) {
+        height: 100%;
+        min-height: 600px;
     }
 }
 
@@ -59,10 +72,6 @@
             }
         }
         
-        &:hover .circle-button {
-            @include transform(scale(1.1));
-        }
-        
         &:first-child .circle-button .circle-button-content {
             @include flex-basis(70%);
         }
@@ -77,36 +86,36 @@
             }
         
             &:first-child {
-                top: -1%;
+                top: -2%;
                 left: 0;
-                right: 50%;
+                right: 48%;
             }
         
             &:nth-child(2) {
-                top: 15%;
+                top: 12%;
                 right: 0;
-                left: 60%;
+                left: 58%;
             }
         
             &:last-child {
-                top: 59%;
-                right: 30%;
-                left: 30%;
+                top: 57%;
+                right: 29%;
+                left: 29%;
             }
         }
     
         @include breakpoint($size-lg) {
             &:first-child {
-                right: 53%;
+                right: 51%;
             }
         
             &:nth-child(2) {
-                left: 62%;
+                left: 60%;
             }
         
             &:last-child {
-                right: 33%;
-                left: 33%;
+                right: 31%;
+                left: 31%;
             }
         }
     }

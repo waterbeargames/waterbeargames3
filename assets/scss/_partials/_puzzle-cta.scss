@@ -5,7 +5,7 @@
 .puzzle-cta {
     text-align: center;
     
-    .puzzle-button {
+    .wbg-button {
         width: 80%;
         margin: 0 10%;
         font-size: 20px;
@@ -18,7 +18,7 @@
     }
     
     @include breakpoint ($size-lg) {
-        .puzzle-button {
+        .wbg-button {
             width: 100%;
             margin: 0;
         }

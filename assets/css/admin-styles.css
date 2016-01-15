@@ -16,4 +16,16 @@
 #game_options .column, #news_story_options .column, #team_options .column {
   padding-right: 10px; }
 
+#wbg_shortcode_form {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent; }
+  #wbg_shortcode_form > *:not(.inside) {
+    display: none; }
+  #wbg_shortcode_form .inside {
+    margin: 0;
+    padding: 0; }
+
 /*# sourceMappingURL=admin-styles.css.map */

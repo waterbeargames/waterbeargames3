@@ -28,7 +28,7 @@ foreach ($games as $game) :
                         include(get_attached_file($game_logo));
                     else :
                     ?>
-                    <h3><?php echo get_the_title($game->ID); ?></h3>
+                    <h4><?php echo get_the_title($game->ID); ?></h4>
                     <?php endif; ?>
                 </div>
                 <a class="puzzle-full-cover-link" href="<?php echo get_permalink($game->ID); ?>"></a>

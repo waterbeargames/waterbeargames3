@@ -2,7 +2,7 @@
 /* Utility Classes */
 /*-----------------*/
 
-%puzzle-button {
+%wbg-button {
     @include transition (all 0.4s ease);
     @extend %default-border-radius;
     display: inline-block;
@@ -18,25 +18,25 @@
     }
 }
 
-.puzzle-button {
-    @extend %puzzle-button;
+.wbg-button {
+    @extend %wbg-button;
     
-    &.puzzle-button-white, &.puzzle-button-transparent:hover {
+    &.wbg-button-white, &.wbg-button-transparent:hover {
         background-color: #fff;
         border-color: #fff;
     }
     
-    &.puzzle-button-black {
+    &.wbg-button-black {
         background-color: #000;
         border-color: #000;
     }
     
-    &.puzzle-button-transparent {
+    &.wbg-button-transparent {
         background-color: transparent;
         border-color: #fff;
     }
     
-    &.puzzle-button-has-icon {
+    &.wbg-button-has-icon {
         position: relative;
         padding-right: 20px;
         
@@ -51,18 +51,18 @@
 }
 
 .primary-color-background {
-    .puzzle-button {
-        &.puzzle-button-white {
+    .wbg-button {
+        &.wbg-button-white {
             background-color: #fff;
             border-color: #fff;
         }
         
-        &.puzzle-button-black {
+        &.wbg-button-black {
             background-color: #000;
             border-color: #000;
         }
         
-        &.puzzle-button-transparent {
+        &.wbg-button-transparent {
             background-color: transparent;
             border-color: #fff;
         }
@@ -75,14 +75,18 @@
     text-align: center;
     
     h4 {
-        margin: 1rem 0 0;
+        margin: 1.5rem 0 0;
     }
 
     @include breakpoint($size-sm) {
         padding: 10px;
     }
 }
-    
+
+.circle-button-container:hover .circle-button, .circle-button:hover {
+    @include transform(scale(1.05));
+}
+
 .circle-button {
     position: relative;
     @include display-flex;
@@ -95,6 +99,11 @@
     background-size: cover;
     text-align: center;
     @include transition(all 0.4s ease);
+    
+    &, * {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+    }
     
     .circle-button-content {
         @include flex(0 1 70%);

@@ -3,7 +3,7 @@
   display: table;
   content: " "; }
 
-.puzzle-button, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, input, select, textarea, #pagination a, .puzzle-accordions-content .column-inner, .game-details {
+.wbg-button, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, input, select, textarea, #pagination a, .puzzle-accordions-content .column-inner, .game-details {
   border-radius: 5px; }
 
 .row, .puzzle-header .header-content .header-content-inner {
@@ -64,7 +64,7 @@ section {
 /*-----------------*/
 /* Utility Classes */
 /*-----------------*/
-.puzzle-button, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
+.wbg-button, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   display: inline-block;
@@ -74,35 +74,35 @@ section {
   color: #fff;
   text-align: center;
   text-decoration: none; }
-  .puzzle-button:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, .comment-reply-link:hover, #cancel-comment-reply-link:hover {
+  .wbg-button:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, .comment-reply-link:hover, #cancel-comment-reply-link:hover {
     color: #fff; }
 
-.puzzle-button.puzzle-button-white, .puzzle-button.puzzle-button-transparent:hover {
+.wbg-button.wbg-button-white, .wbg-button.wbg-button-transparent:hover {
   background-color: #fff;
   border-color: #fff; }
-.puzzle-button.puzzle-button-black {
+.wbg-button.wbg-button-black {
   background-color: #000;
   border-color: #000; }
-.puzzle-button.puzzle-button-transparent {
+.wbg-button.wbg-button-transparent {
   background-color: transparent;
   border-color: #fff; }
-.puzzle-button.puzzle-button-has-icon {
+.wbg-button.wbg-button-has-icon {
   position: relative;
   padding-right: 20px; }
-  .puzzle-button.puzzle-button-has-icon:before {
+  .wbg-button.wbg-button-has-icon:before {
     position: absolute;
     right: 8px;
     display: inline-block;
     font-family: 'FontAwesome';
     content: '\f01a'; }
 
-.primary-color-background .puzzle-button.puzzle-button-white {
+.primary-color-background .wbg-button.wbg-button-white {
   background-color: #fff;
   border-color: #fff; }
-.primary-color-background .puzzle-button.puzzle-button-black {
+.primary-color-background .wbg-button.wbg-button-black {
   background-color: #000;
   border-color: #000; }
-.primary-color-background .puzzle-button.puzzle-button-transparent {
+.primary-color-background .wbg-button.wbg-button-transparent {
   background-color: transparent;
   border-color: #fff; }
 
@@ -111,10 +111,16 @@ section {
   padding: 5px;
   text-align: center; }
   .circle-button-container h4 {
-    margin: 1rem 0 0; }
+    margin: 1.5rem 0 0; }
   @media all and (min-width: 480px) {
     .circle-button-container {
       padding: 10px; } }
+
+.circle-button-container:hover .circle-button, .circle-button:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
 
 .circle-button {
   position: relative;
@@ -138,6 +144,9 @@ section {
   text-align: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
+  .circle-button, .circle-button * {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d; }
   .circle-button .circle-button-content {
     -webkit-flex: 0 1 70%;
     -ms-flex: 0 1 70%;
@@ -1270,22 +1279,32 @@ img, svg {
 /* Header */
 /*--------*/
 #header {
-  min-height: 300px;
+  position: relative;
+  height: 300px;
   padding: 80px 0;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
+  #header h1 {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%) translateZ(0);
+    -moz-transform: translate(0, -50%) translateZ(0);
+    -ms-transform: translate(0, -50%) translateZ(0);
+    transform: translate(0, -50%) translateZ(0); }
   #header + main > section:first-child {
     padding-top: 30px; }
   @media all and (min-width: 660px) {
     #header {
-      min-height: 400px;
+      height: 400px;
       padding: 100px 0; } }
   @media all and (min-width: 850px) {
     #header {
-      min-height: 600px; } }
+      height: 600px; } }
 
 .home #header {
+  height: auto;
   padding: 30px 0; }
   @media all and (min-width: 660px) {
     .home #header {
@@ -1298,6 +1317,7 @@ img, svg {
       -ms-flex-align: center;
       align-items: center;
       height: 100%;
+      min-height: 400px;
       padding: 0; }
       .home #header .row {
         -webkit-flex: 0 1 100%;
@@ -1312,6 +1332,10 @@ img, svg {
             -webkit-flex: 0 1 100%;
             -ms-flex: 0 1 100%;
             flex: 0 1 100%; } }
+  @media all and (min-width: 850px) {
+    .home #header {
+      height: 100%;
+      min-height: 600px; } }
 
 .home-buttons {
   position: relative;
@@ -1327,11 +1351,6 @@ img, svg {
       -webkit-flex: 0 1 60%;
       -ms-flex: 0 1 60%;
       flex: 0 1 60%; }
-    .home-buttons .circle-button-container:hover .circle-button {
-      -webkit-transform: scale(1.1);
-      -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1); }
     .home-buttons .circle-button-container:first-child .circle-button .circle-button-content {
       -webkit-flex-basis: 70%;
       -ms-flex-preferred-size: 70%;
@@ -1342,25 +1361,25 @@ img, svg {
         .home-buttons .circle-button-container:not(:first-child) h4 {
           font-size: 2rem; }
         .home-buttons .circle-button-container:first-child {
-          top: -1%;
+          top: -2%;
           left: 0;
-          right: 50%; }
+          right: 48%; }
         .home-buttons .circle-button-container:nth-child(2) {
-          top: 15%;
+          top: 12%;
           right: 0;
-          left: 60%; }
+          left: 58%; }
         .home-buttons .circle-button-container:last-child {
-          top: 59%;
-          right: 30%;
-          left: 30%; } }
+          top: 57%;
+          right: 29%;
+          left: 29%; } }
     @media all and (min-width: 850px) {
       .home-buttons .circle-button-container:first-child {
-        right: 53%; }
+        right: 51%; }
       .home-buttons .circle-button-container:nth-child(2) {
-        left: 62%; }
+        left: 60%; }
       .home-buttons .circle-button-container:last-child {
-        right: 33%;
-        left: 33%; } }
+        right: 31%;
+        left: 31%; } }
 
 /*----------------*/
 /* Navigation Bar */
@@ -1537,7 +1556,7 @@ img, svg {
   .puzzle-loop:first-child {
     padding-top: 0;
     border-top: 0; }
-  .puzzle-loop .puzzle-button {
+  .puzzle-loop .wbg-button {
     margin-left: 0;
     margin-right: 0; }
 
@@ -1732,7 +1751,7 @@ img, svg {
 /*-------------------------------*/
 .puzzle-cta {
   text-align: center; }
-  .puzzle-cta .puzzle-button {
+  .puzzle-cta .wbg-button {
     width: 80%;
     margin: 0 10%;
     font-size: 20px;
@@ -1742,7 +1761,7 @@ img, svg {
     .puzzle-cta {
       text-align: left; } }
   @media all and (min-width: 850px) {
-    .puzzle-cta .puzzle-button {
+    .puzzle-cta .wbg-button {
       width: 100%;
       margin: 0; } }
 
@@ -1817,7 +1836,7 @@ img, svg {
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3)); }
   .puzzle-games-content .circle-button svg path, .puzzle-games-content .circle-button svg polygon {
     fill: #fff; }
-.puzzle-games-content .circle-button h3 {
+.puzzle-games-content .circle-button h3, .puzzle-games-content .circle-button h4 {
   margin: 0;
   color: #fff; }
 
@@ -1942,7 +1961,7 @@ img, svg {
 /*----------*/
 .error404 main {
   text-align: center; }
-  .error404 main .puzzle-button {
+  .error404 main .wbg-button {
     margin-top: 3rem; }
 
 /*------------------*/
@@ -2023,10 +2042,10 @@ img, svg {
     flex: 0 1 50%; }
   .game-buttons .circle-button-content {
     position: relative;
-    top: -0.5rem;
-    -webkit-flex-basis: 80%;
-    -ms-flex-preferred-size: 80%;
-    flex-basis: 80%; }
+    top: -2px;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%; }
     .game-buttons .circle-button-content .fa {
       font-size: 48px; }
       @media all and (min-width: 660px) {
@@ -2037,6 +2056,9 @@ img, svg {
       margin: 0; }
     .game-buttons .circle-button-content h4 {
       text-transform: uppercase; }
+    .game-buttons .circle-button-content h5 {
+      width: 70%;
+      margin: 0 auto; }
 
 .game-details {
   padding: 10px 25px; }

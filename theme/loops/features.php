@@ -29,7 +29,7 @@ if (!empty($puzzle_column['link']) && !empty($puzzle_column['icon_link'])) {
             <?php echo apply_filters('the_content', $puzzle_column['content']); ?>
         </div>
         <?php if (!empty($puzzle_column['button_text'])) : ?>
-        <a class="puzzle-button puzzle-feature-main-button" href="<?php echo $puzzle_column['link']; ?>"<?php echo $link_target; ?>><?php echo $puzzle_column['button_text']; ?></a>
+        <a class="wbg-button puzzle-feature-main-button" href="<?php echo $puzzle_column['link']; ?>"<?php echo $link_target; ?>><?php echo $puzzle_column['button_text']; ?></a>
         <?php endif; ?>
     </div>
 </div>
