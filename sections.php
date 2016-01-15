@@ -52,7 +52,7 @@ if (!empty($page_sections)) :
             if ($puzzle_section_type == 'games') :
                 include(locate_template('section-games-content.php'));
             elseif (!empty($puzzle_columns_data)) : ?>
-            <div class="row puzzle-<?php echo $puzzle_section_type; ?>-content">
+            <div class="row puzzle-columns-content">
                 <?php
                 $c = 0;
                 $loop_file = 'theme/loops/' . $puzzle_section_type . '.php';

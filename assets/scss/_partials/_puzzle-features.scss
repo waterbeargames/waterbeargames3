@@ -65,12 +65,8 @@
     }
 }
 
-.puzzle-features-content {
-    @include justify-content(center);
-}
-
 @include breakpoint($size-sm) {
-    .puzzle-features-content {
+    .puzzle-features {
         .icon-row {
             .puzzle-main-icon, .puzzle-icon-link, .puzzle-feature-column-content {
                 float: left;

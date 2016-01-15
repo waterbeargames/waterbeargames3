@@ -7,6 +7,38 @@ $one_column->set_group_name('One Column')
     ->set_admin_column_classes('xs-span12')
     ->set_order(10)
     ->set_markup_attr(array(
+        'width'             => array(
+            'name'          => 'Width',
+            'width'         => 'xs-span12 sm-span4',
+            'input_type'    => 'select',
+            'options'       => array(
+                'Full Width'    => 'full',
+                'Medium'        => 'medium',
+                'Narrow'        => 'narrow'
+            )
+        ),
+        'text_color_scheme' => array(
+            'name'          => 'Text Color Scheme',
+            'width'         => 'xs-span12 sm-span4',
+            'input_type'    => 'select',
+            'options'       => array(
+                'Dark'      => 'dark',
+                'Light'     => 'light'
+            )
+        ),
+        'background_color'  => array(
+            'name'          => 'Background Color',
+            'width'         => 'xs-span12 sm-span4',
+            'input_type'    => 'select',
+            'options'       => array(
+                'None'                      => '',
+                'White'                     => 'white',
+                'Alternative Background'    => 'alternative',
+                'Primary Color'             => 'primary',
+                'Secondary Color'           => 'secondary',
+                'Accent Color'              => 'accent'
+            )
+        ),
         'content'           => array(
             'name'          => 'Content',
             'input_type'    => 'textarea',
@@ -26,6 +58,17 @@ $one_column->set_group_name('One Column')
             'width'         => 'xs-span12 sm-span6',
             'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the section slug will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the section slug and headline are blank, the section slug will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
             'input_type'    => 'text'
+        ),
+        'align_items'       => array(
+            'name'          => 'Position Content',
+            'width'         => 'xs-span12 sm-span3',
+            'input_type'    => 'select',
+            'options'       => array(
+                'Left'      => 'left',
+                'Center'    => 'center',
+                'Right'     => 'right'
+            ),
+            'selected'      => 'center'
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
@@ -51,7 +94,7 @@ $one_column->set_group_name('One Column')
         ),
         'text_color_scheme' => array(
             'name'          => 'Text Color Scheme',
-            'width'         => 'xs-span12 sm-span6',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Dark'      => 'dark',

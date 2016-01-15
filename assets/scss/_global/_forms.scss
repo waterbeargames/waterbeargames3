@@ -21,7 +21,7 @@ label, input, select, textarea {
     font-size: 1.6rem;
 }
 
-input, select, textarea {
+button, input, select, textarea {
     -webkit-appearance: none;
 }
 
@@ -48,7 +48,6 @@ button, input[type='button'], input[type='submit'] {
     text-transform: uppercase;
     white-space: normal;
     cursor: pointer;
-    -webkit-appearance: none;
 }
 
 input {
@@ -77,6 +76,7 @@ input {
     
     &[type='submit'] {
         float: right;
+        min-width: 150px;
     }
 }
 

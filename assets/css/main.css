@@ -1,12 +1,12 @@
-.row:after, form:after, form p:after, .puzzle-loop:after, #pagination:after, .puzzle-accordions-content .puzzle-accordion-headline:after, .puzzle-features .icon-row:after {
+.row:after, form:after, form p:after, .puzzle-loop:after, #pagination:after, .puzzle-features .icon-row:after {
   clear: both;
   display: table;
   content: " "; }
 
-.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button, input, select, textarea, #pagination a, .puzzle-accordions-content .column-inner, .game-details {
+.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button, input, select, textarea, #pagination a, .puzzle-one-column .puzzle-columns-content .column-inner, .game-details {
   border-radius: 10px; }
 
-.row, .puzzle-header .header-content .header-content-inner {
+.row {
   max-width: 1060px;
   margin: 0 auto; }
 
@@ -44,7 +44,7 @@ main {
   main > section:first-child {
     padding-top: 120px; }
   main ul, main ol {
-    margin-left: 3rem; }
+    margin-left: 5rem; }
 
 section {
   position: relative;
@@ -57,9 +57,9 @@ section {
   section.no-padding-bottom {
     padding-bottom: 0; }
   section.large-padding-top {
-    padding-top: 60px; }
+    padding-top: 70px; }
   section.large-padding-bottom {
-    padding-bottom: 60px; }
+    padding-bottom: 70px; }
 
 /*-----------------*/
 /* Utility Classes */
@@ -74,6 +74,7 @@ section {
   position: relative;
   top: 0;
   display: inline-block;
+  margin-top: 2.5rem;
   border: 0;
   background-color: #aaa;
   color: #fff;
@@ -107,6 +108,7 @@ section {
   padding: 0.8rem 2.5rem 1.2rem;
   -webkit-box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
+  margin-top: 0;
   font-size: 1.4rem; }
   .wbg-button-small:active, button:active, input[type='button']:active, input[type='submit']:active, .comment-reply-link:active, #cancel-comment-reply-link:active {
     top: 0.4rem;
@@ -205,7 +207,6 @@ section {
   .circle-button, .circle-button .puzzle-background-overlay, .circle-button .puzzle-full-cover-link {
     border-radius: 50%; }
   .circle-button .puzzle-background-overlay {
-    opacity: 0.5;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   .circle-button:hover .puzzle-background-overlay {
@@ -1233,7 +1234,7 @@ label, input, select, textarea {
   font: 16px/1.5 "Open Sans", sans-serif;
   font-size: 1.6rem; }
 
-input, select, textarea {
+button, input, select, textarea {
   -webkit-appearance: none; }
 
 input, select, textarea {
@@ -1253,8 +1254,7 @@ input, select {
 button, input[type='button'], input[type='submit'] {
   text-transform: uppercase;
   white-space: normal;
-  cursor: pointer;
-  -webkit-appearance: none; }
+  cursor: pointer; }
 
 input[type='checkbox'], input[type='radio'], input[type='button'], input[type='submit'], input[type='file'] {
   opacity: 1; }
@@ -1270,7 +1270,8 @@ input[type='file'] {
 input[type='radio'] {
   -webkit-appearance: radio; }
 input[type='submit'] {
-  float: right; }
+  float: right;
+  min-width: 150px; }
 
 select {
   background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 30" enable-background="new 0 0 18 30" xml:space="preserve"><path fill="%23999999" d="M17.8,8.8c0,0.3-0.1,0.6-0.3,0.8c-0.2,0.2-0.5,0.3-0.8,0.3H1.3C1,9.9,0.8,9.7,0.6,9.5 C0.3,9.3,0.2,9.1,0.2,8.8c0-0.3,0.1-0.6,0.3-0.8l7.7-7.7C8.4,0.1,8.7,0,9,0c0.3,0,0.6,0.1,0.8,0.3L17.4,8 C17.7,8.2,17.8,8.5,17.8,8.8z"/><path fill="%23999999" d="M17.4,20.5c0.2,0.2,0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8l-7.7,7.7C9.6,29.9,9.3,30,9,30 c-0.3,0-0.6-0.1-0.8-0.3L0.6,22c-0.2-0.2-0.3-0.5-0.3-0.8c0-0.3,0.1-0.6,0.3-0.8c0.2-0.2,0.5-0.3,0.8-0.3h15.3 C17,20.1,17.2,20.3,17.4,20.5z"/></svg>');
@@ -1726,7 +1727,7 @@ img, svg {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.85; }
+  opacity: 0.5; }
 
 .vertical-center .row:last-child {
   -webkit-box-align: center;
@@ -1737,82 +1738,36 @@ img, svg {
 /*
  * The sections
  */
-.puzzle-games-content, .puzzle-team-content {
+.puzzle-features .puzzle-columns-content, .puzzle-games .puzzle-columns-content, .puzzle-team .puzzle-columns-content, .align-items-center .puzzle-columns-content {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center; }
+
+.align-items-left .puzzle-columns-content {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.align-items-right .puzzle-columns-content {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.puzzle-games .puzzle-columns-content, .puzzle-team .puzzle-columns-content {
   padding: 0 15px 10px; }
-  .puzzle-games-content .column-inner, .puzzle-team-content .column-inner {
+  .puzzle-games .puzzle-columns-content .column-inner, .puzzle-team .puzzle-columns-content .column-inner {
     width: 100%;
     margin: 0;
     padding: 5px; }
     @media all and (min-width: 480px) {
-      .puzzle-games-content .column-inner, .puzzle-team-content .column-inner {
+      .puzzle-games .puzzle-columns-content .column-inner, .puzzle-team .puzzle-columns-content .column-inner {
         padding: 10px; } }
 
-/*---------------------------*/
-/* Puzzle Accordions Section */
-/*---------------------------*/
-.puzzle-accordions-content {
-  padding: 15px 0; }
-  .puzzle-accordions-content > .column {
-    margin-top: 10px;
-    padding: 0 15px; }
-    .puzzle-accordions-content > .column:first-child {
-      margin-top: 0; }
-  .puzzle-accordions-content .column-inner {
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.5); }
-    .puzzle-accordions-content .column-inner:hover, .puzzle-accordions-content .column-inner:active, .puzzle-accordions-content .column-inner.active-accordion {
-      background-color: #fff; }
-    .puzzle-accordions-content .column-inner.active-accordion .puzzle-accordion-headline .fa:before {
-      content: '\f056'; }
-  .puzzle-accordions-content .puzzle-accordion-headline {
-    margin: 0;
-    cursor: pointer; }
-    .puzzle-accordions-content .puzzle-accordion-headline span {
-      float: left;
-      display: block;
-      width: 90%;
-      width: calc(100% - 30px); }
-    .puzzle-accordions-content .puzzle-accordion-headline .fa {
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease;
-      float: left;
-      width: 30px;
-      font-size: 24px; }
-      .puzzle-accordions-content .puzzle-accordion-headline .fa:before {
-        content: '\f055'; }
-  .puzzle-accordions-content .puzzle-accordion-content {
-    display: none; }
-
-.white-background .puzzle-accordions-content .column-inner {
-  background-color: #eee;
-  background-color: rgba(238, 238, 238, 0.5); }
-  .white-background .puzzle-accordions-content .column-inner:hover, .white-background .puzzle-accordions-content .column-inner:active, .white-background .puzzle-accordions-content .column-inner.active-accordion {
-    background-color: #eee; }
-
-/*-------------------------------*/
-/* Puzzle Call to Action Section */
-/*-------------------------------*/
-.puzzle-cta {
-  text-align: center; }
-  .puzzle-cta .wbg-button {
-    width: 80%;
-    margin: 0 10%;
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase; }
-  @media all and (min-width: 660px) {
-    .puzzle-cta {
-      text-align: left; } }
-  @media all and (min-width: 850px) {
-    .puzzle-cta .wbg-button {
-      width: 100%;
-      margin: 0; } }
+.puzzle-one-column .puzzle-columns-content .column-inner.white-background {
+  background-color: rgba(255, 255, 255, 0.85); }
 
 /*-------------------------*/
 /* Puzzle Features Section */
@@ -1865,120 +1820,23 @@ img, svg {
   align-self: center;
   width: 80%; }
 
-.puzzle-features-content {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
 @media all and (min-width: 480px) {
-  .puzzle-features-content .icon-row .puzzle-main-icon, .puzzle-features-content .icon-row .puzzle-icon-link, .puzzle-features-content .icon-row .puzzle-feature-column-content {
+  .puzzle-features .icon-row .puzzle-main-icon, .puzzle-features .icon-row .puzzle-icon-link, .puzzle-features .icon-row .puzzle-feature-column-content {
     float: left; }
-  .puzzle-features-content .icon-row .puzzle-feature-column-content {
+  .puzzle-features .icon-row .puzzle-feature-column-content {
     width: 60%;
     width: calc(100% - 90px); } }
 /*----------------------*/
 /* Puzzle Games Section */
 /*----------------------*/
-.puzzle-games-content .circle-button svg {
+.puzzle-games .circle-button svg {
   -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3)); }
-  .puzzle-games-content .circle-button svg path, .puzzle-games-content .circle-button svg polygon {
+  .puzzle-games .circle-button svg path, .puzzle-games .circle-button svg polygon {
     fill: #fff; }
-.puzzle-games-content .circle-button h3, .puzzle-games-content .circle-button h4 {
+.puzzle-games .circle-button h3, .puzzle-games .circle-button h4 {
   margin: 0;
   color: #fff; }
-
-/*-----------------------*/
-/* Puzzle Header Section */
-/*-----------------------*/
-.puzzle-header {
-  padding: 0; }
-  .puzzle-header .row {
-    max-width: 100%; }
-  .puzzle-header .header-content {
-    height: 400px;
-    padding-top: 50px;
-    background-position: center;
-    background-size: cover;
-    text-align: center; }
-    .puzzle-header .header-content .header-content-inner {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translate(0, -50%) translateZ(0);
-      -moz-transform: translate(0, -50%) translateZ(0);
-      -ms-transform: translate(0, -50%) translateZ(0);
-      transform: translate(0, -50%) translateZ(0);
-      padding: 0 30px; }
-    @media all and (min-width: 660px) {
-      .puzzle-header .header-content {
-        height: 600px; }
-        .puzzle-header .header-content .header-content-inner {
-          padding: 0 50px; } }
-  .puzzle-header .puzzle-header-text-background-white {
-    background-color: rgba(255, 255, 255, 0.8);
-    -webkit-box-shadow: 10px 0 0 rgba(255, 255, 255, 0.8), -10px 0 0 rgba(255, 255, 255, 0.8);
-    box-shadow: 10px 0 0 rgba(255, 255, 255, 0.8), -10px 0 0 rgba(255, 255, 255, 0.8); }
-  .puzzle-header .puzzle-header-text-background-black {
-    background-color: rgba(0, 0, 0, 0.7);
-    -webkit-box-shadow: 10px 0 0 rgba(0, 0, 0, 0.7), -10px 0 0 rgba(0, 0, 0, 0.7);
-    box-shadow: 10px 0 0 rgba(0, 0, 0, 0.7), -10px 0 0 rgba(0, 0, 0, 0.7); }
-  .puzzle-header .puzzle-header-text-white {
-    color: #fff; }
-  .puzzle-header .puzzle-header-text-black {
-    color: #000; }
-  .puzzle-header .align-text-left {
-    text-align: left; }
-  .puzzle-header .align-text-right {
-    text-align: right; }
-  .puzzle-header .align-text-center {
-    text-align: center; }
-
-/* Owl Carousel styling */
-.owl-theme .owl-controls {
-  margin: 0; }
-  .owl-theme .owl-controls .owl-pagination {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0; }
-  .owl-theme .owl-controls .owl-page span {
-    width: 30px;
-    height: 15px;
-    border: solid 1px rgba(255, 255, 255, 0.75);
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    filter: Alpha(Opacity=100);
-    opacity: 1;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
-  .owl-theme .owl-controls .owl-buttons div {
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    display: none;
-    position: absolute;
-    top: 45%;
-    margin: 0;
-    background: transparent;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    font-size: 50px;
-    filter: Alpha(Opacity=70);
-    opacity: 0.7; }
-    .owl-theme .owl-controls .owl-buttons div:hover {
-      filter: Alpha(Opacity=100);
-      opacity: 1; }
-    .owl-theme .owl-controls .owl-buttons div.owl-prev {
-      left: 0; }
-    .owl-theme .owl-controls .owl-buttons div.owl-next {
-      right: 0; }
-    .owl-theme .owl-controls .owl-buttons div i {
-      cursor: pointer; }
-    @media all and (min-width: 660px) {
-      .owl-theme .owl-controls .owl-buttons div {
-        display: block; } }
 
 /*-----------------------------*/
 /* Puzzle Team Members Section */

@@ -177,59 +177,25 @@ if ($footer_background_color == 'secondary') {
 
 /* Sections */
 
-.owl-theme .owl-controls .owl-page.active span {
-    background-color: <?php echo $primary_color; ?>;
+<?php foreach ($colors as $label => $color) : ?>
+.puzzle-one-column .puzzle-columns-content .column-inner.<?php echo $label; ?>-background {
+    background-color: rgba(<?php echo hex2rgb($color); ?>, 0.85);
 }
 
-.owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-header .puzzle-header-text-background-primary-color {
-<?php
-    $text_background_primary_color = 'rgba(' . hex2rgb($primary_color) . ', 0.8)';
-    $text_background_primary_color_shadow = '10px 0 0 ' . $text_background_primary_color . ', -10px 0 0 ' . $text_background_primary_color;
-?>
-    background-color:   <?php echo $text_background_primary_color; ?>;
-    -webkit-box-shadow: <?php echo $text_background_primary_color_shadow; ?>;
-    -moz-box-shadow:    <?php echo $text_background_primary_color_shadow; ?>;
-    box-shadow:         <?php echo $text_background_primary_color_shadow; ?>;
-}
-
-.puzzle-header .puzzle-header-text-background-secondary-color {
-<?php
-    $text_background_secondary_color = 'rgba(' . hex2rgb($secondary_color) . ', 0.75)';
-    $text_background_secondary_color_shadow = '10px 0 0 ' . $text_background_secondary_color . ', -10px 0 0 ' . $text_background_secondary_color;
-?>
-    background-color:   <?php echo $text_background_secondary_color; ?>;
-    -webkit-box-shadow: <?php echo $text_background_secondary_color_shadow; ?>;
-    -moz-box-shadow:    <?php echo $text_background_secondary_color_shadow; ?>;
-    box-shadow:         <?php echo $text_background_secondary_color_shadow; ?>;
-}
-
-.puzzle-header .puzzle-header-text-primary-color {
-    color: <?php echo $primary_color; ?>;
-}
-
-.puzzle-header .puzzle-header-text-secondary-color {
-    color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-accordions .column-inner > h5:first-child:hover .fa {
-    color: <?php echo $secondary_color; ?>;
-}
-
-.puzzle-features .column-inner > i:first-child, .puzzle-accordions .column-inner > h5:first-child i {
-    color: <?php echo $primary_color; ?>;
-}
+<?php endforeach; ?>
 
 /* Buttons */
 
 .wbg-button,
+button,
 input[type='button'],
 input[type='submit'],
 .wbg-button.wbg-button-secondary:hover,
 .secondary-background .wbg-button.wbg-button-secondary,
+.alternative-background .wbg-button.wbg-button-alternative,
+.secondary-background .wbg-button.wbg-button-accent:hover,
+.secondary-background .wbg-button.wbg-button-alternative:hover,
+.secondary-background .wbg-button.wbg-button-black:hover,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -244,28 +210,51 @@ a.page-numbers:hover,
     color: <?php echo $primary_color; ?>;
 }
 
+.wbg-button.wbg-button-alternative,
+.primary-background .wbg-button.wbg-button-alternative {
+    background-color: <?php echo $alternative_background; ?>;
+    color: <?php echo $primary_color; ?>;
+}
+
+.wbg-button.wbg-button-accent,
+.primary-background .wbg-button.wbg-button-accent,
+.primary-background .wbg-button:hover,
+.primary-background .wbg-button.wbg-button-primary:hover,
+.primary-background .wbg-button.wbg-button-secondary:hover,
+.primary-background button:hover,
+.primary-background input[type='button']:hover,
+.primary-background input[type='submit']:hover,
+.secondary-background .wbg-button:hover,
+.secondary-background .wbg-button.wbg-button-primary:hover,
+.secondary-background .wbg-button.wbg-button-secondary:hover,
+.secondary-background button:hover,
+.secondary-background input[type='button']:hover,
+.secondary-background input[type='submit']:hover {
+    background-color: <?php echo $accent_color; ?>;
+    color: <?php echo $headline_dark; ?>;
+}
+
 .wbg-button:hover,
+button:hover,
 input[type='button']:hover,
 input[type='submit']:hover,
+.wbg-button.wbg-button-accent:hover
+.wbg-button.wbg-button-alternative:hover,
+.primary-background .wbg-button.wbg-button-alternative:hover,
+.alternative-background .wbg-button.wbg-button-alternative:hover,
 .wbg-button.wbg-button-secondary,
 .primary-background .wbg-button,
+.primary-background .wbg-button.wbg-button-primary,
+.primary-background button,
 .primary-background input[type='button'],
 .primary-background input[type='submit'],
+.primary-background .wbg-button.wbg-button-accent:hover,
+.primary-background .wbg-button.wbg-button-black:hover,
 .categories .cat-item a:hover,
 #cancel-comment-reply-link:hover,
 .comment-reply-link:hover {
     background-color: <?php echo $secondary_color; ?>;
     color: #fff;
-}
-
-.primary-background .wbg-button:hover,
-.primary-background input[type='button']:hover,
-.primary-background input[type='submit']:hover,
-.secondary-background .wbg-button:hover,
-.secondary-background input[type='button']:hover ,
-.secondary-background input[type='submit']:hover {
-    background-color: #fff;
-    color: <?php echo $primary_color; ?>;
 }
 
 .circle-button .fa {

@@ -23,6 +23,7 @@
     position: relative;
     top: 0;
     display: inline-block;
+    margin-top: 2.5rem;
     border: 0;
     @extend %default-border-radius;
     background-color: $medium-gray;
@@ -50,6 +51,7 @@
 %wbg-button-small {
     @extend %wbg-button;
     @include make-button(0.8, 2.5, 0.4);
+    margin-top: 0;
     font-size: 1.4rem;
 }
 
@@ -157,7 +159,6 @@
     }
     
     .puzzle-background-overlay {
-        opacity: 0.5;
         @include transition(all 0.4s ease);
     }
     

@@ -19,6 +19,7 @@ function section_classes($page_section) {
     $section_classes .= (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
     $section_classes .= (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
     $section_classes .= (!empty($puzzle_options_data['vertical_center']) ? ' vertical-center' : '');
+    $section_classes .= (!empty($puzzle_options_data['align_items']) ? ' align-items-' . $puzzle_options_data['align_items'] : '');
     
     return $section_classes;
 }

@@ -29,7 +29,7 @@ $two_column->set_group_name('Two Column')
         ),
         'column_widths'     => array(
             'name'          => 'Column Widths',
-            'width'         => 'xs-span12 sm-span2',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 '1/2 1/2'   => '1-2_1-2',
@@ -39,7 +39,7 @@ $two_column->set_group_name('Two Column')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span2',
+            'width'         => 'xs span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -50,7 +50,7 @@ $two_column->set_group_name('Two Column')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span2',
+            'width'         => 'xs span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -61,7 +61,7 @@ $two_column->set_group_name('Two Column')
         ),
         'text_color_scheme' => array(
             'name'          => 'Text Color Scheme',
-            'width'         => 'xs-span12 sm-span6',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Dark'      => 'dark',

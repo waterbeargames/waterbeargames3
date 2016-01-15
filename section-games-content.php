@@ -9,7 +9,7 @@ $games = get_posts($args);
 $games_num = count($games);
 $span_classes = span_classes($games_num, 3, 4, 'xs', 'md');
 ?>
-<div class="row puzzle-<?php echo $puzzle_section_type; ?>-content">
+<div class="row puzzle-columns-content">
 <?php
 foreach ($games as $game) :
     $game_featured_image = wp_get_attachment_url(get_post_thumbnail_id($game->ID));

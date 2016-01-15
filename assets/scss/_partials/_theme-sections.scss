@@ -42,7 +42,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.85;
+    opacity: 0.5;
 }
 
 .vertical-center {
@@ -55,17 +55,44 @@
  * The sections
  */
 
-.puzzle-games-content, .puzzle-team-content {
-    @include justify-content(center);
-    padding: 0 15px 10px;
+.puzzle-features, .puzzle-games, .puzzle-team, .align-items-center {
+    .puzzle-columns-content {
+        @include justify-content(center);
+    }
+}
+
+.align-items-left .puzzle-columns-content {
+    @include justify-content(flex-start);
+}
+
+.align-items-right .puzzle-columns-content {
+    @include justify-content(flex-end);
+}
+
+.puzzle-games, .puzzle-team {
+    .puzzle-columns-content {
+        padding: 0 15px 10px;
     
-    .column-inner {
-        width: 100%;
-        margin: 0;
-        padding: 5px;
+        .column-inner {
+            width: 100%;
+            margin: 0;
+            padding: 5px;
         
-        @include breakpoint($size-sm) {
-            padding: 10px;
+            @include breakpoint($size-sm) {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.puzzle-one-column {
+    .puzzle-columns-content {
+        .column-inner {
+            @extend %default-border-radius;
+            
+            &.white-background {
+                background-color: rgba(#fff, 0.85);
+            }
         }
     }
 }
