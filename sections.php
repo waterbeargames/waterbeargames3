@@ -53,6 +53,8 @@ if (!empty($page_sections)) :
                 include(locate_template('section-games-content.php'));
             elseif ($puzzle_section_type == 'news') :
                 include(locate_template('section-news-content.php'));
+            elseif ($puzzle_section_type == 'blog') :
+                include(locate_template('section-blog-content.php'));
             elseif (!empty($puzzle_columns_data)) : ?>
             <div class="row puzzle-columns-content">
                 <?php

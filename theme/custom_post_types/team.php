@@ -14,7 +14,11 @@ function register_team() {
         ),
         'menu_icon'         => 'dashicons-groups',
         'public'            => true,
+        'rewrite'           => array(
+            
+        ),
         'show_ui'           => true,
+        'slug'              => 'games',
         'supports'          => array(
             'title',
             'editor',

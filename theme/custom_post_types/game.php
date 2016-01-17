@@ -14,6 +14,10 @@ function game_init() {
         ),
         'menu_icon'         => 'dashicons-smiley',
         'public'            => true,
+        'has_archive'       => true,
+        'rewrite'           => array(
+            'slug'          => 'games'
+        ),
         'show_ui'           => true,
         'supports'          => array(
             'title',

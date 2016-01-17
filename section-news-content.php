@@ -89,6 +89,8 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
         <?php endforeach; ?>
         </div>
     </div>
+</div>
+<div class="row">
     <div class="column xs-span12">
         <div class="column-inner">
             <a class="wbg-button wbg-button-secondary" href="/news">View All News Stories</a>

@@ -24,4 +24,23 @@ function section_classes($page_section) {
     return $section_classes;
 }
 
+// Shortens content
+//
+// $content - a string of content to be shortened
+// $words_num - integer indicating the desired word count
+//
+// Returns a string of content shortened to the indicated word count
+function shorten_content($content, $word_count = 35) {
+    $shortened_content = strip_tags(strip_shortcodes($content));
+    $words = explode(' ', $shortened_content, $word_count + 1);
+
+    if (count($words) > $word_count) {
+        array_pop($words);
+        array_push($words, '…');
+        $shortened_content = implode(' ', $words);
+    }
+    
+    return $shortened_content;
+}
+
 ?>

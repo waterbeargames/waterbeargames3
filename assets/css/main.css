@@ -216,7 +216,7 @@ section {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   .circle-button:hover .puzzle-background-overlay {
-    opacity: 0.1; }
+    opacity: 0.05; }
 
 /*
  * Miscellaneous
@@ -1767,7 +1767,8 @@ img, svg {
   flex: 0 1 calc(100% - 10px);
   margin: 5px;
   padding: 0;
-  background-color: #eee; }
+  background-color: #eee;
+  text-align: center; }
   .puzzle-story .puzzle-story-image {
     position: relative;
     -webkit-flex: 0 1 140px;
@@ -1807,7 +1808,9 @@ img, svg {
     .puzzle-story .puzzle-story-content h6 {
       font-size: 1.4rem; }
     .puzzle-story .puzzle-story-content p {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      line-height: 1.5;
+      text-align: left; }
     .puzzle-story .puzzle-story-content .wbg-button {
       margin-top: 1rem; }
   @media all and (min-width: 660px) {
@@ -1862,6 +1865,12 @@ img, svg {
     @media all and (min-width: 480px) {
       .puzzle-games .puzzle-columns-content .column-inner, .puzzle-team .puzzle-columns-content .column-inner {
         padding: 10px; } }
+
+/*---------------------*/
+/* Puzzle Blog Section */
+/*---------------------*/
+.puzzle-blog {
+  text-align: center; }
 
 /*-------------------------*/
 /* Puzzle Features Section */
@@ -1976,9 +1985,11 @@ img, svg {
       padding-bottom: 25px; }
       .puzzle-featured-story .puzzle-story .puzzle-story-content .wbg-button {
         min-width: 60%; }
-        @media all and (min-width: 850px) {
-          .puzzle-featured-story .puzzle-story .puzzle-story-content .wbg-button {
-            margin-top: 3rem; } }
+      @media all and (min-width: 850px) {
+        .puzzle-featured-story .puzzle-story .puzzle-story-content h3 {
+          font-size: 2.6rem; }
+        .puzzle-featured-story .puzzle-story .puzzle-story-content .wbg-button {
+          margin-top: 3rem; } }
 
 /*---------------------------*/
 /* Puzzle One Column Section */

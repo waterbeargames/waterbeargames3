@@ -41,8 +41,14 @@
             
             .wbg-button {
                 min-width: 60%;
+            }
                 
-                @include breakpoint($size-lg) {
+            @include breakpoint($size-lg) {
+                h3 {
+                    font-size: 2.6rem;
+                }
+                
+                .wbg-button {
                     margin-top: 3rem;
                 }
             }

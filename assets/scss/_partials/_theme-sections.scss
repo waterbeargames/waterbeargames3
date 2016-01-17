@@ -67,6 +67,7 @@
     padding: 0;
     @extend %default-border-radius;
     background-color: $light-gray;
+    text-align: center;
     
     .puzzle-story-image {
         position: relative;
@@ -98,6 +99,8 @@
         
         p {
             font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: left;
         }
         
         .wbg-button {
