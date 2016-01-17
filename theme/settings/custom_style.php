@@ -39,13 +39,13 @@ h1, h2, h3, h4, h5, h6, th,
 .dark-text-color-scheme h3,
 .dark-text-color-scheme h4,
 .dark-text-color-scheme h5,
-.dark-text-color-scheme h6,
 .dark-text-color-scheme th {
     color: <?php echo $headline_dark; ?>;
 }
 
 body, p, li, td,
 .dark-text-color-scheme,
+.dark-text-color-scheme h6,
 .dark-text-color-scheme p,
 .dark-text-color-scheme li,
 .dark-text-color-scheme td {
@@ -57,12 +57,12 @@ body, p, li, td,
 .light-text-color-scheme h3,
 .light-text-color-scheme h4,
 .light-text-color-scheme h5,
-.light-text-color-scheme h6,
 .light-text-color-scheme th {
     color: <?php echo $headline_light; ?>;
 }
 
 .light-text-color-scheme,
+.light-text-color-scheme h6,
 .light-text-color-scheme p,
 .light-text-color-scheme li,
 .light-text-color-scheme td,
@@ -139,7 +139,7 @@ a:hover, a:active {
 #dl-menu.dl-menuwrapper button:active,
 #dl-menu.dl-menuwrapper li a:hover,
 #dl-menu.dl-menuwrapper li a:active {
-    background: <?php echo $nav_primary_color; ?>;
+    background: <?php echo $primary_color; ?>;
 }
 
 /* Footer */
@@ -183,6 +183,14 @@ if ($footer_background_color == 'secondary') {
 }
 
 <?php endforeach; ?>
+
+.puzzle-story {
+    background-color: <?php echo $alternative_background; ?>;
+}
+
+.puzzle-story-image {
+    background-color: <?php echo $primary_color; ?>;
+}
 
 /* Buttons */
 

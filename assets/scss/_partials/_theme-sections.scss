@@ -51,6 +51,95 @@
     }
 }
 
+/* Used in news and blog sections */
+.puzzle-stories {
+    .column {
+        @include display-flex;
+    }
+}
+
+.puzzle-story {
+    overflow: hidden;
+    @include display-flex;
+    @include flex-direction(column);
+    @include flex(0 1 calc(100% - 10px));
+    margin: 5px;
+    padding: 0;
+    @extend %default-border-radius;
+    background-color: $light-gray;
+    
+    .puzzle-story-image {
+        position: relative;
+        @include flex(0 1 140px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .puzzle-story-content {
+        @include display-flex;
+        @include align-items(center);
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include flex(1 1 auto);
+        padding: 10px 10px 20px;
+        
+        > * {
+            @include flex(0 1 auto);
+        }
+        
+        h1, h2, h3, h4, h5, h6, p, ul, ol {
+            margin: 0.5rem 0;
+        }
+        
+        h6 {
+            font-size: 1.4rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+        
+        .wbg-button {
+            margin-top: 1rem;
+        }
+    }
+    
+    @include breakpoint($size-md) {
+        @include flex(0 1 calc(100% - 30px));
+        margin: 15px;
+        
+        .puzzle-story-content {
+            h4 {
+                font-size: 1.8rem;
+            }
+            
+            h6 {
+                font-size: 1.6rem;
+            }
+            
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    
+    @include breakpoint($size-lg) {
+        .puzzle-story-content {
+            padding-left: 15px;
+            padding-right: 15px;
+            
+            h4 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.alternative-background .puzzle-story {
+    background-color: #fff;
+}
+
 /*
  * The sections
  */
@@ -80,18 +169,6 @@
         
             @include breakpoint($size-sm) {
                 padding: 10px;
-            }
-        }
-    }
-}
-
-.puzzle-one-column {
-    .puzzle-columns-content {
-        .column-inner {
-            @extend %default-border-radius;
-            
-            &.white-background {
-                background-color: rgba(#fff, 0.85);
             }
         }
     }

@@ -31,12 +31,7 @@ jQuery('document').ready(function($){
         navHasShadow = false;
     
     var toggleNav = function() {
-        var adminBarHeight = $adminBar.height(),
-            threshold = $header.outerHeight() - $nav.outerHeight();
-        
-        if ($('#wpadminbar').css('position') === 'fixed') {
-            threshold -= adminBarHeight;
-        }
+        var threshold = $header.outerHeight() / 2;
         
         if ($window.scrollTop() > 10 && !navHasShadow) {
             $nav.removeClass('no-transition').removeClass('no-shadow');

@@ -1,0 +1,15 @@
+/*---------------------------*/
+/* Puzzle One Column Section */
+/*---------------------------*/
+
+.puzzle-one-column {
+    .puzzle-columns-content {
+        .column-inner {
+            @extend %default-border-radius;
+            
+            &.white-background {
+                background-color: rgba(#fff, 0.85);
+            }
+        }
+    }
+}

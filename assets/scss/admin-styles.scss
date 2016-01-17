@@ -18,8 +18,14 @@
         color: #ddd; 
     }
     
-    input:not([type='submit']), select, textarea {
+    input, select, textarea {
         width: 100%;
+    }
+    
+    input {
+        &[type='checkbox'], &[type='radio'], &[type='button'], &[type='submit'] {
+            width: auto;
+        }
     }
     
     img[src=''] {

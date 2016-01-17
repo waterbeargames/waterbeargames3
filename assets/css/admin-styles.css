@@ -9,8 +9,10 @@
 #game_options :-ms-input-placeholder, #news_story_options :-ms-input-placeholder, #team_options :-ms-input-placeholder {
   font-style: italic;
   color: #ddd; }
-#game_options input:not([type='submit']), #game_options select, #game_options textarea, #news_story_options input:not([type='submit']), #news_story_options select, #news_story_options textarea, #team_options input:not([type='submit']), #team_options select, #team_options textarea {
+#game_options input, #game_options select, #game_options textarea, #news_story_options input, #news_story_options select, #news_story_options textarea, #team_options input, #team_options select, #team_options textarea {
   width: 100%; }
+#game_options input[type='checkbox'], #game_options input[type='radio'], #game_options input[type='button'], #game_options input[type='submit'], #news_story_options input[type='checkbox'], #news_story_options input[type='radio'], #news_story_options input[type='button'], #news_story_options input[type='submit'], #team_options input[type='checkbox'], #team_options input[type='radio'], #team_options input[type='button'], #team_options input[type='submit'] {
+  width: auto; }
 #game_options img[src=''], #news_story_options img[src=''], #team_options img[src=''] {
   display: none; }
 #game_options .column, #news_story_options .column, #team_options .column {

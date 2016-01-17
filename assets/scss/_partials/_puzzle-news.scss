@@ -1,0 +1,51 @@
+/*---------------------*/
+/* Puzzle News Section */
+/*---------------------*/
+
+.puzzle-news {
+    text-align: center;
+}
+
+.puzzle-news-section-headline {
+    padding-bottom: 0;
+    
+    h3 {
+        margin-bottom: 0;
+    }
+}
+
+.puzzle-featured-story {
+    @include display-flex;
+    @include flex-direction(column);
+    
+    > * {
+        @include flex(0 1 auto);
+    }
+    
+    .puzzle-story {
+        @include flex(1 1 auto);
+        
+        .puzzle-story-image {
+            @include breakpoint($size-sm) {
+                @include flex-basis(200px);
+            }
+            
+            @include breakpoint($size-lg) {
+                @include flex-basis(350px);
+            }
+        }
+        
+        .puzzle-story-content {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            
+            .wbg-button {
+                min-width: 60%;
+                
+                @include breakpoint($size-lg) {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}

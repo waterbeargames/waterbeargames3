@@ -26,12 +26,12 @@ function game_init() {
 add_action('init', 'game_init');
 
 // Add custom fields
-function game_meta_box(){
+function game_meta_box() {
     add_meta_box('game_options', 'Game Options', 'game_meta_options', 'game', 'normal', 'low');
 }
 add_action('admin_init', 'game_meta_box');
 
-function game_meta_options(){
+function game_meta_options() {
     global $post;
     $game = get_post_meta($post->ID, 'wbg_game', true);
     
@@ -159,7 +159,7 @@ function game_meta_options(){
 <?php
 }
 
-function game_save_options(){
+function game_save_options() {
     global $post;
     if ($post && $post->post_type == 'game') {
         update_post_meta($post->ID, 'wbg_game', $_POST['wbg_game']);

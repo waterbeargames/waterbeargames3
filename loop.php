@@ -14,6 +14,18 @@
     }
     
     the_excerpt();
+    
+    $link = get_the_permalink($post->ID);
+    $target = '';
+    
+    if ($post->post_type == 'news') {
+        $news = get_post_meta($post->ID, 'wbg_news', true);
+        
+        if (!empty($news['link']) && empty($news['local'])) {
+            $link = $news['link'];
+            $target = ' target="_blank"';
+        }
+    }
     ?>
-    <a class="wbg-button wbg-button-secondary" href="<?php echo get_the_permalink($post->ID); ?>">Read More</a>
+    <a class="wbg-button wbg-button-secondary" href="<?php echo $link; ?>"<?php echo $target; ?>>Read More</a>
 </div>
