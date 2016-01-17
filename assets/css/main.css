@@ -1857,7 +1857,7 @@ img, svg {
   justify-content: flex-end; }
 
 .puzzle-games .puzzle-columns-content, .puzzle-team .puzzle-columns-content {
-  padding: 0 15px 10px; }
+  padding: 10px 15px; }
   .puzzle-games .puzzle-columns-content .column-inner, .puzzle-team .puzzle-columns-content .column-inner {
     width: 100%;
     margin: 0;
