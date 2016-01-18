@@ -22,9 +22,9 @@ $two_column->set_group_name('Two Column')
             'save_as'       => 'h2'
         ),
         'id'                => array(
-            'name'          => 'Section Slug',
+            'name'          => 'Section ID',
             'width'         => 'xs-span12 sm-span6',
-            'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the section slug will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the section slug and headline are blank, the section slug will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
+            'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the Section ID will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the Section ID and headline are blank, the Section ID will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
             'input_type'    => 'text'
         ),
         'column_widths'     => array(

@@ -132,6 +132,10 @@
 
 .circle-button-container:hover .circle-button, .circle-button:hover {
     @include transform(scale(1.05));
+    
+    .puzzle-background-overlay {
+        opacity: 0.05;
+    }
 }
 
 .circle-button {
@@ -168,10 +172,6 @@
     
     .puzzle-background-overlay {
         @include transition(all 0.4s ease);
-    }
-    
-    &:hover .puzzle-background-overlay {
-        opacity: 0.05;
     }
 }
 

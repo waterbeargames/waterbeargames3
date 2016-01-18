@@ -179,7 +179,7 @@ if ($footer_background_color == 'secondary') {
 
 <?php foreach ($colors as $label => $color) : ?>
 .puzzle-one-column .puzzle-columns-content .column-inner.<?php echo $label; ?>-background {
-    background-color: rgba(<?php echo hex2rgb($color); ?>, 0.85);
+    background-color: rgba(<?php echo hex2rgb($color); ?>, 0.95);
 }
 
 <?php endforeach; ?>
@@ -300,7 +300,7 @@ input[type='submit']:hover,
     color: <?php echo $secondary_color; ?>;
 }
 
-.single-post-content.comments-open {
+.single-post-content.comments-open, .single-news-content.has-news-link {
     border-color: <?php echo $primary_color; ?>;
 }
 

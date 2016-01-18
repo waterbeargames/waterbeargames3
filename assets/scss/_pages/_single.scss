@@ -8,14 +8,14 @@
     }
 }
 
-.single-post-content {
+.single-post-content, .single-news-content {
     margin: 3rem 0;
     padding: 2rem 0;
     border-top: solid 1px $medium-gray;
-    
-    &.comments-open {
-        border-bottom: solid 1px $medium-gray;
-    }
+}
+
+.single-post-content.comments-open, .single-news-content.has-news-link {
+    border-bottom: solid 1px $medium-gray;
 }
 
 .single-post-page-links {

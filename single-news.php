@@ -14,13 +14,12 @@ $news = get_post_meta($post->ID, 'wbg_news', true);
                         <h4><?php the_time(get_option('date_format')); echo (!empty($news['media']) ? ', from ' . $news['media'] : ''); ?></h4>
                     </div>
                 
-                    <div class="single-post-content">
+                    <div class="single-news-content<?php echo (!empty($news['link']) ? ' has-news-link' : ''); ?>">
                         <?php the_content(); ?>
-                        
-                        <?php if (!empty($news['link'])) : ?>
-                        <a class="wbg-button" href="<?php echo $news['link']; ?>" target="_blank">Read More</a>
-                        <?php endif; ?>
                     </div>
+                    <?php if (!empty($news['link'])) : ?>
+                    <a class="wbg-button" href="<?php echo $news['link']; ?>" target="_blank">View Original Story</a>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php

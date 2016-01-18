@@ -1,47 +1,9 @@
 <?php
-$features = new PuzzleSection;
-$features->set_group_name('Features')
-    ->set_group_name_slug('features')
-    ->set_single_name('Feature')
-    ->set_multiple(true)
-    ->set_admin_column_classes('xs-span12 sm-span4 md-span6 lg-span4')
-    ->set_order(50)
-    ->set_markup_attr(array(
-        'icon'              => array(
-            'name'          => 'Icon',
-            'input_type'    => 'icon'
-        ),
-        'headline'          => array(
-            'name'          => 'Headline',
-            'input_type'    => 'text',
-            'save_as'       => 'h4'
-        ),
-        'content'           => array(
-            'name'          => 'Content',
-            'input_type'    => 'textarea',
-            'rows'          => 5,
-            'save_as'       => 'content'
-        ),
-        'button_text'       => array(
-            'name'          => 'Button Text',
-            'input_type'    => 'text'
-        ),
-        'link'                  => array(
-            'name'              => 'Link',
-            'input_type'        => 'text',
-            'placeholder'       => 'http://',
-            'save_as'           => 'link',
-            'save_as_link_text' => 'button_text'
-        ),
-        'open_link_in_new_tab'  => array(
-            'name'          => 'Open Link in New Tab',
-            'input_type'    => 'checkbox'
-        ),
-        'icon_link'         => array(
-            'name'          => 'Make icon into link',
-            'input_type'    => 'checkbox'
-        )
-    ))
+$team = new PuzzleSection;
+$team->set_group_name('Team')
+    ->set_group_name_slug('team')
+    ->set_fixed_column_num(0)
+    ->set_order(60)
     ->set_options(array(
         'headline'          => array(
             'name'          => 'Headline',
@@ -50,23 +12,14 @@ $features->set_group_name('Features')
             'save_as'       => 'h2'
         ),
         'id'                => array(
-            'name'          => 'Section Slug',
+            'name'          => 'Section ID',
             'width'         => 'xs-span12 sm-span6',
-            'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the section slug will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the section slug and headline are blank, the section slug will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
+            'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the Section ID will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the Section ID and headline are blank, the Section ID will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
             'input_type'    => 'text'
-        ),
-        'layout'            => array(
-            'name'          => 'Layout',
-            'width'         => 'xs-span12 sm-span2',
-            'input_type'    => 'select',
-            'options'       => array(
-                'Columns'   => 'columns',
-                'Rows'      => 'rows'
-            )
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span2',
+            'width'         => 'xs span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -77,7 +30,7 @@ $features->set_group_name('Features')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span2',
+            'width'         => 'xs span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -124,5 +77,5 @@ $features->set_group_name('Features')
     ));
 
 $puzzle_pieces = new PuzzlePieces;
-$puzzle_pieces->add_section($features);
+$puzzle_pieces->add_section($team);
 ?>

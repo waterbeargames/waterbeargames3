@@ -31,6 +31,7 @@ input, select, textarea {
     padding: 0.5rem 1rem;
     border: solid 1px $medium-gray;
     @extend %default-border-radius;
+    background-color: #fff;
     opacity: 0.75;
     @include transition(all 0.4s ease);
     

@@ -178,6 +178,8 @@ section {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05); }
+  .circle-button-container:hover .circle-button .puzzle-background-overlay, .circle-button:hover .puzzle-background-overlay {
+    opacity: 0.05; }
 
 .circle-button {
   position: relative;
@@ -215,8 +217,6 @@ section {
   .circle-button .puzzle-background-overlay {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
-  .circle-button:hover .puzzle-background-overlay {
-    opacity: 0.05; }
 
 /*
  * Miscellaneous
@@ -1161,7 +1161,7 @@ p, li, td {
     font-weight: 600; }
 
 p, li {
-  line-height: 2; }
+  line-height: 1.75; }
 
 p {
   margin: 2rem 0; }
@@ -1251,6 +1251,7 @@ input, select, textarea {
   margin: 0.2rem 0 1rem 0;
   padding: 0.5rem 1rem;
   border: solid 1px #aaa;
+  background-color: #fff;
   opacity: 0.75;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
@@ -2005,7 +2006,7 @@ img, svg {
 /* Puzzle One Column Section */
 /*---------------------------*/
 .puzzle-one-column .puzzle-columns-content .column-inner.white-background {
-  background-color: rgba(255, 255, 255, 0.85); }
+  background-color: rgba(255, 255, 255, 0.95); }
 
 /*-----------------------------*/
 /* Puzzle Team Members Section */
@@ -2046,12 +2047,13 @@ img, svg {
 .single-post-meta h4, .single-post-meta h6 {
   margin: 0.5rem 0; }
 
-.single-post-content {
+.single-post-content, .single-news-content {
   margin: 3rem 0;
   padding: 2rem 0;
   border-top: solid 1px #aaa; }
-  .single-post-content.comments-open {
-    border-bottom: solid 1px #aaa; }
+
+.single-post-content.comments-open, .single-news-content.has-news-link {
+  border-bottom: solid 1px #aaa; }
 
 .single-post-page-links {
   font-weight: 700; }
