@@ -5,7 +5,7 @@
 #header {
     position: relative;
     height: 300px;
-    padding: 80px 0;
+    padding: 80px 0 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,7 +21,7 @@
     
     @include breakpoint($size-md) {
         height: 400px;
-        padding: 100px 0;
+        padding: 140px 0 60px;
     }
     
     @include breakpoint($size-lg) {
@@ -55,7 +55,7 @@
     
     @include breakpoint($size-lg) {
         height: 100%;
-        min-height: 600px;
+        min-height: 650px;
     }
 }
 

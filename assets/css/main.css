@@ -42,7 +42,18 @@ body {
 main {
   display: block; }
   main > section:first-child {
-    padding-top: 120px; }
+    padding-top: 90px; }
+    main > section:first-child .no-padding-top {
+      padding-top: 60px; }
+    main > section:first-child .large-padding-top {
+      padding-top: 130px; }
+    @media all and (min-width: 660px) {
+      main > section:first-child {
+        padding-top: 110px; }
+        main > section:first-child .no-padding-top {
+          padding-top: 80px; }
+        main > section:first-child .large-padding-top {
+          padding-top: 150px; } }
   main ul, main ol {
     margin-left: 5rem; }
 
@@ -1341,7 +1352,7 @@ img, svg {
 #header {
   position: relative;
   height: 300px;
-  padding: 80px 0;
+  padding: 80px 0 40px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1358,7 +1369,7 @@ img, svg {
   @media all and (min-width: 660px) {
     #header {
       height: 400px;
-      padding: 100px 0; } }
+      padding: 140px 0 60px; } }
   @media all and (min-width: 850px) {
     #header {
       height: 600px; } }
@@ -1395,7 +1406,7 @@ img, svg {
   @media all and (min-width: 850px) {
     .home #header {
       height: 100%;
-      min-height: 600px; } }
+      min-height: 650px; } }
 
 .home-buttons {
   position: relative;
@@ -1448,7 +1459,7 @@ img, svg {
   position: fixed;
   z-index: 2;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
   -webkit-transition: box-shadow 0.4s ease;
@@ -1523,6 +1534,8 @@ img, svg {
     position: absolute;
     top: 0;
     border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   #dl-menu.dl-menuwrapper ul {
@@ -1657,7 +1670,7 @@ img, svg {
 #sidebar .sidebar-widget {
   margin: 3rem 0; }
   #sidebar .sidebar-widget:first-child {
-    margin-top: 0; }
+    margin-top: 1.5rem; }
 #sidebar .post-date {
   margin-left: 5px; }
 #sidebar .screen-reader-text {
@@ -2079,10 +2092,10 @@ img, svg {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 20px;
   border-radius: 50%;
   background-color: rgba(85, 85, 85, 0.75); }
   .header-game-logo svg {

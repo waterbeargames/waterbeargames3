@@ -6,7 +6,7 @@
     position: fixed;
     z-index: 2;
     width: 100%;
-    background-color: rgba(#fff, 0.9);
+    background-color: rgba(#fff, 0.95);
     @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
     @include transition(box-shadow 0.4s ease);
     
@@ -110,6 +110,7 @@
         position: absolute;
         top: 0;
         border-radius: 0;
+        @include box-shadow(none);
         @include transition(all 0.4s ease);
     }
     

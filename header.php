@@ -9,7 +9,7 @@
 <body <?php body_class('smooth-scroll-enabled'); ?>>
     <nav id="nav"<?php echo (is_front_page() ? ' class="no-logo no-shadow no-transition"' : ''); ?>>
         <div class="row">
-            <div class="column xs-span8 sm-span6 md-span4 lg-span3">
+            <div class="column xs-span8 sm-span6 md-span3 lg-span2">
                 <div class="vector-container">
                     <a href="<?php echo get_site_url(); ?>">
                         <?php include('assets/images/bear.svg'); ?>
@@ -18,7 +18,7 @@
             </div>
             
             <?php if (has_nav_menu('primary')) : ?>
-            <div class="column xs-span4 sm-span6 md-span8 lg-span9">
+            <div class="column xs-span4 sm-span6 md-span9 lg-span10">
                 <?php
                 $args = array(
                     'theme_location'  => 'primary',

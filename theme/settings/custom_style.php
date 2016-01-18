@@ -70,6 +70,26 @@ body, p, li, td,
     color: <?php echo $text_light; ?>;
 }
 
+/* Links */
+
+a {
+    color: <?php echo $secondary_color; ?>;
+}
+
+a:hover, a:active {
+    color: <?php echo $primary_color; ?>;
+}
+
+/* Forms */
+
+input, select, textarea {
+    border-color: <?php echo $text_dark; ?>;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: <?php echo $primary_color; ?>;
+}
+
 /* Section Backgrounds */
 
 .primary-background {
@@ -86,16 +106,6 @@ body, p, li, td,
 
 .alternative-background {
     background-color: <?php echo $alternative_background; ?>;
-}
-
-/* Links */
-
-a {
-    color: <?php echo $secondary_color; ?>;
-}
-
-a:hover, a:active {
-    color: <?php echo $primary_color; ?>;
 }
 
 /* Navigation Bar */
@@ -133,13 +143,7 @@ a:hover, a:active {
 
 #dl-menu.dl-menuwrapper li a:hover,
 #dl-menu.dl-menuwrapper li a:active {
-    color: <?php echo $primary_color; ?>;
-}
-
-#dl-menu.dl-menuwrapper button:active,
-#dl-menu.dl-menuwrapper li a:hover,
-#dl-menu.dl-menuwrapper li a:active {
-    background: <?php echo $primary_color; ?>;
+    background: <?php echo $secondary_color; ?>;
 }
 
 /* Footer */
