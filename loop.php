@@ -27,5 +27,5 @@
         }
     }
     ?>
-    <a class="wbg-button wbg-button-secondary" href="<?php echo $link; ?>"<?php echo $target; ?>>Read More</a>
+    <a class="wbg-button" href="<?php echo $link; ?>"<?php echo $target; ?>>Read More</a>
 </div>

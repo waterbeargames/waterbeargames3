@@ -47,7 +47,7 @@ $span_classes = span_classes($blog_posts_num);
                 $blog_link = get_permalink(get_option('page_for_posts'));
             }
             ?>
-            <a class="wbg-button wbg-button-secondary" href="<?php echo $blog_link; ?>">View All Blog Posts</a>
+            <a class="wbg-button" href="<?php echo $blog_link; ?>">View All Blog Posts</a>
         </div>
     </div>
 </div>

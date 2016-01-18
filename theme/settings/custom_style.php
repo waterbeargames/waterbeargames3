@@ -198,43 +198,57 @@ if ($footer_background_color == 'secondary') {
 button,
 input[type='button'],
 input[type='submit'],
-.wbg-button.wbg-button-secondary:hover,
-.secondary-background .wbg-button.wbg-button-secondary,
-.alternative-background .wbg-button.wbg-button-alternative,
-.secondary-background .wbg-button.wbg-button-accent:hover,
-.secondary-background .wbg-button.wbg-button-alternative:hover,
-.secondary-background .wbg-button.wbg-button-black:hover,
+.wbg-button.wbg-button-primary:hover,
+.primary-background .wbg-button.wbg-button-primary,
+.primary-background .wbg-button.wbg-button-accent:hover,
+.alternative-background .wbg-button:hover,
+.alternative-background button:hover,
+.alternative-background input[type='button']:hover,
+.alternative-background input[type='submit']:hover,
+.alternative-background .wbg-button.wbg-button-secondary,
+.alternative-background .wbg-button.wbg-button-accent:hover,
+.alternative-background .wbg-button.wbg-button-alternative:hover,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
 a.page-numbers:hover,
 #cancel-comment-reply-link,
 #pagination a:hover {
+    background-color: <?php echo $secondary_color; ?>;
+    color: #fff;
+}
+
+.wbg-button:hover,
+button:hover,
+input[type='button']:hover,
+input[type='submit']:hover,
+.wbg-button.wbg-button-primary,
+.wbg-button.wbg-button-accent:hover,
+.wbg-button.wbg-button-alternative:hover,
+.secondary-background .wbg-button,
+.secondary-background button,
+.secondary-background input[type='button'],
+.secondary-background input[type='submit'],
+.secondary-background .wbg-button.wbg-button-accent:hover,
+.alternative-background .wbg-button,
+.alternative-background button,
+.alternative-background input[type='button'],
+.alternative-background input[type='submit'],
+.alternative-background .wbg-button.wbg-button-secondary:hover,
+.alternative-background .wbg-button.wbg-button-alternative,
+.categories .cat-item a:hover,
+#cancel-comment-reply-link:hover,
+.comment-reply-link:hover {
     background-color: <?php echo $primary_color; ?>;
     color: #fff;
 }
 
-#pagination a {
-    color: <?php echo $primary_color; ?>;
-}
-
-.wbg-button.wbg-button-alternative,
-.primary-background .wbg-button.wbg-button-alternative {
-    background-color: <?php echo $alternative_background; ?>;
-    color: <?php echo $primary_color; ?>;
-}
-
 .wbg-button.wbg-button-accent,
-.primary-background .wbg-button.wbg-button-accent,
 .primary-background .wbg-button:hover,
-.primary-background .wbg-button.wbg-button-primary:hover,
-.primary-background .wbg-button.wbg-button-secondary:hover,
 .primary-background button:hover,
 .primary-background input[type='button']:hover,
 .primary-background input[type='submit']:hover,
 .secondary-background .wbg-button:hover,
-.secondary-background .wbg-button.wbg-button-primary:hover,
-.secondary-background .wbg-button.wbg-button-secondary:hover,
 .secondary-background button:hover,
 .secondary-background input[type='button']:hover,
 .secondary-background input[type='submit']:hover {
@@ -242,27 +256,13 @@ a.page-numbers:hover,
     color: <?php echo $headline_dark; ?>;
 }
 
-.wbg-button:hover,
-button:hover,
-input[type='button']:hover,
-input[type='submit']:hover,
-.wbg-button.wbg-button-accent:hover
-.wbg-button.wbg-button-alternative:hover,
-.primary-background .wbg-button.wbg-button-alternative:hover,
-.alternative-background .wbg-button.wbg-button-alternative:hover,
-.wbg-button.wbg-button-secondary,
-.primary-background .wbg-button,
-.primary-background .wbg-button.wbg-button-primary,
-.primary-background button,
-.primary-background input[type='button'],
-.primary-background input[type='submit'],
-.primary-background .wbg-button.wbg-button-accent:hover,
-.primary-background .wbg-button.wbg-button-black:hover,
-.categories .cat-item a:hover,
-#cancel-comment-reply-link:hover,
-.comment-reply-link:hover {
-    background-color: <?php echo $secondary_color; ?>;
-    color: #fff;
+.wbg-button.wbg-button-alternative {
+    background-color: <?php echo $alternative_background; ?>;
+    color: <?php echo $primary_color; ?>;
+}
+
+#pagination a {
+    color: <?php echo $primary_color; ?>;
 }
 
 .circle-button .fa {

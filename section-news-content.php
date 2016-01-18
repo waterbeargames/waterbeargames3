@@ -93,7 +93,7 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
 <div class="row">
     <div class="column xs-span12">
         <div class="column-inner">
-            <a class="wbg-button wbg-button-secondary" href="/news">View All News Stories</a>
+            <a class="wbg-button" href="/news">View All News Stories</a>
         </div>
     </div>
 </div>

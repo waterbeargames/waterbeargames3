@@ -52,5 +52,6 @@ require_once('puzzle_colors.php');
 require_once('customize_theme.php');
 require_once(dirname(__FILE__) . '/../miscellaneous/helpers.php');
 require_once(dirname(__FILE__) . '/../miscellaneous/button_shortcode.php');
+require_once(dirname(__FILE__) . '/../miscellaneous/recent_news_widget.php');
 
 ?>

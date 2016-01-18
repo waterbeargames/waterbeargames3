@@ -157,7 +157,7 @@ section {
 .wbg-button-large {
   border-radius: 15px; }
 
-.primary-background .wbg-button.wbg-button-black {
+.secondary-background .wbg-button.wbg-button-black, .alternative-background .wbg-button.wbg-button-black {
   background-color: #555; }
 
 /*
