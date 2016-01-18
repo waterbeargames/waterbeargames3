@@ -213,7 +213,7 @@ input[type='submit'],
 .comment-reply-link,
 a.page-numbers:hover,
 #cancel-comment-reply-link,
-#pagination a:hover {
+#pagination a {
     background-color: <?php echo $secondary_color; ?>;
     color: #fff;
 }
@@ -237,8 +237,9 @@ input[type='submit']:hover,
 .alternative-background .wbg-button.wbg-button-secondary:hover,
 .alternative-background .wbg-button.wbg-button-alternative,
 .categories .cat-item a:hover,
+.comment-reply-link:hover
 #cancel-comment-reply-link:hover,
-.comment-reply-link:hover {
+#pagination a:hover {
     background-color: <?php echo $primary_color; ?>;
     color: #fff;
 }
@@ -261,10 +262,6 @@ input[type='submit']:hover,
     color: <?php echo $primary_color; ?>;
 }
 
-#pagination a {
-    color: <?php echo $primary_color; ?>;
-}
-
 .circle-button .fa {
     color: <?php echo $primary_color; ?>;
 }
@@ -279,7 +276,19 @@ input[type='submit']:hover,
 
 /* Blog */
 
-.puzzle-loop, .single-post-content, .single-post-content.comments-open, #pagination {
+.puzzle-loop {
+    background-color: rgba(<?php echo hex2rgb($alternative_background); ?>, 0.5);
+}
+
+.puzzle-loop h3 a {
+    color: <?php echo $primary_color; ?>;
+}
+
+.puzzle-loop h3 a:hover {
+    color: <?php echo $secondary_color; ?>;
+}
+
+.single-post-content.comments-open {
     border-color: <?php echo $primary_color; ?>;
 }
 

@@ -49,7 +49,7 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
                 <?php if (!empty($featured_story_meta['media'])) : ?>
                 <h4><?php echo $featured_story_meta['media']; ?></h4>
                 <?php endif; ?>
-                <h5><?php echo date('F j, Y', strtotime($featured_story->post_date)); ?></h5>
+                <h5><?php echo date(get_option('date_format'), strtotime($featured_story->post_date)); ?></h5>
                 <a class="wbg-button" href="<?php echo $featured_story_link; ?>"<?php echo $featured_story_target; ?>>View Story</a>
             </div>
         </div>
@@ -80,7 +80,7 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
                         <h4><?php echo $news_story->post_title; ?></h4>
                         <h6>
                             <?php echo (!empty($news_meta['media']) ? $news_meta['media'] . '<br />' : ''); ?>
-                            <?php echo date('F j, Y', strtotime($news_story->post_date)); ?>
+                            <?php echo date(get_option('date_format'), strtotime($news_story->post_date)); ?>
                         </h6>
                         <a class="wbg-button wbg-button-small" href="<?php echo $news_link; ?>"<?php echo $target; ?>>View Story</a>
                     </div>
@@ -93,7 +93,7 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
 <div class="row">
     <div class="column xs-span12">
         <div class="column-inner">
-            <a class="wbg-button" href="/news">View All News Stories</a>
+            <a class="wbg-button wbg-button-secondary" href="/news">View All News Stories</a>
         </div>
     </div>
 </div>

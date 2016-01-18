@@ -10,7 +10,7 @@
                             the_post(); ?>
                             <div class="single-post-meta">
                                 <h2><?php the_title(); ?></h2>
-                                <h4><?php the_time('F j, Y'); ?>, by <?php the_author(); ?></h4>
+                                <h4><?php the_time(get_option('date_format')); ?>, by <?php the_author(); ?></h4>
                                 <?php
                                 $categories = get_the_category();
                                 if ($categories) : ?>

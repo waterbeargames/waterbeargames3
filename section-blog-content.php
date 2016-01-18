@@ -21,7 +21,7 @@ $span_classes = span_classes($blog_posts_num);
                 <div class="puzzle-story-content">
                     <h4><?php echo $blog_post->post_title; ?></h4>
                     <h6>
-                        <?php echo date('F j, Y', strtotime($blog_post->post_date)); ?>
+                        <?php echo date(get_option('date_format'), strtotime($blog_post->post_date)); ?>
                     </h6>
                     <?php
                     $excerpt = $blog_post->post_excerpt;

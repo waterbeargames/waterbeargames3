@@ -3,7 +3,7 @@
   display: table;
   content: " "; }
 
-.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button, input, select, textarea, #pagination a, .puzzle-story, .puzzle-one-column .puzzle-columns-content .column-inner, .game-details {
+.wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button, input, select, textarea, img, .puzzle-loop, .puzzle-story, .puzzle-one-column .puzzle-columns-content .column-inner, .game-details {
   border-radius: 10px; }
 
 .row {
@@ -1610,14 +1610,17 @@ img, svg {
 /* Posts Loop */
 /*------------*/
 .puzzle-loop {
-  padding: 3rem 0;
-  border-top: solid 1px #aaa; }
-  .puzzle-loop:first-child {
-    padding-top: 0;
-    border-top: 0; }
+  margin-bottom: 2rem;
+  padding: 20px;
+  background-color: #eee; }
+  .puzzle-loop h3, .puzzle-loop h5 {
+    margin: 0.5rem 0; }
+    .puzzle-loop h3:first-child, .puzzle-loop h5:first-child {
+      margin-top: 0; }
+  .puzzle-loop .alignright {
+    margin-top: 2rem; }
   .puzzle-loop .wbg-button {
-    margin-left: 0;
-    margin-right: 0; }
+    margin-top: 0; }
 
 /*----------*/
 /* Comments */
@@ -1674,31 +1677,38 @@ img, svg {
 /*------------*/
 #pagination {
   margin: 0;
-  padding: 30px 0;
-  border-top: solid 1px #aaa;
+  padding: 15px 0;
   list-style: none; }
   #pagination li {
-    display: inline-block;
-    font-size: 18px;
-    font-size: 1.8rem; }
+    font-size: 1.4rem; }
   #pagination a {
-    display: inline-block;
-    padding: 15px 25px;
-    background-color: #fff;
-    border: solid 2px #aaa;
-    text-decoration: none; }
-    #pagination a:hover {
-      background-color: #aaa;
-      border-color: transparent;
-      color: #fff; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #aaa;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff; }
+    #pagination a .fa {
+      display: block;
+      font-size: 30px; }
   #pagination #newer-pages {
     float: left; }
-    #pagination #newer-pages .fa {
-      margin-right: 5px; }
   #pagination #older-pages {
     float: right; }
-    #pagination #older-pages .fa {
-      margin-left: 5px; }
 
 /*--------*/
 /* Footer */

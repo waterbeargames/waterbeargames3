@@ -11,7 +11,7 @@ $news = get_post_meta($post->ID, 'wbg_news', true);
                 <div class="column-inner">
                     <div class="single-post-meta">
                         <h2><?php the_title(); ?></h2>
-                        <h4><?php the_time('F j, Y'); echo (!empty($news['media']) ? ', from ' . $news['media'] : ''); ?></h4>
+                        <h4><?php the_time(get_option('date_format')); echo (!empty($news['media']) ? ', from ' . $news['media'] : ''); ?></h4>
                     </div>
                 
                     <div class="single-post-content">

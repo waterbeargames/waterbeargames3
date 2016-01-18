@@ -12,8 +12,7 @@ $found_posts = $wp_query->found_posts;
                 <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
                     <div class="column-inner">
                         <?php if (have_posts()) : ?>
-                            <h2>Water Bear Games in the News</h2>
-                            <h4><?php echo $found_posts ?> news stor<?php echo ($found_posts != 1 ? 'ies' : 'y'); ?></h4>
+                            <h2>In the News</h2>
                             <?php
                             while (have_posts()) {
                                 the_post();

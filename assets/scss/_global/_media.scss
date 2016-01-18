@@ -9,6 +9,7 @@ iframe {
 
 img {
     display: inline-block;
+    @extend %default-border-radius;
 }
 
 a img {
