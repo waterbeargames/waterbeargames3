@@ -1,3 +1,6 @@
+@import '_global/_variables';
+@import '_global/_mixins';
+
 #game_options, #news_story_options, #team_options {
     * {
         box-sizing: border-box;
@@ -51,5 +54,55 @@
     .inside {
         margin: 0;
         padding: 0;
+    }
+}
+
+#team_options {
+    .added-columns {
+        @include display-flex;
+        @include flex-wrap(wrap);
+        
+        .column {
+            @include flex(0 1 auto);
+            padding: 5px;
+            border: solid 1px $medium-gray;
+            background-color: $light-gray;
+        }
+        
+        .puzzle-collapsable-menu {
+            @extend %clearfix;
+            margin: 0 0 10px;
+        
+            .fa {
+                @include transition(all 0.4s ease);
+                display: block;
+                width: 30px;
+                height: 30px;
+                font-size: 24px;
+                line-height: 30px;
+                text-align: center;
+                cursor: pointer;
+            }
+        
+            h5 {
+                float: left;
+                width: calc(100% - 60px);
+                margin: 0;
+                padding: 0 5px;
+                font-size: 16px;
+                line-height: 30px;
+            }
+
+            .fa-close {
+                float: right;
+                background-color: $medium-gray;
+                border-radius: 50%;
+                color: #fff;
+            
+                &:hover {
+                    background-color: $dark-gray;
+                }
+            }
+        }
     }
 }

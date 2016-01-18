@@ -1,3 +1,8 @@
+#team_options .added-columns .puzzle-collapsable-menu:after {
+  clear: both;
+  display: table;
+  content: " "; }
+
 #game_options *, #news_story_options *, #team_options * {
   box-sizing: border-box; }
 #game_options ::-webkit-input-placeholder, #news_story_options ::-webkit-input-placeholder, #team_options ::-webkit-input-placeholder {
@@ -29,5 +34,47 @@
   #wbg_shortcode_form .inside {
     margin: 0;
     padding: 0; }
+
+#team_options .added-columns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  #team_options .added-columns .column {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 5px;
+    border: solid 1px #aaa;
+    background-color: #eee; }
+  #team_options .added-columns .puzzle-collapsable-menu {
+    margin: 0 0 10px; }
+    #team_options .added-columns .puzzle-collapsable-menu .fa {
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      display: block;
+      width: 30px;
+      height: 30px;
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+      cursor: pointer; }
+    #team_options .added-columns .puzzle-collapsable-menu h5 {
+      float: left;
+      width: calc(100% - 60px);
+      margin: 0;
+      padding: 0 5px;
+      font-size: 16px;
+      line-height: 30px; }
+    #team_options .added-columns .puzzle-collapsable-menu .fa-close {
+      float: right;
+      background-color: #aaa;
+      border-radius: 50%;
+      color: #fff; }
+      #team_options .added-columns .puzzle-collapsable-menu .fa-close:hover {
+        background-color: #555; }
 
 /*# sourceMappingURL=admin-styles.css.map */

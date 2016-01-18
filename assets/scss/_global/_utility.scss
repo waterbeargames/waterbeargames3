@@ -138,6 +138,12 @@
     }
 }
 
+.circle-button-container:hover, .circle-button:hover {
+    &, a {
+        z-index: 1;
+    }
+}
+
 .circle-button {
     position: relative;
     @include display-flex;

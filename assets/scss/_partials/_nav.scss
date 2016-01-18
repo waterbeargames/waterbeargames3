@@ -68,20 +68,6 @@
     a {
         text-decoration: none;
         color: #fff;
-        
-        img {
-            /* Fix blurriness when scaling/transitioning */
-            @include filter(blur(0));
-            /* Fix for blur filter causing issues in IE9 */
-            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
-            @include transition(all 0.4s ease);
-        }
-        
-        &:hover, &:active {
-            img {
-                opacity: 0.75;;
-            }
-        }
     }
 }
 
@@ -157,10 +143,6 @@
             a {
                 display: block;
                 padding: 10px 15px;
-                
-                &:hover, &:active {
-                    opacity: 0.75;
-                }
             }
         }
         

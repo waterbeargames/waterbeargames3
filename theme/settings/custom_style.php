@@ -87,7 +87,9 @@ input, select, textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: <?php echo $primary_color; ?>;
+    border-color: <?php echo $secondary_color; ?>;
+    -webkit-box-shadow: 0 0 0 2px <?php echo $secondary_color; ?>;
+    box-shadow: 0 0 0 2px <?php echo $secondary_color; ?>;
 }
 
 /* Section Backgrounds */
@@ -144,6 +146,10 @@ input:focus, select:focus, textarea:focus {
 #dl-menu.dl-menuwrapper li a:hover,
 #dl-menu.dl-menuwrapper li a:active {
     background: <?php echo $secondary_color; ?>;
+}
+
+#nav-menu ul li a:hover {
+    color: <?php echo $secondary_color; ?>;
 }
 
 /* Footer */
@@ -285,6 +291,7 @@ input[type='submit']:hover,
 <?php foreach ($colors as $label => $color) : ?>
 .circle-button-container:hover .circle-button.<?php echo $label; ?>-background,
 .circle-button.<?php echo $label; ?>-background:hover {
+    -webkit-box-shadow: 0 0 0 8px rgba(<?php echo hex2rgb($color); ?>, 0.5);
     box-shadow: 0 0 0 8px rgba(<?php echo hex2rgb($color); ?>, 0.5);
 }
 

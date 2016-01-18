@@ -1,0 +1,26 @@
+/*------------------*/
+/* Single Team Page */
+/*------------------*/
+
+.team-member-images {
+    .column-inner {
+        @extend %clearfix;
+    }
+    
+    img {
+        width: 60%;
+        border-radius: 50%;
+        
+        &:nth-child(odd) {
+            float: left;
+        }
+        
+        &:nth-child(even) {
+            float: right;
+        }
+        
+        &:not(:first-child) {
+            margin-top: -10%;
+        }
+    }
+}
