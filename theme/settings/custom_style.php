@@ -188,6 +188,10 @@ if ($footer_background_color == 'secondary') {
     background-color: <?php echo $alternative_background; ?>;
 }
 
+.puzzle-featured-story .puzzle-story {
+    background-color: <?php echo $accent_color; ?>;
+}
+
 .puzzle-story-image {
     background-color: <?php echo $primary_color; ?>;
 }
@@ -208,6 +212,10 @@ input[type='submit'],
 .alternative-background .wbg-button.wbg-button-secondary,
 .alternative-background .wbg-button.wbg-button-accent:hover,
 .alternative-background .wbg-button.wbg-button-alternative:hover,
+.puzzle-story .wbg-button:hover,
+.puzzle-loop .wbg-button:hover,
+.alternative-background .puzzle-story .wbg-button,
+.alternative-background .puzzle-loop .wbg-button,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -236,6 +244,10 @@ input[type='submit']:hover,
 .alternative-background input[type='submit'],
 .alternative-background .wbg-button.wbg-button-secondary:hover,
 .alternative-background .wbg-button.wbg-button-alternative,
+.puzzle-story .wbg-button,
+.puzzle-loop .wbg-button,
+.alternative-background .puzzle-story .wbg-button:hover,
+.alternative-background .puzzle-loop .wbg-button:hover,
 .categories .cat-item a:hover,
 .comment-reply-link:hover
 #cancel-comment-reply-link:hover,
