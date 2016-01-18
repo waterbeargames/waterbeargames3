@@ -32,12 +32,7 @@ input, select, textarea {
     border: solid 1px $medium-gray;
     @extend %default-border-radius;
     background-color: #fff;
-    opacity: 0.75;
     @include transition(all 0.4s ease);
-    
-    &:focus {
-        opacity: 1;
-    }
 }
 
 input, select {
@@ -52,10 +47,6 @@ button, input[type='button'], input[type='submit'] {
 }
 
 input {
-    &[type='checkbox'], &[type='radio'], &[type='button'], &[type='submit'], &[type='file'] {
-        opacity: 1;
-    }
-    
     &[type='checkbox'], &[type='radio'], &[type='button'], &[type='submit'] {
         width: auto;
         height: auto;

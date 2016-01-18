@@ -17,8 +17,10 @@
         }
     }
     
-    .alignright {
-        margin-top: 2rem;
+    @include breakpoint($size-md) {
+        .alignright {
+            margin-top: 3rem;
+        }
     }
     
     .wbg-button {

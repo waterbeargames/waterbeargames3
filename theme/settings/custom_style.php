@@ -88,8 +88,6 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
     border-color: <?php echo $secondary_color; ?>;
-    -webkit-box-shadow: 0 0 0 2px <?php echo $secondary_color; ?>;
-    box-shadow: 0 0 0 2px <?php echo $secondary_color; ?>;
 }
 
 /* Section Backgrounds */
