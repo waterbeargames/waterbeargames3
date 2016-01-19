@@ -57,14 +57,10 @@ if (!empty($page_sections)) :
             <?php endif; ?>
     
             <?php
-            if ($puzzle_section_type == 'games') :
-                include(locate_template('section-games-content.php'));
-            elseif ($puzzle_section_type == 'news') :
-                include(locate_template('section-news-content.php'));
-            elseif ($puzzle_section_type == 'blog') :
-                include(locate_template('section-blog-content.php'));
-            elseif ($puzzle_section_type == 'team') :
-                include(locate_template('section-team-content.php'));
+            $special_sections = array('blog', 'games', 'news', 'team');
+            
+            if (in_array($puzzle_section_type, $special_sections)) :
+                include(locate_template('section-' . $puzzle_section_type . '-content.php'));
             elseif (!empty($puzzle_columns_data)) : ?>
             <div class="row puzzle-columns-content">
                 <?php

@@ -27,6 +27,7 @@
     position: relative;
     top: 0;
     display: inline-block;
+    margin: 0.3rem 0;
     border: 0;
     @extend %default-border-radius;
     background-color: $medium-gray;

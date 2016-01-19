@@ -60,33 +60,11 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
         </div>
         <div class="row puzzle-stories">
         <?php
-        foreach ($news_stories as $news_story) :
-            $news_featured_image = wp_get_attachment_url(get_post_thumbnail_id($news_story->ID));
-            $news_meta = get_post_meta($news_story->ID, 'wbg_news', true);
-            
-            $news_link = get_permalink($news_story->ID);
-            $target = '';
-            if (!empty($news_meta['link']) && empty($news_meta['local'])) {
-                $news_link = $news_meta['link'];
-                $target = ' target="_blank"';
-            }
-            ?>
-            <div class="column xs-span12 sm-span6">
-                <div class="column-inner puzzle-story">
-                    <div class="puzzle-story-image"<?php echo ($news_featured_image ? ' style="background-image: url(' . $news_featured_image . ');"' : '') ?>>
-                        <a class="puzzle-full-cover-link" href="<?php echo $news_link; ?>"<?php echo $target; ?>></a>
-                    </div>
-                    <div class="puzzle-story-content">
-                        <h4><?php echo $news_story->post_title; ?></h4>
-                        <h6>
-                            <?php echo (!empty($news_meta['media']) ? $news_meta['media'] . '<br />' : ''); ?>
-                            <?php echo date(get_option('date_format'), strtotime($news_story->post_date)); ?>
-                        </h6>
-                        <a class="wbg-button wbg-button-small" href="<?php echo $news_link; ?>"<?php echo $target; ?>>View Story</a>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
+        foreach ($news_stories as $story) {
+            $span_classes = 'xs-span12 sm-span6';
+            include(locate_template('theme/loops/stories.php'));
+        }
+        ?>
         </div>
     </div>
 </div>
