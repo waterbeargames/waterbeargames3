@@ -67,5 +67,16 @@ $meta_info = array_filter(array(
             <?php endif; ?>
         </div>
     </section>
+    <?php if (!empty($game['cta'])) : ?>
+    <section class="alternative-background">
+        <div class="row">
+            <div class="column xs-span12">
+                <div class="column-inner">
+                    <?php echo apply_filters('the_content', stripslashes_deep($game['cta'])); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?>

@@ -27,7 +27,6 @@
     position: relative;
     top: 0;
     display: inline-block;
-    margin-top: 2.5rem;
     border: 0;
     @extend %default-border-radius;
     background-color: $medium-gray;
@@ -55,13 +54,13 @@
 %wbg-button-small {
     @extend %wbg-button;
     @include make-button(0.8, 2.5, 0.4);
-    margin-top: 0;
     font-size: 1.4rem;
 }
 
 %wbg-button-large {
     @extend %wbg-button;
     @include make-button(1, 4, 0.7);
+    margin-top: 2.5rem;
     font-size: 2rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -118,15 +117,10 @@
 
 .circle-button-container {
     position: relative;
-    padding: 5px;
     text-align: center;
     
     h4 {
         margin: 1.5rem 0 0;
-    }
-
-    @include breakpoint($size-sm) {
-        padding: 10px;
     }
 }
 

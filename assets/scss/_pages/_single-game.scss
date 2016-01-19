@@ -41,6 +41,11 @@
     
     .circle-button-container {
         @include flex(0 1 50%);
+        padding: 5px;
+        
+        @include breakpoint($size-sm) {
+            padding: 10px;
+        }
     }
     
     .circle-button-content {

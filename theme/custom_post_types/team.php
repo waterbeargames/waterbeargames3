@@ -66,6 +66,7 @@ function meta_options_team() {
     </p>
     <hr />
     <h3>Images</h3>
+    <p>Images should be squares only.</p>
     <div class="row added-columns">
         <?php
         $i = 0;
@@ -78,7 +79,7 @@ function meta_options_team() {
         }
         ?>
     </div>
-    <p><a class="button puzzle-add-team-image" href="#">Add Image</a></p>
+    <p><a class="button puzzle-add-team-image" href="#">Add New Image</a></p>
     <script>
         var $ = jQuery.noConflict();
         $(document).ready(function() {

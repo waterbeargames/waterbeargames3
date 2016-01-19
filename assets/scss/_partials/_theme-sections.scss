@@ -36,6 +36,32 @@
     }
 }
 
+.background-bear-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    opacity: 0.3;
+}
+
+.background-bear {
+    @include flex(0 1 100%);
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+
+    svg {
+        path {
+            fill: #fff;
+        }
+    }
+}
+
 .puzzle-background-overlay {
     position: absolute;
     top: 0;
@@ -48,6 +74,12 @@
 .vertical-center {
     .row:last-child {
         @include align-items(center);
+    }
+}
+
+.puzzle-section-cta {
+    .wbg-button {
+        margin-top: 2rem;
     }
 }
 
@@ -171,7 +203,7 @@
             padding: 5px;
         
             @include breakpoint($size-sm) {
-                padding: 10px;
+                padding: 15px;
             }
         }
     }

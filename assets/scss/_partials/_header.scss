@@ -65,6 +65,7 @@
     
     .circle-button-container {
         @include flex(0 1 (100% / 3));
+        padding: 5px;
         
         .circle-button {
             .circle-button-content {
@@ -75,14 +76,16 @@
         &:first-child .circle-button .circle-button-content {
             @include flex-basis(70%);
         }
+        
+        @include breakpoint($size-sm) {
+            padding: 10px;
+        }
     
         @include breakpoint($size-md) {
             position: absolute;
         
-            &:not(:first-child) {
-                h4 {
-                    font-size: 2rem;
-                }
+            h4 {
+                font-size: 1.6rem;
             }
         
             &:first-child {
@@ -105,8 +108,16 @@
         }
     
         @include breakpoint($size-lg) {
+            h4 {
+                font-size: 2rem;
+            }
+            
             &:first-child {
                 right: 51%;
+                
+                h4 {
+                    font-size: 2.4rem;
+                }
             }
         
             &:nth-child(2) {

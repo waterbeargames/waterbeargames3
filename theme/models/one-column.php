@@ -72,7 +72,7 @@ $one_column->set_group_name('One Column')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -83,7 +83,7 @@ $one_column->set_group_name('One Column')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -119,6 +119,10 @@ $one_column->set_group_name('One Column')
         ),
         'overlay'           => array(
             'name'          => 'Overlay background color on background image',
+            'input_type'    => 'checkbox'
+        ),
+        'background_bear'   => array(
+            'name'          => 'Overlay water bear on background',
             'input_type'    => 'checkbox'
         )
     ));

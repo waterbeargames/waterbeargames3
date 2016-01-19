@@ -24,6 +24,14 @@ if (!empty($page_sections)) :
         ?>
     
         <section id="<?php echo $section_id; ?>" class="<?php echo section_classes($page_section); ?>"<?php echo ($background_image ? ' style="background-image: url(' . $background_image . ');"' : ''); ?>>
+            <?php if (!empty($puzzle_options_data['background_bear'])) : ?>
+            <div class="background-bear-container">
+                <div class="background-bear">
+                    <?php include('assets/images/bear.svg'); ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            
             <?php if (!empty($puzzle_options_data['overlay'])) : ?>
             <div class="puzzle-background-overlay <?php echo $background_color; ?>"></div>
             <?php endif; ?>

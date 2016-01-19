@@ -44,9 +44,12 @@ $puzzle_pieces->set_page_builder_post_types(array('page'));
 
 /* Require files */
 
-foreach (glob(get_stylesheet_directory() . '/theme/models/*.php') as $filename) {
-    include $filename;
+function init_puzzle_models() {
+    foreach (glob(get_stylesheet_directory() . '/theme/models/*.php') as $filename) {
+        include $filename;
+    }
 }
+add_action('init', 'init_puzzle_models');
 
 require_once('puzzle_colors.php');
 require_once('customize_theme.php');

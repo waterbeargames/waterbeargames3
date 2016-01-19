@@ -1,12 +1,12 @@
 <?php
-// Puzzle Pieces required settings
-function puzzle_config_location() { return 'theme/settings/puzzle_config.php'; }
-require_once('puzzle_pieces/puzzle_pieces.php');
-
 // Custom Post Types
 foreach (glob(get_stylesheet_directory() . '/theme/custom_post_types/*.php') as $filename) {
     include $filename;
 }
+
+// Puzzle Pieces required settings
+function puzzle_config_location() { return 'theme/settings/puzzle_config.php'; }
+require_once('puzzle_pieces/puzzle_pieces.php');
 
 // Allow SVG uploads
 function wbg_myme_types($mime_types){

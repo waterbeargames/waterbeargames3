@@ -88,7 +88,6 @@ section {
   position: relative;
   top: 0;
   display: inline-block;
-  margin-top: 2.5rem;
   border: 0;
   background-color: #aaa;
   color: #fff;
@@ -122,7 +121,6 @@ section {
   padding: 0.8rem 2.5rem 1.2rem;
   -webkit-box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
-  margin-top: 0;
   font-size: 1.4rem; }
   .wbg-button-small:active, button:active, input[type='button']:active, input[type='submit']:active, .comment-reply-link:active, #cancel-comment-reply-link:active {
     top: 0.4rem;
@@ -139,6 +137,7 @@ section {
   padding: 1rem 4rem 1.7rem;
   -webkit-box-shadow: 0 -0.7rem 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 -0.7rem 0 rgba(0, 0, 0, 0.3) inset;
+  margin-top: 2.5rem;
   font-size: 2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase; }
@@ -176,13 +175,9 @@ section {
  */
 .circle-button-container {
   position: relative;
-  padding: 5px;
   text-align: center; }
   .circle-button-container h4 {
     margin: 1.5rem 0 0; }
-  @media all and (min-width: 480px) {
-    .circle-button-container {
-      padding: 10px; } }
 
 .circle-button-container:hover .circle-button, .circle-button:hover {
   -webkit-transform: scale(1.05);
@@ -1422,7 +1417,8 @@ img, svg {
   .home-buttons .circle-button-container {
     -webkit-flex: 0 1 33.33333%;
     -ms-flex: 0 1 33.33333%;
-    flex: 0 1 33.33333%; }
+    flex: 0 1 33.33333%;
+    padding: 5px; }
     .home-buttons .circle-button-container .circle-button .circle-button-content {
       -webkit-flex: 0 1 60%;
       -ms-flex: 0 1 60%;
@@ -1431,11 +1427,14 @@ img, svg {
       -webkit-flex-basis: 70%;
       -ms-flex-preferred-size: 70%;
       flex-basis: 70%; }
+    @media all and (min-width: 480px) {
+      .home-buttons .circle-button-container {
+        padding: 10px; } }
     @media all and (min-width: 660px) {
       .home-buttons .circle-button-container {
         position: absolute; }
-        .home-buttons .circle-button-container:not(:first-child) h4 {
-          font-size: 2rem; }
+        .home-buttons .circle-button-container h4 {
+          font-size: 1.6rem; }
         .home-buttons .circle-button-container:first-child {
           top: -2%;
           left: 0;
@@ -1449,8 +1448,12 @@ img, svg {
           right: 29%;
           left: 29%; } }
     @media all and (min-width: 850px) {
+      .home-buttons .circle-button-container h4 {
+        font-size: 2rem; }
       .home-buttons .circle-button-container:first-child {
         right: 51%; }
+        .home-buttons .circle-button-container:first-child h4 {
+          font-size: 2.4rem; }
       .home-buttons .circle-button-container:nth-child(2) {
         left: 60%; }
       .home-buttons .circle-button-container:last-child {
@@ -1748,6 +1751,37 @@ img, svg {
     .puzzle-main-content p {
       font-size: 2rem; } }
 
+.background-bear-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0.3; }
+
+.background-bear {
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px; }
+  .background-bear svg path {
+    fill: #fff; }
+
 .puzzle-background-overlay {
   position: absolute;
   top: 0;
@@ -1761,6 +1795,9 @@ img, svg {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.puzzle-section-cta .wbg-button {
+  margin-top: 2rem; }
 
 /* Used in news and blog sections */
 .puzzle-stories .column {
@@ -1882,7 +1919,7 @@ img, svg {
     padding: 5px; }
     @media all and (min-width: 480px) {
       .puzzle-games .puzzle-columns-content .column-inner, .puzzle-team .puzzle-columns-content .column-inner {
-        padding: 10px; } }
+        padding: 15px; } }
 
 /*---------------------*/
 /* Puzzle Blog Section */
@@ -2124,7 +2161,11 @@ img, svg {
   .game-buttons .circle-button-container {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
-    flex: 0 1 50%; }
+    flex: 0 1 50%;
+    padding: 5px; }
+    @media all and (min-width: 480px) {
+      .game-buttons .circle-button-container {
+        padding: 10px; } }
   .game-buttons .circle-button-content {
     position: relative;
     top: -2px;

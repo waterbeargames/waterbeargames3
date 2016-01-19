@@ -24,10 +24,40 @@ function game_init() {
             'editor',
             'thumbnail',
             'page-attributes'
-        )
+        ),
+        'taxonomies'        => array('game_category')
     ));
 }
 add_action('init', 'game_init');
+
+// Register taxonomy
+function register_game_category_taxonomy() {
+    $labels = array(
+        'name'                       => _x('Game Categories', 'taxonomy general name'),
+        'singular_name'              => _x('Game Category', 'taxonomy singular name'),
+        'search_items'               => __('Search Game Categories'),
+        'all_items'                  => __('All Game Categories'),
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => __('Edit Game Category'),
+        'update_item'                => __('Update Game Category'),
+        'add_new_item'               => __('Add New Game Category'),
+        'new_item_name'              => __('New Game Category Name'),
+        'menu_name'                  => __('Game Categories')
+    );
+
+    $args = array(
+        'hierarchical'          => true,
+        'labels'                => $labels,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'query_var'             => true,
+        'rewrite'               => array('slug' => 'category')
+    );
+    
+    register_taxonomy('game_category', array('game'), $args);
+}
+add_action('init', 'register_game_category_taxonomy');
 
 // Add custom fields
 function game_meta_box() {
@@ -57,6 +87,8 @@ function game_meta_options() {
         preg_match($file_name_regex, wp_get_attachment_url($game['print_and_play']), $matches);
         $game_print_and_play_preview = $matches[0];
     }
+    
+    $game_cta = (!empty($game['cta']) ? stripslashes_deep($game['cta']) : '');
     ?>
     <div class="row">
         <div class="column xs-span12 sm-span4">
@@ -114,6 +146,19 @@ function game_meta_options() {
                 Accent Color<br />
                 <input class="color-field" name="wbg_game[accent_color]" value="<?php echo (!empty($game['accent_color']) ? $game['accent_color'] : ''); ?>" type="text" />
             </p>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="column xs-span12">
+            <h3>Call to Action section</h3>
+            <?php
+            $wp_editor_settings = array(
+                'textarea_name' => 'wbg_game[cta]',
+                'textarea_rows' => 10
+            );
+            wp_editor($game_cta, 'wbg_game_cta', $wp_editor_settings);
+            ?>
         </div>
     </div>
     <script>

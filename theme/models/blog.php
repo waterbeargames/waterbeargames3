@@ -19,7 +19,7 @@ $blog->set_group_name('Blog')
         ),
         'posts_num'         => array(
             'name'          => 'Number of Posts',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 '3'         => '3',
@@ -30,7 +30,7 @@ $blog->set_group_name('Blog')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -41,7 +41,7 @@ $blog->set_group_name('Blog')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',

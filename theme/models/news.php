@@ -19,7 +19,7 @@ $news->set_group_name('News')
         ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -30,7 +30,7 @@ $news->set_group_name('News')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',

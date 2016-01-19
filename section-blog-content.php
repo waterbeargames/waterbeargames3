@@ -38,7 +38,7 @@ $span_classes = span_classes($blog_posts_num);
         </div>
     <?php endforeach; ?>
 </div>
-<div class="row">
+<div class="row puzzle-section-cta">
     <div class="column xs-span12">
         <div class="column-inner">
             <?php

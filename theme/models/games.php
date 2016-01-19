@@ -1,4 +1,11 @@
 <?php
+$game_categories = get_terms('game_category');
+$game_category_options = array('All' => '');
+
+foreach ($game_categories as $cat) {
+    $game_category_options[$cat->name] = $cat->term_id;
+}
+
 $games = new PuzzleSection;
 $games->set_group_name('Games')
     ->set_group_name_slug('games')
@@ -17,9 +24,15 @@ $games->set_group_name('Games')
             'tip'           => '<strong>Use this for linking directly to a section. Lowercase letters, numbers, dashes, and underscores only.</strong> If left blank, the Section ID will be the headline lowercase with words separated by dashes (symbols will be deleted). If both the Section ID and headline are blank, the Section ID will be "section-n" where "n" is the place that the section is in on the page (e.g. the 4th section on the page will be "section-4").',
             'input_type'    => 'text'
         ),
+        'category'          => array(
+            'name'          => 'Category',
+            'width'         => 'xs-span12 sm-span3',
+            'input_type'    => 'select',
+            'options'       => $game_category_options
+        ),
         'padding_top'       => array(
             'name'          => 'Top Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -30,7 +43,7 @@ $games->set_group_name('Games')
         ),
         'padding_bottom'    => array(
             'name'          => 'Bottom Padding',
-            'width'         => 'xs span12 sm-span3',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Large'     => 'large',
@@ -41,7 +54,7 @@ $games->set_group_name('Games')
         ),
         'text_color_scheme' => array(
             'name'          => 'Text Color Scheme',
-            'width'         => 'xs-span12 sm-span6',
+            'width'         => 'xs-span12 sm-span3',
             'input_type'    => 'select',
             'options'       => array(
                 'Dark'      => 'dark',
