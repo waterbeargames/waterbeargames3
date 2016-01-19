@@ -9,7 +9,7 @@
 <body <?php body_class('smooth-scroll-enabled'); ?>>
     <nav id="nav"<?php echo (is_front_page() ? ' class="no-logo no-shadow no-transition"' : ''); ?>>
         <div class="row">
-            <div class="column xs-span8 sm-span6 md-span3 lg-span2">
+            <div class="column xs-span8 sm-span6 md-span2">
                 <div class="vector-container">
                     <a href="<?php echo get_site_url(); ?>">
                         <?php include('assets/images/bear.svg'); ?>
@@ -18,7 +18,7 @@
             </div>
             
             <?php if (has_nav_menu('primary')) : ?>
-            <div class="column xs-span4 sm-span6 md-span9 lg-span10">
+            <div class="column xs-span4 sm-span6 md-span10">
                 <?php
                 $args = array(
                     'theme_location'  => 'primary',
@@ -51,6 +51,22 @@
                 );
                 wp_nav_menu($args);
                 ?>
+                
+                <?php
+                $twitter = get_theme_mod('twitter');
+                $facebook = get_theme_mod('facebook');
+                
+                if (!empty($twitter) || !empty($facebook)) : ?>
+                <ul class="nav-social-media">
+                    <?php if (!empty($twitter)) : ?>
+                    <li><a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <?php endif; ?>
+                    
+                    <?php if (!empty($facebook)) : ?>
+                    <li><a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <?php endif; ?>
+                </ul>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
         </div>

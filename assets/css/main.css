@@ -81,14 +81,13 @@ section {
 .wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link, .wbg-button-large, .wbg-button {
   top: 0;
   bottom: 0.5rem;
-  margin-bottom: 0;
+  margin: 0.3rem 0;
   padding: 1rem 3rem 1.5rem;
   -webkit-box-shadow: 0 -0.5rem 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 -0.5rem 0 rgba(0, 0, 0, 0.3) inset;
   position: relative;
   top: 0;
   display: inline-block;
-  margin: 0.3rem 0;
   border: 0;
   background-color: #aaa;
   color: #fff;
@@ -102,7 +101,7 @@ section {
   .wbg-button-small:active, button:active, input[type='button']:active, input[type='submit']:active, .comment-reply-link:active, #cancel-comment-reply-link:active, .wbg-button-large:active, .wbg-button:active {
     top: 0.5rem;
     bottom: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     padding-bottom: 1rem;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset; }
@@ -118,7 +117,7 @@ section {
 .wbg-button-small, button, input[type='button'], input[type='submit'], .comment-reply-link, #cancel-comment-reply-link {
   top: 0;
   bottom: 0.4rem;
-  margin-bottom: 0;
+  margin: 0.3rem 0;
   padding: 0.8rem 2.5rem 1.2rem;
   -webkit-box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 -0.4rem 0 rgba(0, 0, 0, 0.3) inset;
@@ -126,7 +125,7 @@ section {
   .wbg-button-small:active, button:active, input[type='button']:active, input[type='submit']:active, .comment-reply-link:active, #cancel-comment-reply-link:active {
     top: 0.4rem;
     bottom: 0;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.7rem;
     padding-bottom: 0.8rem;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset; }
@@ -134,7 +133,7 @@ section {
 .wbg-button-large {
   top: 0;
   bottom: 0.7rem;
-  margin-bottom: 0;
+  margin: 0.3rem 0;
   padding: 1rem 4rem 1.7rem;
   -webkit-box-shadow: 0 -0.7rem 0 rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 -0.7rem 0 rgba(0, 0, 0, 0.3) inset;
@@ -145,7 +144,7 @@ section {
   .wbg-button-large:active {
     top: 0.7rem;
     bottom: 0;
-    margin-bottom: 0.7rem;
+    margin-bottom: 1rem;
     padding-bottom: 1rem;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3) inset; }
@@ -251,7 +250,6 @@ section {
   flex-wrap: wrap; }
 
 .column {
-  float: left;
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
@@ -1499,6 +1497,15 @@ img, svg {
     @media all and (min-width: 660px) {
       #nav .row {
         height: 80px; } }
+  #nav .column:last-child {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
   #nav ul {
     margin: 0; }
   #nav .vector-container {
@@ -1529,6 +1536,11 @@ img, svg {
 @media all and (min-width: 783px) {
   body.admin-bar #nav {
     top: 32px; } }
+#dl-menu, #nav-menu {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto; }
+
 /* Mobile menu */
 #dl-menu.dl-menuwrapper {
   float: right;
@@ -1538,6 +1550,7 @@ img, svg {
   #dl-menu.dl-menuwrapper button {
     position: absolute;
     top: 0;
+    margin: 0;
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -1575,7 +1588,11 @@ img, svg {
       font-size: 1.6rem; }
       #nav-menu ul li a {
         display: block;
-        padding: 10px 15px; }
+        padding: 10px 8px; }
+        @media all and (min-width: 850px) {
+          #nav-menu ul li a {
+            padding-left: 15px;
+            padding-right: 15px; } }
     #nav-menu ul .menu-item-has-children {
       position: relative; }
     #nav-menu ul ul {
@@ -1617,12 +1634,41 @@ img, svg {
         #nav-menu ul ul ul.show-adjust {
           left: -100%; }
 
+/* Social Media */
+.nav-social-media {
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none; }
+  .nav-social-media li {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    padding: 0 10px; }
+  .nav-social-media a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #aaa;
+    color: #fff;
+    line-height: 28px;
+    text-align: center; }
+
 @media all and (min-width: 660px) {
   #dl-menu {
     display: none; }
 
   #nav-menu {
-    display: block; } }
+    display: block; }
+
+  .nav-social-media {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
 /*------------*/
 /* Posts Loop */
 /*------------*/

@@ -61,7 +61,6 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 }
 
 .column {
-    float: left;
     @include flex(0 1 100%);
     min-width: 0;
 }

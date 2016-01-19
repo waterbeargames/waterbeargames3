@@ -23,10 +23,42 @@ function puzzle_customize_register($wp_customize) {
         )));
     }
     
+    /* Social */
+    $wp_customize->add_section('puzzle_social_media' , array(
+        'title'      => 'Social Media',
+        'priority'   => 200
+    ));
+    
+    $wp_customize->add_setting('twitter', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_html',
+        'transport'         => 'refresh'
+    ));
+    
+    $wp_customize->add_control('twitter', array(
+        'label'             => 'Twitter',
+        'section'           => 'puzzle_social_media',
+        'settings'          => 'twitter',
+        'type'              => 'text'
+    ));
+    
+    $wp_customize->add_setting('facebook', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_html',
+        'transport'         => 'refresh'
+    ));
+    
+    $wp_customize->add_control('facebook', array(
+        'label'             => 'Facebook',
+        'section'           => 'puzzle_social_media',
+        'settings'          => 'facebook',
+        'type'              => 'text'
+    ));
+    
     /* Header */
     $wp_customize->add_section('puzzle_header' , array(
         'title'      => 'Header',
-        'priority'   => 200,
+        'priority'   => 210
     ));
     
     for ($i = 0; $i < 3; $i++) {
@@ -117,7 +149,7 @@ function puzzle_customize_register($wp_customize) {
     
     $wp_customize->add_section('puzzle_footer' , array(
         'title'      => 'Footer',
-        'priority'   => 210,
+        'priority'   => 220
     ));
     
     $wp_customize->add_setting('footer_background_color', array(

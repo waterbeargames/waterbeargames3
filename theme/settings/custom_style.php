@@ -110,10 +110,6 @@ input:focus, select:focus, textarea:focus {
 
 /* Navigation Bar */
 
-#nav a {
-    color: <?php echo $primary_color; ?>;
-}
-
 #nav .vector-container path {
     fill: <?php echo $primary_color; ?>;
 }
@@ -146,8 +142,20 @@ input:focus, select:focus, textarea:focus {
     background: <?php echo $secondary_color; ?>;
 }
 
+#nav-menu ul li a {
+    color: <?php echo $primary_color; ?>;
+}
+
 #nav-menu ul li a:hover {
     color: <?php echo $secondary_color; ?>;
+}
+
+.nav-social-media a {
+    background-color: <?php echo $primary_color; ?>;
+}
+
+.nav-social-media a:hover {
+    background-color: <?php echo $secondary_color; ?>;
 }
 
 /* Footer */
