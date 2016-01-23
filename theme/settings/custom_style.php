@@ -83,7 +83,7 @@ a:hover, a:active {
 /* Forms */
 
 input, select, textarea {
-    border-color: rgba(<?php echo $text_dark; ?>, 0.5);
+    border-color: rgba(<?php echo hex2rgb($text_dark); ?>, 0.5);
 }
 
 input:focus, select:focus, textarea:focus {
