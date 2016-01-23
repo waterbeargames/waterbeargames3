@@ -157,6 +157,7 @@
     }
     
     .circle-button-content {
+        position: relative;
         @include flex(0 1 70%);
     }
     
@@ -172,6 +173,7 @@
     
     .puzzle-background-overlay {
         @include transition(all 0.4s ease);
+        -webkit-transform-style: flat;
     }
 }
 

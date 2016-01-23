@@ -23,7 +23,7 @@ if ($story->post_type == 'news') {
             <?php if (!$story_featured_image) : ?>
             <div class="background-bear-container">
                 <div class="background-bear">
-                    <?php include(dirname(__FILE__) . '/../../assets/images/bear.svg'); ?>
+                    <?php insert_svg(get_template_directory() . '/assets/images/bear.svg'); ?>
                 </div>
             </div>
             <?php endif; ?>

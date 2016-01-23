@@ -12,7 +12,7 @@ $game_logo = (!empty($game_meta['logo']) ? $game_meta['logo'] : false);
             <div class="circle-button-content">
                 <?php
                 if ($game_logo) :
-                    include(get_attached_file($game_logo));
+                    insert_svg(get_attached_file($game_logo));
                 else :
                 ?>
                 <h4><?php echo get_the_title($game->ID); ?></h4>

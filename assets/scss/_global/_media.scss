@@ -27,4 +27,11 @@ img, svg {
 
 .vector-container {
     position: relative;
+    height: 0;
+    
+    svg {
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
 }

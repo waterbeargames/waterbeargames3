@@ -5,6 +5,28 @@
  * Helper functions
  */
 
+// Inserts an inline SVG with a padding trick on the container to fix the size
+// in IE and Edge.
+//
+// $svg_location - string, location of the SVG file
+//
+// Echos the SVG wrapped in a container
+function insert_svg($svg_location) {
+    ob_start();
+    require($svg_location);
+    $svg = ob_get_clean();
+    $svg = simplexml_load_string($svg);
+    $viewBox = (string) $svg->attributes()->viewBox;
+    preg_match_all('/\d+/', $viewBox, $dimensions);
+    $width = $dimensions[0][2] - $dimensions[0][0];
+    $height = $dimensions[0][3] - $dimensions[0][1];
+    $aspect_ratio = $height / $width;
+    
+    echo '<div class="vector-container" style="padding-bottom: ' . $aspect_ratio * 100 . '%;">';
+    include($svg_location);
+    echo '</div>';
+}
+
 // Determines classes for a section. Can be edited on a theme-by-theme basis.
 //
 // $page_section - array of data pertaining to the section

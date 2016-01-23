@@ -27,7 +27,7 @@ if (!empty($page_sections)) :
             <?php if (!empty($puzzle_options_data['background_bear'])) : ?>
             <div class="background-bear-container">
                 <div class="background-bear">
-                    <?php include('assets/images/bear.svg'); ?>
+                    <?php insert_svg(get_template_directory() . '/assets/images/bear.svg')?>
                 </div>
             </div>
             <?php endif; ?>
