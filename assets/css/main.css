@@ -2190,14 +2190,15 @@ img, svg {
   padding: 20px;
   border-radius: 50%;
   background-color: rgba(85, 85, 85, 0.75); }
-  .header-game-logo svg {
+  .header-game-logo .vector-container {
     -webkit-flex: 0 1 100%;
     -ms-flex: 0 1 100%;
-    flex: 0 1 100%;
-    -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3)); }
-    .header-game-logo svg path, .header-game-logo svg polygon {
-      fill: #fff; }
+    flex: 0 1 100%; }
+    .header-game-logo .vector-container svg {
+      -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+      filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3)); }
+      .header-game-logo .vector-container svg path, .header-game-logo .vector-container svg polygon {
+        fill: #fff; }
   @media all and (min-width: 660px) {
     .header-game-logo {
       width: 200px;
