@@ -3,6 +3,17 @@
 /*--------*/
 
 #footer {
+    padding: 15px 0;
     background-color: $medium-gray;
     text-align: center;
+    
+    p {
+        margin: 1rem 0;
+    }
+    
+    @include breakpoint($size-md) {
+        p {
+            font-size: 1.4rem;
+        }
+    }
 }

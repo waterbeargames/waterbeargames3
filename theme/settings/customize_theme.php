@@ -169,7 +169,7 @@ function puzzle_customize_register($wp_customize) {
     
     $wp_customize->add_setting('footer_content', array(
         'default'           => '',
-        'sanitize_callback' => 'esc_html',
+        'sanitize_callback' => 'wp_kses_post',
         'transport'         => 'refresh'
     ));
     

@@ -1785,8 +1785,14 @@ img, svg {
 /* Footer */
 /*--------*/
 #footer {
+  padding: 15px 0;
   background-color: #aaa;
   text-align: center; }
+  #footer p {
+    margin: 1rem 0; }
+  @media all and (min-width: 660px) {
+    #footer p {
+      font-size: 1.4rem; } }
 
 /*-----------------*/
 /* Puzzle Sections */

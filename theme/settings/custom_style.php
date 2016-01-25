@@ -65,8 +65,7 @@ body, p, li, td,
 .light-text-color-scheme h6,
 .light-text-color-scheme p,
 .light-text-color-scheme li,
-.light-text-color-scheme td,
-.light-text-color-scheme a {
+.light-text-color-scheme td {
     color: <?php echo $text_light; ?>;
 }
 
@@ -78,6 +77,14 @@ a {
 
 a:hover, a:active {
     color: <?php echo $primary_color; ?>;
+}
+
+.light-text-color-scheme a:not(.wbg-button) {
+    color: <?php echo $accent_color; ?>;
+}
+
+.light-text-color-scheme a:not(.wbg-button):hover {
+    color: rgba(<? echo hex2rgb($text_light); ?>, 0.6);
 }
 
 /* Forms */
@@ -187,10 +194,20 @@ if ($footer_background_color == 'secondary') {
     color: <?php echo $footer_headline_color; ?>;
 }
 
-#footer, #footer p, #footer li, #footer th, #footer td, #footer a {
+#footer, #footer p, #footer li, #footer th, #footer td {
     color: <?php echo $footer_text_color; ?>
 }
 
+<?php if ($footer_text_color == $text_light) : ?>
+#footer a {
+    color: <?php echo $accent_color; ?>;
+}
+
+#footer a:hover {
+    color: rgba(<?php echo hex2rgb($footer_text_color); ?>, 0.6);
+}
+
+<?php endif; ?>
 /* Sections */
 
 <?php foreach ($colors as $label => $color) : ?>
