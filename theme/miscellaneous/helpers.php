@@ -20,7 +20,7 @@ function insert_svg($svg_location) {
     preg_match_all('/\d+/', $viewBox, $dimensions);
     $width = $dimensions[0][2] - $dimensions[0][0];
     $height = $dimensions[0][3] - $dimensions[0][1];
-    $aspect_ratio = $height / $width;
+    $aspect_ratio = ceil($height / $width * 10000) / 10000;
     
     echo '<div class="vector-container" style="padding-bottom: ' . $aspect_ratio * 100 . '%;">';
     include($svg_location);

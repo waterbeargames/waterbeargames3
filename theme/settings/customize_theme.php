@@ -86,10 +86,11 @@ function puzzle_customize_register($wp_customize) {
             'section'           => 'puzzle_header',
             'settings'          => 'home_buttons[' . $i . '][icon]',
             'type'              => 'select',
-            'choices'           => array(
-                'bear'          => 'Water Bear',
-                'salmon'        => 'Salmon',
-                'bee'           => 'Bee'
+            'choices'               => array(
+                'bear'              => 'Water Bear',
+                'salmon'            => 'Salmon',
+                'bee'               => 'Bee',
+                'marcus-and-cara'   => 'Marcus and Cara'
             )
         ));
         
