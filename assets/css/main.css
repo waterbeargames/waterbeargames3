@@ -1479,7 +1479,8 @@ img, svg {
   border-radius: 50%;
   -webkit-animation: bubble-burst 5s ease;
   -moz-animation: bubble-burst 5s ease;
-  animation: bubble-burst 5s ease; }
+  animation: bubble-burst 5s ease;
+  opacity: 0; }
   .header-bubble.small-header-bubble {
     width: 200px;
     height: 200px;

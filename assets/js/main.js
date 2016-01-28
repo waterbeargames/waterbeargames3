@@ -37,13 +37,16 @@ jQuery('document').ready(function($){
     pushFooterDown();
     $window.resize(pushFooterDown);
     
-    // Home page nav effects
+    /*
+     * Home page nav effects
+     */
     var navHasLogo = false,
         navHasShadow = false;
     
     var toggleNav = function() {
         var threshold = $header.outerHeight() / 2;
         
+        // Adds shadow at 10px from the top
         if ($window.scrollTop() > 10 && !navHasShadow) {
             $nav.removeClass('no-transition').removeClass('no-shadow');
             navHasShadow = true;
@@ -52,6 +55,7 @@ jQuery('document').ready(function($){
             navHasShadow = false;
         }
         
+        // Adds logo halfway down the header
         if ($window.scrollTop() > threshold && !navHasLogo) {
             $nav.removeClass('no-transition').removeClass('no-logo');
             navHasLogo = true;
@@ -74,10 +78,15 @@ jQuery('document').ready(function($){
     
     // Creates a single bubble, then removes it
     var makeBubble = function() {
-        var xPosition   = Math.floor(Math.random() * 100),
-            yPosition   = Math.floor(Math.random() * 100),
-            color       = bubbleColors[Math.floor(Math.random() * bubbleColors.length)],
-            size        = bubbleSizes[Math.floor(Math.random() * bubbleSizes.length)];
+        // Sets random x and y position 0-100
+        var xPosition = Math.floor(Math.random() * 101),
+            yPosition = Math.floor(Math.random() * 101);
+        
+        // Chooses a random color from the bubbleColors array
+        var color = bubbleColors[Math.floor(Math.random() * bubbleColors.length)];
+        
+        // Chooses a random size from the bubbleSizes array
+        var size = bubbleSizes[Math.floor(Math.random() * bubbleSizes.length)];
         
         var $bubble = $('<div class="header-bubble ' + color + '-header-bubble ' + size + '-header-bubble" style="top: ' + yPosition + '%; left: ' + xPosition + '%;"></div>');
         
