@@ -1387,6 +1387,7 @@ img, svg {
       height: 600px; } }
 
 .home #header {
+  position: relative;
   height: auto;
   padding: 30px 0; }
   @media all and (min-width: 660px) {
@@ -1472,6 +1473,68 @@ img, svg {
         right: 31%;
         left: 31%; } }
 
+.header-bubble {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-animation: bubble-burst 5s ease;
+  -moz-animation: bubble-burst 5s ease;
+  animation: bubble-burst 5s ease; }
+  .header-bubble.small-header-bubble {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px; }
+  .header-bubble.medium-header-bubble {
+    width: 325px;
+    height: 325px;
+    margin-top: -162.5px;
+    margin-left: -162.5px; }
+  .header-bubble.large-header-bubble {
+    width: 450px;
+    height: 450px;
+    margin-top: -225px;
+    margin-left: -225px; }
+
+@-webkit-keyframes bubble-burst {
+  0% {
+    -webkit-transform: scale(0) translateZ(0);
+    -moz-transform: scale(0) translateZ(0);
+    -ms-transform: scale(0) translateZ(0);
+    transform: scale(0) translateZ(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+    -moz-transform: scale(1) translateZ(0);
+    -ms-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+    opacity: 0; } }
+@-moz-keyframes bubble-burst {
+  0% {
+    -webkit-transform: scale(0) translateZ(0);
+    -moz-transform: scale(0) translateZ(0);
+    -ms-transform: scale(0) translateZ(0);
+    transform: scale(0) translateZ(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+    -moz-transform: scale(1) translateZ(0);
+    -ms-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+    opacity: 0; } }
+@keyframes bubble-burst {
+  0% {
+    -webkit-transform: scale(0) translateZ(0);
+    -moz-transform: scale(0) translateZ(0);
+    -ms-transform: scale(0) translateZ(0);
+    transform: scale(0) translateZ(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+    -moz-transform: scale(1) translateZ(0);
+    -ms-transform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
+    opacity: 0; } }
 /*----------------*/
 /* Navigation Bar */
 /*----------------*/

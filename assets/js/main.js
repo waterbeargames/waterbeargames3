@@ -3,10 +3,21 @@ jQuery('document').ready(function($){
         $body = $('body'),
         $adminBar = $('#wpadminbar'),
         $header = $('#header'),
+        $homeHeader = $('.home #header'),
         $nav = $('#nav'),
+        $mobileMenu = $('#dl-menu'),
         $main = $('main'),
         $footer = $('#footer');
-        
+    
+    // Check if mobile width
+    var isMobileWidth = function() {
+        if ($mobileMenu.css('display') === 'block') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     // Sticky footer
     var pushFooterDown = function() {
         $main.css('min-height', '');
@@ -54,4 +65,43 @@ jQuery('document').ready(function($){
         toggleNav();
         $window.scroll(toggleNav);
     }
+    
+    /*
+     * Home page header bubbles
+     */
+    var bubbleSizes     = ['small', 'medium', 'large'],
+        bubbleColors    = ['primary', 'secondary', 'accent'];
+    
+    // Creates a single bubble, then removes it
+    var makeBubble = function() {
+        var xPosition   = Math.floor(Math.random() * 100),
+            yPosition   = Math.floor(Math.random() * 100),
+            color       = bubbleColors[Math.floor(Math.random() * bubbleColors.length)],
+            size        = bubbleSizes[Math.floor(Math.random() * bubbleSizes.length)];
+        
+        var $bubble = $('<div class="header-bubble ' + color + '-header-bubble ' + size + '-header-bubble" style="top: ' + yPosition + '%; left: ' + xPosition + '%;"></div>');
+        
+        $homeHeader.append($bubble);
+        
+        setTimeout(function() {
+            $bubble.remove();
+        }, 5000);
+    };
+    
+    var makingBubbles = false,
+        makeBubbles = false;
+    
+    // Creates bubbles only at large width
+    var startMakingBubbles = function() {
+        if (isMobileWidth() && makingBubbles) {
+            if (makeBubbles) { clearInterval(makeBubbles); }
+            makingBubbles = false;
+        } else if (!isMobileWidth() && !makingBubbles) {
+            makeBubbles = setInterval(makeBubble, 1000);
+            makingBubbles = true;
+        }
+    }
+    
+    startMakingBubbles();
+    $window.resize(startMakingBubbles);
 });

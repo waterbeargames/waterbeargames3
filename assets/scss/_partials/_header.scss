@@ -30,6 +30,7 @@
 }
 
 .home #header {
+    position: relative;
     height: auto;
     padding: 30px 0;
     
@@ -130,4 +131,41 @@
             }
         }
     }
+}
+
+$bubble-sizes: ('small': 200, 'medium': 325, 'large': 450);
+
+.header-bubble {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    @include animation(bubble-burst 5s ease);
+    
+    @each $size-name, $size in $bubble-sizes {
+        &.#{$size-name}-header-bubble {
+            width: #{$size}px;
+            height: #{$size}px;
+            margin-top: -#{$size / 2}px;
+            margin-left: -#{$size / 2}px;
+        }
+    }
+}
+
+@mixin keyframes-bubble-burst() {
+    @-webkit-keyframes bubble-burst {
+        @content;
+    }
+    
+    @-moz-keyframes bubble-burst {
+        @content;
+    }
+    
+    @keyframes bubble-burst {
+        @content;
+    }
+}
+
+@include keyframes-bubble-burst() {
+    0%      { @include transform(scale(0) translateZ(0)); opacity: 1; }
+    100%    { @include transform(scale(1) translateZ(0)); opacity: 0; }
 }
