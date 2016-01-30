@@ -168,15 +168,15 @@ input:focus, select:focus, textarea:focus {
 /* Header */
 
 .header-bubble.primary-header-bubble {
-    background-color: rgba(<?php echo hex2rgb($primary_color); ?>, 0.1);
+    background-color: rgba(<?php echo hex2rgb($primary_color); ?>, 0.11);
 }
 
 .header-bubble.secondary-header-bubble {
-    background-color: rgba(<?php echo hex2rgb($secondary_color); ?>, 0.1);
+    background-color: rgba(<?php echo hex2rgb($secondary_color); ?>, 0.11);
 }
 
 .header-bubble.accent-header-bubble {
-    background-color: rgba(<?php echo hex2rgb($accent_color); ?>, 0.3);
+    background-color: rgba(<?php echo hex2rgb($accent_color); ?>, 0.4);
 }
 
 /* Footer */

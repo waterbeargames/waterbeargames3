@@ -59,11 +59,11 @@
                 if (!empty($twitter) || !empty($facebook)) : ?>
                 <ul class="nav-social-media">
                     <?php if (!empty($twitter)) : ?>
-                    <li><a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="<?php echo $twitter; ?>" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                     <?php endif; ?>
                     
                     <?php if (!empty($facebook)) : ?>
-                    <li><a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="<?php echo $facebook; ?>" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                     <?php endif; ?>
                 </ul>
                 <?php endif; ?>
