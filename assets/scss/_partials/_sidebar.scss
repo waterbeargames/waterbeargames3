@@ -3,6 +3,8 @@
 /*---------*/
 
 #sidebar {
+    margin-top: 5rem;
+    
     .sidebar-widget {
         margin: 3rem 0;
         
@@ -35,5 +37,9 @@
         a {
             text-decoration: none;
         }
+    }
+    
+    @include breakpoint($size-lg) {
+        margin-top: 0;
     }
 }

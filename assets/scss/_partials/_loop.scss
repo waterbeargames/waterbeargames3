@@ -4,8 +4,8 @@
 
 .puzzle-loop {
     @extend %clearfix;
-    margin-bottom: 2rem;
-    padding: 20px;
+    margin-bottom: $small-space-unit;
+    padding: $small-space-unit;
     background-color: $light-gray;
     @extend %default-border-radius;
     

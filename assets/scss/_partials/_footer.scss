@@ -3,12 +3,20 @@
 /*--------*/
 
 #footer {
-    padding: 15px 0;
+    padding: $small-space-unit 0;
     background-color: $medium-gray;
     text-align: center;
     
     p {
         margin: 1rem 0;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     
     @include breakpoint($size-md) {

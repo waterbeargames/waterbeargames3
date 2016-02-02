@@ -5,7 +5,7 @@
 #header {
     position: relative;
     height: 225px;
-    padding: ($small-nav-height + 10px) 0 $small-space-unit;
+    padding: ($small-nav-height + $small-space-unit) 0 ($small-space-unit + 5px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
