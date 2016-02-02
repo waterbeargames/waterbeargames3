@@ -50,9 +50,7 @@
                     'walker'          => ''
                 );
                 wp_nav_menu($args);
-                ?>
                 
-                <?php
                 $twitter = get_theme_mod('twitter');
                 $facebook = get_theme_mod('facebook');
                 
