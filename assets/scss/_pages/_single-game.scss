@@ -5,8 +5,8 @@
 .header-game-logo {
     @include display-flex;
     @include align-items(center);
-    width: 105px;
-    height: 105px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
     padding: 15px;
     border-radius: 50%;
@@ -25,14 +25,14 @@
     }
     
     @include breakpoint($size-sm) {
-        width: 160px;
-        height: 160px;
-        padding: 20px;
+        width: 170px;
+        height: 170px;
+        padding: 25px;
     }
     
     @include breakpoint($size-md) {
-        width: 200px;
-        height: 200px;
+        width: 190px;
+        height: 190px;
         padding: 30px;
     }
     

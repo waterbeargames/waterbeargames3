@@ -28,7 +28,7 @@ main {
     
     > section {
         &:first-child {
-            padding-top: $small-nav-height + ($space-unit - 15px);
+            padding-top: $small-nav-height + $small-space-unit;
         }
         
         &.no-padding-top:first-child {
@@ -36,7 +36,7 @@ main {
         }
         
         &.large-padding-top:first-child {
-            padding-top: $small-nav-height + (($space-unit - 15px) * 2);
+            padding-top: $small-nav-height + ($small-space-unit * 2);
         }
         
         @include breakpoint($size-md) {
@@ -61,7 +61,7 @@ main {
 
 section {
     position: relative;
-    padding: ($space-unit - 15px) 0;
+    padding: $small-space-unit 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,11 +75,11 @@ section {
     }
     
     &.large-padding-top {
-        padding-top: ($space-unit - 15px) * 2;
+        padding-top: $small-space-unit * 2;
     }
     
     &.large-padding-bottom {
-        padding-bottom: ($space-unit - 15px) * 2;
+        padding-bottom: $small-space-unit * 2;
     }
     
     @include breakpoint($size-md) {

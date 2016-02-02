@@ -5,7 +5,7 @@
 #header {
     position: relative;
     height: 225px;
-    padding: 80px 0 40px;
+    padding: ($small-nav-height + 10px) 0 $small-space-unit;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +17,7 @@
     
     + main > section {
         &:first-child {
-            padding-top: ($space-unit - 15px);
+            padding-top: $small-space-unit;
         }
         
         &.no-padding-top:first-child {
@@ -25,17 +25,18 @@
         }
         
         &.no-padding-top:first-child {
-            padding-top: ($space-unit - 15px) * 2;
+            padding-top: $small-space-unit * 2;
         }
     }
     
     @include breakpoint($size-sm) {
         height: 300px;
+        padding: ($small-nav-height + $space-unit) 0 $space-unit;
     }
     
     @include breakpoint($size-md) {
         height: 400px;
-        padding: 140px 0 60px;
+        padding: ($space-unit * 2 + $large-nav-height - 10px) 0 ($space-unit * 2);
         
         + main > section {
             &:first-child {
