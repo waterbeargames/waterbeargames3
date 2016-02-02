@@ -28,11 +28,11 @@
     
     .row {
         @include align-items(center);
-        height: 60px;
+        height: $small-nav-height;
         padding: 5px 15px;
         
         @include breakpoint($size-md) {
-            height: 80px;
+            height: $large-nav-height;
         }
     }
     
@@ -46,7 +46,7 @@
     }
     
     .vector-container {
-        height: 50px;
+        height: ($small-nav-height - 10px);
         opacity: 1;
         @include transition(all 0.4s ease);
         visibility: visible;
@@ -61,11 +61,11 @@
         }
         
         @include breakpoint($size-md) {
-            height: 60px;
+            height: ($large-nav-height - 20px);
             margin-left: 15px;
             
             svg {
-                height: 60px;
+                height: ($large-nav-height - 20px);
             }
         }
     }

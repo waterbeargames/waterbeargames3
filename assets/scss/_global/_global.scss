@@ -28,26 +28,28 @@ main {
     
     > section {
         &:first-child {
-            padding-top: 90px;
-            
-            .no-padding-top {
-                padding-top: 60px;
+            padding-top: $small-nav-height + ($space-unit - 15px);
+        }
+        
+        &.no-padding-top:first-child {
+            padding-top: $small-nav-height;
+        }
+        
+        &.large-padding-top:first-child {
+            padding-top: $small-nav-height + (($space-unit - 15px) * 2);
+        }
+        
+        @include breakpoint($size-md) {
+            &:first-child {
+                padding-top: $large-nav-height + $space-unit;
             }
             
-            .large-padding-top {
-                padding-top: 130px;
+            &.no-padding-top:first-child {
+                padding-top: $large-nav-height;
             }
             
-            @include breakpoint($size-md) {
-                padding-top: 110px;
-                
-                .no-padding-top {
-                    padding-top: 80px;
-                }
-                
-                .large-padding-top {
-                    padding-top: 150px;
-                }
+            &.large-padding-top:first-child {
+                padding-top: $large-nav-height + ($space-unit * 2);
             }
         }
     }
@@ -59,7 +61,7 @@ main {
 
 section {
     position: relative;
-    padding: 30px 0;
+    padding: ($space-unit - 15px) 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,10 +75,22 @@ section {
     }
     
     &.large-padding-top {
-        padding-top: 70px;
+        padding-top: ($space-unit - 15px) * 2;
     }
     
     &.large-padding-bottom {
-        padding-bottom: 70px;
+        padding-bottom: ($space-unit - 15px) * 2;
+    }
+    
+    @include breakpoint($size-md) {
+        padding: $space-unit 0;
+        
+        &.large-padding-top {
+            padding-top: $space-unit * 2;
+        }
+    
+        &.large-padding-bottom {
+            padding-bottom: $space-unit * 2;
+        }
     }
 }
