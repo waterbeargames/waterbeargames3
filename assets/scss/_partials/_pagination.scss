@@ -4,8 +4,7 @@
 
 #pagination {
     @extend %clearfix;
-    margin: 0;
-    padding: 15px 0;
+    margin: $small-space-unit 0;
     list-style: none;
     
     li {
@@ -27,14 +26,27 @@
         .fa {
             display: block;
             font-size: 30px;
+            @include transition(all 0.4s ease);
         }
     }
     
     #newer-pages {
         float: left;
+        
+        a:hover {
+            .fa {
+                @include transform(translate(-15%, 0));
+            }
+        }
     }
     
     #older-pages {
         float: right;
+        
+        a:hover {
+            .fa {
+                @include transform(translate(15%, 0));
+            }
+        }
     }
 }

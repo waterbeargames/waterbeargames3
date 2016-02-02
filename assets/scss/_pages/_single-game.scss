@@ -46,7 +46,7 @@
 .game-buttons {
     @include display-flex;
     @include justify-content(center);
-    margin-bottom: 3rem;
+    margin-bottom: $space-unit;
     
     .circle-button-container {
         @include flex(0 1 50%);
@@ -91,7 +91,7 @@
     @extend %default-border-radius;
     
     p {
-        margin: 0.5rem;
+        margin: ($text-space-unit / 2) 0;
         font-size: 1.2rem;
         line-height: 1.5;
         

@@ -1,4 +1,4 @@
-.row:after, form:after, .puzzle-loop:after, #pagination:after, .puzzle-features .icon-row:after, .team-member-images .column-inner:after {
+.row:after, form:after, .puzzle-loop:after, #pagination:after, .team-member-images .column-inner:after {
   clear: both;
   display: table;
   content: " "; }
@@ -1089,7 +1089,7 @@ section {
 
 .wp-caption {
   background-color: #eee;
-  padding: 10px; }
+  padding: 1rem; }
 
 .wp-caption-text, .gallery-caption {
   text-align: center; }
@@ -1101,7 +1101,8 @@ section {
   list-style: none; }
   .categories .cat-item {
     display: inline-block;
-    margin: 5px 5px 5px 0; }
+    margin: 5px 5px 5px 0;
+    font-size: inherit; }
     .categories .cat-item a {
       display: block;
       padding: 5px 10px; }
@@ -1241,7 +1242,7 @@ a {
     margin: 3rem 0; }
 
   hr {
-    margin: 3rem 0; } }
+    margin: 4rem 0; } }
 @media all and (min-width: 850px) {
   h1 {
     font-size: 6rem; }
@@ -1412,7 +1413,7 @@ img, svg {
 .home #header {
   position: relative;
   height: auto;
-  padding: 30px 0; }
+  padding: 35px 0; }
   @media all and (min-width: 660px) {
     .home #header {
       display: -webkit-box;
@@ -1784,7 +1785,7 @@ img, svg {
 /* Comments */
 /*----------*/
 .comment {
-  padding: 1.5rem 2rem;
+  padding: rem(17.5px) rem(22.5px);
   border-bottom: solid 1px #eee;
   list-style: none; }
   .comment:last-child {
@@ -1814,9 +1815,9 @@ img, svg {
 #sidebar {
   margin-top: 5rem; }
   #sidebar .sidebar-widget {
-    margin: 3rem 0; }
+    margin: 35px 0; }
     #sidebar .sidebar-widget:first-child {
-      margin-top: 1.5rem; }
+      margin-top: 17.5px; }
   #sidebar .post-date {
     margin-left: 5px; }
   #sidebar .screen-reader-text {
@@ -1839,8 +1840,7 @@ img, svg {
 /* Pagination */
 /*------------*/
 #pagination {
-  margin: 0;
-  padding: 15px 0;
+  margin: 20px 0;
   list-style: none; }
   #pagination li {
     font-size: 1.4rem; }
@@ -1867,11 +1867,23 @@ img, svg {
     color: #fff; }
     #pagination a .fa {
       display: block;
-      font-size: 30px; }
+      font-size: 30px;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
   #pagination #newer-pages {
     float: left; }
+    #pagination #newer-pages a:hover .fa {
+      -webkit-transform: translate(-15%, 0);
+      -moz-transform: translate(-15%, 0);
+      -ms-transform: translate(-15%, 0);
+      transform: translate(-15%, 0); }
   #pagination #older-pages {
     float: right; }
+    #pagination #older-pages a:hover .fa {
+      -webkit-transform: translate(15%, 0);
+      -moz-transform: translate(15%, 0);
+      -ms-transform: translate(15%, 0);
+      transform: translate(15%, 0); }
 
 /*--------*/
 /* Footer */
@@ -2084,63 +2096,6 @@ img, svg {
 .puzzle-blog {
   text-align: center; }
 
-/*-------------------------*/
-/* Puzzle Features Section */
-/*-------------------------*/
-.puzzle-features .puzzle-icon-link, .puzzle-features .puzzle-main-icon {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 30px auto;
-  margin-bottom: 3rem; }
-.puzzle-features .puzzle-main-icon {
-  font-size: 36px;
-  line-height: 60px;
-  text-align: center; }
-.puzzle-features .puzzle-icon-link {
-  text-decoration: none; }
-.puzzle-features .icon-column .column-inner {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-  .puzzle-features .icon-column .column-inner > * {
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto; }
-  .puzzle-features .icon-column .column-inner .puzzle-feature-column-content {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1; }
-  .puzzle-features .icon-column .column-inner ul {
-    margin-left: 0;
-    padding: 0 1rem;
-    list-style: none; }
-    .puzzle-features .icon-column .column-inner ul li {
-      padding: 1rem 0;
-      border-top: solid 1px #aaa; }
-      .puzzle-features .icon-column .column-inner ul li:first-child {
-        border-top: 0; }
-  .puzzle-features .icon-column .column-inner ol {
-    text-align: left; }
-.puzzle-features .icon-column .puzzle-feature-main-button {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  width: 80%; }
-
-@media all and (min-width: 480px) {
-  .puzzle-features .icon-row .puzzle-main-icon, .puzzle-features .icon-row .puzzle-icon-link, .puzzle-features .icon-row .puzzle-feature-column-content {
-    float: left; }
-  .puzzle-features .icon-row .puzzle-feature-column-content {
-    width: 60%;
-    width: calc(100% - 90px); } }
 /*----------------------*/
 /* Puzzle Games Section */
 /*----------------------*/
@@ -2201,7 +2156,7 @@ img, svg {
         .puzzle-featured-story .puzzle-story .puzzle-story-content h3 {
           font-size: 2.6rem; }
         .puzzle-featured-story .puzzle-story .puzzle-story-content .wbg-button {
-          margin-top: 3rem; } }
+          margin-top: 35px; } }
 
 /*---------------------------*/
 /* Puzzle One Column Section */
@@ -2209,38 +2164,13 @@ img, svg {
 .puzzle-one-column .puzzle-columns-content .column-inner.white-background {
   background-color: rgba(255, 255, 255, 0.95); }
 
-/*-----------------------------*/
-/* Puzzle Team Members Section */
-/*-----------------------------*/
-.puzzle-team-members .puzzle-team-member-picture {
-  display: block;
-  margin: 10px auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-.puzzle-team-members .puzzle-team-member-contact-info p {
-  margin: 8px 0;
-  margin: 0.8rem 0;
-  line-height: 1; }
-  .puzzle-team-members .puzzle-team-member-contact-info p i {
-    margin-right: 10px;
-    font-size: 25px;
-    font-size: 2.5rem;
-    vertical-align: middle; }
-.puzzle-team-members .puzzle-social-links a {
-  display: inline-block;
-  margin: 4px;
-  text-align: center; }
-  .puzzle-team-members .puzzle-social-links a .fa {
-    font-size: 30px;
-    line-height: 30px; }
-
 /*----------*/
 /* 404 Page */
 /*----------*/
 .error404 main {
   text-align: center; }
   .error404 main .wbg-button {
-    margin-top: 3rem; }
+    margin-top: 35px; }
 
 /*------------------*/
 /* Single Post Page */
@@ -2249,9 +2179,13 @@ img, svg {
   margin: 0.5rem 0; }
 
 .single-post-content, .single-news-content {
-  margin: 3rem 0;
-  padding: 2rem 0;
+  margin: 20px 0;
+  padding: 20px 0;
   border-top: solid 1px #aaa; }
+  @media all and (min-width: 660px) {
+    .single-post-content, .single-news-content {
+      margin: 35px 0;
+      padding: 35px 0; } }
 
 .single-post-content.comments-open, .single-news-content.has-news-link {
   border-bottom: solid 1px #aaa; }
@@ -2320,7 +2254,7 @@ img, svg {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 3rem; }
+  margin-bottom: 35px; }
   .game-buttons .circle-button-container {
     -webkit-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
@@ -2352,7 +2286,7 @@ img, svg {
 .game-details {
   padding: 10px 25px; }
   .game-details p {
-    margin: 0.5rem;
+    margin: 0.5rem 0;
     font-size: 1.2rem;
     line-height: 1.5; }
     @media all and (min-width: 660px) {
@@ -2427,11 +2361,9 @@ img, svg {
 
 /* Contact Form 7 */
 .wpcf7-form span.wpcf7-not-valid-tip {
-  margin-top: -5px;
   margin-top: -0.5rem;
   padding: 0 20px;
   background-color: rgba(255, 0, 0, 0.5);
-  font-size: 14px;
   font-size: 1.4rem;
   color: #fff; }
 .wpcf7-form div.wpcf7-response-output {
@@ -2442,7 +2374,6 @@ img, svg {
   border: 0;
   color: #fff; }
   .wpcf7-form div.wpcf7-response-output.wpcf7-mail-sent-ok {
-    background-color: #aaa;
     background-color: rgba(170, 170, 170, 0.5); }
 
 /*# sourceMappingURL=main.css.map */

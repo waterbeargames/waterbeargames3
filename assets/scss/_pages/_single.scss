@@ -4,14 +4,19 @@
 
 .single-post-meta {
     h4, h6 {
-        margin: 0.5rem 0;
+        margin: ($text-space-unit / 2) 0;
     }
 }
 
 .single-post-content, .single-news-content {
-    margin: 3rem 0;
-    padding: 2rem 0;
+    margin: $small-space-unit 0;
+    padding: $small-space-unit 0;
     border-top: solid 1px $medium-gray;
+    
+    @include breakpoint($size-md) {
+        margin: $space-unit 0;
+        padding: $space-unit 0;
+    }
 }
 
 .single-post-content.comments-open, .single-news-content.has-news-link {

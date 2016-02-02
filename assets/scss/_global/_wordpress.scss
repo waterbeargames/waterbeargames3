@@ -4,7 +4,7 @@
 
 .aligncenter, .alignleft, .alignright {
     display: block;
-    margin: 2rem auto;
+    margin: ($text-space-unit * 2) auto;
 }
 
 @include breakpoint($size-md) {
@@ -16,13 +16,13 @@
     .alignleft {
         float: left;
         clear: right;
-        margin-right: 2rem;
+        margin-right: $text-space-unit * 2;
     }
 
     .alignright {
         float: right;
         clear: left;
-        margin-left: 2rem;
+        margin-left: $text-space-unit * 2;
     }
 }
 
@@ -36,7 +36,7 @@
 
 .wp-caption {
     background-color: $light-gray;
-    padding: 10px;
+    padding: $text-space-unit;
 }
 
 .wp-caption-text, .gallery-caption {
@@ -53,6 +53,7 @@
     .cat-item {
         display: inline-block;
         margin: 5px 5px 5px 0;
+        font-size: inherit;
         
         a {
             display: block;

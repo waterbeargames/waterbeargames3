@@ -61,7 +61,7 @@
 .home #header {
     position: relative;
     height: auto;
-    padding: 30px 0;
+    padding: $space-unit 0;
     
     @include breakpoint($size-md) {
         @include display-flex;

@@ -10,7 +10,7 @@
     @extend %default-border-radius;
     
     h3, h5 {
-        margin: 0.5rem 0;
+        margin: ($text-space-unit / 2) 0;
         
         &:first-child {
             margin-top: 0;
@@ -19,7 +19,7 @@
     
     @include breakpoint($size-md) {
         .alignright {
-            margin-top: 3rem;
+            margin-top: ($text-space-unit * 3);
         }
     }
     
