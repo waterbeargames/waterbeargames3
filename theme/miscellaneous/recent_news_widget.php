@@ -14,7 +14,7 @@ class WBG_Widget_Recent_News extends WP_Widget {
      * Outputs the content for the current Recent News widget instance.
      */
     public function widget($args, $instance) {
-        if (!isset( $args['widget_id'])) {
+        if (!isset($args['widget_id'])) {
             $args['widget_id'] = $this->id;
         }
 
@@ -83,7 +83,7 @@ class WBG_Widget_Recent_News extends WP_Widget {
     /*
      * Outputs the settings form for the Recent News widget.
      */
-    public function form( $instance ) {
+    public function form($instance) {
         $title     = isset($instance['title']) ? esc_attr($instance['title']) : '';
         $number    = isset($instance['number']) ? absint($instance['number']) : 5;
         $show_date = isset($instance['show_date']) ? (bool) $instance['show_date'] : false;

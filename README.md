@@ -1,9 +1,6 @@
-# Water Bear Games 3.0
+# Water Bear Games
 
-### Overview
-The third version of the Water Bear Games site, because I'm obsessive.
-
-[Water Bear Games 2.0 is currently live here.](http://waterbeargames.com/)
+This is the theme for the [Water Bear Games website](http://waterbeargames.com/). We also use this repository's Github issues for Water Bear Games projects in general.
 
 ### History of the Water Bear Games site
 - First it was straight HTML/CSS.
