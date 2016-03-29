@@ -6,22 +6,42 @@
  */
 
 // Inserts an inline SVG with a padding trick on the container to fix the size
-// in IE and Edge.
+// in IE and Edge. SVGs do not scale properly in these browsers.
 //
 // $svg_location - string, location of the SVG file
 //
 // Echos the SVG wrapped in a container
 function insert_svg($svg_location) {
     ob_start();
+    
+    // Get the SVG code
     require($svg_location);
     $svg = ob_get_clean();
     $svg = simplexml_load_string($svg);
+    
+    // Parse the viewBox value
+    // e.g. "10 20 100 200"
     $viewBox = (string) $svg->attributes()->viewBox;
+    
+    // Convert the $viewBox string into an array of the dimensions
     preg_match_all('/\d+/', $viewBox, $dimensions);
+    
+    // Determine the width and height from the applicable dimensions
+    // in the $dimensions array
+    //
+    // e.g. An svg with a viewBox of "10 20 110 200" would be
+    // 100 wide (110 - 10) and 180 tall (200 - 20).
     $width = $dimensions[0][2] - $dimensions[0][0];
     $height = $dimensions[0][3] - $dimensions[0][1];
+    
+    // Calculate the aspect ratio; round up to the nearest 10,000th place
+    // e.g. An SVG that is 100 x 180 has an aspect ratio of 0.556
     $aspect_ratio = ceil($height / $width * 10000) / 10000;
     
+    // Echo the SVG wrapped in a container with a padding-bottom trick to fix
+    // the size in IE and Edge.
+    // e.g. A 100 x 180 SVG would be in a container with
+    // "padding-bottom: 55.6%;"
     echo '<div class="vector-container" style="padding-bottom: ' . $aspect_ratio * 100 . '%;">';
     include($svg_location);
     echo '</div>';
