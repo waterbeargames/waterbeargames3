@@ -13,7 +13,13 @@ if ($footer) :
             </div>
         </div>
     </footer>
-<?php endif; ?>
-<?php wp_footer(); ?>
+    <?php
+endif;
+
+// Drop shadow for SVGs such as game logos
+include('assets/images/dropshadow.svg');
+
+wp_footer();
+?>
 </body>
 </html>

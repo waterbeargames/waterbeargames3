@@ -16,9 +16,10 @@
         @include flex(0 1 100%);
         
         svg {
-            @include filter(drop-shadow(0 0 3px rgba(#000, 0.3)));
+            overflow: visible;
         
             path, polygon {
+                @include filter(url(#dropshadow));
                 fill: #fff;
             }
         }

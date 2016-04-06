@@ -20,26 +20,9 @@
     }
 }
 
-%clearfix {
-    &:after {
-        clear: both;
-        display: table;
-        content: " ";
-    }
-}
-
-%default-border-radius {
-    border-radius: 10px;
-}
-
 @mixin filter($filter) {
     -webkit-filter: $filter;
     filter: $filter;
-}
-
-%page-max-width {
-    max-width: $max-width;
-    margin: 0 auto;
 }
 
 @mixin transform($property) {

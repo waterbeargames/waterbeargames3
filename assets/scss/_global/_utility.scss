@@ -188,3 +188,20 @@
     bottom: 0;
     left: 0;
 }
+
+%clearfix {
+    &:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+}
+
+%default-border-radius {
+    border-radius: 10px;
+}
+
+%page-max-width {
+    max-width: $max-width;
+    margin: 0 auto;
+}

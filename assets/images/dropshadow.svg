@@ -1,0 +1,14 @@
+<svg style="display: block; height: 0;">
+  <defs>
+    <filter id="dropshadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
