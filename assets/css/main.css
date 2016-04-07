@@ -2102,8 +2102,6 @@ img, svg {
 .puzzle-games .circle-button svg {
   overflow: visible; }
   .puzzle-games .circle-button svg path, .puzzle-games .circle-button svg polygon {
-    -webkit-filter: url(#dropshadow);
-    filter: url(#dropshadow);
     fill: #fff; }
 .puzzle-games .circle-button h3, .puzzle-games .circle-button h4 {
   margin: 0;
@@ -2228,8 +2226,6 @@ img, svg {
     .header-game-logo .vector-container svg {
       overflow: visible; }
       .header-game-logo .vector-container svg path, .header-game-logo .vector-container svg polygon {
-        -webkit-filter: url(#dropshadow);
-        filter: url(#dropshadow);
         fill: #fff; }
   @media all and (min-width: 480px) {
     .header-game-logo {

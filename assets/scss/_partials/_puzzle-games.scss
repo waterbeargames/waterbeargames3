@@ -8,7 +8,7 @@
             overflow: visible;
             
             path, polygon {
-                @include filter(url(#dropshadow));
+//                @include filter(url(#dropshadow));
                 fill: #fff;
             }
         }

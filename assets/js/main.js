@@ -113,4 +113,15 @@ jQuery('document').ready(function($){
     
     startMakingBubbles();
     $window.resize(startMakingBubbles);
+    
+    /*
+     * Add filter attribute with drop shadow to certain SVG elements
+     * because styling it through CSS is problematic cross-browser right now
+     */
+    
+    var $svgElements = $('.puzzle-games .circle-button svg, .header-game-logo .vector-container svg').find('path, polygon');
+    
+    $.each($svgElements, function() {
+        $(this).attr('filter', 'url(#dropshadow)');
+    });
 });
