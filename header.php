@@ -4,6 +4,7 @@
     <title><?php wp_title(''); ?></title>
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <?php echo favicons(); ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('smooth-scroll-enabled'); ?>>

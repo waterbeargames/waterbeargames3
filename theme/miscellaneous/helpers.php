@@ -5,6 +5,43 @@
  * Helper functions
  */
 
+// Generates favicon code
+//
+// Returns a string of favicons separated by new lines
+function favicons() {
+    $favicons = array();
+    
+    $apple_sizes = array(57, 114, 72, 144, 60, 120, 76, 152);
+    $standard_sizes = array(196, 96, 32, 16, 128);
+    $ms_sizes = array(
+        'TileImage'         => array(144, 144),
+        'square70x70logo'   => array(70, 70),
+        'square150x150logo' => array(150, 150),
+        'wide310x150logo'   => array(310, 150),
+        'square310x310logo' => array(310, 310)
+    );
+    
+    foreach ($apple_sizes as $size) {
+        $dimensions = $size . 'x' . $size;
+        $favicons[] = '<link rel="apple-touch-icon-precomposed" sizes="' . $dimensions . '" href="' . get_template_directory_uri() . '/assets/images/favicons/apple-touch-icon-' . $dimensions . '.png" />';
+    }
+    
+    foreach ($standard_sizes as $size) {
+        $dimensions = $size . 'x' . $size;
+        $favicons[] = '<link rel="icon" type="image/png" href="' . get_template_directory_uri() . '/assets/images/favicons/favicon-' . $dimensions . '.png" sizes="' . $dimensions . '" />';
+    }
+    
+    $favicons[] = '<meta name="application-name" content="&nbsp;"/>';
+    $favicons[] = '<meta name="msapplication-TileColor" content="#FFFFFF" />';
+    
+    foreach ($ms_sizes as $name => $size) {
+        $dimensions = $size[0] . 'x' . $size[1];
+        $favicons[] = '<meta name="msapplication-' . $name . '" content="' . get_template_directory_uri() . '/assets/images/favicons/mstile-' . $dimensions . '.png" />';
+    }
+    
+    return join("\n    ", $favicons);
+}
+
 // Inserts an inline SVG with a padding trick on the container to fix the size
 // in IE and Edge. SVGs do not scale properly in these browsers.
 //
