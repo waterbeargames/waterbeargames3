@@ -2101,7 +2101,7 @@ img, svg {
 /*----------------------*/
 .puzzle-games .circle-button svg {
   overflow: visible; }
-  .puzzle-games .circle-button svg path, .puzzle-games .circle-button svg polygon {
+  .puzzle-games .circle-button svg rect, .puzzle-games .circle-button svg circle, .puzzle-games .circle-button svg ellipse, .puzzle-games .circle-button svg path, .puzzle-games .circle-button svg polygon {
     fill: #fff; }
 .puzzle-games .circle-button h3, .puzzle-games .circle-button h4 {
   margin: 0;
@@ -2225,7 +2225,7 @@ img, svg {
     flex: 0 1 100%; }
     .header-game-logo .vector-container svg {
       overflow: visible; }
-      .header-game-logo .vector-container svg path, .header-game-logo .vector-container svg polygon {
+      .header-game-logo .vector-container svg rect, .header-game-logo .vector-container svg circle, .header-game-logo .vector-container svg ellipse, .header-game-logo .vector-container svg path, .header-game-logo .vector-container svg polygon {
         fill: #fff; }
   @media all and (min-width: 480px) {
     .header-game-logo {

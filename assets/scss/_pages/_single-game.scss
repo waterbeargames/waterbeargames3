@@ -18,7 +18,7 @@
         svg {
             overflow: visible;
         
-            path, polygon {
+            rect, circle, ellipse, path, polygon {
 //                @include filter(url("#dropshadow"));
                 fill: #fff;
             }
