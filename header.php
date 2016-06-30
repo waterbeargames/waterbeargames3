@@ -77,3 +77,4 @@
         get_template_part('header', 'game');
     }
     ?>
+    <main>

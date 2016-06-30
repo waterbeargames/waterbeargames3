@@ -21,9 +21,5 @@ $games_num = count($games);
 $span_classes = span_classes($games_num, 3, 4, 'xs', 'md');
 ?>
 <div class="row puzzle-columns-content">
-<?php
-foreach ($games as $game) {
-    include(locate_template('/theme/loops/games.php'));
-}
-?>
+    <?php foreach ($games as $game) include(locate_template('/theme/loops/games.php')); ?>
 </div>

@@ -8,11 +8,7 @@ $blog_posts_num = count($blog_posts);
 $span_classes = span_classes($blog_posts_num);
 ?>
 <div class="row puzzle-columns-content puzzle-stories">
-    <?php
-    foreach ($blog_posts as $story) {
-        include(locate_template('theme/loops/stories.php'));
-    }
-    ?>
+    <?php foreach ($blog_posts as $story) include(locate_template('theme/loops/stories.php')); ?>
 </div>
 <div class="row puzzle-section-cta">
     <div class="column xs-span12">

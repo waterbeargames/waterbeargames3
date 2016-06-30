@@ -59,12 +59,10 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
             <h3>Recently</h3>
         </div>
         <div class="row puzzle-stories">
-        <?php
-        foreach ($news_stories as $story) {
+            <?php
             $span_classes = 'xs-span12 sm-span6';
-            include(locate_template('theme/loops/stories.php'));
-        }
-        ?>
+            foreach ($news_stories as $story) include(locate_template('theme/loops/stories.php'));
+            ?>
         </div>
     </div>
 </div>
