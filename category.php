@@ -13,7 +13,7 @@ $found_posts = $wp_query->found_posts;
             <div class="column-inner">
                 <?php if (have_posts()) : ?>
                     <h2>Category: <?php single_cat_title(); ?></h2>
-                    <h4><?php echo $found_posts ?> post<?php echo ($found_posts != 1 ? 's' : ''); ?> categorized as &quot;<?php echo single_cat_title(); ?>&quot;</h4>
+                    <h4><?php echo $found_posts ?> post<?php if ($found_posts != 1) echo 's'; ?> categorized as &quot;<?php echo single_cat_title(); ?>&quot;</h4>
                     <?php
                     while (have_posts()) {
                         the_post();

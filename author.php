@@ -14,7 +14,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
             <div class="column-inner">
                 <?php if (have_posts()) : ?>
                     <h2>Author: <?php echo $curauth->display_name; ?></h2>
-                    <h4><?php echo $found_posts ?> post<?php echo ($found_posts != 1 ? 's' : ''); ?> written by <?php echo $curauth->display_name; ?></h4>
+                    <h4><?php echo $found_posts ?> post<?php if ($found_posts != 1) echo 's'; ?> written by <?php echo $curauth->display_name; ?></h4>
                     <?php
                     while (have_posts()) {
                         the_post();
