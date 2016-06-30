@@ -18,10 +18,10 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
                     <?php
                     while (have_posts()) {
                         the_post();
-                        get_template_part('loop');
+                        get_template_part('theme/loops/loop');
                     }
             
-                    if ($found_posts > $posts_per_page) get_template_part('pagination');
+                    if ($found_posts > $posts_per_page) get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
                     <h1>No results</h1>

@@ -33,7 +33,7 @@ $found_posts = $wp_query->found_posts;
             include(locate_template('/theme/loops/games.php'));
         }
 
-        if ($found_posts > $posts_per_page) get_template_part('pagination');
+        if ($found_posts > $posts_per_page) get_template_part('theme/partials/pagination');
         ?>
     </div>
     <?php else : ?>

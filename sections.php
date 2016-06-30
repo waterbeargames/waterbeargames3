@@ -58,7 +58,7 @@ if (!empty($page_sections)) :
             $special_sections = array('blog', 'games', 'news', 'team');
             
             if (in_array($puzzle_section_type, $special_sections)) :
-                include(locate_template('section-' . $puzzle_section_type . '-content.php'));
+                include(locate_template('theme/partials/section-' . $puzzle_section_type . '-content.php'));
             elseif (!empty($puzzle_columns_data)) : ?>
             <div class="row puzzle-columns-content">
                 <?php
