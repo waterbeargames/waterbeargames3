@@ -1,4 +1,4 @@
-<nav id="nav"<?php echo (is_front_page() ? ' class="no-logo no-shadow no-transition"' : ''); ?>>
+<nav id="nav"<?php if (is_front_page()) echo ' class="no-logo no-shadow no-transition"'; ?>>
     <div class="row">
         <div class="column xs-span8 sm-span6 md-span2">
             <div class="vector-container">

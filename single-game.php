@@ -56,7 +56,7 @@ $meta_info = array_filter(array(
                 
                 <?php if ($has_meta_info) : ?>
                 <div class="game-details alternative-background">
-                    <?php foreach ($meta_info as $label => $info) :?>
+                    <?php foreach ($meta_info as $label => $info) : ?>
                     <p><strong><?php echo $label; ?>:</strong> <?php echo $info; ?></p>
                     <?php endforeach; ?>
                 </div>

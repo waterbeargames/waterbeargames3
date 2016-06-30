@@ -9,7 +9,7 @@ $found_posts = $wp_query->found_posts;
 <?php get_header(); ?>
 <section>
     <div class="row">
-        <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
+        <div class="column xs-span12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-span8'; ?>">
             <div class="column-inner">
                 <?php if (have_posts()) : ?>
                     <h2>Tag: <?php single_tag_title(); ?></h2>

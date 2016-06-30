@@ -16,7 +16,7 @@ $span_classes = span_classes($team_members_num, 3, 4, 'xs', 'md');
     <div class="column <?php echo $span_classes; ?>">
         <div class="column-inner">
             <div class="circle-button-container">
-                <div class="circle-button secondary-background"<?php echo ($team_member_featured_image ? ' style="background-image: url(' . $team_member_featured_image . ');"' : '') ?>>
+                <div class="circle-button secondary-background"<?php if ($team_member_featured_image) echo ' style="background-image: url(' . $team_member_featured_image . ');"'; ?>>
                     <?php if ($team_member_featured_image) : ?>
                     <div class="puzzle-background-overlay secondary-background"></div>
                     <?php endif; ?>

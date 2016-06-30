@@ -10,7 +10,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 <?php get_header(); ?>
 <section>
     <div class="row">
-        <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
+        <div class="column xs-span12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-span8'; ?>">
             <div class="column-inner">
                 <?php if (have_posts()) : ?>
                     <h2>Author: <?php echo $curauth->display_name; ?></h2>

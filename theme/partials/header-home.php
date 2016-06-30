@@ -1,7 +1,7 @@
 <?php $home_buttons = get_theme_mod('home_buttons'); ?>
 <header id="header">
     <div class="row">
-        <div class="column xs-span6 xs-left3 xs-right3<?php echo ($home_buttons ? ' md-left0 md-right0' : ''); ?>">
+        <div class="column xs-span6 xs-left3 xs-right3<?php if ($home_buttons) echo ' md-left0 md-right0'; ?>">
             <div class="column-inner home-header-logo">
                 <?php insert_svg(get_stylesheet_directory() . '/assets/images/logo.svg'); ?>
             </div>

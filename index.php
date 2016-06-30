@@ -8,7 +8,7 @@ $found_posts = $wp_query->found_posts;
 <?php get_header(); ?>
 <section>
     <div class="row">
-        <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
+        <div class="column xs-span12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-span8'; ?>">
             <div class="column-inner">
                 <h2><?php echo get_the_title($wp_query->queried_object_id); ?></h2>
                 <?php

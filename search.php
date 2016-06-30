@@ -9,7 +9,7 @@ $found_posts = $wp_query->found_posts;
 <?php get_header(); ?>
 <section>
     <div class="row">
-        <div class="column xs-span12<?php echo (is_active_sidebar('main-sidebar') ? ' lg-span8' : ''); ?>">
+        <div class="column xs-span12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-span8'; ?>">
             <div class="column-inner">
                 <h2><?php echo $found_posts ?> search result<?php echo ($found_posts != 1 ? 's' : ''); ?> for: &quot;<?php echo get_search_query(); ?>&quot;</h2>
                 <?php

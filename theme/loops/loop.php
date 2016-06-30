@@ -40,6 +40,7 @@ if (get_post_type($post) == 'post' || get_post_type($post) == 'news') {
     
     the_excerpt();
     ?>
+    
     <p>
         <a class="wbg-button wbg-button-secondary" href="<?php echo $link; ?>"<?php echo $target; ?>>Read More</a>
     </p>

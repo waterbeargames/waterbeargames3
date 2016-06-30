@@ -115,7 +115,7 @@ function shorten_content($content, $word_count = 35) {
 
     if (count($words) > $word_count) {
         array_pop($words);
-        array_push($words, '…');
+        array_push($words, '&hellip;');
         $shortened_content = implode(' ', $words);
     }
     

@@ -3,9 +3,11 @@ $span_classes = 'xs-span12';
 
 if ($puzzle_options_data['column_widths'] == '1-2_1-2') {
     $span_classes .= ' md-span6';
-} elseif (($puzzle_options_data['column_widths'] == '1-3_2-3' && $c == 0) || ($puzzle_options_data['column_widths'] == '2-3_1-3' && $c == 1)) {
+} elseif (($puzzle_options_data['column_widths'] == '1-3_2-3' && $c == 0) ||
+          ($puzzle_options_data['column_widths'] == '2-3_1-3' && $c == 1)) {
     $span_classes .= ' md-span4';
-} elseif (($puzzle_options_data['column_widths'] == '1-3_2-3' && $c == 1) || ($puzzle_options_data['column_widths'] == '2-3_1-3' && $c == 0)) {
+} elseif (($puzzle_options_data['column_widths'] == '1-3_2-3' && $c == 1) ||
+          ($puzzle_options_data['column_widths'] == '2-3_1-3' && $c == 0)) {
     $span_classes .= ' md-span8';
 }
 ?>

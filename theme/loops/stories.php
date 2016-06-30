@@ -19,7 +19,7 @@ if ($story->post_type == 'news') {
 ?>
 <div class="column <?php echo $span_classes; ?>">
     <div class="column-inner puzzle-story">
-        <div class="puzzle-story-image"<?php echo ($story_featured_image ? ' style="background-image: url(' . $story_featured_image . ');"' : '') ?>>
+        <div class="puzzle-story-image"<?php if ($story_featured_image) echo ' style="background-image: url(' . $story_featured_image . ');"'; ?>>
             <?php if (!$story_featured_image) : ?>
             <div class="background-bear-container">
                 <div class="background-bear">

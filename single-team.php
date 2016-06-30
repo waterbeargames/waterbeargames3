@@ -9,10 +9,12 @@ $team_images = array_filter($team_meta['images']);
     <div class="row">
         <div class="column xs-span12<?php echo (!empty($team_images) ? ' md-span7' : ''); ?>">
             <div class="column-inner">
-                <h2><?php echo get_the_title(); ?></h2>
+                <?php the_title('<h2>', '</h2>'); ?>
+                
                 <?php if (!empty($team_meta['title'])) : ?>
                 <h4><?php echo $team_meta['title']; ?></h4>
                 <?php endif; ?>
+                
                 <?php the_content(); ?>
             </div>
         </div>
