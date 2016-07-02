@@ -24,7 +24,7 @@ $found_posts = $wp_query->found_posts;
                     ?>
                 <?php else : ?>
                     <h1>No results</h1>
-                    <p>Sorry, no posts categorized as: &quot;<?php echo single_cat_title(); ?>&quot;.</p>
+                    <p>Sorry, no posts categorized as: &quot;<?php echo single_tag_title(); ?>&quot;.</p>
                 <?php endif; ?>
             </div>
         </div>
