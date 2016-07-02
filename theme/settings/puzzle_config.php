@@ -27,7 +27,7 @@ $puzzle_pieces->set_font_awesome_library(true);
 
 /*
  * Add custom icon libraries before and after Font Awesome library
- * Icon library must be available..
+ * Icon library must be available.
  * The Font Awesome library does not have to be available for these to load.
  */
 $puzzle_pieces->set_custom_icon_libraries_before(false);
@@ -41,6 +41,9 @@ $puzzle_pieces->set_icon_library_choice_none(false);
 
 /* Choose which post types the page builder is available for */
 $puzzle_pieces->set_page_builder_post_types(array('page'));
+
+/* Add Owl Carousel */
+$puzzle_pieces->set_owl_carousel(false);
 
 /* Require files */
 

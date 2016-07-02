@@ -65,7 +65,7 @@ if (!empty($page_sections)) :
                 $c = 0;
                 $loop_file = 'theme/loops/' . $puzzle_section_type . '.php';
         
-                foreach($puzzle_columns_data as $puzzle_column) {
+                foreach ($puzzle_columns_data as $puzzle_column) {
                     include(locate_template($loop_file));
                     $c++;
                 }
