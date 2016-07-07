@@ -64,10 +64,6 @@ $team->set_group_name('Team')
                 'Secondary Color'           => 'secondary'
             )
         ),
-        'overlay'           => array(
-            'name'          => 'Overlay background color on background image',
-            'input_type'    => 'checkbox'
-        ),
         'main_content'      => array(
             'name'          => 'Main Content',
             'input_type'    => 'textarea',

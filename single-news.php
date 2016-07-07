@@ -10,7 +10,7 @@ $news = get_post_meta($post->ID, 'wbg_news', true);
             <div class="column-inner">
                 <div class="single-post-meta">
                     <?php the_title('<h2>', '</h2>'); ?>
-                    <h4><?php the_time(get_option('date_format')); echo (!empty($news['media']) ? ', from ' . $news['media'] : ''); ?></h4>
+                    <h4><?php the_time(get_option('date_format')); if (!empty($news['media'])) echo ', from ' . $news['media']; ?></h4>
                 </div>
             
                 <div class="single-news-content<?php echo (!empty($news['link']) ? ' has-news-link' : ''); ?>">

@@ -3,7 +3,7 @@
 /*----------*/
 
 .comment {
-    padding: rem($space-unit / 2) rem($space-unit / 2 + 5px);
+    padding: ($space-unit / 2) ($space-unit / 2 + 0.5rem);
     border-bottom: solid 1px $light-gray;
     list-style: none;
     

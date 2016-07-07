@@ -29,7 +29,7 @@
     .row {
         @include align-items(center);
         height: $small-nav-height;
-        padding: 5px 15px;
+        padding: 0.5rem 1.5rem;
         
         @include breakpoint($size-md) {
             height: $large-nav-height;
@@ -46,14 +46,14 @@
     }
     
     .vector-container {
-        height: ($small-nav-height - 10px);
+        height: ($small-nav-height - 1rem);
         opacity: 1;
         @include transition(all 0.4s ease);
         visibility: visible;
         
         svg {
             width: auto;
-            height: 50px;
+            height: 5rem;
             
             path {
                 @include transition(all 0.4s ease);
@@ -61,11 +61,11 @@
         }
         
         @include breakpoint($size-md) {
-            height: ($large-nav-height - 20px);
-            margin-left: 15px;
+            height: ($large-nav-height - 2rem);
+            margin-left: 1.5rem;
             
             svg {
-                height: ($large-nav-height - 20px);
+                height: ($large-nav-height - 2rem);
             }
         }
     }
@@ -155,8 +155,8 @@
                 padding: 10px 8px;
                 
                 @include breakpoint($size-lg) {
-                    padding-left: 15px;
-                    padding-right: 15px;
+                    padding-right: $small-space-unit;
+                    padding-left: $small-space-unit;
                 }
             }
         }
@@ -194,7 +194,7 @@
                 display: block;
                 
                 &.menu-item-has-children > a {
-                    padding-right: 25px;
+                    padding-right: 2.5rem;
                     
                     &:after {
                         position: absolute;
@@ -227,17 +227,17 @@
     
     li {
         @include flex(0 1 auto);
-        padding: 0 10px;
+        padding: 0 1rem;
     }
     
     a {
         display: block;
-        width: 30px;
-        height: 30px;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
         background-color: $medium-gray;
         color: #fff;
-        line-height: 28px;
+        line-height: 2.8rem;
         text-align: center;
     }
 }

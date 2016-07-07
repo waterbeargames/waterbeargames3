@@ -82,8 +82,8 @@
     overflow: hidden;
     @include display-flex;
     @include flex-direction(column);
-    @include flex(0 1 calc(100% - 10px));
-    margin: 5px;
+    @include flex(0 1 calc(100% - 1rem));
+    margin: 0.5rem;
     padding: 0;
     @extend %default-border-radius;
     background-color: $light-gray;
@@ -130,8 +130,8 @@
     }
     
     @include breakpoint($size-md) {
-        @include flex(0 1 calc(100% - 30px));
-        margin: 15px;
+        @include flex(0 1 calc(100% - #{$space-unit}));
+        margin: $space-unit / 2;
         
         .puzzle-story-content {
             h4 {
@@ -150,8 +150,8 @@
     
     @include breakpoint($size-lg) {
         .puzzle-story-content {
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: $small-space-unit;
+            padding-right: $small-space-unit;
             
             h4 {
                 font-size: 2rem;
@@ -184,15 +184,15 @@
 
 .puzzle-games, .puzzle-team {
     .puzzle-columns-content {
-        padding: 10px 15px;
+        padding: ($small-space-unit - 0.5rem) $small-space-unit;
     
         .column-inner {
             width: 100%;
             margin: 0;
-            padding: 5px;
+            padding: 0.5rem;
         
             @include breakpoint($size-sm) {
-                padding: 15px;
+                padding: $small-space-unit;
             }
         }
     }

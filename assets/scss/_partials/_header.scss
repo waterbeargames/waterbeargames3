@@ -5,7 +5,7 @@
 #header {
     position: relative;
     height: 225px;
-    padding: ($small-nav-height + $small-space-unit) 0 ($small-space-unit + 5px);
+    padding: ($small-nav-height + $small-space-unit) 0 ($small-space-unit + 0.5rem);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,7 +36,7 @@
     
     @include breakpoint($size-md) {
         height: 400px;
-        padding: ($space-unit * 2 + $large-nav-height - 10px) 0 ($space-unit * 2);
+        padding: ($space-unit * 2 + $large-nav-height - 1rem) 0 ($space-unit * 2);
         
         + main > section {
             &:first-child {
@@ -108,7 +108,7 @@
         }
         
         @include breakpoint($size-sm) {
-            padding: 10px;
+            padding: 1rem;
         }
     
         @include breakpoint($size-md) {

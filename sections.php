@@ -29,10 +29,6 @@ if (!empty($page_sections)) :
                 </div>
             </div>
             <?php endif; ?>
-            
-            <?php if (!empty($puzzle_options_data['overlay'])) : ?>
-            <div class="puzzle-background-overlay <?php echo $background_color; ?>"></div>
-            <?php endif; ?>
         
             <?php if (!empty($puzzle_options_data['headline']) && $puzzle_section_type != 'two-column') : ?>
             <div class="row puzzle-section-headline">

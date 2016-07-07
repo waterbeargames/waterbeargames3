@@ -1,18 +1,13 @@
 <?php
-global $wp_query;
-
 $args = array(
-    'orderby'           => 'menu_order',
-    'order'             => 'ASC',
-    'post_type'         => 'game'
+    'orderby'   => 'menu_order',
+    'order'     => 'ASC',
+    'post_type' => 'game'
 );
 query_posts($args);
 
-$posts_per_page = $wp_query->query_vars['posts_per_page'];
-$found_posts = $wp_query->found_posts;
+get_header();
 ?>
-
-<?php get_header(); ?>
 <section class="puzzle-games">
     <div class="row puzzle-section-headline">
         <div class="column xs-span12">
@@ -22,8 +17,7 @@ $found_posts = $wp_query->found_posts;
         </div>
     </div>
     <?php if (have_posts()) :
-        $games_num = $wp_query->post_count;
-        $span_classes = span_classes($games_num, 3, 4, 'xs', 'md');
+        $span_classes = span_classes($wp_query->post_count, 3, 4, 'xs', 'md');
         ?>
     <div class="row puzzle-columns-content">
         <?php
@@ -32,8 +26,8 @@ $found_posts = $wp_query->found_posts;
             $game = $post;
             include(locate_template('/theme/loops/games.php'));
         }
-
-        if ($found_posts > $posts_per_page) get_template_part('theme/partials/pagination');
+        
+        get_template_part('theme/partials/pagination');
         ?>
     </div>
     <?php else : ?>

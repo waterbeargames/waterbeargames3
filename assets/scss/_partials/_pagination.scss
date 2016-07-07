@@ -3,7 +3,7 @@
 /*------------*/
 
 #pagination {
-    @extend %clearfix;
+    @include display-flex;
     margin: $small-space-unit 0;
     list-style: none;
     

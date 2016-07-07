@@ -1,10 +1,3 @@
-<?php
-global $wp_query;
-
-$posts_per_page = $wp_query->query_vars['posts_per_page'];
-$found_posts = $wp_query->found_posts;
-?>
-
 <?php get_header(); ?>
 <section>
     <div class="row">
@@ -12,14 +5,14 @@ $found_posts = $wp_query->found_posts;
             <div class="column-inner">
                 <?php if (have_posts()) : ?>
                     <h2>Date: <?php single_month_title(' '); ?></h2>
-                    <h4><?php echo $found_posts ?> post<?php if ($found_posts != 1) echo 's'; ?> in <?php single_month_title(' '); ?></h4>
+                    <h4><?php echo pluralize($wp_query->found_posts, 'post'); ?> in <?php single_month_title(' '); ?></h4>
                     <?php
                     while (have_posts()) {
                         the_post();
                         get_template_part('theme/loops/loop');
                     }
             
-                    if ($found_posts > $posts_per_page) get_template_part('theme/partials/pagination');
+                    get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
                     <h1>No results</h1>

@@ -84,6 +84,29 @@ function insert_svg($svg_location) {
     echo '</div>';
 }
 
+// Pluralizes a string
+//
+// $num - integer, the number to base the pluralization on
+// $word - string, the word to pluralize
+// $plural - string, the pluralized form of the word. If blank, an 's' is
+//      added to the end of $word
+//
+// Returns a string with the number and correctly pluralized word
+// e.g. '5 cats', '1 dog'
+function pluralize($num, $word, $plural = null) {
+    $output = $num . ' ';
+    
+    if ($num == 1) {
+        $output .= $word;
+    } else if ($plural) {
+        $output .= $plural;
+    } else {
+        $output .= $word . 's';
+    }
+    
+    return $output;
+}
+
 // Determines classes for a section. Can be edited on a theme-by-theme basis.
 //
 // $page_section - array of data pertaining to the section

@@ -8,7 +8,6 @@
             overflow: visible;
             
             rect, circle, ellipse, path, polygon {
-//                @include filter(url(#dropshadow));
                 fill: #fff;
             }
         }

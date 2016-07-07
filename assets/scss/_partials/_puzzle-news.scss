@@ -36,8 +36,8 @@
         }
         
         .puzzle-story-content {
-            padding-top: ($small-space-unit - 5px);
-            padding-bottom: ($small-space-unit + 5px);
+            padding-top: ($small-space-unit - 0.5rem);
+            padding-bottom: ($small-space-unit + 0.5rem);
             
             .wbg-button {
                 min-width: 60%;

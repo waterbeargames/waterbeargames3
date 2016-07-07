@@ -88,10 +88,6 @@ $two_column->set_group_name('Two Column')
                 'Secondary Color'           => 'secondary'
             )
         ),
-        'overlay'           => array(
-            'name'          => 'Overlay background color on background image',
-            'input_type'    => 'checkbox'
-        ),
         'background_bear'   => array(
             'name'          => 'Overlay water bear on background',
             'input_type'    => 'checkbox'
