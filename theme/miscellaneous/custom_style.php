@@ -9,8 +9,8 @@
  * updates the theme customizations (see /theme/customize_theme.php).
  */
 
-$puzzle_pieces = new PuzzlePieces;
-$puzzle_default_colors = $puzzle_pieces->colors();
+$puzzle_colors = new PuzzleColors;
+$puzzle_default_colors = $puzzle_colors->colors();
 
 $primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_color']->default_color());
 $secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
