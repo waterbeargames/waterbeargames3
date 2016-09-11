@@ -1,8 +1,9 @@
 <?php
 $args = array(
-    'orderby'   => 'menu_order',
-    'order'     => 'ASC',
-    'post_type' => 'game'
+    'orderby'           => 'menu_order',
+    'order'             => 'ASC',
+    'posts_per_page'    => -1,
+    'post_type'         => 'game'
 );
 query_posts($args);
 
@@ -27,8 +28,7 @@ get_header();
                 $game = $post;
                 include(locate_template('/theme/loops/games.php'));
             }
-        
-            get_template_part('theme/partials/pagination');
+            wp_reset_query();
             ?>
         </div>
     <?php else : ?>
@@ -39,9 +39,6 @@ get_header();
                 </div>
             </div>
         </div>
-        <?php
-        wp_reset_query();
-    endif;
-    ?>
+    <?php endif; ?>
 </section>
 <?php get_footer(); ?>
