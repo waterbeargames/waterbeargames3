@@ -7,9 +7,9 @@
 
 function puzzle_customize_register($wp_customize) {
     /* Colors */
-    $puzzle_pieces = new PuzzlePieces;
+    $puzzle_colors = new PuzzleColors;
     
-    foreach($puzzle_pieces->colors() as $color) {
+    foreach($puzzle_colors->colors() as $color) {
         $wp_customize->add_setting($color->id(), array(
             'default'           => $color->default_color(),
             'sanitize_callback' => 'sanitize_hex_color',
