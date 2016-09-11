@@ -2,27 +2,29 @@
 /* Media */
 /*-------*/
 
+iframe, img, svg {
+    max-width: 100%;
+}
+
 iframe {
     display: block;
-    max-width: 100%;
+}
+
+img, svg {
+    height: auto;
 }
 
 img {
     display: inline-block;
     @extend %default-border-radius;
     
+    a & {
+        border: 0;
+    }
+    
     &.no-curved-corners {
         border-radius: 0;
     }
-}
-
-a img {
-    border: 0;
-}
-
-img, svg {
-    max-width: 100%;
-    height: auto;
 }
 
 .vector-container {

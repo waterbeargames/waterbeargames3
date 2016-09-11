@@ -1,13 +1,15 @@
 <?php
 
 /*
- * Puzzle
+ * Water Bear Games
  * Helper functions
  */
 
-// Generates favicon code
-//
-// Returns a string of favicons separated by new lines
+/*
+ * Generates favicon code
+ *
+ * Returns a string of favicons separated by new lines
+ */
 function favicons() {
     $favicons = array();
     
@@ -42,12 +44,14 @@ function favicons() {
     return join("\n    ", $favicons);
 }
 
-// Inserts an inline SVG with a padding trick on the container to fix the size
-// in IE and Edge. SVGs do not scale properly in these browsers.
-//
-// $svg_location - string, location of the SVG file
-//
-// Echos the SVG wrapped in a container
+/*
+ * Inserts an inline SVG with a padding trick on the container to fix the size
+ * in IE and Edge. SVGs do not scale properly in these browsers.
+ *
+ * $svg_location - string, location of the SVG file
+ *
+ * Echos the SVG wrapped in a container
+ */
 function insert_svg($svg_location) {
     ob_start();
     
@@ -84,54 +88,14 @@ function insert_svg($svg_location) {
     echo '</div>';
 }
 
-// Pluralizes a string
-//
-// $num - integer, the number to base the pluralization on
-// $word - string, the word to pluralize
-// $plural - string, the pluralized form of the word. If blank, an 's' is
-//      added to the end of $word
-//
-// Returns a string with the number and correctly pluralized word
-// e.g. '5 cats', '1 dog'
-function pluralize($num, $word, $plural = null) {
-    $output = $num . ' ';
-    
-    if ($num == 1) {
-        $output .= $word;
-    } else if ($plural) {
-        $output .= $plural;
-    } else {
-        $output .= $word . 's';
-    }
-    
-    return $output;
-}
-
-// Determines classes for a section. Can be edited on a theme-by-theme basis.
-//
-// $page_section - array of data pertaining to the section
-//
-// Returns a string of classes for a section
-function section_classes($page_section) {
-    $puzzle_options_data = $page_section['options'];
-    
-    $section_classes  = 'puzzle-' . $page_section['type'];
-    $section_classes .= (!empty($puzzle_options_data['background_color']) ? ' ' . $puzzle_options_data['background_color'] . '-background' : '');
-    $section_classes .= (!empty($puzzle_options_data['text_color_scheme']) ? ' ' . $puzzle_options_data['text_color_scheme'] . '-text-color-scheme' : '');
-    $section_classes .= (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
-    $section_classes .= (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
-    $section_classes .= (!empty($puzzle_options_data['vertical_center']) ? ' vertical-center' : '');
-    $section_classes .= (!empty($puzzle_options_data['align_items']) ? ' align-items-' . $puzzle_options_data['align_items'] : '');
-    
-    return $section_classes;
-}
-
-// Shortens content
-//
-// $content - a string of content to be shortened
-// $words_num - integer indicating the desired word count
-//
-// Returns a string of content shortened to the indicated word count
+/*
+ * Shortens content
+ *
+ * $content - a string of content to be shortened
+ * $words_num - integer indicating the desired word count
+ *
+ * Returns a string of content shortened to the indicated word count
+ */
 function shorten_content($content, $word_count = 35) {
     $shortened_content = strip_tags(strip_shortcodes($content));
     $words = explode(' ', $shortened_content, $word_count + 1);
@@ -143,6 +107,27 @@ function shorten_content($content, $word_count = 35) {
     }
     
     return $shortened_content;
+}
+
+/*
+ * Determines classes for a section
+ *
+ * $page_section - array of data pertaining to the section
+ *
+ * Returns a string of classes for a section
+ */
+function wbg_section_classes($page_section) {
+    $puzzle_options_data = $page_section['options'];
+    
+    $section_classes  = 'puzzle-' . $page_section['type'];
+    $section_classes .= (!empty($puzzle_options_data['background_color']) ? ' ' . $puzzle_options_data['background_color'] . '-background' : '');
+    $section_classes .= (!empty($puzzle_options_data['text_color_scheme']) ? ' ' . $puzzle_options_data['text_color_scheme'] . '-text-color-scheme' : '');
+    $section_classes .= (!empty($puzzle_options_data['padding_top']) ? ' ' . $puzzle_options_data['padding_top'] . '-padding-top' : '');
+    $section_classes .= (!empty($puzzle_options_data['padding_bottom']) ? ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom' : '');
+    $section_classes .= (!empty($puzzle_options_data['vertical_center']) ? ' vertical-center' : '');
+    $section_classes .= (!empty($puzzle_options_data['align_items']) ? ' align-items-' . $puzzle_options_data['align_items'] : '');
+    
+    return $section_classes;
 }
 
 ?>

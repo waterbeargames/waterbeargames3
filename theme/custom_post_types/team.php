@@ -9,8 +9,8 @@
 function register_team() {
     register_post_type('team', array(
         'labels'            => array(
-            'name'          => __('Team Members'),
-            'singular_name' => __('Team Member')
+            'name'          => __('Team Members', 'water-bear-games'),
+            'singular_name' => __('Team Member', 'water-bear-games')
         ),
         'menu_icon'         => 'dashicons-groups',
         'public'            => true,
@@ -48,7 +48,7 @@ function team_image_markup($i, $image = NULL) {
     $output .= '</div>';
     $output .= '<div class="column-inner">';
     $output .= $image_preview . '<br />';
-    $output .= '<input name="wbg_team[images][' . $i . ']" type="hidden" value="' . (!empty($image) ? $image : '') . '" readonly />';
+    $output .= '<input name="_wbg_team[images][' . $i . ']" type="hidden" value="' . (!empty($image) ? $image : '') . '" readonly />';
     $output .= '<a href="#" class="puzzle_add_image_button button" data-editor="content" title="Insert Image">Insert Image</a>';
     $output .= '</div>';
     $output .= '</div>';
@@ -58,11 +58,11 @@ function team_image_markup($i, $image = NULL) {
 
 function meta_options_team() {
     global $post;
-    $team = get_post_meta($post->ID, 'wbg_team', true);
+    $team = get_post_meta($post->ID, '_wbg_team', true);
     ?>
     <p>
         Title<br />
-        <input name="wbg_team[title]" type="text" value="<?php echo (!empty($team['title']) ? $team['title'] : ''); ?>" />
+        <input name="_wbg_team[title]" type="text" value="<?php echo (!empty($team['title']) ? $team['title'] : ''); ?>" />
     </p>
     <hr />
     <h3>Images</h3>
@@ -104,8 +104,8 @@ function meta_options_team() {
 
 function save_options_team() {
     global $post;
-    if ($post && $post->post_type == 'team') {
-        update_post_meta($post->ID, 'wbg_team', $_POST['wbg_team']);
+    if ($post && $post->post_type == 'team' && isset($_POST['_wbg_team'])) {
+        update_post_meta($post->ID, '_wbg_team', $_POST['_wbg_team']);
     }
 }
 

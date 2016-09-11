@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <h4><?php echo $button['text']; ?></h4>
-                    <a class="puzzle-full-cover-link" href="<?php echo $button['link']; ?>"<?php echo (!empty($button['open_link_in_new_tab']) ? ' target="_blank"' : ''); ?>></a>
+                    <a class="puzzle-full-cover-link" href="<?php echo $button['link']; ?>"<?php if (!empty($button['open_link_in_new_tab'])) echo ' target="_blank"'; ?>></a>
                 </div>
                 <?php endforeach; ?>
             </div>

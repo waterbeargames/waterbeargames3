@@ -1,12 +1,14 @@
 <?php
+
 /*
  * Water Bear Games
  * Recent News Widget
  */
+
 class WBG_Widget_Recent_News extends WP_Widget {
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_recent_news', 'description' => __("Your site&#8217;s most recent news stories."));
-        parent::__construct('recent-news', __('Recent News Stories'), $widget_ops);
+        $widget_ops = array('classname' => 'widget_recent_news', 'description' => __("Your site&#8217;s most recent news stories.", 'water-bear-games'));
+        parent::__construct('recent-news', __('Recent News Stories', 'water-bear-games'), $widget_ops);
         $this->alt_option_name = 'widget_recent_news';
     }
 
@@ -18,7 +20,7 @@ class WBG_Widget_Recent_News extends WP_Widget {
             $args['widget_id'] = $this->id;
         }
 
-        $title = (!empty($instance['title'])) ? $instance['title'] : __('Recent News');
+        $title = (!empty($instance['title'])) ? $instance['title'] : __('Recent News', 'water-bear-games');
         $title = apply_filters('widget_title', $title, $instance, $this->id_base);
 
         $number = (!empty($instance['number'])) ? absint($instance['number']) : 5;
@@ -88,14 +90,14 @@ class WBG_Widget_Recent_News extends WP_Widget {
         $number    = isset($instance['number']) ? absint($instance['number']) : 5;
         $show_date = isset($instance['show_date']) ? (bool) $instance['show_date'] : false;
         ?>
-        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'water-bear-games'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:'); ?></label>
+        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:', 'water-bear-games'); ?></label>
         <input class="tiny-text" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
         <p><input class="checkbox" type="checkbox"<?php checked($show_date); ?> id="<?php echo $this->get_field_id('show_date'); ?>" name="<?php echo $this->get_field_name('show_date'); ?>" />
-        <label for="<?php echo $this->get_field_id('show_date'); ?>"><?php _e('Display post date?'); ?></label></p>
+        <label for="<?php echo $this->get_field_id('show_date'); ?>"><?php _e('Display post date?', 'water-bear-games'); ?></label></p>
         <?php
     }
 }

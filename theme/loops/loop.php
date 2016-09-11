@@ -3,7 +3,7 @@ $link = get_the_permalink($post->ID);
 $target = '';
 
 if ($post->post_type == 'news') {
-    $news_meta = get_post_meta($post->ID, 'wbg_news', true);
+    $news_meta = get_post_meta($post->ID, '_wbg_news', true);
     
     if (!empty($news_meta['link']) && empty($news_meta['local'])) {
         $link = $news_meta['link'];

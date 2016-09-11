@@ -7,7 +7,7 @@ $args = array(
 );
 $team_members = get_posts($args);
 $team_members_num = count($team_members);
-$span_classes = span_classes($team_members_num, 3, 4, 'xs', 'md');
+$span_classes = ppb_span_classes($team_members_num, 3, 4, 'xs', 'md');
 ?>
 <div class="row puzzle-columns-content">
 <?php foreach ($team_members as $team_member) :

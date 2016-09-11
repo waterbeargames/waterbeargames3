@@ -184,7 +184,7 @@ add_action('customize_register', 'puzzle_customize_register');
 
 function puzzle_save_custom_style() {
     ob_start();
-    require(get_stylesheet_directory() . '/theme/settings/custom_style.php');
+    require(get_stylesheet_directory() . '/theme/miscellaneous/custom_style.php');
     $css = ob_get_clean();
     
     global $wp_filesystem;

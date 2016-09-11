@@ -1,6 +1,6 @@
 <?php
 $game_featured_image = wp_get_attachment_url(get_post_thumbnail_id($game->ID));
-$game_meta = get_post_meta($game->ID, 'wbg_game', true);
+$game_meta = get_post_meta($game->ID, '_wbg_game', true);
 $game_logo = (!empty($game_meta['logo']) ? $game_meta['logo'] : false);
 ?>
 <div class="column <?php echo $span_classes; ?>">

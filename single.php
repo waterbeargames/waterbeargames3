@@ -31,7 +31,7 @@ the_post();
                     the_content();
                     
                     $args = array(
-                        'before'            => '<p class="single-post-page-links">' . __('Pages:'),
+                        'before'            => '<p class="single-post-page-links">' . __('Pages:', 'water-bear-games'),
                         'after'             => '</p>',
                         'link_before'       => '<span>',
                         'link_after'        => '</span>'

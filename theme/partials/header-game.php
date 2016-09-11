@@ -1,5 +1,5 @@
 <?php
-$game = get_post_meta($post->ID, 'wbg_game', true);
+$game = get_post_meta($post->ID, '_wbg_game', true);
 $game_banner = (!empty($game['banner']) ? wp_get_attachment_url($game['banner'], 'large') : false);
 ?>
 <header id="header" class="alternative-background"<?php if ($game_banner) echo ' style="background-image: url(' . $game_banner . ');"'; ?>>

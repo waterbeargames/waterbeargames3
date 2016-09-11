@@ -2,12 +2,12 @@
 get_header();
 the_post();
 
-$team_meta = get_post_meta($post->ID, 'wbg_team', true);
-$team_images = array_filter($team_meta['images']);
+$team_meta = get_post_meta($post->ID, '_wbg_team', true);
+$team_images = (!empty($team_meta['images']) ? array_filter($team_meta['images']) : '');
 ?>
 <section>
     <div class="row">
-        <div class="column xs-span12<?php echo (!empty($team_images) ? ' md-span7' : ''); ?>">
+        <div class="column xs-span12<?php if (!empty($team_images)) echo ' md-span7'; ?>">
             <div class="column-inner">
                 <?php the_title('<h2>', '</h2>'); ?>
                 

@@ -5,7 +5,7 @@ $story_target = '';
 $story_media = '';
 
 if ($story->post_type == 'news') {
-    $news_meta = get_post_meta($story->ID, 'wbg_news', true);
+    $news_meta = get_post_meta($story->ID, '_wbg_news', true);
     
     if (!empty($news_meta['link']) && empty($news_meta['local'])) {
         $story_link = $news_meta['link'];

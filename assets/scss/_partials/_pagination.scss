@@ -15,6 +15,7 @@
         @include display-flex;
         @include flex-direction(column);
         @include justify-content(center);
+        @include flex(0 0 75px);
         width: 75px;
         height: 75px;
         border-radius: 50%;
@@ -31,8 +32,6 @@
     }
     
     #newer-pages {
-        float: left;
-        
         a:hover {
             .fa {
                 @include transform(translate(-15%, 0));
@@ -41,7 +40,7 @@
     }
     
     #older-pages {
-        float: right;
+        margin-left: auto;
         
         a:hover {
             .fa {

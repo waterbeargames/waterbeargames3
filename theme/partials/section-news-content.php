@@ -9,7 +9,7 @@ $news_stories = get_posts($args);
 $args = array(
     'meta_query' => array(
         array(
-            'key' => 'wbg_news_featured',
+            'key' => '_wbg_news_featured',
             'value' => 'on',
         )
     ),
@@ -26,7 +26,7 @@ if (empty($featured_story)) {
 }
 
 $featured_story_featured_image = wp_get_attachment_url(get_post_thumbnail_id($featured_story->ID));
-$featured_story_meta = get_post_meta($featured_story->ID, 'wbg_news', true);
+$featured_story_meta = get_post_meta($featured_story->ID, '_wbg_news', true);
 
 $featured_story_link = get_permalink($featured_story->ID);
 $featured_story_target = '';

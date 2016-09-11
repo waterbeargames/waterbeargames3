@@ -16,31 +16,32 @@ get_header();
             </div>
         </div>
     </div>
-    <?php if (have_posts()) :
-        $span_classes = span_classes($wp_query->post_count, 3, 4, 'xs', 'md');
+    <?php
+    if (have_posts()) :
+        $span_classes = ppb_span_classes($wp_query->post_count, 3, 4, 'xs', 'md');
         ?>
-    <div class="row puzzle-columns-content">
-        <?php
-        while (have_posts()) {
-            the_post();
-            $game = $post;
-            include(locate_template('/theme/loops/games.php'));
-        }
+        <div class="row puzzle-columns-content">
+            <?php
+            while (have_posts()) {
+                the_post();
+                $game = $post;
+                include(locate_template('/theme/loops/games.php'));
+            }
         
-        get_template_part('theme/partials/pagination');
-        ?>
-    </div>
+            get_template_part('theme/partials/pagination');
+            ?>
+        </div>
     <?php else : ?>
-    <div class="row puzzle-main-content">
-        <div class="column xs-span12 md-span9 md-center">
-            <div class="column-inner">
-                <p>Sorry, no games found.</p>
+        <div class="row puzzle-main-content">
+            <div class="column xs-span12 md-span9 md-center">
+                <div class="column-inner">
+                    <p>Sorry, no games found.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <?php
+        <?php
+        wp_reset_query();
     endif;
-    wp_reset_query();
     ?>
 </section>
 <?php get_footer(); ?>

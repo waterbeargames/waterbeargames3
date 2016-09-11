@@ -2,7 +2,7 @@
 get_header();
 the_post();
 
-$news = get_post_meta($post->ID, 'wbg_news', true);
+$news = get_post_meta($post->ID, '_wbg_news', true);
 ?>
 <section>
     <div class="row">

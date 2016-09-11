@@ -5,7 +5,7 @@ $args = array(
 );
 $blog_posts = get_posts($args);
 $blog_posts_num = count($blog_posts);
-$span_classes = span_classes($blog_posts_num);
+$span_classes = ppb_span_classes($blog_posts_num);
 ?>
 <div class="row puzzle-columns-content puzzle-stories">
     <?php foreach ($blog_posts as $story) include(locate_template('theme/loops/stories.php')); ?>

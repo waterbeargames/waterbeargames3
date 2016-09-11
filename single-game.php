@@ -2,7 +2,7 @@
 get_header();
 the_post();
 
-$game = get_post_meta($post->ID, 'wbg_game', true);
+$game = get_post_meta($post->ID, '_wbg_game', true);
 $has_meta_info = !empty($game['playtime']) || !empty($game['players_num']) || !empty($game['difficulty']) || !empty($game['print_and_play_update']);
 $has_sidebar = !empty($game['print_and_play']) || !empty($game['store']) || $has_meta_info;
 

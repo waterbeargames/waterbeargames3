@@ -9,8 +9,8 @@
 function game_init() {
     register_post_type('game', array(
         'labels'            => array(
-            'name'          => __('Games'),
-            'singular_name' => __('Game')
+            'name'          => __('Games', 'water-bear-games'),
+            'singular_name' => __('Game', 'water-bear-games')
         ),
         'menu_icon'         => 'dashicons-smiley',
         'public'            => true,
@@ -33,17 +33,17 @@ add_action('init', 'game_init');
 // Register taxonomy
 function register_game_category_taxonomy() {
     $labels = array(
-        'name'                       => _x('Game Categories', 'taxonomy general name'),
-        'singular_name'              => _x('Game Category', 'taxonomy singular name'),
-        'search_items'               => __('Search Game Categories'),
-        'all_items'                  => __('All Game Categories'),
+        'name'                       => __('Game Categories', 'water-bear-games'),
+        'singular_name'              => __('Game Category', 'water-bear-games'),
+        'search_items'               => __('Search Game Categories', 'water-bear-games'),
+        'all_items'                  => __('All Game Categories', 'water-bear-games'),
         'parent_item'                => null,
         'parent_item_colon'          => null,
-        'edit_item'                  => __('Edit Game Category'),
-        'update_item'                => __('Update Game Category'),
-        'add_new_item'               => __('Add New Game Category'),
-        'new_item_name'              => __('New Game Category Name'),
-        'menu_name'                  => __('Game Categories')
+        'edit_item'                  => __('Edit Game Category', 'water-bear-games'),
+        'update_item'                => __('Update Game Category', 'water-bear-games'),
+        'add_new_item'               => __('Add New Game Category', 'water-bear-games'),
+        'new_item_name'              => __('New Game Category Name', 'water-bear-games'),
+        'menu_name'                  => __('Game Categories', 'water-bear-games')
     );
 
     $args = array(
@@ -67,7 +67,7 @@ add_action('admin_init', 'game_meta_box');
 
 function game_meta_options() {
     global $post;
-    $game = get_post_meta($post->ID, 'wbg_game', true);
+    $game = get_post_meta($post->ID, '_wbg_game', true);
     
     $game_banner = '<img src="" />';
     if (!empty($game['banner'])) {
@@ -99,14 +99,14 @@ function game_meta_options() {
                 
                 ?>
                 <input class="wbg-game-file-preview" type="text" value="<?php echo $game_logo_preview; ?>" readonly />
-                <input class="wbg-game-file-id" name="wbg_game[logo]" type="hidden" value="<?php echo (!empty($game['logo']) ? $game['logo'] : ''); ?>" readonly />
+                <input class="wbg-game-file-id" name="_wbg_game[logo]" type="hidden" value="<?php if (!empty($game['logo'])) echo $game['logo']; ?>" readonly />
                 <a href="#" class="wbg_add_file_button button" data-editor="content" title="Add File">Add File</a>
                 <a href="#" class="wbg_remove_file_button button">Remove File</a>
             </p>
             <p>
                 Banner<br />
                 <?php echo $game_banner; ?><br />
-                <input name="wbg_game[banner]" type="hidden" value="<?php echo (!empty($game['banner']) ? $game['banner'] : ''); ?>" readonly />
+                <input name="_wbg_game[banner]" type="hidden" value="<?php echo (!empty($game['banner']) ? $game['banner'] : ''); ?>" readonly />
                 <a href="#" class="puzzle_add_image_button button" data-editor="content" title="Add Image">Add Image</a> <a href="#" class="puzzle_remove_image_button button">Remove Image</a>
             </p>
         </div>
@@ -115,36 +115,36 @@ function game_meta_options() {
             <p>
                 Print &amp; Play File<br />
                 <input class="wbg-game-file-preview" type="text" value="<?php echo $game_print_and_play_preview; ?>" readonly />
-                <input class="wbg-game-file-id" name="wbg_game[print_and_play]" type="hidden" value="<?php echo (!empty($game['print_and_play']) ? $game['print_and_play'] : ''); ?>" readonly />
+                <input class="wbg-game-file-id" name="_wbg_game[print_and_play]" type="hidden" value="<?php echo (!empty($game['print_and_play']) ? $game['print_and_play'] : ''); ?>" readonly />
                 <a href="#" class="wbg_add_file_button button" data-editor="content" title="Add File">Add File</a>
                 <a href="#" class="wbg_remove_file_button button">Remove File</a>
             </p>
             <p>
                 Store Link<br />
-                <input name="wbg_game[store]" placeholder="http://..." value="<?php echo (!empty($game['store']) ? $game['store'] : ''); ?>" />
+                <input name="_wbg_game[store]" placeholder="http://..." value="<?php echo (!empty($game['store']) ? $game['store'] : ''); ?>" />
             </p>
         </div>
         <div class="column xs-span12 sm-span4">
             <h3>General Details</h3>
             <p>
                 Playtime<br />
-                <input name="wbg_game[playtime]" placeholder="5-10 minutes" value="<?php echo (!empty($game['playtime']) ? $game['playtime'] : ''); ?>" />
+                <input name="_wbg_game[playtime]" placeholder="5-10 minutes" value="<?php echo (!empty($game['playtime']) ? $game['playtime'] : ''); ?>" />
             </p>
             <p>
                 Number of Players<br />
-                <input name="wbg_game[players_num]" placeholder="2-5" value="<?php echo (!empty($game['players_num']) ? $game['players_num'] : ''); ?>" />
+                <input name="_wbg_game[players_num]" placeholder="2-5" value="<?php echo (!empty($game['players_num']) ? $game['players_num'] : ''); ?>" />
             </p>
             <p>
                 Difficulty<br />
-                <input name="wbg_game[difficulty]" placeholder="8 years old and up" value="<?php echo (!empty($game['difficulty']) ? $game['difficulty'] : ''); ?>" />
+                <input name="_wbg_game[difficulty]" placeholder="8 years old and up" value="<?php echo (!empty($game['difficulty']) ? $game['difficulty'] : ''); ?>" />
             </p>
             <p>
                 Last Print &amp; Play Update<br />
-                <input name="wbg_game[print_and_play_update]" placeholder="January 1st, 2016" value="<?php echo (!empty($game['print_and_play_update']) ? $game['print_and_play_update'] : ''); ?>" />
+                <input name="_wbg_game[print_and_play_update]" placeholder="January 1st, 2016" value="<?php echo (!empty($game['print_and_play_update']) ? $game['print_and_play_update'] : ''); ?>" />
             </p>
             <p>
                 Accent Color<br />
-                <input class="color-field" name="wbg_game[accent_color]" value="<?php echo (!empty($game['accent_color']) ? $game['accent_color'] : ''); ?>" type="text" />
+                <input class="puzzle-color-field" name="_wbg_game[accent_color]" value="<?php echo (!empty($game['accent_color']) ? $game['accent_color'] : ''); ?>" type="text" />
             </p>
         </div>
     </div>
@@ -154,7 +154,7 @@ function game_meta_options() {
             <h3>Call to Action section</h3>
             <?php
             $wp_editor_settings = array(
-                'textarea_name' => 'wbg_game[cta]',
+                'textarea_name' => '_wbg_game[cta]',
                 'textarea_rows' => 10
             );
             wp_editor($game_cta, 'wbg_game_cta', $wp_editor_settings);
@@ -210,8 +210,8 @@ function game_meta_options() {
 
 function game_save_options() {
     global $post;
-    if ($post && $post->post_type == 'game') {
-        update_post_meta($post->ID, 'wbg_game', $_POST['wbg_game']);
+    if ($post && $post->post_type == 'game' && isset($_POST['_wbg_game'])) {
+        update_post_meta($post->ID, '_wbg_game', $_POST['_wbg_game']);
     }
 }
 add_action('save_post', 'game_save_options');

@@ -84,7 +84,7 @@ a:hover, a:active {
 }
 
 .light-text-color-scheme a:not(.wbg-button):hover {
-    color: rgba(<? echo hex2rgb($text_light); ?>, 0.6);
+    color: rgba(<?php echo hex2rgb($text_light); ?>, 0.6);
 }
 
 /* Forms */
