@@ -169,6 +169,7 @@ $bubble-sizes: ('small': 200, 'medium': 325, 'large': 450);
     z-index: -1;
     border-radius: 50%;
     opacity: 0;
+    @include animation(bubble-burst 5s ease);
     
     @each $size-name, $size in $bubble-sizes {
         &.#{$size-name}-header-bubble {
