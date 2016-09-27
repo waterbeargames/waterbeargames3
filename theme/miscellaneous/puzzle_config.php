@@ -16,9 +16,14 @@ add_action('ppb_modify_settings', 'wbg_modify_puzzle_settings');
 
 /* Field modifications */
 function wbg_modify_puzzle_fields($f) {
+    /* Change the available background colors for sections */
     $f->field('background_color', false)
-        ->remove_option('gray')
-        ->add_option('alternative', 'Alternative Background', 1);
+        ->set_options(array(
+            'white'         => 'White',
+            'alternative'   => 'Alternative Background',
+            'primary'       => 'Primary Color',
+            'secondary'     => 'Secondary Color'
+        ));
 }
 add_action('ppb_modify_fields', 'wbg_modify_puzzle_fields');
 
