@@ -266,9 +266,7 @@ input[type='submit'],
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
-a.page-numbers:hover,
-#cancel-comment-reply-link,
-#pagination a {
+#cancel-comment-reply-link {
     background-color: <?php echo $secondary_color; ?>;
     color: #fff;
 }
@@ -297,8 +295,7 @@ input[type='submit']:hover,
 .alternative-background .puzzle-loop .wbg-button:hover,
 .categories .cat-item a:hover,
 .comment-reply-link:hover
-#cancel-comment-reply-link:hover,
-#pagination a:hover {
+#cancel-comment-reply-link:hover {
     background-color: <?php echo $primary_color; ?>;
     color: #fff;
 }
@@ -356,6 +353,23 @@ input[type='submit']:hover,
     color: <?php echo $text_dark; ?>
 }
 
+.page-numbers.current {
+    background-color: <?php echo $accent_color; ?>;
+}
+
+.page-numbers.disabled {
+    color: rgba(<?php echo hex2rgb($text_dark); ?>, 0.25);
+}
+
+.pagination a {
+    background-color: <?php echo $secondary_color; ?>;
+    color: #fff;
+}
+
+.pagination a:hover {
+    background-color: <?php echo $primary_color; ?>;
+    color: #fff;
+}
 
 /* Contact Form 7 */
 

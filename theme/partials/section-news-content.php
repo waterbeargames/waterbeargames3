@@ -38,7 +38,7 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
 <div class="row puzzle-columns-content">
     <div class="column xs-span12 sm-span9 sm-center md-span6 lg-uncenter puzzle-featured-story">
         <div class="column-inner puzzle-news-section-headline">
-            <h3>Featured Story</h3>
+            <h3><?php _e('Featured Story', 'water-bear-games'); ?></h3>
         </div>
         <div class="column-inner puzzle-story">
             <div class="puzzle-story-image"<?php echo ($featured_story_featured_image ? ' style="background-image: url(' . $featured_story_featured_image . ');"' : '') ?>>

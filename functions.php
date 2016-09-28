@@ -20,7 +20,6 @@ if (class_exists('PuzzlePageBuilder')) require_once('theme/miscellaneous/puzzle_
 
 /* Miscellaneous files */
 require_once('theme/miscellaneous/helpers.php');
-require_once('theme/miscellaneous/button_shortcode.php');
 require_once('theme/miscellaneous/recent_news_widget.php');
 
 /* Theme setup */

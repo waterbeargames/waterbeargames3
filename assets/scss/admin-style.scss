@@ -46,23 +46,6 @@
     }
 }
 
-#wbg_shortcode_form {
-    margin: 0;
-    background: transparent;
-    border: 0;
-    -webkit-box-shadow: 0 0 0 transparent;
-    box-shadow: 0 0 0 transparent;
-    
-    > *:not(.inside) {
-        display: none;
-    }
-    
-    .inside {
-        margin: 0;
-        padding: 0;
-    }
-}
-
 #team_options {
     .added-columns {
         @include display-flex;

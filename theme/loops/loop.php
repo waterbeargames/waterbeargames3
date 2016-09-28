@@ -42,6 +42,6 @@ if (get_post_type($post) == 'post' || get_post_type($post) == 'news') {
     ?>
     
     <p>
-        <a class="wbg-button wbg-button-secondary" href="<?php echo $link; ?>"<?php echo $target; ?>>Read More</a>
+        <a class="wbg-button wbg-button-secondary" href="<?php echo $link; ?>"<?php echo $target; ?>><?php _e('Read More', 'water-bear-games'); ?></a>
     </p>
 </div>

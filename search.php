@@ -14,7 +14,7 @@
                     get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
-                    <p>Sorry, no posts found for &quot;<?php echo get_search_query(); ?>&quot;.</p>
+                    <p><?php _e('Sorry, no posts found for', 'water-bear-games'); ?> &quot;<?php echo get_search_query(); ?>&quot;.</p>
                 <?php endif; ?>
             </div>
         </div>

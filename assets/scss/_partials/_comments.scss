@@ -22,18 +22,6 @@
     @extend %wbg-button-small;
 }
 
-.page-numbers {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: $light-gray;
-    text-decoration: none;
-    
-    &.current {
-        background-color: $medium-gray;
-        color: #fff;
-    }
-}
-
 .comment-respond {
     margin-top: 2rem;
 }

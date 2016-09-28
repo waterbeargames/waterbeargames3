@@ -10,7 +10,7 @@
  *
  * Returns a string of favicons separated by new lines
  */
-function favicons() {
+function get_the_favicons() {
     $favicons = array();
     
     $apple_sizes = array(57, 114, 72, 144, 60, 120, 76, 152);
@@ -42,6 +42,11 @@ function favicons() {
     }
     
     return join("\n    ", $favicons);
+}
+
+/* Echos the favicons */
+function the_favicons() {
+    echo get_the_favicons();
 }
 
 /*

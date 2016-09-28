@@ -13,7 +13,7 @@ get_header();
     <div class="row puzzle-section-headline">
         <div class="column xs-span12">
             <div class="column-inner">
-                <h2>Games</h2>
+                <h2><?php _e('Games', 'water-bear-games'); ?></h2>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@ get_header();
         <div class="row puzzle-main-content">
             <div class="column xs-span12 md-span9 md-center">
                 <div class="column-inner">
-                    <p>Sorry, no games found.</p>
+                    <p><?php _e('Sorry, no games found.', 'water-bear-games'); ?></p>
                 </div>
             </div>
         </div>

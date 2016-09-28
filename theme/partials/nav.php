@@ -36,7 +36,7 @@
                 'after'           => '',
                 'link_before'     => '',
                 'link_after'      => '',
-                'items_wrap'      => '<button class="dl-trigger">Open Menu</button><ul class="dl-menu">%3$s</ul>',
+                'items_wrap'      => '<button class="dl-trigger">' . __('Open Menu', 'water-bear-games') . '</button><ul class="dl-menu">%3$s</ul>',
                 'depth'           => 0,
                 'walker'          => ''
             );

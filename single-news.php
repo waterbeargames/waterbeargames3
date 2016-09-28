@@ -18,7 +18,7 @@ $news = get_post_meta($post->ID, '_wbg_news', true);
                 </div>
                 
                 <?php if (!empty($news['link'])) : ?>
-                <a class="wbg-button" href="<?php echo $news['link']; ?>" target="_blank">View Original Story</a>
+                <a class="wbg-button" href="<?php echo $news['link']; ?>" target="_blank"><?php _e('View Original Story', 'water-bear-games'); ?></a>
                 <?php endif; ?>
             </div>
         </div>

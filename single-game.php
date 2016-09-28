@@ -17,7 +17,7 @@ $meta_info = array_filter(array(
     <div class="row">
         <div class="column xs-span12<?php echo ($has_sidebar ? ' lg-span6 xl-span7' : ''); ?>">
             <div class="column-inner">
-                <h2>Overview</h2>
+                <h2><?php _e('Overview', 'water-bear-games'); ?></h2>
                 <?php the_content(); ?>
             </div>
         </div>
@@ -31,8 +31,8 @@ $meta_info = array_filter(array(
                         <div class="circle-button accent-background">
                             <div class="circle-button-content">
                                 <i class="fa fa-shopping-cart"></i>
-                                <h4>Purchase</h4>
-                                <h5>the official game</h5>
+                                <h4><?php _e('Purchase', 'water-bear-games'); ?></h4>
+                                <h5><?php _e('the official game', 'water-bear-games'); ?></h5>
                             </div>
                             <a class="puzzle-full-cover-link" href="<?php echo $game['store']; ?>" target="_blank"></a>
                         </div>
@@ -44,8 +44,8 @@ $meta_info = array_filter(array(
                         <div class="circle-button secondary-background light-text-color-scheme">
                             <div class="circle-button-content">
                                 <i class="fa fa-arrow-circle-o-down"></i>
-                                <h4>Download</h4>
-                                <h5>the print &amp; play</h5>
+                                <h4><?php _e('Download', 'water-bear-games'); ?></h4>
+                                <h5><?php _e('the print &amp; play', 'water-bear-games'); ?></h5>
                             </div>
                             <a class="puzzle-full-cover-link" href="<?php echo wp_get_attachment_url($game['print_and_play']); ?>"></a>
                         </div>

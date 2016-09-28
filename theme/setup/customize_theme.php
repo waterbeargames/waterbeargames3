@@ -182,6 +182,7 @@ function puzzle_customize_register($wp_customize) {
 }
 add_action('customize_register', 'puzzle_customize_register');
 
+/* Save custom CSS using user-defined colors */
 function puzzle_save_custom_style() {
     ob_start();
     require(get_stylesheet_directory() . '/theme/miscellaneous/custom_style.php');
@@ -199,4 +200,12 @@ function puzzle_save_custom_style() {
     }
 }
 add_action('customize_save_after', 'puzzle_save_custom_style');
+
+/* Checks if the custom CSS exists. If it does not, create it. */
+function puzzle_check_if_custom_style_exists() {
+    if (!file_exists(get_stylesheet_directory() . '/assets/css/custom.css')) {
+        puzzle_save_custom_style();
+    }
+}
+
 ?>

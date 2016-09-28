@@ -48,7 +48,7 @@ if ($story->post_type == 'news') {
                 echo apply_filters('like_the_content', $story_excerpt);
             }
             ?>
-            <a class="wbg-button wbg-button-small" href="<?php echo $story_link; ?>"<?php echo $story_target; ?>><?php echo ($story->post_type == 'news' ? 'View Story' : 'Read More'); ?></a>
+            <a class="wbg-button wbg-button-small" href="<?php echo $story_link; ?>"<?php echo $story_target; ?>><?php ($story->post_type == 'news' ? _e('View Story', 'water-bear-games') : _e('Read More', 'water-bear-games')); ?></a>
         </div>
     </div>
 </div>

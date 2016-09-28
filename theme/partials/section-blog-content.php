@@ -19,7 +19,7 @@ $span_classes = ppb_span_classes($blog_posts_num);
                 $blog_link = get_permalink(get_option('page_for_posts'));
             }
             ?>
-            <a class="wbg-button" href="<?php echo $blog_link; ?>">View All Blog Posts</a>
+            <a class="wbg-button" href="<?php echo $blog_link; ?>"><?php _e('View All Blog Posts', 'water-bear-games'); ?></a>
         </div>
     </div>
 </div>

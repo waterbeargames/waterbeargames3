@@ -14,8 +14,8 @@
                     get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
-                    <h1>No results</h1>
-                    <p>Sorry, no posts found.</p>
+                    <h1><?php _e('No results', 'water-bear-games'); ?></h1>
+                    <p><?php _e('Sorry, no posts found.', 'water-bear-games'); ?></p>
                 <?php endif; ?>
             </div>
         </div>

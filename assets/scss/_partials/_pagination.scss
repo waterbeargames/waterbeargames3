@@ -2,36 +2,117 @@
 /* Pagination */
 /*------------*/
 
-#pagination {
-    @include display-flex;
-    margin: $small-space-unit 0;
-    list-style: none;
+.page-numbers, .prev-container a, .next-container a {
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    background-color: $light-gray;
+    font-size: 1rem;
+    line-height: 2.8rem;
+    text-align: center;
     
-    li {
-        font-size: 1.4rem;
+    &.current {
+        background-color: $medium-gray;
     }
     
-    a {
+    &.dots {
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+    }
+    
+    @include breakpoint($size-sm) {
+        margin: 0 0.5rem;
+    }
+    
+    @include breakpoint($size-md) {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.4rem;
+        line-height: 4rem;
+    }
+}
+
+a.page-numbers {
+    color: #fff;
+}
+
+.pagination {
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(space-between);
+    margin: $small-space-unit 0;
+    
+    &, ul {
+        list-style: none;
+    }
+    
+    ul {
+        margin: 0;
+        background-color: transparent;
+    }
+    
+    .page-numbers-container ul {
         @include display-flex;
-        @include flex-direction(column);
-        @include justify-content(center);
-        @include flex(0 0 75px);
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        background-color: $medium-gray;
-        line-height: 1.4;
-        text-align: center;
-        color: #fff;
-        
-        .fa {
-            display: block;
-            font-size: 30px;
-            @include transition(all 0.4s ease);
+    
+        li {
+            @include flex(0 1 2.5rem);
         }
     }
     
-    #newer-pages {
+    .prev-container, .next-container {
+        > span, a {
+            width: 3.2rem;
+            height: 3.2rem;
+            
+            i {
+                display: block;
+                font-size: 2rem;
+                line-height: 3.2rem;
+                @include transition(all 0.4s ease);
+            }
+            
+            span {
+                display: none;
+            }
+            
+            @include breakpoint($size-sm) {
+                width: 5rem;
+                height: 5rem;
+                
+                i {
+                    font-size: 3rem;
+                    line-height: 5rem;
+                }
+            }
+            
+            @include breakpoint($size-md) {
+                @include display-flex;
+                @include flex-direction(column);
+                @include justify-content(center);
+                @include flex(0 0 7.5rem);
+                width: 7.5rem;
+                height: 7.5rem;
+                line-height: 1.4;
+                
+                i, span {
+                    @include flex(0 0 auto);
+                }
+                
+                i {
+                    line-height: 1;
+                }
+                
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    .prev-container {
         a:hover {
             .fa {
                 @include transform(translate(-15%, 0));
@@ -39,9 +120,7 @@
         }
     }
     
-    #older-pages {
-        margin-left: auto;
-        
+    .next-container {
         a:hover {
             .fa {
                 @include transform(translate(15%, 0));
