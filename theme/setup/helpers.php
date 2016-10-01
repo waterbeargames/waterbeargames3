@@ -45,9 +45,7 @@ function get_the_favicons() {
 }
 
 /* Echos the favicons */
-function the_favicons() {
-    echo get_the_favicons();
-}
+function the_favicons() { echo get_the_favicons(); }
 
 /*
  * Inserts an inline SVG with a padding trick on the container to fix the size

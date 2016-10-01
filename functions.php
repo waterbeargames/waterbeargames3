@@ -18,10 +18,6 @@ require_once('puzzle_pieces/puzzle_pieces.php');
  */
 if (class_exists('PuzzlePageBuilder')) require_once('theme/miscellaneous/puzzle_config.php');
 
-/* Miscellaneous files */
-require_once('theme/miscellaneous/helpers.php');
-require_once('theme/miscellaneous/recent_news_widget.php');
-
 /* Theme setup */
 foreach (glob(get_stylesheet_directory() . '/theme/setup/*.php') as $filename) {
     include $filename;

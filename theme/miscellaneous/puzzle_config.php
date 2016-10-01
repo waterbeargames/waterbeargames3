@@ -7,7 +7,7 @@
 
 /* General settings */
 function wbg_modify_puzzle_settings($settings) {
-    $settings->set_shortcodes(false);
+    $settings->set_button_formats(false);
     $settings->set_templates_directory('/theme/loops');
     $settings->set_owl_carousel(false);
     $settings->set_icon_library(false);

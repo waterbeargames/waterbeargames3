@@ -16,7 +16,7 @@
                     ?>
                 <?php else : ?>
                     <h1><?php _e('No results', 'water-bear-games'); ?></h1>
-                    <p><?php _e('Sorry, no posts categorized as:', 'water-bear-games'); ?> &quot;<?php echo single_tag_title(); ?>&quot;.</p>
+                    <p><?php _e('Sorry, no posts tagged as:', 'water-bear-games'); ?> &quot;<?php echo single_tag_title(); ?>&quot;.</p>
                 <?php endif; ?>
             </div>
         </div>
