@@ -8,7 +8,7 @@
     width: 100%;
     background-color: rgba(#fff, 0.95);
     @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
-    @include transition(box-shadow 0.4s ease);
+    transition: box-shadow 0.4s ease;
     
     &.no-logo {
         .vector-container {
@@ -23,10 +23,10 @@
     }
     
     &.no-transition {
-        @include transition(none);
+        transition: none;
     }
     
-    .row {
+    .pz-row {
         @include align-items(center);
         height: $small-nav-height;
         padding: 0.5rem 1.5rem;
@@ -48,7 +48,7 @@
     .vector-container {
         height: ($small-nav-height - 1rem);
         opacity: 1;
-        @include transition(all 0.4s ease);
+        @extend %default-transition;
         visibility: visible;
         
         svg {
@@ -56,7 +56,7 @@
             height: 5rem;
             
             path {
-                @include transition(all 0.4s ease);
+                @extend %default-transition;
             }
         }
         
@@ -107,7 +107,7 @@
         margin: 0;
         border-radius: 0;
         @include box-shadow(none);
-        @include transition(all 0.4s ease);
+        @extend %default-transition;
     }
     
     ul {
@@ -166,8 +166,6 @@
         }
         
         ul {
-            @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
-            @include transition(visibility 0.4s ease, opacity 0.4s ease);
             position: absolute;
             visibility: hidden;
             top: 100%;
@@ -177,7 +175,9 @@
             background-color: $medium-gray;
             background-color: rgba($medium-gray, 0.9);
             text-align: left;
+            @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
             opacity: 0;
+            transition: visibility 0.4s ease, opacity 0.4s ease;
             
             &.show {
                 z-index: 2;

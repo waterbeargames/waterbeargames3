@@ -33,7 +33,7 @@ input, select, textarea {
     border: solid 1px $medium-gray;
     @extend %default-border-radius;
     background-color: #fff;
-    @include transition(all 0.4s ease);
+    @extend %default-transition;
 }
 
 input, select {

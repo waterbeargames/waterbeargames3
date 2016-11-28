@@ -71,7 +71,7 @@ a.page-numbers {
                 display: block;
                 font-size: 2rem;
                 line-height: 3.2rem;
-                @include transition(all 0.4s ease);
+                @extend %default-transition;
             }
             
             span {

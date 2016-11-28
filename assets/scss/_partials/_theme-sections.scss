@@ -2,19 +2,13 @@
 /* Puzzle Sections */
 /*-----------------*/
 
-/* Section backgrounds */
-
-.white-background {
-    background-color: #fff;
-}
-
 /* Subsections inside each section */
 
-.puzzle-section-headline {
+.pz-section-headline {
     text-align: center;
 }
 
-.puzzle-main-content {
+.pz-main-content {
     text-align: center;
     
     @include breakpoint($size-lg) {
@@ -50,35 +44,26 @@
     }
 }
 
-.puzzle-background-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.5;
-}
-
 .vertical-center {
-    .row:last-child {
+    .pz-row:last-child {
         @include align-items(center);
     }
 }
 
-.puzzle-section-cta {
+.wbg-section-cta {
     .wbg-button {
         margin-top: 2rem;
     }
 }
 
 /* Used in news and blog sections */
-.puzzle-stories {
+.wbg-stories {
     .column {
         @include display-flex;
     }
 }
 
-.puzzle-story {
+.wbg-story {
     overflow: hidden;
     @include display-flex;
     @include flex-direction(column);
@@ -89,7 +74,7 @@
     background-color: $light-gray;
     text-align: center;
     
-    .puzzle-story-image {
+    .wbg-story-image {
         position: relative;
         @include flex(0 1 140px);
         background-position: center;
@@ -97,7 +82,7 @@
         background-size: cover;
     }
     
-    .puzzle-story-content {
+    .wbg-story-content {
         @include display-flex;
         @include align-items(center);
         @include flex-direction(column);
@@ -133,7 +118,7 @@
         @include flex(0 1 calc(100% - #{$space-unit}));
         margin: $space-unit / 2;
         
-        .puzzle-story-content {
+        .wbg-story-content {
             h4 {
                 font-size: 1.8rem;
             }
@@ -149,7 +134,7 @@
     }
     
     @include breakpoint($size-lg) {
-        .puzzle-story-content {
+        .wbg-story-content {
             padding-left: $small-space-unit;
             padding-right: $small-space-unit;
             
@@ -160,7 +145,7 @@
     }
 }
 
-.alternative-background .puzzle-story {
+.pz-alternative-background .wbg-story {
     background-color: #fff;
 }
 
@@ -168,25 +153,25 @@
  * The sections
  */
 
-.puzzle-features, .puzzle-games, .puzzle-team, .align-items-center {
-    .puzzle-columns-content {
+.pz-features, .pz-games, .pz-team, .align-items-center {
+    .pz-columns-content {
         @include justify-content(center);
     }
 }
 
-.align-items-left .puzzle-columns-content {
+.align-items-left .pz-columns-content {
     @include justify-content(flex-start);
 }
 
-.align-items-right .puzzle-columns-content {
+.align-items-right .pz-columns-content {
     @include justify-content(flex-end);
 }
 
-.puzzle-games, .puzzle-team {
-    .puzzle-columns-content {
+.pz-games, .pz-team {
+    .pz-columns-content {
         padding: ($small-space-unit - 0.5rem) $small-space-unit;
     
-        .column-inner {
+        .col-inner {
             width: 100%;
             margin: 0;
             padding: 0.5rem;

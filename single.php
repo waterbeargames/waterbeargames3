@@ -3,9 +3,9 @@ get_header();
 the_post();
 ?>
 <section>
-    <div class="row">
-        <div class="column xs-span12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-span8'; ?>">
-            <div class="column-inner">
+    <div class="pz-row">
+        <div class="column xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
+            <div class="col-inner">
                 <div class="single-post-meta">
                     <?php the_title('<h2>', '</h2>'); ?>
                     <h4><?php the_time(get_option('date_format')); ?>, by <?php the_author(); ?></h4>

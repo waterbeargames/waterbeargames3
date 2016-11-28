@@ -6,6 +6,9 @@ body { margin: 8px; }
 
 @import '_global/_utility';
 @import '_global/_global';
+
+html, body { height: auto; }
+
 @import '_global/_wordpress';
 @import '_global/_typography';
 @import '_global/_forms';

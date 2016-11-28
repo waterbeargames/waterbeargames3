@@ -2,12 +2,12 @@
 /* Puzzle One Column Section */
 /*---------------------------*/
 
-.puzzle-one-column {
-    .puzzle-columns-content {
-        .column-inner {
+.pz-one-column {
+    .pz-columns-content {
+        .col-inner {
             @extend %default-border-radius;
             
-            &.white-background {
+            &.pz-white-background {
                 background-color: rgba(#fff, 0.95);
             }
         }

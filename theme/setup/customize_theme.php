@@ -7,19 +7,24 @@
 
 function puzzle_customize_register($wp_customize) {
     /* Colors */
-    $puzzle_colors = new PuzzleColors;
+    $colors = wbg_default_colors();
     
-    foreach($puzzle_colors->colors() as $color) {
-        $wp_customize->add_setting($color->id(), array(
-            'default'           => $color->default_color(),
+    $wp_customize->add_section('puzzle_colors' , array(
+        'title'      => 'Colors',
+        'priority'   => 200
+    ));
+    
+    foreach($colors as $color) {
+        $wp_customize->add_setting($color['id'], array(
+            'default'           => $color['default'],
             'sanitize_callback' => 'sanitize_hex_color',
             'transport'         => 'refresh'
         ));
         
-        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, $color->id(), array(
-            'label'         => $color->label(),
-            'section'       => 'colors',
-            'settings'      => $color->id()
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, $color['id'], array(
+            'label'         => $color['label'],
+            'section'       => 'puzzle_colors',
+            'settings'      => $color['id']
         )));
     }
     

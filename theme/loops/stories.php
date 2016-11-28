@@ -18,8 +18,8 @@ if ($story->post_type == 'news') {
 }
 ?>
 <div class="column <?php echo $span_classes; ?>">
-    <div class="column-inner puzzle-story">
-        <div class="puzzle-story-image"<?php if ($story_featured_image) echo ' style="background-image: url(' . $story_featured_image . ');"'; ?>>
+    <div class="col-inner wbg-story">
+        <div class="wbg-story-image"<?php if ($story_featured_image) echo ' style="background-image: url(' . $story_featured_image . ');"'; ?>>
             <?php if (!$story_featured_image) : ?>
             <div class="background-bear-container">
                 <div class="background-bear">
@@ -27,9 +27,9 @@ if ($story->post_type == 'news') {
                 </div>
             </div>
             <?php endif; ?>
-            <a class="puzzle-full-cover-link" href="<?php echo $story_link; ?>"<?php echo $story_target; ?>></a>
+            <a class="wbg-full-cover-link" href="<?php echo $story_link; ?>"<?php echo $story_target; ?>></a>
         </div>
-        <div class="puzzle-story-content">
+        <div class="wbg-story-content">
             <h4><?php echo $story->post_title; ?></h4>
             <h6>
                 <?php

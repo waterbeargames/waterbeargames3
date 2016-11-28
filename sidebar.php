@@ -1,5 +1,5 @@
-<div id="sidebar" class="column xs-span12 lg-span4">
-    <div class="column-inner">
+<div id="sidebar" class="column xs-12 lg-4">
+    <div class="col-inner">
         <?php dynamic_sidebar('main-sidebar'); ?>
     </div>
 </div>

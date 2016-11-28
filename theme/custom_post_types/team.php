@@ -67,7 +67,7 @@ function meta_options_team() {
     <hr />
     <h3>Images</h3>
     <p>Images should be squares only.</p>
-    <div class="row added-columns">
+    <div class="pz-row added-columns">
         <?php
         $i = 0;
     

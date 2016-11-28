@@ -90,7 +90,7 @@ function game_meta_options() {
     
     $game_cta = (!empty($game['cta']) ? stripslashes_deep($game['cta']) : '');
     ?>
-    <div class="row">
+    <div class="pz-row">
         <div class="column xs-span12 sm-span4">
             <h3>Imagery</h3>
             <p>

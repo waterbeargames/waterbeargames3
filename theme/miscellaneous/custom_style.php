@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Puzzle
+ * Water Bear Games
  * Custom style colors using admin options
  *
  * The CSS here is converted into /assets/css/custom.css by functions.php if
@@ -9,13 +9,12 @@
  * updates the theme customizations (see /theme/customize_theme.php).
  */
 
-$puzzle_colors = new PuzzleColors;
-$puzzle_default_colors = $puzzle_colors->colors();
+$wbg_colors = wbg_theme_colors();
 
-$primary_color = get_theme_mod('primary_color', $puzzle_default_colors['primary_color']->default_color());
-$secondary_color = get_theme_mod('secondary_color', $puzzle_default_colors['secondary_color']->default_color());
-$accent_color = get_theme_mod('accent_color', $puzzle_default_colors['accent_color']->default_color());
-$alternative_background = get_theme_mod('alternative_background', $puzzle_default_colors['alternative_background']->default_color());
+$primary_color = $wbg_colors['primary_color'];
+$secondary_color = $wbg_colors['secondary_color'];
+$accent_color = $wbg_colors['accent_color'];
+$alternative_background = $wbg_colors['alternative_background'];;
 
 $colors = array(
     'primary'       => $primary_color,
@@ -24,48 +23,37 @@ $colors = array(
     'alternative'   => $alternative_background
 );
 
-$headline_dark = get_theme_mod('headline_dark', $puzzle_default_colors['headline_dark']->default_color());
-$text_dark = get_theme_mod('text_dark', $puzzle_default_colors['text_dark']->default_color());
-$headline_light = get_theme_mod('headline_light', $puzzle_default_colors['headline_light']->default_color());
-$text_light = get_theme_mod('text_light', $puzzle_default_colors['text_light']->default_color());
+$headline_dark = $wbg_colors['headline_dark'];
+$text_dark = $wbg_colors['text_dark'];
+$headline_light = $wbg_colors['headline_light'];
+$text_light = $wbg_colors['text_light'];
 
 $footer_background_color = get_theme_mod('footer_background_color', 'primary');
 ?>
 /* Text */
 
-h1, h2, h3, h4, h5, h6, th,
-.dark-text-color-scheme h1,
-.dark-text-color-scheme h2,
-.dark-text-color-scheme h3,
-.dark-text-color-scheme h4,
-.dark-text-color-scheme h5,
-.dark-text-color-scheme th {
+h1, h2, h3, h4, h5, th {
     color: <?php echo $headline_dark; ?>;
 }
 
-body, p, li, td,
-.dark-text-color-scheme,
-.dark-text-color-scheme h6,
-.dark-text-color-scheme p,
-.dark-text-color-scheme li,
-.dark-text-color-scheme td {
+body, h6, .pz-dark-text h6, p, li, td {
     color: <?php echo $text_dark; ?>;
 }
 
-.light-text-color-scheme h1,
-.light-text-color-scheme h2,
-.light-text-color-scheme h3,
-.light-text-color-scheme h4,
-.light-text-color-scheme h5,
-.light-text-color-scheme th {
+.pz-light-text h1,
+.pz-light-text h2,
+.pz-light-text h3,
+.pz-light-text h4,
+.pz-light-text h5,
+.pz-light-text th {
     color: <?php echo $headline_light; ?>;
 }
 
-.light-text-color-scheme,
-.light-text-color-scheme h6,
-.light-text-color-scheme p,
-.light-text-color-scheme li,
-.light-text-color-scheme td {
+.pz-light-text,
+.pz-light-text h6,
+.pz-light-text p,
+.pz-light-text li,
+.pz-light-text td {
     color: <?php echo $text_light; ?>;
 }
 
@@ -79,11 +67,11 @@ a:hover, a:active {
     color: <?php echo $primary_color; ?>;
 }
 
-.light-text-color-scheme a:not(.wbg-button) {
+.pz-light-text a:not(.wbg-button) {
     color: <?php echo $accent_color; ?>;
 }
 
-.light-text-color-scheme a:not(.wbg-button):hover {
+.pz-light-text a:not(.wbg-button):hover {
     color: rgba(<?php echo hex2rgb($text_light); ?>, 0.6);
 }
 
@@ -99,19 +87,11 @@ input:focus, select:focus, textarea:focus {
 
 /* Section Backgrounds */
 
-.primary-background {
-    background-color: <?php echo $primary_color; ?>;
-}
-
-.secondary-background {
-    background-color: <?php echo $secondary_color; ?>;
-}
-
-.accent-background {
+.pz-accent-background {
     background-color: <?php echo $accent_color; ?>;
 }
 
-.alternative-background {
+.pz-alternative-background {
     background-color: <?php echo $alternative_background; ?>;
 }
 
@@ -225,21 +205,21 @@ if ($footer_background_color == 'secondary') {
 /* Sections */
 
 <?php foreach ($colors as $label => $color) : ?>
-.puzzle-one-column .puzzle-columns-content .column-inner.<?php echo $label; ?>-background {
+.pz-one-column .pz-columns-content .col-inner.<?php echo $label; ?>-background {
     background-color: rgba(<?php echo hex2rgb($color); ?>, 0.95);
 }
 
 <?php endforeach; ?>
 
-.puzzle-story {
+.wbg-story {
     background-color: <?php echo $alternative_background; ?>;
 }
 
-.puzzle-featured-story .puzzle-story {
+.wbg-featured-story .wbg-story {
     background-color: <?php echo $accent_color; ?>;
 }
 
-.puzzle-story-image {
+.wbg-story-image {
     background-color: <?php echo $primary_color; ?>;
 }
 
@@ -250,19 +230,19 @@ button,
 input[type='button'],
 input[type='submit'],
 .wbg-button.wbg-button-primary:hover,
-.primary-background .wbg-button.wbg-button-primary,
-.primary-background .wbg-button.wbg-button-accent:hover,
-.alternative-background .wbg-button:hover,
-.alternative-background button:hover,
-.alternative-background input[type='button']:hover,
-.alternative-background input[type='submit']:hover,
-.alternative-background .wbg-button.wbg-button-secondary,
-.alternative-background .wbg-button.wbg-button-accent:hover,
-.alternative-background .wbg-button.wbg-button-alternative:hover,
-.puzzle-story .wbg-button:hover,
-.puzzle-loop .wbg-button:hover,
-.alternative-background .puzzle-story .wbg-button,
-.alternative-background .puzzle-loop .wbg-button,
+.pz-primary-background .wbg-button.wbg-button-primary,
+.pz-primary-background .wbg-button.wbg-button-accent:hover,
+.pz-alternative-background .wbg-button:hover,
+.pz-alternative-background button:hover,
+.pz-alternative-background input[type='button']:hover,
+.pz-alternative-background input[type='submit']:hover,
+.pz-alternative-background .wbg-button.wbg-button-secondary,
+.pz-alternative-background .wbg-button.wbg-button-accent:hover,
+.pz-alternative-background .wbg-button.wbg-button-alternative:hover,
+.wbg-story .wbg-button:hover,
+.wbg-loop .wbg-button:hover,
+.pz-alternative-background .wbg-story .wbg-button,
+.pz-alternative-background .wbg-loop .wbg-button,
 .categories .cat-item a,
 .single-post-page-links a:hover,
 .comment-reply-link,
@@ -278,21 +258,21 @@ input[type='submit']:hover,
 .wbg-button.wbg-button-primary,
 .wbg-button.wbg-button-accent:hover,
 .wbg-button.wbg-button-alternative:hover,
-.secondary-background .wbg-button,
-.secondary-background button,
-.secondary-background input[type='button'],
-.secondary-background input[type='submit'],
-.secondary-background .wbg-button.wbg-button-accent:hover,
-.alternative-background .wbg-button,
-.alternative-background button,
-.alternative-background input[type='button'],
-.alternative-background input[type='submit'],
-.alternative-background .wbg-button.wbg-button-secondary:hover,
-.alternative-background .wbg-button.wbg-button-alternative,
-.puzzle-story .wbg-button,
-.puzzle-loop .wbg-button,
-.alternative-background .puzzle-story .wbg-button:hover,
-.alternative-background .puzzle-loop .wbg-button:hover,
+.pz-secondary-background .wbg-button,
+.pz-secondary-background button,
+.pz-secondary-background input[type='button'],
+.pz-secondary-background input[type='submit'],
+.pz-secondary-background .wbg-button.wbg-button-accent:hover,
+.pz-alternative-background .wbg-button,
+.pz-alternative-background button,
+.pz-alternative-background input[type='button'],
+.pz-alternative-background input[type='submit'],
+.pz-alternative-background .wbg-button.wbg-button-secondary:hover,
+.pz-alternative-background .wbg-button.wbg-button-alternative,
+.wbg-story .wbg-button,
+.wbg-loop .wbg-button,
+.pz-alternative-background .wbg-story .wbg-button:hover,
+.pz-alternative-background .wbg-loop .wbg-button:hover,
 .categories .cat-item a:hover,
 .comment-reply-link:hover
 #cancel-comment-reply-link:hover {
@@ -301,14 +281,14 @@ input[type='submit']:hover,
 }
 
 .wbg-button.wbg-button-accent,
-.primary-background .wbg-button:hover,
-.primary-background button:hover,
-.primary-background input[type='button']:hover,
-.primary-background input[type='submit']:hover,
-.secondary-background .wbg-button:hover,
-.secondary-background button:hover,
-.secondary-background input[type='button']:hover,
-.secondary-background input[type='submit']:hover {
+.pz-primary-background .wbg-button:hover,
+.pz-primary-background button:hover,
+.pz-primary-background input[type='button']:hover,
+.pz-primary-background input[type='submit']:hover,
+.pz-secondary-background .wbg-button:hover,
+.pz-secondary-background button:hover,
+.pz-secondary-background input[type='button']:hover,
+.pz-secondary-background input[type='submit']:hover {
     background-color: <?php echo $accent_color; ?>;
     color: <?php echo $headline_dark; ?>;
 }
@@ -323,8 +303,8 @@ input[type='submit']:hover,
 }
 
 <?php foreach ($colors as $label => $color) : ?>
-.circle-button-container:hover .circle-button.<?php echo $label; ?>-background,
-.circle-button.<?php echo $label; ?>-background:hover {
+.circle-button-container:hover .circle-button.pz-<?php echo $label; ?>-background,
+.circle-button.pz-<?php echo $label; ?>-background:hover {
     -webkit-box-shadow: 0 0 0 8px rgba(<?php echo hex2rgb($color); ?>, 0.5);
     box-shadow: 0 0 0 8px rgba(<?php echo hex2rgb($color); ?>, 0.5);
 }
@@ -333,15 +313,15 @@ input[type='submit']:hover,
 
 /* Blog */
 
-.puzzle-loop {
+.wbg-loop {
     background-color: rgba(<?php echo hex2rgb($alternative_background); ?>, 0.5);
 }
 
-.puzzle-loop h3 a {
+.wbg-loop h3 a {
     color: <?php echo $primary_color; ?>;
 }
 
-.puzzle-loop h3 a:hover {
+.wbg-loop h3 a:hover {
     color: <?php echo $secondary_color; ?>;
 }
 

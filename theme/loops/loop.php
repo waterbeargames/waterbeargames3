@@ -25,7 +25,7 @@ if (get_post_type($post) == 'post' || get_post_type($post) == 'news') {
     $time = '<h5>' . get_the_time(get_option('date_format')) . '</h5>';
 }
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class('puzzle-loop'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('wbg-loop'); ?>>
     <h3><a href="<?php echo $link; ?>"<?php echo $target; ?>><?php the_title(); ?></a></h3>
 
     <?php

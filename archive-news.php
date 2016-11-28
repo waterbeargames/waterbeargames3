@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <section>
-    <div class="row">
-        <div class="column xs-span12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-span8'; ?>">
-            <div class="column-inner">
+    <div class="pz-row">
+        <div class="column xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
+            <div class="col-inner">
                 <?php if (have_posts()) : ?>
                     <h2><?php _e('In the News', 'water-bear-games'); ?></h2>
                     <?php
@@ -14,7 +14,7 @@
                     get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
-                    <h1><?php _e('No results', 'water-bear-games'); ?></h1>
+                    <h2><?php _e('No results', 'water-bear-games'); ?></h2>
                     <p><?php _e('Sorry, no posts in', 'water-bear-games'); ?> <?php single_month_title(' '); ?>.</p>
                 <?php endif; ?>
             </div>

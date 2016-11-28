@@ -6,9 +6,9 @@
         $footer_content = stripslashes_deep($footer);
         ?>
         <footer id="footer">
-            <div class="row">
+            <div class="pz-row">
                 <div class="column xs-span12">
-                    <div class="column-inner">
+                    <div class="col-inner">
                         <?php echo apply_filters('like_the_content', $footer_content); ?>
                     </div>
                 </div>

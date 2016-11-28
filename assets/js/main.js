@@ -119,7 +119,7 @@ jQuery('document').ready(function($){
      * because styling it through CSS is problematic cross-browser right now
      */
     
-    var $svgElements = $('.puzzle-games .circle-button svg, .header-game-logo .vector-container svg').find('rect, circle, ellipse, path, polygon');
+    var $svgElements = $('.pz-games .circle-button svg, .header-game-logo .vector-container svg').find('rect, circle, ellipse, path, polygon');
     
     $.each($svgElements, function() {
         $(this).attr('filter', 'url(#dropshadow)');

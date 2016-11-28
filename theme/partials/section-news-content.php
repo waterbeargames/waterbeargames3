@@ -35,16 +35,16 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
     $featured_story_target = ' target="_blank"';
 }
 ?>
-<div class="row puzzle-columns-content">
-    <div class="column xs-span12 sm-span9 sm-center md-span6 lg-uncenter puzzle-featured-story">
-        <div class="column-inner puzzle-news-section-headline">
+<div class="pz-row pz-columns-content">
+    <div class="column xs-12 sm-9 sm-center md-6 lg-uncenter wbg-featured-story">
+        <div class="col-inner wbg-news-section-headline">
             <h3><?php _e('Featured Story', 'water-bear-games'); ?></h3>
         </div>
-        <div class="column-inner puzzle-story">
-            <div class="puzzle-story-image"<?php echo ($featured_story_featured_image ? ' style="background-image: url(' . $featured_story_featured_image . ');"' : '') ?>>
-                <a class="puzzle-full-cover-link" href="<?php echo $featured_story_link; ?>"<?php echo $featured_story_target; ?>></a>
+        <div class="col-inner wbg-story">
+            <div class="wbg-story-image"<?php echo ($featured_story_featured_image ? ' style="background-image: url(' . $featured_story_featured_image . ');"' : '') ?>>
+                <a class="wbg-full-cover-link" href="<?php echo $featured_story_link; ?>"<?php echo $featured_story_target; ?>></a>
             </div>
-            <div class="puzzle-story-content">
+            <div class="wbg-story-content">
                 <h3><?php echo $featured_story->post_title; ?></h3>
                 <?php if (!empty($featured_story_meta['media'])) : ?>
                 <h4><?php echo $featured_story_meta['media']; ?></h4>
@@ -54,11 +54,11 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
             </div>
         </div>
     </div>
-    <div class="column xs-span12 lg-span6">
-        <div class="column-inner puzzle-news-section-headline">
+    <div class="column xs-12 lg-6">
+        <div class="col-inner wbg-news-section-headline">
             <h3>Recently</h3>
         </div>
-        <div class="row puzzle-stories">
+        <div class="pz-row wbg-stories">
             <?php
             $span_classes = 'xs-span12 sm-span6';
             foreach ($news_stories as $story) include(locate_template('theme/loops/stories.php'));
@@ -66,9 +66,9 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
         </div>
     </div>
 </div>
-<div class="row puzzle-section-cta">
-    <div class="column xs-span12">
-        <div class="column-inner">
+<div class="pz-row wbg-section-cta">
+    <div class="column xs-12">
+        <div class="col-inner">
             <a class="wbg-button" href="/news">View All News Stories</a>
         </div>
     </div>

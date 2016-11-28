@@ -1,18 +1,18 @@
 <?php
-$span_classes = 'xs-span12';
+$span_classes = 'xs-12';
 
 if ($puzzle_options_data['column_widths'] == '1-2_1-2') {
-    $span_classes .= ' md-span6';
+    $span_classes .= ' md-6';
 } elseif (($puzzle_options_data['column_widths'] == '1-3_2-3' && $c == 0) ||
           ($puzzle_options_data['column_widths'] == '2-3_1-3' && $c == 1)) {
-    $span_classes .= ' md-span4';
+    $span_classes .= ' md-4';
 } elseif (($puzzle_options_data['column_widths'] == '1-3_2-3' && $c == 1) ||
           ($puzzle_options_data['column_widths'] == '2-3_1-3' && $c == 0)) {
-    $span_classes .= ' md-span8';
+    $span_classes .= ' md-8';
 }
 ?>
 <div class="column <?php echo $span_classes; ?>">
-    <div class="column-inner">
+    <div class="col-inner">
         <?php if (!empty($puzzle_options_data['headline']) && $c == 0) : ?>
         <h2><?php echo $puzzle_options_data['headline']; ?></h2>
         <?php endif; ?>

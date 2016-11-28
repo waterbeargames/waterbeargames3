@@ -27,7 +27,7 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
 
     @each $name, $value in $miscellaneous_widths {
         .column {
-            &.#{$size}-span#{$name} {
+            &.#{$size}-#{$name} {
                 @include flex-basis(100% / $columns_num * $value);
                 width: 100% / $columns_num * $value;
             }
@@ -53,7 +53,7 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
     }
 }
 
-.row {
+.pz-row {
     @extend %clearfix;
     @extend %page-max-width;
     @include display-flex;
@@ -65,7 +65,7 @@ $miscellaneous_widths: (1point5: 1.5, 2point4: 2.4);
     min-width: 0;
 }
 
-.column-inner {
+.col-inner {
     position: relative;
     width: calc(100% - #{$small-space-unit / 2});
     margin: 0 ($small-space-unit / 4);

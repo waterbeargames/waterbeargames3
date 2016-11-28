@@ -9,10 +9,10 @@ query_posts($args);
 
 get_header();
 ?>
-<section class="puzzle-games">
-    <div class="row puzzle-section-headline">
-        <div class="column xs-span12">
-            <div class="column-inner">
+<section class="pz-games">
+    <div class="pz-row pz-section-headline">
+        <div class="column xs-12">
+            <div class="col-inner">
                 <h2><?php _e('Games', 'water-bear-games'); ?></h2>
             </div>
         </div>
@@ -21,7 +21,7 @@ get_header();
     if (have_posts()) :
         $span_classes = ppb_span_classes($wp_query->post_count, 3, 4, 'xs', 'md');
         ?>
-        <div class="row puzzle-columns-content">
+        <div class="pz-row pz-columns-content">
             <?php
             while (have_posts()) {
                 the_post();
@@ -32,9 +32,9 @@ get_header();
             ?>
         </div>
     <?php else : ?>
-        <div class="row puzzle-main-content">
+        <div class="pz-row pz-main-content">
             <div class="column xs-span12 md-span9 md-center">
-                <div class="column-inner">
+                <div class="col-inner">
                     <p><?php _e('Sorry, no games found.', 'water-bear-games'); ?></p>
                 </div>
             </div>

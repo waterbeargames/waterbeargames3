@@ -4,10 +4,10 @@ $game_meta = get_post_meta($game->ID, '_wbg_game', true);
 $game_logo = (!empty($game_meta['logo']) ? $game_meta['logo'] : false);
 ?>
 <div class="column <?php echo $span_classes; ?>">
-    <div class="column-inner">
-        <div class="circle-button secondary-background"<?php echo ($game_featured_image ? ' style="background-image: url(' . $game_featured_image . ');"' : '') ?>>
+    <div class="col-inner">
+        <div class="circle-button pz-secondary-background"<?php echo ($game_featured_image ? ' style="background-image: url(' . $game_featured_image . ');"' : '') ?>>
             <?php if ($game_featured_image) : ?>
-            <div class="puzzle-background-overlay secondary-background"></div>
+            <div class="pz-background-overlay pz-secondary-background"></div>
             <?php endif; ?>
             <div class="circle-button-content">
                 <?php
@@ -18,7 +18,7 @@ $game_logo = (!empty($game_meta['logo']) ? $game_meta['logo'] : false);
                 <h4><?php echo get_the_title($game->ID); ?></h4>
                 <?php endif; ?>
             </div>
-            <a class="puzzle-full-cover-link" href="<?php echo get_permalink($game->ID); ?>"></a>
+            <a class="wbg-full-cover-link" href="<?php echo get_permalink($game->ID); ?>"></a>
         </div>
     </div>
 </div>

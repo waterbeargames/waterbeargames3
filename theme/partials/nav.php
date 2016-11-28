@@ -1,5 +1,5 @@
 <nav id="nav"<?php if (is_front_page()) echo ' class="no-logo no-shadow no-transition"'; ?>>
-    <div class="row">
+    <div class="pz-row">
         <div class="column xs-span8 sm-span6 md-span2">
             <div class="vector-container">
                 <a href="<?php echo get_site_url(); ?>">
@@ -13,32 +13,15 @@
             <?php
             $args = array(
                 'theme_location'  => 'primary',
-                'menu'            => '',
-                'container'       => 'div',
-                'container_id'    => 'nav-menu',
-                'before'          => '',
-                'after'           => '',
-                'link_before'     => '',
-                'link_after'      => '',
-                'items_wrap'      => '<ul id="%1$s">%3$s</ul>',
-                'depth'           => 0,
-                'walker'          => ''
+                'container_id'    => 'nav-menu'
             );
             wp_nav_menu($args);
             
             $args = array(
                 'theme_location'  => 'primary',
-                'menu'            => '',
-                'container'       => 'div',
                 'container_id'    => 'dl-menu',
                 'container_class' => 'dl-menuwrapper',
-                'before'          => '',
-                'after'           => '',
-                'link_before'     => '',
-                'link_after'      => '',
-                'items_wrap'      => '<button class="dl-trigger">' . __('Open Menu', 'water-bear-games') . '</button><ul class="dl-menu">%3$s</ul>',
-                'depth'           => 0,
-                'walker'          => ''
+                'items_wrap'      => '<button class="dl-trigger">' . __('Open Menu', 'water-bear-games') . '</button><ul class="dl-menu">%3$s</ul>'
             );
             wp_nav_menu($args);
             

@@ -2,11 +2,11 @@
 /* Puzzle News Section */
 /*---------------------*/
 
-.puzzle-news {
+.pz-news {
     text-align: center;
 }
 
-.puzzle-news-section-headline {
+.wbg-news-section-headline {
     padding-bottom: 0;
     
     h3 {
@@ -14,7 +14,7 @@
     }
 }
 
-.puzzle-featured-story {
+.wbg-featured-story {
     @include display-flex;
     @include flex-direction(column);
     
@@ -22,10 +22,10 @@
         @include flex(0 1 auto);
     }
     
-    .puzzle-story {
+    .wbg-story {
         @include flex(1 1 auto);
         
-        .puzzle-story-image {
+        .wbg-story-image {
             @include breakpoint($size-sm) {
                 @include flex-basis(200px);
             }
@@ -35,7 +35,7 @@
             }
         }
         
-        .puzzle-story-content {
+        .wbg-story-content {
             padding-top: ($small-space-unit - 0.5rem);
             padding-bottom: ($small-space-unit + 0.5rem);
             

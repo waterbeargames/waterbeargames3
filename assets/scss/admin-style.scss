@@ -1,6 +1,7 @@
 @import '_global/_variables';
 @import '_global/_mixins';
 @import '_global/_utility';
+@import '_global/_grid';
 
 #game_options, #news_story_options, #team_options {
     * {
@@ -48,11 +49,7 @@
 
 #team_options {
     .added-columns {
-        @include display-flex;
-        @include flex-wrap(wrap);
-        
         .column {
-            @include flex(0 1 auto);
             padding: 5px;
             border: solid 1px $medium-gray;
             background-color: $light-gray;
@@ -63,7 +60,7 @@
             margin: 0 0 10px;
         
             .fa {
-                @include transition(all 0.4s ease);
+                @extend %default-transition;
                 display: block;
                 width: 30px;
                 height: 30px;

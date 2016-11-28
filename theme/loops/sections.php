@@ -32,9 +32,9 @@ if (!empty($page_sections)) :
             <?php endif; ?>
         
             <?php if (!empty($puzzle_options_data['headline']) && $puzzle_section_type != 'two-column') : ?>
-            <div class="row puzzle-section-headline">
-                <div class="column xs-span12">
-                    <div class="column-inner">
+            <div class="pz-row pz-section-headline">
+                <div class="column xs-12">
+                    <div class="col-inner">
                         <h2><?php echo $puzzle_options_data['headline']; ?></h2>
                     </div>
                 </div>
@@ -42,9 +42,9 @@ if (!empty($page_sections)) :
             <?php endif; ?>
 
             <?php if (!empty($main_content)) : ?>
-            <div class="row puzzle-main-content">
-                <div class="column xs-span12 md-span9 md-center">
-                    <div class="column-inner">
+            <div class="pz-row pz-main-content">
+                <div class="column xs-12 md-9 md-center">
+                    <div class="col-inner">
                         <?php echo apply_filters('the_content', $main_content); ?>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ if (!empty($page_sections)) :
             if (in_array($puzzle_section_type, $special_sections)) :
                 include(locate_template('theme/partials/section-' . $puzzle_section_type . '-content.php'));
             elseif (!empty($puzzle_columns_data)) : ?>
-            <div class="row puzzle-columns-content">
+            <div class="pz-row pz-columns-content">
                 <?php
                 foreach ($puzzle_columns_data as $c => $puzzle_column) {
                     include(ppb_locate_template($puzzle_section_type));
