@@ -65,6 +65,13 @@ function wbg_modify_puzzle_colors($colors) {
         'headline_light'    => $wbg_theme_colors['headline_light'],
         'text_light'        => $wbg_theme_colors['text_light']
     ));
+    
+    $colors->set_link_colors(array(
+        'link_dark'         => $wbg_theme_colors['secondary_color'],
+        'link_dark_hover'   => $wbg_theme_colors['primary_color'],
+        'link_light'        => $wbg_theme_colors['accent_color'],
+        'link_light_hover'  => 'rgba(255, 255, 255, 0.6)'
+    ));
 }
 add_action('ppb_modify_colors', 'wbg_modify_puzzle_colors');
 
