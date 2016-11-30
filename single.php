@@ -3,8 +3,8 @@ get_header();
 the_post();
 ?>
 <section>
-    <div class="pz-row">
-        <div class="column xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
+    <div class="row">
+        <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
             <div class="col-inner">
                 <div class="single-post-meta">
                     <?php the_title('<h2>', '</h2>'); ?>

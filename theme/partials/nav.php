@@ -1,6 +1,6 @@
 <nav id="nav"<?php if (is_front_page()) echo ' class="no-logo no-shadow no-transition"'; ?>>
-    <div class="pz-row">
-        <div class="column xs-span8 sm-span6 md-span2">
+    <div class="row">
+        <div class="col xs-8 sm-6 md-2">
             <div class="vector-container">
                 <a href="<?php echo get_site_url(); ?>">
                     <?php include(TEMPLATEPATH . '/assets/images/bear.svg'); ?>
@@ -9,7 +9,7 @@
         </div>
         
         <?php if (has_nav_menu('primary')) : ?>
-        <div class="column xs-span4 sm-span6 md-span10">
+        <div class="col xs-4 sm-6 md-10">
             <?php
             $args = array(
                 'theme_location'  => 'primary',

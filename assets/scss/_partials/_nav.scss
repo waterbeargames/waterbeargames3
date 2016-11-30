@@ -26,7 +26,7 @@
         transition: none;
     }
     
-    .pz-row {
+    .row {
         @include align-items(center);
         height: $small-nav-height;
         padding: 0.5rem 1.5rem;
@@ -36,7 +36,7 @@
         }
     }
     
-    .column:last-child {
+    .col:last-child {
         @include display-flex;
         @include justify-content(flex-end);
     }

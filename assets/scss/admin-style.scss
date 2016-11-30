@@ -1,7 +1,9 @@
 @import '_global/_variables';
 @import '_global/_mixins';
 @import '_global/_utility';
-@import '_global/_grid';
+@import '_global/_grid/_variables';
+@import '_global/_grid/_mixins';
+@import '_global/_grid/_grid';
 
 #game_options, #news_story_options, #team_options {
     * {
@@ -42,14 +44,14 @@
         }
     }
     
-    .column {
+    .col {
         padding-right: 10px;
     }
 }
 
 #team_options {
     .added-columns {
-        .column {
+        .col {
             padding: 5px;
             border: solid 1px $medium-gray;
             background-color: $light-gray;

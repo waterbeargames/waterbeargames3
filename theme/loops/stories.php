@@ -17,7 +17,7 @@ if ($story->post_type == 'news') {
     }
 }
 ?>
-<div class="column <?php echo $span_classes; ?>">
+<div class="col <?php echo $col_classes; ?>">
     <div class="col-inner wbg-story">
         <div class="wbg-story-image"<?php if ($story_featured_image) echo ' style="background-image: url(' . $story_featured_image . ');"'; ?>>
             <?php if (!$story_featured_image) : ?>

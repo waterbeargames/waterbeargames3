@@ -39,6 +39,12 @@ a.page-numbers {
     color: #fff;
 }
 
+.page-numbers {
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
 .pagination {
     @include display-flex;
     @include align-items(center);

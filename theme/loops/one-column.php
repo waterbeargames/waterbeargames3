@@ -1,10 +1,10 @@
 <?php
-$span_classes = 'xs-12';
+$col_classes = 'xs-12';
 
 if ($puzzle_column['width'] == 'medium') {
-    $span_classes .= ' md-9';
+    $col_classes .= ' md-9';
 } else if ($puzzle_column['width'] == 'narrow') {
-    $span_classes .= ' md-6';
+    $col_classes .= ' md-6';
 }
 
 $column_inner_classes = '';
@@ -17,7 +17,7 @@ if ($puzzle_options_data['text_color_scheme'] != $puzzle_column['text_color_sche
     $column_inner_classes .= ' pz-' . $puzzle_column['text_color_scheme'] . '-text';
 }
 ?>
-<div class="column <?php echo $span_classes; ?>">
+<div class="col <?php echo $col_classes; ?>">
     <div class="col-inner<?php echo $column_inner_classes; ?>">
         <?php echo apply_filters('the_content', $puzzle_column['content']); ?>
     </div>

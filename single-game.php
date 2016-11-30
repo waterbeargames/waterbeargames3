@@ -14,15 +14,15 @@ $meta_info = array_filter(array(
 ));
 ?>
 <section>
-    <div class="pz-row">
-        <div class="column xs-12<?php echo ($has_sidebar ? ' lg-6 xl-7' : ''); ?>">
+    <div class="row">
+        <div class="col xs-12<?php echo ($has_sidebar ? ' lg-6 xl-7' : ''); ?>">
             <div class="col-inner">
                 <h2><?php _e('Overview', 'water-bear-games'); ?></h2>
                 <?php the_content(); ?>
             </div>
         </div>
         <?php if ($has_sidebar) : ?>
-        <div class="game-sidebar column xs-12 sm-8 sm-center lg-6 lg-uncenter xl-5">
+        <div class="game-sidebar col xs-12 sm-8 sm-center lg-6 lg-uncenter xl-5">
             <div class="col-inner">
                 <?php if (!empty($game['store']) || !empty($game['print_and_play'])) : ?>
                 <div class="game-buttons">
@@ -69,8 +69,8 @@ $meta_info = array_filter(array(
 
 <?php if (!empty($game['cta'])) : ?>
 <section class="pz-alternative-background">
-    <div class="pz-row">
-        <div class="column xs-span12">
+    <div class="row">
+        <div class="col xs-12">
             <div class="col-inner">
                 <?php echo apply_filters('the_content', stripslashes_deep($game['cta'])); ?>
             </div>

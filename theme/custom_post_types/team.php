@@ -41,12 +41,12 @@ function team_image_markup($i, $image = NULL) {
         $image_preview = wp_get_attachment_image($image, 'large');
     }
     
-    $output  = '<div class="column xs-span12 sm-span6 md-span4">';
+    $output  = '<div class="col xs-12 sm-6 md-4">';
     $output .= '<div class="puzzle-collapsable-menu">';
     $output .= '<h5>Image</h5>';
     $output .= '<i class="fa fa-close puzzle-remove-section"></i>';
     $output .= '</div>';
-    $output .= '<div class="column-inner">';
+    $output .= '<div class="col-inner">';
     $output .= $image_preview . '<br />';
     $output .= '<input name="_wbg_team[images][' . $i . ']" type="hidden" value="' . (!empty($image) ? $image : '') . '" readonly />';
     $output .= '<a href="#" class="puzzle_add_image_button button" data-editor="content" title="Insert Image">Insert Image</a>';
@@ -67,7 +67,7 @@ function meta_options_team() {
     <hr />
     <h3>Images</h3>
     <p>Images should be squares only.</p>
-    <div class="pz-row added-columns">
+    <div class="row added-columns">
         <?php
         $i = 0;
     

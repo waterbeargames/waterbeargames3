@@ -7,13 +7,19 @@ $args = array(
 );
 $team_members = get_posts($args);
 $team_members_num = count($team_members);
-$span_classes = ppb_span_classes($team_members_num, 3, 4, 'xs', 'md');
+
+$args = array(
+    'prefix' => '',
+    'size1' => 'xs',
+    'size2' => 'md'
+);
+$col_classes = ppb_col_classes($team_members_num, $args);
 ?>
-<div class="pz-row pz-columns-content">
+<div class="row pz-columns-content">
 <?php foreach ($team_members as $team_member) :
     $team_member_featured_image = wp_get_attachment_url(get_post_thumbnail_id($team_member->ID));
     ?>
-    <div class="column <?php echo $span_classes; ?>">
+    <div class="col <?php echo $col_classes; ?>">
         <div class="col-inner">
             <div class="circle-button-container">
                 <div class="circle-button secondary-background"<?php if ($team_member_featured_image) echo ' style="background-image: url(' . $team_member_featured_image . ');"'; ?>>

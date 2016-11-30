@@ -4,7 +4,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 get_header();
 ?>
 <section>
-    <div class="pz-row">
+    <div class="row">
         <div class="column xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
             <div class="col-inner">
                 <?php if (have_posts()) : ?>

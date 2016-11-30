@@ -1,0 +1,42 @@
+//-----------//
+// Variables //
+//-----------//
+
+// CSS prefix
+$pz-grid-prefix: '';
+
+// Sizes for grid system and media queries
+$pz-grid-sizes: (
+    xs: 0,
+    sm: $size-sm,
+    md: $size-md,
+    lg: $size-lg,
+    xl: $size-xl
+);
+
+$pz-grid-max-width: $max-width;
+
+$pz-grid-col-num: 12;
+$pz-grid-miscellaneous-widths: (
+    one-eighth: $pz-grid-col-num / 8,
+    three-eighths: $pz-grid-col-num / 8 * 3,
+    five-eighths: $pz-grid-col-num / 8 * 5,
+    seven-eighths: $pz-grid-col-num / 8 * 7,
+    one-fifth: $pz-grid-col-num / 5,
+    two-fifths: $pz-grid-col-num / 5 * 2,
+    three-fifths: $pz-grid-col-num / 5 * 3,
+    four-fifths: $pz-grid-col-num / 5 * 4
+);
+
+$pz-grid-col-inner-top-bottom-margin: (
+    xs: 1rem
+);
+
+$pz-grid-col-inner-left-right-margin: (
+    xs: 1rem
+);
+
+$pz-grid-col-inner-padding: (
+    xs: 1rem,
+    md: 1.5rem
+);

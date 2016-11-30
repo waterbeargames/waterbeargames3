@@ -3,7 +3,9 @@
 @import '_global/_resets';
 @import '_global/_utility';
 @import '_global/_global';
-@import '_global/_grid';
+@import '_global/_grid/_variables';
+@import '_global/_grid/_mixins';
+@import '_global/_grid/_grid';
 @import '_global/_wordpress';
 @import '_global/_typography';
 @import '_global/_forms';

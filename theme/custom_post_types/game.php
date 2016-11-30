@@ -90,8 +90,8 @@ function game_meta_options() {
     
     $game_cta = (!empty($game['cta']) ? stripslashes_deep($game['cta']) : '');
     ?>
-    <div class="pz-row">
-        <div class="column xs-span12 sm-span4">
+    <div class="row">
+        <div class="col xs-12 sm-4">
             <h3>Imagery</h3>
             <p>
                 SVG Logo<br />
@@ -110,7 +110,7 @@ function game_meta_options() {
                 <a href="#" class="puzzle_add_image_button button" data-editor="content" title="Add Image">Add Image</a> <a href="#" class="puzzle_remove_image_button button">Remove Image</a>
             </p>
         </div>
-        <div class="column xs-span12 sm-span4">
+        <div class="col xs-12 sm-4">
             <h3>Links</h3>
             <p>
                 Print &amp; Play File<br />
@@ -124,7 +124,7 @@ function game_meta_options() {
                 <input name="_wbg_game[store]" placeholder="http://..." value="<?php echo (!empty($game['store']) ? $game['store'] : ''); ?>" />
             </p>
         </div>
-        <div class="column xs-span12 sm-span4">
+        <div class="col xs-12 sm-4">
             <h3>General Details</h3>
             <p>
                 Playtime<br />
@@ -150,7 +150,7 @@ function game_meta_options() {
     </div>
     <hr />
     <div class="row">
-        <div class="column xs-span12">
+        <div class="col xs-12">
             <h3>Call to Action section</h3>
             <?php
             $wp_editor_settings = array(

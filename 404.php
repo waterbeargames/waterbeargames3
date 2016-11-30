@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section>
-    <div class="pz-row">
-        <div class="column xs-span12">
+    <div class="row">
+        <div class="col xs-12">
             <div class="col-inner">
                 <h1><?php _e('404', 'water-bear-games'); ?></h1>
                 <h2><?php _e('Page not found!', 'water-bear-games'); ?></h2>

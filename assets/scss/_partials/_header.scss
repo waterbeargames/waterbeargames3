@@ -70,10 +70,10 @@
         min-height: 400px;
         padding: 0;
         
-        .pz-row {
+        .row {
             @include flex(0 1 100%);
             
-            .column:last-child {
+            .col:last-child {
                 @include display-flex;
                 
                 .col-inner {

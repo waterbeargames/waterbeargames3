@@ -35,8 +35,8 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
     $featured_story_target = ' target="_blank"';
 }
 ?>
-<div class="pz-row pz-columns-content">
-    <div class="column xs-12 sm-9 sm-center md-6 lg-uncenter wbg-featured-story">
+<div class="row pz-columns-content">
+    <div class="col xs-12 sm-9 sm-center md-6 lg-uncenter wbg-featured-story">
         <div class="col-inner wbg-news-section-headline">
             <h3><?php _e('Featured Story', 'water-bear-games'); ?></h3>
         </div>
@@ -54,20 +54,20 @@ if (!empty($featured_story_meta['link']) && empty($featured_story_meta['local'])
             </div>
         </div>
     </div>
-    <div class="column xs-12 lg-6">
+    <div class="col xs-12 lg-6">
         <div class="col-inner wbg-news-section-headline">
             <h3>Recently</h3>
         </div>
-        <div class="pz-row wbg-stories">
+        <div class="row wbg-stories">
             <?php
-            $span_classes = 'xs-span12 sm-span6';
+            $col_classes = 'xs-12 sm-6';
             foreach ($news_stories as $story) include(locate_template('theme/loops/stories.php'));
             ?>
         </div>
     </div>
 </div>
-<div class="pz-row wbg-section-cta">
-    <div class="column xs-12">
+<div class="row wbg-section-cta">
+    <div class="col xs-12">
         <div class="col-inner">
             <a class="wbg-button" href="/news">View All News Stories</a>
         </div>

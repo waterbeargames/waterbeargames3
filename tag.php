@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section>
-    <div class="pz-row">
-        <div class="column xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
+    <div class="row">
+        <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
             <div class="col-inner">
                 <?php if (have_posts()) : ?>
                     <h2><?php _e('Tag:', 'water-bear-games'); ?> <?php single_tag_title(); ?></h2>

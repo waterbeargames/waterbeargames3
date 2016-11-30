@@ -45,7 +45,7 @@
 }
 
 .vertical-center {
-    .pz-row:last-child {
+    .row:last-child {
         @include align-items(center);
     }
 }
@@ -58,7 +58,7 @@
 
 /* Used in news and blog sections */
 .wbg-stories {
-    .column {
+    .col {
         @include display-flex;
     }
 }
@@ -68,6 +68,7 @@
     @include display-flex;
     @include flex-direction(column);
     @include flex(0 1 calc(100% - 1rem));
+    width: calc(100% - 1rem);
     margin: 0.5rem;
     padding: 0;
     @extend %default-border-radius;
@@ -116,6 +117,7 @@
     
     @include breakpoint($size-md) {
         @include flex(0 1 calc(100% - #{$space-unit}));
+        width: calc(100% - #{$space-unit});
         margin: $space-unit / 2;
         
         .wbg-story-content {

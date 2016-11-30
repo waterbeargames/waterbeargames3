@@ -10,8 +10,8 @@ query_posts($args);
 get_header();
 ?>
 <section class="pz-games">
-    <div class="pz-row pz-section-headline">
-        <div class="column xs-12">
+    <div class="row pz-section-headline">
+        <div class="col xs-12">
             <div class="col-inner">
                 <h2><?php _e('Games', 'water-bear-games'); ?></h2>
             </div>
@@ -19,9 +19,18 @@ get_header();
     </div>
     <?php
     if (have_posts()) :
-        $span_classes = ppb_span_classes($wp_query->post_count, 3, 4, 'xs', 'md');
+        $col_classes = 'xs-12 md-4';
+        
+        if (class_exists('PuzzlePageBuilder')) {
+            $args = array(
+                'prefix' => '',
+                'size1' => 'xs',
+                'size2' => 'md'
+            );
+            $col_classes = ppb_col_classes($wp_query->post_count, $args);
+        }
         ?>
-        <div class="pz-row pz-columns-content">
+        <div class="row pz-columns-content">
             <?php
             while (have_posts()) {
                 the_post();
@@ -32,8 +41,8 @@ get_header();
             ?>
         </div>
     <?php else : ?>
-        <div class="pz-row pz-main-content">
-            <div class="column xs-span12 md-span9 md-center">
+        <div class="row pz-main-content">
+            <div class="col xs-12 md-9 md-center">
                 <div class="col-inner">
                     <p><?php _e('Sorry, no games found.', 'water-bear-games'); ?></p>
                 </div>

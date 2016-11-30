@@ -5,13 +5,13 @@ $args = array(
 );
 $blog_posts = get_posts($args);
 $blog_posts_num = count($blog_posts);
-$span_classes = ppb_span_classes($blog_posts_num);
+$col_classes = ppb_col_classes($blog_posts_num, array('prefix' => ''));
 ?>
-<div class="pz-row pz-columns-content wbg-stories">
+<div class="row pz-columns-content wbg-stories">
     <?php foreach ($blog_posts as $story) include(locate_template('theme/loops/stories.php')); ?>
 </div>
-<div class="pz-row wbg-section-cta">
-    <div class="column xs-12">
+<div class="row wbg-section-cta">
+    <div class="col xs-12">
         <div class="col-inner">
             <?php
             $blog_link = get_site_url();

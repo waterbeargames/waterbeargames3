@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <section>
-    <div class="pz-row">
-        <div class="column xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
-            <div class="column-inner">
+    <div class="row">
+        <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
+            <div class="col-inner">
                 <?php if (have_posts()) : ?>
                     <h2><?php _e('Date:', 'water-bear-games'); ?> <?php single_month_title(' '); ?></h2>
                     <h4><?php echo pluralize($wp_query->found_posts, 'post'); ?> in <?php single_month_title(' '); ?></h4>
