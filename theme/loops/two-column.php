@@ -14,9 +14,9 @@ if ($puzzle_options_data['column_widths'] == '1-2_1-2') {
 <div class="col <?php echo $col_classes; ?>">
     <div class="col-inner">
         <?php if (!empty($puzzle_options_data['headline']) && $c == 0) : ?>
-        <h2><?php echo $puzzle_options_data['headline']; ?></h2>
+            <h2><?php echo esc_html($puzzle_options_data['headline']); ?></h2>
         <?php endif; ?>
         
-        <?php echo apply_filters('the_content', $puzzle_column['content']); ?>
+        <?php echo ppb_format_content($puzzle_column['content']); ?>
     </div>
 </div>

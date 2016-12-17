@@ -226,6 +226,7 @@ if ($footer_background_color == 'secondary') {
 /* Buttons */
 
 .wbg-button,
+a.wbg-button,
 button,
 input[type='button'],
 input[type='submit'],
@@ -252,6 +253,7 @@ input[type='submit'],
 }
 
 .wbg-button:hover,
+a.wbg-button:hover,
 button:hover,
 input[type='button']:hover,
 input[type='submit']:hover,

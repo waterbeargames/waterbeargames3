@@ -7,10 +7,10 @@ $has_meta_info = !empty($game['playtime']) || !empty($game['players_num']) || !e
 $has_sidebar = !empty($game['print_and_play']) || !empty($game['store']) || $has_meta_info;
 
 $meta_info = array_filter(array(
-    'Playtime'                      => (!empty($game['playtime']) ? $game['playtime'] : false),
-    'Number of Players'             => (!empty($game['players_num']) ? $game['players_num'] : false),
-    'Difficulty'                    => (!empty($game['difficulty']) ? $game['difficulty'] : false),
-    'Last Print &amp; Play Update'  => (!empty($game['print_and_play_update']) ? $game['print_and_play_update'] : false)
+    'Playtime'                      => (!empty($game['playtime']) ? esc_html($game['playtime']) : false),
+    'Number of Players'             => (!empty($game['players_num']) ? esc_html($game['players_num']) : false),
+    'Difficulty'                    => (!empty($game['difficulty']) ? esc_html($game['difficulty']) : false),
+    'Last Print &amp; Play Update'  => (!empty($game['print_and_play_update']) ? esc_html($game['print_and_play_update']) : false)
 ));
 ?>
 <section>
@@ -34,7 +34,7 @@ $meta_info = array_filter(array(
                                 <h4><?php _e('Purchase', 'water-bear-games'); ?></h4>
                                 <h5><?php _e('the official game', 'water-bear-games'); ?></h5>
                             </div>
-                            <a class="wbg-full-cover-link" href="<?php echo $game['store']; ?>" target="_blank"></a>
+                            <a class="wbg-full-cover-link" href="<?php echo esc_url($game['store']); ?>" target="_blank"></a>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -72,7 +72,7 @@ $meta_info = array_filter(array(
     <div class="row">
         <div class="col xs-12">
             <div class="col-inner">
-                <?php echo apply_filters('the_content', stripslashes_deep($game['cta'])); ?>
+                <?php echo wp_kses_post($game['cta']); ?>
             </div>
         </div>
     </div>

@@ -19,6 +19,6 @@ if ($puzzle_options_data['text_color_scheme'] != $puzzle_column['text_color_sche
 ?>
 <div class="col <?php echo $col_classes; ?>">
     <div class="col-inner<?php echo $column_inner_classes; ?>">
-        <?php echo apply_filters('the_content', $puzzle_column['content']); ?>
+        <?php echo ppb_format_content($puzzle_column['content']); ?>
     </div>
 </div>

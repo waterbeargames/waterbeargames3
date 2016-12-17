@@ -10,7 +10,7 @@ $news = get_post_meta($post->ID, '_wbg_news', true);
             <div class="col-inner">
                 <div class="single-post-meta">
                     <?php the_title('<h2>', '</h2>'); ?>
-                    <h4><?php the_time(get_option('date_format')); if (!empty($news['media'])) echo ', from ' . $news['media']; ?></h4>
+                    <h4><?php the_time(get_option('date_format')); if (!empty($news['media'])) echo ', from ' . esc_html($news['media']); ?></h4>
                 </div>
             
                 <div class="single-news-content<?php echo (!empty($news['link']) ? ' has-news-link' : ''); ?>">
@@ -18,7 +18,7 @@ $news = get_post_meta($post->ID, '_wbg_news', true);
                 </div>
                 
                 <?php if (!empty($news['link'])) : ?>
-                <a class="wbg-button" href="<?php echo $news['link']; ?>" target="_blank"><?php _e('View Original Story', 'water-bear-games'); ?></a>
+                <a class="wbg-button" href="<?php echo esc_url($news['link']); ?>" target="_blank"><?php _e('View Original Story', 'water-bear-games'); ?></a>
                 <?php endif; ?>
             </div>
         </div>

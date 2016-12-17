@@ -12,18 +12,19 @@ $team_images = (!empty($team_meta['images']) ? array_filter($team_meta['images']
                 <?php the_title('<h2>', '</h2>'); ?>
                 
                 <?php if (!empty($team_meta['title'])) : ?>
-                <h4><?php echo $team_meta['title']; ?></h4>
+                    <h4><?php echo esc_html($team_meta['title']); ?></h4>
                 <?php endif; ?>
                 
                 <?php the_content(); ?>
             </div>
         </div>
+        
         <?php if (!empty($team_images)) : ?>
-        <div class="col xs-12 md-5 team-member-images">
-            <div class="col-inner">
-                <?php foreach ($team_images as $image) echo wp_get_attachment_image($image, 'full'); ?>
+            <div class="col xs-12 md-5 team-member-images">
+                <div class="col-inner">
+                    <?php foreach ($team_images as $image) echo wp_get_attachment_image($image, 'full'); ?>
+                </div>
             </div>
-        </div>
         <?php endif; ?>
     </div>
 </section>

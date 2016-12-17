@@ -1,11 +1,23 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$cat_title = single_cat_title('', false);
+?>
 <section>
     <div class="row">
         <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
             <div class="col-inner">
                 <?php if (have_posts()) : ?>
-                    <h2><?php _e('Category:', 'water-bear-games'); ?> <?php single_cat_title(); ?></h2>
-                    <h4><?php echo pluralize($wp_query->found_posts, 'post'); ?> <?php _e('categorized as', 'water-bear-games'); ?> &quot;<?php echo single_cat_title(); ?>&quot;</h4>
+                    <h2><?php printf(__('Category: %s', 'water-bear-games'), $cat_title); ?></h2>
+                    <h4><?php
+                        printf(
+                            _x('%1$s categorized as %2$s', '# categorized as Category', 'water-bear-games'),
+                            pluralize(
+                                $wp_query->found_posts,
+                                _x('post', 'noun', 'water-bear-games'),
+                                _x('posts', 'plural noun', 'water-bear-games')
+                            ),
+                            $cat_title
+                        ); ?></h4>
                     <?php
                     while (have_posts()) {
                         the_post();
@@ -16,7 +28,7 @@
                     ?>
                 <?php else : ?>
                     <h2><?php _e('No results', 'water-bear-games'); ?></h2>
-                    <p><?php _e('Sorry, no posts tagged as', 'water-bear-games'); ?> &quot;<?php echo single_tag_title(); ?>&quot;.</p>
+                    <p><?php printf(_x('Sorry, no posts categorized as %s.', 'category title', 'water-bear-games'), $cat_title); ?></p>
                 <?php endif; ?>
             </div>
         </div>

@@ -8,12 +8,12 @@ if ($story->post_type == 'news') {
     $news_meta = get_post_meta($story->ID, '_wbg_news', true);
     
     if (!empty($news_meta['link']) && empty($news_meta['local'])) {
-        $story_link = $news_meta['link'];
+        $story_link = esc_url($news_meta['link']);
         $story_target = ' target="_blank"';
     }
     
     if (!empty($news_meta['media'])) {
-        $story_media = $news_meta['media'] . '<br />';
+        $story_media = esc_html($news_meta['media']) . '<br />';
     }
 }
 ?>
@@ -45,7 +45,7 @@ if ($story->post_type == 'news') {
                     $story_excerpt = shorten_content($story->post_content);
                 }
             
-                echo apply_filters('like_the_content', $story_excerpt);
+                echo echo ppb_format_content($story_excerpt);;
             }
             ?>
             <a class="wbg-button wbg-button-small" href="<?php echo $story_link; ?>"<?php echo $story_target; ?>><?php ($story->post_type == 'news' ? _e('View Story', 'water-bear-games') : _e('Read More', 'water-bear-games')); ?></a>

@@ -1,22 +1,34 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$tag_title = single_tag_title('', false);
+?>
 <section>
     <div class="row">
         <div class="col xs-12<?php if (is_active_sidebar('main-sidebar')) echo ' lg-8'; ?>">
             <div class="col-inner">
                 <?php if (have_posts()) : ?>
-                    <h2><?php _e('Tag:', 'water-bear-games'); ?> <?php single_tag_title(); ?></h2>
-                    <h4><?php echo pluralize($wp_query->found_posts, 'post'); ?> <?php _e('tagged as', 'water-bear-games'); ?> &quot;<?php echo single_tag_title(); ?>&quot;</h4>
+                    <h2><?php printf(__('Tag: %s', 'water-bear-games'), $tag_title); ?></h2>
+                    <h4><?php
+                        printf(
+                            _x('%1$s tagged as %2$s', '# posts tagged as Tag Title', 'water-bear-games'),
+                            pluralize(
+                                $wp_query->found_posts,
+                                _x('post', 'noun', 'water-bear-games'),
+                                _x('posts', 'plural noun', 'water-bear-games')
+                            ),
+                            $tag_title
+                        ); ?></h4>
                     <?php
                     while (have_posts()) {
                         the_post();
-                        get_template_part('theme/loops/loop');
+                        get_template_part('theme/partials/loop');
                     }
                 
                     get_template_part('theme/partials/pagination');
                     ?>
                 <?php else : ?>
                     <h2><?php _e('No results', 'water-bear-games'); ?></h2>
-                    <p><?php _e('Sorry, no posts tagged as:', 'water-bear-games'); ?> &quot;<?php echo single_tag_title(); ?>&quot;.</p>
+                    <p><?php printf(_x('Sorry, no posts tagged as %s.', 'tag title', 'water-bear-games'), $tag_title); ?></p>
                 <?php endif; ?>
             </div>
         </div>
