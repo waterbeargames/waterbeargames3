@@ -97,11 +97,11 @@ input:focus, select:focus, textarea:focus {
 
 /* Navigation Bar */
 
-#nav .vector-container path {
+.main-nav .vector-container path {
     fill: <?php echo $primary_color; ?>;
 }
 
-#nav .vector-container a:hover path {
+.main-nav .vector-container a:hover path {
     fill: <?php echo $secondary_color; ?>;
 }
 
@@ -112,7 +112,7 @@ input:focus, select:focus, textarea:focus {
 #dl-menu.dl-menuwrapper ul,
 #dl-menu.dl-menuwrapper button.dl-active,
 #dl-menu.dl-menuwrapper button,
-#nav-menu ul ul {
+.desktop-nav-menu ul ul {
     background-color: <?php echo $primary_color; ?>;
 }
 
@@ -129,11 +129,11 @@ input:focus, select:focus, textarea:focus {
     background: <?php echo $secondary_color; ?>;
 }
 
-#nav-menu ul li a {
+.desktop-nav-menu ul li a {
     color: <?php echo $primary_color; ?>;
 }
 
-#nav-menu ul li a:hover {
+.desktop-nav-menu ul li a:hover {
     color: <?php echo $secondary_color; ?>;
 }
 
@@ -180,24 +180,24 @@ if ($footer_background_color == 'secondary') {
 }
 ?>
 
-#footer {
+.main-footer {
     background-color: <?php echo $footer_primary_color; ?>
 }
 
-#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+.main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5, .main-footer h6 {
     color: <?php echo $footer_headline_color; ?>;
 }
 
-#footer, #footer p, #footer li, #footer th, #footer td {
+.main-footer, .main-footer p, .main-footer li, .main-footer th, .main-footer td {
     color: <?php echo $footer_text_color; ?>
 }
 
 <?php if ($footer_text_color == $text_light) : ?>
-#footer a {
+.main-footer a {
     color: <?php echo $accent_color; ?>;
 }
 
-#footer a:hover {
+.main-footer a:hover {
     color: rgba(<?php echo hex2rgb($footer_text_color); ?>, 0.6);
 }
 

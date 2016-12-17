@@ -2,7 +2,7 @@
 /* Navigation Bar */
 /*----------------*/
 
-#nav {
+.main-nav {
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -77,18 +77,18 @@
 }
 
 @include breakpoint(601px) {
-    body.admin-bar #nav {
+    body.admin-bar .main-nav {
         top: 46px;
     }
 }
 
 @include breakpoint(783px) {
-    body.admin-bar #nav {
+    body.admin-bar .main-nav {
         top: 32px;
     }
 }
 
-#dl-menu, #nav-menu {
+#dl-menu, .desktop-nav-menu {
     @include flex(0 1 auto);
 }
 
@@ -136,7 +136,7 @@
 }
 
 /* Desktop menu */
-#nav-menu {
+.desktop-nav-menu {
     display: none;
     
     ul {
@@ -247,7 +247,7 @@
         display: none;
     }
     
-    #nav-menu {
+    .desktop-nav-menu {
         display: block;
     }
     

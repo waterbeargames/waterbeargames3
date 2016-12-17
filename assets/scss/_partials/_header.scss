@@ -2,7 +2,7 @@
 /* Header */
 /*--------*/
 
-#header {
+.main-header {
     position: relative;
     height: 225px;
     padding: ($small-nav-height + $small-space-unit) 0 ($small-space-unit + 0.5rem);
@@ -58,7 +58,7 @@
     }
 }
 
-.home #header {
+.home .main-header {
     position: relative;
     height: auto;
     padding: $space-unit 0;

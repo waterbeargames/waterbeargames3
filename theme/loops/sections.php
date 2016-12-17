@@ -40,7 +40,7 @@ if (!empty($page_sections)) :
             </div>
             <?php endif; ?>
 
-            <?php if (!empty($main_content)) : ?>
+            <?php if (!empty($puzzle_options_data['main_content'])) : ?>
             <div class="row pz-main-content">
                 <div class="col xs-12 md-9 md-center">
                     <div class="col-inner">

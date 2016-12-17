@@ -1,4 +1,4 @@
-<nav id="nav"<?php if (is_front_page()) echo ' class="no-logo no-shadow no-transition"'; ?>>
+<nav class="main-nav<?php if (is_front_page()) echo ' no-logo no-shadow no-transition'; ?>">
     <div class="row">
         <div class="col xs-8 sm-6 md-2">
             <div class="vector-container">
@@ -13,7 +13,8 @@
             <?php
             $args = array(
                 'theme_location'  => 'primary',
-                'container_id'    => 'nav-menu'
+                'container_id'    => 'desktop-nav-menu',
+                'container_class' => 'desktop-nav-menu'
             );
             wp_nav_menu($args);
             

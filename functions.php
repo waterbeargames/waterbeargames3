@@ -9,9 +9,6 @@ foreach (glob(get_stylesheet_directory() . '/theme/custom_post_types/*.php') as 
     include $filename;
 }
 
-/* Puzzle Pieces functionality */
-require_once('puzzle_pieces/puzzle_pieces.php');
-
 /*
  * Puzzle Page Builder config
  * Only include if the plugin is active

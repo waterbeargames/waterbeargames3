@@ -1,5 +1,5 @@
 <?php $home_buttons = get_theme_mod('home_buttons'); ?>
-<header id="header">
+<header class="main-header">
     <div class="row">
         <div class="col xs-6 xs-left3 xs-right3<?php if ($home_buttons) echo ' md-left0 md-right0'; ?>">
             <div class="col-inner home-header-logo">

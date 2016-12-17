@@ -22,7 +22,7 @@ $col_classes = ppb_col_classes($team_members_num, $args);
     <div class="col <?php echo $col_classes; ?>">
         <div class="col-inner">
             <div class="circle-button-container">
-                <div class="circle-button secondary-background"<?php if ($team_member_featured_image) echo ' style="background-image: url(' . $team_member_featured_image . ');"'; ?>>
+                <div class="circle-button pz-secondary-background"<?php if ($team_member_featured_image) echo ' style="background-image: url(' . $team_member_featured_image . ');"'; ?>>
                     <?php if ($team_member_featured_image) : ?>
                     <div class="pz-background-overlay pz-secondary-background"></div>
                     <?php endif; ?>
