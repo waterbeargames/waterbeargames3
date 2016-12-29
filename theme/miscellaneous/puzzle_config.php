@@ -25,35 +25,45 @@ add_action('ppb_modify_settings', 'wbg_modify_puzzle_settings');
 function wbg_modify_puzzle_colors($colors) {
     $wbg_theme_colors = wbg_theme_colors();
     
-    $primary = new PuzzleColor;
-    $primary->set_name('Blue')
-        ->set_id('primary')
-        ->set_color($wbg_theme_colors['primary_color'])
-        ->set_text_color_scheme('light');
+    $primary = new PuzzleColor(array(
+        'name'              => 'Blue',
+        'id'                => 'primary',
+        'color'             => $wbg_theme_colors['primary_color'],
+        'text_color_scheme' => 'light',
+        'order'             => 0
+    ));
     
-    $secondary = new PuzzleColor;
-    $secondary->set_name('Aqua')
-        ->set_id('secondary')
-        ->set_color($wbg_theme_colors['secondary_color'])
-        ->set_text_color_scheme('light');
+    $secondary = new PuzzleColor(array(
+        'name'              => 'Aqua',
+        'id'                => 'secondary',
+        'color'             => $wbg_theme_colors['secondary_color'],
+        'text_color_scheme' => 'light',
+        'order'             => 1
+    ));
     
-    $white = new PuzzleColor;
-    $white->set_name('White')
-        ->set_id('white')
-        ->set_color('#fff')
-        ->set_text_color_scheme('dark');
+    $white = new PuzzleColor(array(
+        'name'              => 'White',
+        'id'                => 'white',
+        'color'             => '#fff',
+        'text_color_scheme' => 'dark',
+        'order'             => 2
+    ));
     
-    $accent = new PuzzleColor;
-    $accent->set_name('Yellow')
-        ->set_id('accent')
-        ->set_color($wbg_theme_colors['accent_color'])
-        ->set_text_color_scheme('dark');
+    $accent = new PuzzleColor(array(
+        'name'              => 'Yellow',
+        'id'                => 'accent',
+        'color'             => $wbg_theme_colors['accent_color'],
+        'text_color_scheme' => 'dark',
+        'order'             => 3
+    ));
     
-    $alternative = new PuzzleColor;
-    $alternative->set_name('Gray')
-        ->set_id('alternative')
-        ->set_color($wbg_theme_colors['alternative_background'])
-        ->set_text_color_scheme('dark');
+    $alternative = new PuzzleColor(array(
+        'name'              => 'Gray',
+        'id'                => 'alternative',
+        'color'             => $wbg_theme_colors['alternative_background'],
+        'text_color_scheme' => 'dark',
+        'order'             => 4
+    ));
     
     $colors->replace_theme_colors(array(
         $primary, $secondary, $white, $accent, $alternative

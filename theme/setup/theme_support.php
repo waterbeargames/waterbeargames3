@@ -19,9 +19,18 @@ add_theme_support('title-tag');
  * The only action this does not have is 'prepend_attachment' because
  * it causes attachment pages to show attachments in weird places.
  */
-$actions = array('wptexturize', 'convert_smilies', 'convert_chars', 'wpautop', 'shortcode_unautop');
-foreach ($actions as $action) {
-    add_filter('like_the_content', $action);
+$actions = array(
+    'wptexturize'                           => 10,
+    'convert_smilies'                       => 20,
+    'convert_chars'                         => 10,
+    'wpautop'                               => 10,
+    'shortcode_unautop'                     => 10,
+    'wp_make_content_images_responsive'     => 10,
+    'do_shortcode'                          => 11
+);
+
+foreach ($actions as $action => $priority) {
+    add_filter('like_the_content', $action, $priority);
 }
 
 /*
