@@ -18,7 +18,7 @@ $games = new PuzzleSection(array(
             'id'            => 'category',
             'input_type'    => 'select',
             'options'       => $game_category_options,
-            'set_width'     => 3
+            'width'         => 3
         )),
         $f->field('padding_top')->set_width(3),
         $f->field('padding_bottom')->set_width(3),
