@@ -176,7 +176,7 @@ function wbg_section_classes($page_section) {
     }
     
     if (!empty($puzzle_options_data['padding_bottom'])) {
-        $section_classes .= ' ' . $puzzle_options_data['padding_top'] . '-padding-bottom';
+        $section_classes .= ' ' . $puzzle_options_data['padding_bottom'] . '-padding-bottom';
     }
     
     $section_classes .= (!empty($puzzle_options_data['vertical_center']) ? ' vertical-center' : '');
