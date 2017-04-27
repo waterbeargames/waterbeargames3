@@ -41,15 +41,18 @@ function team_image_markup($i, $image = NULL) {
         $image_preview = wp_get_attachment_image($image, 'large');
     }
     
-    $output  = '<div class="col xs-12 sm-6 md-4">';
-    $output .= '<div class="puzzle-collapsable-menu">';
-    $output .= '<h5>Image</h5>';
-    $output .= '<i class="fa fa-close puzzle-remove-section"></i>';
+    $output  = '<div class="col xs-12 sm-6 md-4 puzzle-page-builder-column">';
+    $output .= '<div class="puzzle-section-menu">';
+    $output .= '<div class="pz-row puzzle-section-menu-title">';
+    $output .= '<h4>Image</h4>';
+    $output .= '<a class="puzzle-remove-section" href="#" title="Delete" aria-label="Delete"><i class="ei ei-close-alt2" aria-hidden="true"></i></a>';
     $output .= '</div>';
-    $output .= '<div class="col-inner">';
-    $output .= $image_preview . '<br />';
+    $output .= '</div>';
+    $output .= '<div class="puzzle-image-container">';
+    $output .= $image_preview;
     $output .= '<input name="_wbg_team[images][' . $i . ']" type="hidden" value="' . (!empty($image) ? $image : '') . '" readonly />';
-    $output .= '<a href="#" class="puzzle_add_image_button button" data-editor="content" title="Insert Image">Insert Image</a>';
+    $output .= '<a class="puzzle-add-image-button" data-editor="content" href="#" title="Add Image" aria-label="Add Image"><i class="ei ei-plus-alt2" aria-hidden="true"></i></a>';
+    $output .= '<a class="puzzle-remove-image-button" href="#" title="Remove Image" aria-label="Remove Image"><i class="ei ei-close-alt" aria-hidden="true"></i></a>';
     $output .= '</div>';
     $output .= '</div>';
     
@@ -67,7 +70,7 @@ function meta_options_team() {
     <hr />
     <h3>Images</h3>
     <p>Images should be squares only.</p>
-    <div class="row added-columns">
+    <div id="puzzle-page-section-options" class="row added-columns">
         <?php
         $i = 0;
     
