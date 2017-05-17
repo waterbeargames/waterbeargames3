@@ -1,3 +1,3 @@
 .gitignore
 .git-ftp-ignore
-assets/scss
+assets/scss/*
