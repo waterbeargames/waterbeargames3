@@ -107,7 +107,7 @@ function game_meta_options() {
                 Banner<br />
                 <?php echo $game_banner; ?><br />
                 <input name="_wbg_game[banner]" type="hidden" value="<?php echo (!empty($game['banner']) ? $game['banner'] : ''); ?>" readonly />
-                <a href="#" class="puzzle_add_image_button button" data-editor="content" title="Add Image">Add Image</a> <a href="#" class="puzzle_remove_image_button button">Remove Image</a>
+                <a href="#" class="puzzle-add-image-button button" data-editor="content" title="Add Image">Add Image</a> <a href="#" class="puzzle-remove-image-button button">Remove Image</a>
             </p>
         </div>
         <div class="col xs-12 sm-4">
