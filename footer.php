@@ -1,6 +1,6 @@
     </main>
     <?php $footer_content = get_theme_mod('footer_content'); ?>
-    <footer class="mainFooter">
+    <footer class="main-footer">
         <div class="row">
             <div class="col xs-12">
                 <div class="col-inner">
